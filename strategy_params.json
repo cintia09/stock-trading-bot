@@ -1,0 +1,15 @@
+{
+  "stop_loss_pct": -0.08,
+  "take_profit_pct": 0.05,
+  "take_profit_full_pct": 0.10,
+  "min_score": 65,
+  "max_position_pct": 0.15,
+  "max_total_position": 0.70,
+  "volume_ratio_min": 1.2,
+  "rsi_oversold": 30,
+  "rsi_overbought": 70,
+  "daily_max_loss": 30000,
+  "version": 1,
+  "last_updated": "2026-02-06T10:45:00",
+  "notes": "初始策略参数，将根据每日复盘自动调整"
+}

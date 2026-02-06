@@ -271,12 +271,20 @@ def fetch_market_overview() -> dict:
             data = match.group(2).split(',')
             
             if code in indices and len(data) >= 4:
+                price = float(data[1]) if data[1] else 0
+                pre_close = float(data[2]) if data[2] else 0
+                # 计算涨跌幅
+                if pre_close > 0:
+                    change_pct = round((price - pre_close) / pre_close * 100, 2)
+                else:
+                    change_pct = 0
                 result[code] = {
                     "name": indices[code],
-                    "price": float(data[1]) if data[1] else 0,
-                    "change_pct": float(data[2]) if data[2] else 0,
-                    "volume": float(data[4]) if len(data) > 4 and data[4] else 0,
-                    "amount": float(data[5]) if len(data) > 5 and data[5] else 0
+                    "price": price,
+                    "pre_close": pre_close,
+                    "change_pct": change_pct,
+                    "volume": float(data[8]) if len(data) > 8 and data[8] else 0,
+                    "amount": float(data[9]) if len(data) > 9 and data[9] else 0
                 }
     except Exception as e:
         print(f"大盘指数获取失败: {e}")

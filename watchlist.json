@@ -1,0 +1,180 @@
+{
+  "stocks": [
+    {
+      "code": "601899",
+      "name": "紫金矿业",
+      "market": "SH",
+      "sector": "有色金属/贵金属",
+      "latest_price": 37.45,
+      "price_date": "2026-02-05",
+      "change_pct": -4.37,
+      "52w_high": 38.38,
+      "52w_low": 15.0,
+      "pe": 21.86,
+      "pb": 5.93,
+      "reason": "券商2月金股，黄金铜龙头，一年涨幅84%",
+      "priority": "A",
+      "data_source": "新浪财经"
+    },
+    {
+      "code": "600519",
+      "name": "贵州茅台",
+      "market": "SH",
+      "sector": "白酒/消费",
+      "latest_price": 1555.0,
+      "price_date": "2026-02-05",
+      "change_pct": 1.97,
+      "reason": "消费龙头，业绩稳定，北向资金青睐",
+      "priority": "A",
+      "data_source": "新浪财经"
+    },
+    {
+      "code": "002594",
+      "name": "比亚迪",
+      "market": "SZ",
+      "sector": "新能源汽车",
+      "latest_price": 90.11,
+      "price_date": "2026-02-05",
+      "change_pct": 1.09,
+      "reason": "新能源汽车龙头，销量增长强劲",
+      "priority": "A",
+      "data_source": "新浪财经"
+    },
+    {
+      "code": "002475",
+      "name": "立讯精密",
+      "market": "SZ",
+      "sector": "消费电子/AI硬件",
+      "latest_price": 51.7,
+      "price_date": "2026-02-05",
+      "change_pct": -0.39,
+      "reason": "消费电子龙头，AI硬件产业链",
+      "priority": "B",
+      "data_source": "新浪财经"
+    },
+    {
+      "code": "601318",
+      "name": "中国平安",
+      "market": "SH",
+      "sector": "保险/金融",
+      "latest_price": 67.35,
+      "price_date": "2026-02-05",
+      "change_pct": -0.07,
+      "reason": "保险龙头，防御配置",
+      "priority": "B",
+      "data_source": "新浪财经"
+    },
+    {
+      "code": "600036",
+      "name": "招商银行",
+      "market": "SH",
+      "sector": "银行/金融",
+      "latest_price": null,
+      "price_date": null,
+      "reason": "银行龙头，分红稳定，防守配置",
+      "priority": "B",
+      "data_source": null
+    },
+    {
+      "code": "000333",
+      "name": "美的集团",
+      "market": "SZ",
+      "latest_price": 80.45,
+      "price_date": "2026-02-06",
+      "change_pct": 0.8,
+      "reason": "北向资金",
+      "priority": "A",
+      "added_at": "2026-02-06T00:53:15.651728"
+    },
+    {
+      "code": "300251",
+      "name": "光线传媒",
+      "market": "SZ",
+      "latest_price": 20.84,
+      "price_date": "2026-02-06",
+      "change_pct": 9.0,
+      "reason": "北向资金",
+      "priority": "B",
+      "added_at": "2026-02-06T00:53:15.651752"
+    },
+    {
+      "code": "300308",
+      "name": "中际旭创",
+      "market": "SZ",
+      "latest_price": 561.99,
+      "price_date": "2026-02-06",
+      "change_pct": 0.36,
+      "reason": "成交额榜",
+      "priority": "B",
+      "added_at": "2026-02-06T00:53:15.651760"
+    },
+    {
+      "code": "300418",
+      "name": "昆仑万维",
+      "market": "SZ",
+      "latest_price": 59.26,
+      "price_date": "2026-02-06",
+      "change_pct": 0.65,
+      "reason": "成交额榜",
+      "priority": "B",
+      "added_at": "2026-02-06T00:53:15.651767"
+    },
+    {
+      "code": "601138",
+      "name": "工业富联",
+      "market": "SH",
+      "latest_price": 53.88,
+      "price_date": "2026-02-06",
+      "change_pct": 0.88,
+      "reason": "成交额榜",
+      "priority": "B",
+      "added_at": "2026-02-06T00:53:15.651773"
+    },
+    {
+      "code": "600986",
+      "name": "浙文互联",
+      "market": "SH",
+      "latest_price": 15.52,
+      "price_date": "2026-02-06",
+      "change_pct": 4.79,
+      "reason": "成交额榜",
+      "priority": "B",
+      "added_at": "2026-02-06T00:53:15.651779"
+    },
+    {
+      "code": "300896",
+      "name": "爱美客",
+      "market": "SZ",
+      "latest_price": 153.96,
+      "price_date": "2026-02-06",
+      "change_pct": 3.8,
+      "reason": "美容护理龙头",
+      "priority": "B",
+      "added_at": "2026-02-06T00:53:15.651785"
+    },
+    {
+      "code": "601888",
+      "name": "中国中免",
+      "market": "SH",
+      "latest_price": 92.47,
+      "price_date": "2026-02-06",
+      "change_pct": 1.07,
+      "reason": "旅游酒店龙头",
+      "priority": "B",
+      "added_at": "2026-02-06T00:53:15.651790"
+    },
+    {
+      "code": "300144",
+      "name": "宋城演艺",
+      "market": "SZ",
+      "latest_price": 9.11,
+      "price_date": "2026-02-06",
+      "change_pct": 4.35,
+      "reason": "旅游酒店龙头",
+      "priority": "B",
+      "added_at": "2026-02-06T00:53:15.651797"
+    }
+  ],
+  "last_updated": "2026-02-06T00:53:15.651800",
+  "update_source": "新浪财经实时行情"
+}

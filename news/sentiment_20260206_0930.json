@@ -1,0 +1,64 @@
+{
+  "overall_sentiment": -4,
+  "overall_label": "neutral",
+  "hot_sectors": [
+    [
+      "贵金属",
+      9,
+      -0.56
+    ],
+    [
+      "银行",
+      3,
+      0.0
+    ],
+    [
+      "医药",
+      2,
+      0.0
+    ],
+    [
+      "AI",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "巨震！全球坠入“波动炼狱”：金银大跌后急速拉升，韩国股市盘中熔断",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "大跌",
+          "暴跌"
+        ]
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1770340726"
+    },
+    {
+      "title": "白银在新一轮抛售中暴跌20% 波动率保持在高位附近",
+      "sentiment": {
+        "score": -3,
+        "label": "very_negative",
+        "positive": [],
+        "negative": [
+          "暴跌",
+          "下跌",
+          "抛售"
+        ]
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1770337174"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-06T09:30:07.106198"
+}

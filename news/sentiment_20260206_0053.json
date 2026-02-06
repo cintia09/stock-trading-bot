@@ -1,0 +1,78 @@
+{
+  "overall_sentiment": -6,
+  "overall_label": "negative",
+  "hot_sectors": [
+    [
+      "AI",
+      6,
+      -0.5
+    ],
+    [
+      "银行",
+      5,
+      -0.6
+    ],
+    [
+      "贵金属",
+      4,
+      -1.5
+    ],
+    [
+      "消费",
+      3,
+      0.0
+    ],
+    [
+      "新能源车",
+      1,
+      -1.0
+    ],
+    [
+      "光伏",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "美股三大指数下跌 白银暴跌 黄金、比特币大跌",
+      "sentiment": {
+        "score": -3,
+        "label": "very_negative",
+        "positive": [],
+        "negative": [
+          "暴跌",
+          "下跌",
+          "大跌"
+        ]
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "2026-02-06 00:30:40"
+    },
+    {
+      "title": "金银价格在历史性抛售后剧烈震荡",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [
+          "上涨"
+        ],
+        "negative": [
+          "抛售",
+          "下跌",
+          "暴跌"
+        ]
+      },
+      "sectors": [
+        "贵金属",
+        "银行"
+      ],
+      "time": "1770307148"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-06T00:53:43.810091"
+}

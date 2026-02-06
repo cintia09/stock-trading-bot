@@ -1,0 +1,90 @@
+{
+  "initial_capital": 1000000,
+  "current_cash": 276771.7800000001,
+  "total_value": 999877.78,
+  "created_at": "2026-02-06T00:23:00+08:00",
+  "last_updated": "2026-02-06T09:34:29.330127",
+  "holdings": [
+    {
+      "code": "601318",
+      "name": "中国平安",
+      "quantity": 2200,
+      "cost_price": 66.74,
+      "last_buy_date": "2026-02-06",
+      "market_value": 147180.0,
+      "current_price": 66.9,
+      "pnl_pct": 0.24
+    },
+    {
+      "code": "300896",
+      "name": "爱美客",
+      "quantity": 900,
+      "cost_price": 151.75,
+      "last_buy_date": "2026-02-06",
+      "market_value": 136215.0,
+      "current_price": 151.35,
+      "pnl_pct": -0.26
+    },
+    {
+      "code": "600036",
+      "name": "招商银行",
+      "quantity": 3700,
+      "cost_price": 39.48,
+      "last_buy_date": "2026-02-06",
+      "market_value": 146261.0,
+      "current_price": 39.53,
+      "pnl_pct": 0.13
+    },
+    {
+      "code": "000333",
+      "name": "美的集团",
+      "quantity": 1800,
+      "cost_price": 79.9,
+      "last_buy_date": "2026-02-06",
+      "market_value": 144054.0,
+      "current_price": 80.03,
+      "pnl_pct": 0.16
+    },
+    {
+      "code": "300144",
+      "name": "宋城演艺",
+      "quantity": 16900,
+      "cost_price": 8.86,
+      "last_buy_date": "2026-02-06",
+      "market_value": 149396.0,
+      "current_price": 8.84,
+      "pnl_pct": -0.23
+    }
+  ],
+  "frozen_sells": [
+    {
+      "code": "601318",
+      "quantity": 2200,
+      "buy_date": "2026-02-06"
+    },
+    {
+      "code": "300896",
+      "quantity": 900,
+      "buy_date": "2026-02-06"
+    },
+    {
+      "code": "600036",
+      "quantity": 3700,
+      "buy_date": "2026-02-06"
+    },
+    {
+      "code": "000333",
+      "quantity": 1800,
+      "buy_date": "2026-02-06"
+    },
+    {
+      "code": "300144",
+      "quantity": 16900,
+      "buy_date": "2026-02-06"
+    }
+  ],
+  "daily_pnl": 0,
+  "total_pnl": -122.22,
+  "total_pnl_pct": -0.01,
+  "trade_count": 0
+}

@@ -1,0 +1,89 @@
+{
+  "overall_sentiment": 14,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      10,
+      0.2
+    ],
+    [
+      "消费",
+      4,
+      1.0
+    ],
+    [
+      "贵金属",
+      2,
+      0.5
+    ],
+    [
+      "银行",
+      2,
+      -0.5
+    ],
+    [
+      "新能源车",
+      1,
+      0.0
+    ],
+    [
+      "光伏",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "“工业牙齿”价格再创新高！今年以来上涨超40%",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "上涨",
+          "新高",
+          "创新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-02-07 12:49:13"
+    },
+    {
+      "title": "中关村信息谷南宁项目聚焦AI与东盟合作 打造科技创新高地",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "新高",
+          "创新高"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "2026-02-07 12:45:37"
+    },
+    {
+      "title": "酒价内参2月7日价格发布 总价续创新高价格中枢进一步抬升",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "创新高",
+          "新高",
+          "回暖"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "消费"
+      ],
+      "time": "1770427561"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-07T13:29:09.760457"
+}

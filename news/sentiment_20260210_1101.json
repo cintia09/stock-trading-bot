@@ -1,0 +1,135 @@
+{
+  "overall_sentiment": 40,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      10,
+      0.8
+    ],
+    [
+      "医药",
+      3,
+      1.0
+    ],
+    [
+      "新能源车",
+      2,
+      0.5
+    ],
+    [
+      "银行",
+      2,
+      0.0
+    ],
+    [
+      "贵金属",
+      1,
+      1.0
+    ],
+    [
+      "房地产",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "1.7万亿美元的上涨仍未消除“韩国折扣” Kospi指数料将进一步走高",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "增长",
+          "上涨",
+          "盈利"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770692225"
+    },
+    {
+      "title": "国产大模型概念股延续昨日强势 智谱大涨逾15%MINIMAX-WP涨超5%",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "上涨",
+          "强势",
+          "大涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770692111"
+    },
+    {
+      "title": "英矽智能盘中涨超11%创新高 与康哲药业达成多个药物研发项目合作",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "上涨",
+          "创新高",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770691975"
+    },
+    {
+      "title": "MiniMax与智谱股价大涨 摩根大通给予超配评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "大涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770691792"
+    },
+    {
+      "title": "长飞光纤光缆盘中涨超9%再创新高 年初至今股价已实现翻倍",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "上涨",
+          "创新高",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770690390"
+    },
+    {
+      "title": "信达生物早盘涨超5% 高盛给予“买入”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "医药"
+      ],
+      "time": "1770690043"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-10T11:01:06.200819"
+}

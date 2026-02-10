@@ -6,6 +6,39 @@
 import numpy as np
 from typing import List, Dict, Tuple
 
+def calculate_atr(klines: List[Dict], period: int = 20) -> float:
+    """计算ATR（平均真实波幅），返回百分比形式"""
+    if not klines or len(klines) < period + 1:
+        return 0.02  # 默认2%
+    trs = []
+    for i in range(1, len(klines)):
+        high = klines[i]["high"]
+        low = klines[i]["low"]
+        prev_close = klines[i-1]["close"]
+        tr = max(high - low, abs(high - prev_close), abs(low - prev_close))
+        trs.append(tr / prev_close if prev_close > 0 else 0)
+    if len(trs) < period:
+        return sum(trs) / len(trs) if trs else 0.02
+    return sum(trs[-period:]) / period
+
+def calculate_hybrid_atr(klines: List[Dict], realtime: Dict = None) -> float:
+    """混合ATR = max(20日ATR, 5日ATR, 当日实时振幅)
+    解决纯20日ATR在暴涨首日的滞后问题"""
+    atr20 = calculate_atr(klines, 20)
+    atr5 = calculate_atr(klines, 5)
+    
+    # 当日实时振幅
+    daily_range = 0.0
+    if realtime:
+        high = realtime.get("high", 0)
+        low = realtime.get("low", 0)
+        pre_close = realtime.get("pre_close", 0)
+        if pre_close > 0 and high > 0 and low > 0:
+            daily_range = (high - low) / pre_close
+    
+    return max(atr20, atr5, daily_range)
+
+
 def calculate_ma(prices: List[float], period: int) -> List[float]:
     """计算移动平均线"""
     if len(prices) < period:

@@ -1,0 +1,481 @@
+{
+  "strategy_name": "当前策略_2026-02-07",
+  "start_date": "2025-12-09",
+  "end_date": "2026-02-07",
+  "initial_capital": 1000000,
+  "final_capital": 1016854.0,
+  "total_return": 0.016854,
+  "annual_return": 0.10548182829092845,
+  "max_drawdown": 0.04900006374557403,
+  "win_rate": 0.7142857142857143,
+  "profit_factor": 1.9015295609446814,
+  "sharpe_ratio": 0.767368795948323,
+  "total_trades": 19,
+  "winning_trades": 5,
+  "losing_trades": 2,
+  "trades": [
+    {
+      "date": "2025-12-09",
+      "code": "601318",
+      "name": "中国平安",
+      "action": "buy",
+      "price": 62.45,
+      "quantity": 2400,
+      "reason": "评分达标",
+      "pnl": 0,
+      "pnl_pct": 0
+    },
+    {
+      "date": "2025-12-10",
+      "code": "300144",
+      "name": "宋城演艺",
+      "action": "buy",
+      "price": 8.06,
+      "quantity": 18600,
+      "reason": "评分达标",
+      "pnl": 0,
+      "pnl_pct": 0
+    },
+    {
+      "date": "2025-12-15",
+      "code": "601318",
+      "name": "中国平安",
+      "action": "sell",
+      "price": 67.08,
+      "quantity": 2400,
+      "reason": "止盈 (7.4%)",
+      "pnl": 11111.999999999989,
+      "pnl_pct": 0.07413931144915925
+    },
+    {
+      "date": "2025-12-15",
+      "code": "601318",
+      "name": "中国平安",
+      "action": "buy",
+      "price": 67.08,
+      "quantity": 2200,
+      "reason": "评分达标",
+      "pnl": 0,
+      "pnl_pct": 0
+    },
+    {
+      "date": "2025-12-15",
+      "code": "000333",
+      "name": "美的集团",
+      "action": "buy",
+      "price": 80.41,
+      "quantity": 1800,
+      "reason": "评分达标",
+      "pnl": 0,
+      "pnl_pct": 0
+    },
+    {
+      "date": "2025-12-16",
+      "code": "300896",
+      "name": "爱美客",
+      "action": "buy",
+      "price": 140.56,
+      "quantity": 1000,
+      "reason": "评分达标",
+      "pnl": 0,
+      "pnl_pct": 0
+    },
+    {
+      "date": "2025-12-18",
+      "code": "600036",
+      "name": "招商银行",
+      "action": "buy",
+      "price": 41.36,
+      "quantity": 3600,
+      "reason": "评分达标",
+      "pnl": 0,
+      "pnl_pct": 0
+    },
+    {
+      "date": "2025-12-25",
+      "code": "601318",
+      "name": "中国平安",
+      "action": "sell",
+      "price": 70.8,
+      "quantity": 2200,
+      "reason": "止盈 (5.5%)",
+      "pnl": 8183.999999999997,
+      "pnl_pct": 0.055456171735241484
+    },
+    {
+      "date": "2025-12-25",
+      "code": "601318",
+      "name": "中国平安",
+      "action": "buy",
+      "price": 70.8,
+      "quantity": 2100,
+      "reason": "评分达标",
+      "pnl": 0,
+      "pnl_pct": 0
+    },
+    {
+      "date": "2026-01-09",
+      "code": "300896",
+      "name": "爱美客",
+      "action": "sell",
+      "price": 149.91,
+      "quantity": 1000,
+      "reason": "止盈 (6.7%)",
+      "pnl": 9349.999999999995,
+      "pnl_pct": 0.06651963574274328
+    },
+    {
+      "date": "2026-01-09",
+      "code": "300896",
+      "name": "爱美客",
+      "action": "buy",
+      "price": 149.91,
+      "quantity": 1000,
+      "reason": "评分达标",
+      "pnl": 0,
+      "pnl_pct": 0
+    },
+    {
+      "date": "2026-01-12",
+      "code": "300144",
+      "name": "宋城演艺",
+      "action": "sell",
+      "price": 8.48,
+      "quantity": 18600,
+      "reason": "止盈 (5.2%)",
+      "pnl": 7811.999999999999,
+      "pnl_pct": 0.05210918114143919
+    },
+    {
+      "date": "2026-01-12",
+      "code": "300144",
+      "name": "宋城演艺",
+      "action": "buy",
+      "price": 8.48,
+      "quantity": 18300,
+      "reason": "评分达标",
+      "pnl": 0,
+      "pnl_pct": 0
+    },
+    {
+      "date": "2026-01-22",
+      "code": "600036",
+      "name": "招商银行",
+      "action": "sell",
+      "price": 37.85,
+      "quantity": 3600,
+      "reason": "止损 (-8.5%)",
+      "pnl": -12635.999999999993,
+      "pnl_pct": -0.08486460348162471
+    },
+    {
+      "date": "2026-01-22",
+      "code": "601318",
+      "name": "中国平安",
+      "action": "sell",
+      "price": 64.8,
+      "quantity": 2100,
+      "reason": "止损 (-8.5%)",
+      "pnl": -12600.0,
+      "pnl_pct": -0.08474576271186442
+    },
+    {
+      "date": "2026-01-29",
+      "code": "601318",
+      "name": "中国平安",
+      "action": "buy",
+      "price": 68.0,
+      "quantity": 2200,
+      "reason": "评分达标",
+      "pnl": 0,
+      "pnl_pct": 0
+    },
+    {
+      "date": "2026-01-30",
+      "code": "600036",
+      "name": "招商银行",
+      "action": "buy",
+      "price": 38.67,
+      "quantity": 3900,
+      "reason": "评分达标",
+      "pnl": 0,
+      "pnl_pct": 0
+    },
+    {
+      "date": "2026-02-05",
+      "code": "300144",
+      "name": "宋城演艺",
+      "action": "sell",
+      "price": 9.11,
+      "quantity": 18300,
+      "reason": "止盈 (7.4%)",
+      "pnl": 11528.999999999982,
+      "pnl_pct": 0.07429245283018855
+    },
+    {
+      "date": "2026-02-05",
+      "code": "300144",
+      "name": "宋城演艺",
+      "action": "buy",
+      "price": 9.11,
+      "quantity": 16800,
+      "reason": "评分达标",
+      "pnl": 0,
+      "pnl_pct": 0
+    }
+  ],
+  "daily_values": [
+    {
+      "date": "2025-12-09",
+      "value": 1000000.0,
+      "cash": 850120.0,
+      "positions": 1
+    },
+    {
+      "date": "2025-12-10",
+      "value": 1000240.0,
+      "cash": 700204.0,
+      "positions": 2
+    },
+    {
+      "date": "2025-12-11",
+      "value": 998518.0,
+      "cash": 700204.0,
+      "positions": 2
+    },
+    {
+      "date": "2025-12-12",
+      "value": 1001830.0,
+      "cash": 700204.0,
+      "positions": 2
+    },
+    {
+      "date": "2025-12-15",
+      "value": 1009624.0,
+      "cash": 568882.0,
+      "positions": 3
+    },
+    {
+      "date": "2025-12-16",
+      "value": 1010498.0,
+      "cash": 428322.0,
+      "positions": 4
+    },
+    {
+      "date": "2025-12-17",
+      "value": 1017780.0,
+      "cash": 428322.0,
+      "positions": 4
+    },
+    {
+      "date": "2025-12-18",
+      "value": 1016870.0,
+      "cash": 279426.0,
+      "positions": 5
+    },
+    {
+      "date": "2025-12-19",
+      "value": 1021952.0,
+      "cash": 279426.0,
+      "positions": 5
+    },
+    {
+      "date": "2025-12-22",
+      "value": 1018962.0,
+      "cash": 279426.0,
+      "positions": 5
+    },
+    {
+      "date": "2025-12-23",
+      "value": 1016794.0,
+      "cash": 279426.0,
+      "positions": 5
+    },
+    {
+      "date": "2025-12-24",
+      "value": 1015590.0,
+      "cash": 279426.0,
+      "positions": 5
+    },
+    {
+      "date": "2025-12-25",
+      "value": 1020370.0,
+      "cash": 286506.0,
+      "positions": 5
+    },
+    {
+      "date": "2025-12-26",
+      "value": 1022730.0,
+      "cash": 286506.0,
+      "positions": 5
+    },
+    {
+      "date": "2025-12-29",
+      "value": 1015224.0,
+      "cash": 286506.0,
+      "positions": 5
+    },
+    {
+      "date": "2025-12-30",
+      "value": 1014886.0,
+      "cash": 286506.0,
+      "positions": 5
+    },
+    {
+      "date": "2025-12-31",
+      "value": 1012794.0,
+      "cash": 286506.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-05",
+      "value": 1026380.0,
+      "cash": 286506.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-06",
+      "value": 1035366.0,
+      "cash": 286506.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-07",
+      "value": 1031069.0,
+      "cash": 286506.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-08",
+      "value": 1022794.0,
+      "cash": 286506.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-09",
+      "value": 1024698.0,
+      "cash": 286506.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-12",
+      "value": 1023001.0,
+      "cash": 289050.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-13",
+      "value": 1017977.0,
+      "cash": 289050.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-14",
+      "value": 1017105.0,
+      "cash": 289050.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-15",
+      "value": 1014727.0,
+      "cash": 289050.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-16",
+      "value": 1005276.0,
+      "cash": 289050.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-19",
+      "value": 1009120.0,
+      "cash": 289050.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-20",
+      "value": 1012189.0,
+      "cash": 289050.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-21",
+      "value": 1005885.0,
+      "cash": 289050.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-01-22",
+      "value": 998571.0,
+      "cash": 561390.0,
+      "positions": 3
+    },
+    {
+      "date": "2026-01-23",
+      "value": 997891.0,
+      "cash": 561390.0,
+      "positions": 3
+    },
+    {
+      "date": "2026-01-26",
+      "value": 994184.0,
+      "cash": 561390.0,
+      "positions": 3
+    },
+    {
+      "date": "2026-01-27",
+      "value": 989106.0,
+      "cash": 561390.0,
+      "positions": 3
+    },
+    {
+      "date": "2026-01-28",
+      "value": 984633.0,
+      "cash": 561390.0,
+      "positions": 3
+    },
+    {
+      "date": "2026-01-29",
+      "value": 997844.0,
+      "cash": 411790.0,
+      "positions": 4
+    },
+    {
+      "date": "2026-01-30",
+      "value": 994131.0,
+      "cash": 260977.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-02-02",
+      "value": 996839.0,
+      "cash": 260977.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-02-03",
+      "value": 1004939.0,
+      "cash": 260977.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-02-04",
+      "value": 1013133.0,
+      "cash": 260977.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-02-05",
+      "value": 1029499.0,
+      "cash": 274642.0,
+      "positions": 5
+    },
+    {
+      "date": "2026-02-06",
+      "value": 1016854.0,
+      "cash": 274642.0,
+      "positions": 5
+    }
+  ]
+}

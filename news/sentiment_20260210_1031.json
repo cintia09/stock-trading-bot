@@ -1,0 +1,107 @@
+{
+  "overall_sentiment": 32,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      6,
+      0.67
+    ],
+    [
+      "医药",
+      4,
+      1.0
+    ],
+    [
+      "贵金属",
+      3,
+      0.33
+    ],
+    [
+      "银行",
+      3,
+      0.33
+    ],
+    [
+      "新能源车",
+      2,
+      1.0
+    ],
+    [
+      "房地产",
+      2,
+      0.0
+    ],
+    [
+      "消费",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "长飞光纤光缆盘中涨超9%再创新高 年初至今股价已实现翻倍",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "上涨",
+          "新高",
+          "创新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770690390"
+    },
+    {
+      "title": "信达生物早盘涨超5% 高盛给予“买入”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "医药"
+      ],
+      "time": "1770690043"
+    },
+    {
+      "title": "阅文集团早盘高开逾6% 公司内部信明确加速布局AI漫剧",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "大涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770687407"
+    },
+    {
+      "title": "光大期货：2月10日矿钢煤焦日报",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "弱势",
+          "下跌"
+        ]
+      },
+      "sectors": [],
+      "time": "1770685770"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-10T10:31:05.127602"
+}

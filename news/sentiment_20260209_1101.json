@@ -1,0 +1,114 @@
+{
+  "overall_sentiment": 34,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "银行",
+      5,
+      0.4
+    ],
+    [
+      "AI",
+      3,
+      1.33
+    ],
+    [
+      "消费",
+      2,
+      1.0
+    ],
+    [
+      "贵金属",
+      1,
+      2.0
+    ],
+    [
+      "光伏",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "金山云早盘涨逾8% 公司有望受惠持续强劲LLM训练需求",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "扩张"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770604892"
+    },
+    {
+      "title": "歌礼制药-B早盘涨超8% 获GIC斥资7.81亿港元增持歌礼制药",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "增持"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770604021"
+    },
+    {
+      "title": "美元走弱与央行需求共振支撑金价，但美伊谈判或压制短期上行空间",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "反弹",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1770603060"
+    },
+    {
+      "title": "中信建投期货：2月9日工业品早报",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "反弹",
+          "主力"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "消费"
+      ],
+      "time": "1770602991"
+    },
+    {
+      "title": "阅文集团盘中涨超9% 机构看好阅文在AI应用浪潮里的发展良机",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "看好"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770602222"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-09T11:01:04.138183"
+}

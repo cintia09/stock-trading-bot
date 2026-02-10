@@ -1,0 +1,188 @@
+{
+  "overall_sentiment": 32,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      4,
+      2.0
+    ],
+    [
+      "医药",
+      4,
+      1.25
+    ],
+    [
+      "新能源车",
+      1,
+      0.0
+    ],
+    [
+      "消费",
+      1,
+      -1.0
+    ],
+    [
+      "银行",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "中船系概念震荡反弹，中国动力涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "反弹",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-02-10 13:51:07"
+    },
+    {
+      "title": "大面积涨停！603000，1分钟封板！超23万手封死",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "反弹",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI",
+        "医药"
+      ],
+      "time": "1770696585"
+    },
+    {
+      "title": "富瑞：美图公司去年经调整盈利指引中位数符预期 予“买入”评级",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "盈利",
+          "买入",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770696492"
+    },
+    {
+      "title": "瑞银：看好敏实集团机器人业务布局 目标价升至45.5港元",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "盈利",
+          "看好"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770696443"
+    },
+    {
+      "title": "LABUBU全年卖了超1亿只，泡泡玛特股价连续两日大涨",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "突破",
+          "大涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770696383"
+    },
+    {
+      "title": "中银国际：文远知行-W中东市场加速扩张 带动盈利结构改善",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "盈利",
+          "买入",
+          "扩张"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770696324"
+    },
+    {
+      "title": "中银国际：料快手-W可灵AI释放长期价值 目标价跃升至80港元",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770696252"
+    },
+    {
+      "title": "花旗：重申敏实集团“买入”评级 列90日内潜在上涨催化剂观察名单",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770696192"
+    },
+    {
+      "title": "林洋能源增持、回购、注销股份多管齐下，能否提振股价？",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "涨停",
+          "增持"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770696079"
+    },
+    {
+      "title": "港股午评：恒指涨0.54% 科指涨0.84% 创新药概念股走强 AI应用股大涨 智谱涨超21%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "大涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI",
+        "医药"
+      ],
+      "time": "1770696006"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-10T14:01:05.698657"
+}

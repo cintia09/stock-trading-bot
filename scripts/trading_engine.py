@@ -13,6 +13,11 @@ from fetch_stock_data import (
     fetch_hot_stocks, save_data, load_data
 )
 from technical_analysis import generate_signals, calculate_volume_ratio, analyze_trend
+try:
+    from technical_analysis import calculate_hybrid_atr, calculate_atr
+except ImportError:
+    calculate_hybrid_atr = None
+    calculate_atr = None
 from news_sentiment import get_market_sentiment
 from t0_strategy import T0Strategy, IntradayMomentum, VWAPStrategy
 from factor_model import FactorModel, StockScreener
@@ -24,15 +29,45 @@ DATA_DIR = BASE_DIR / "data"
 TRADING_RULES = {
     "min_buy_amount": 5000,       # 最小买入金额
     "max_position_pct": 0.15,     # 单只最大仓位15%
-    "max_total_position": 0.70,   # 最大总仓位70%
-    "stop_loss_pct": -0.08,       # 止损-8%
-    "take_profit_pct": 0.05,      # 止盈+5%减仓
-    "take_profit_full_pct": 0.10, # 止盈+10%全出
+    "max_total_position": 0.50,   # 最大总仓位50%（节前轻仓）
+    "stop_loss_pct": -0.05,       # 止损-5%（收紧）
+    "take_profit_pct": 0.04,      # 止盈+4%减仓（更早触发）
+    "take_profit_full_pct": 0.08, # 止盈+8%全出（更早触发）
     "commission_rate": 0.00025,   # 佣金万2.5
     "min_commission": 5,          # 最低佣金5元
     "stamp_tax": 0.001,           # 印花税千1(卖出)
     "transfer_fee": 0.00002,      # 过户费万0.2
+    "underperform_alert_pct": -0.015,  # 逆市下跌预警阈值
+    "clearance_first_batch_pct": 0.7,  # 清仓时首批卖出比例
 }
+
+# 从策略参数文件动态加载（如有）
+def _load_strategy_params():
+    params_file = BASE_DIR / "strategy_params.json"
+    if params_file.exists():
+        import json as _json
+        with open(params_file, 'r') as f:
+            params = _json.load(f)
+        # v2兼容参数
+        for key in ["stop_loss_pct", "take_profit_pct", "take_profit_full_pct",
+                     "max_position_pct", "max_total_position", "min_buy_amount",
+                     "underperform_alert_pct", "clearance_first_batch_pct"]:
+            if key in params:
+                TRADING_RULES[key] = params[key]
+        # v3新参数
+        for key in ["take_profit_atr_multiplier", "take_profit_full_atr_multiplier",
+                     "trailing_stop_atr_multiplier", "trailing_stop_trigger_atr_multiplier",
+                     "trailing_stop_sell_pct", "passive_overweight_tolerance",
+                     "residual_clear_threshold_pct", "residual_clear_max_hold_days",
+                     "limit_up_filter_daily_pct", "limit_up_filter_daily_soft_pct",
+                     "limit_up_filter_soft_min_score", "limit_up_filter_3day_pct",
+                     "atr_period", "atr_fast_period", "atr_use_hybrid",
+                     "underperform_consecutive_days_to_act", "underperform_reduce_pct",
+                     "min_score"]:
+            if key in params:
+                TRADING_RULES[key] = params[key]
+
+_load_strategy_params()
 
 def load_account() -> Dict:
     """加载账户信息"""
@@ -195,14 +230,55 @@ def score_stock(code: str, realtime: Dict, klines: List[Dict], sentiment: Dict) 
         score -= 5
         reasons.append("市场情绪悲观")
     
-    # 判断动作
-    if score >= 70:
+    # ============ 新增：AI增强情绪因子（权重15%） ============
+    # 说明：不改变既有接口，仅在 score_stock 内追加融合逻辑。
+    # - 个股情绪 analyze_stock_sentiment: [-10, +10] -> 映射到 [0, 100]
+    # - 最终分数做加权融合：score = score*0.85 + sentiment_score*0.15
+    try:
+        from sentiment_enhanced import analyze_stock_sentiment, calculate_fear_greed
+
+        stock_name = (realtime or {}).get("name") or code
+        raw_sent = analyze_stock_sentiment(code, stock_name)  # [-10, +10]
+        mapped_sent = (float(raw_sent) + 10.0) / 20.0 * 100.0
+        mapped_sent = max(0.0, min(100.0, mapped_sent))
+
+        score_before = score
+        score = score * 0.85 + mapped_sent * 0.15
+        reasons.append(f"AI情绪{raw_sent:+.1f} -> {mapped_sent:.0f}分(权重15%)")
+
+        # 恐贪指数用于动态阈值（更贴近逆向/获利了结）
+        fg = calculate_fear_greed()
+        fg_score = int(fg.get("score", 50)) if isinstance(fg, dict) else 50
+
+        buy_shift = -5 if fg_score < 30 else 0
+        sell_shift = 5 if fg_score > 70 else 0  # 更容易卖出：提高卖出触发阈值
+
+        strong_buy_th = 70 + buy_shift
+        buy_th = 60 + buy_shift
+        strong_sell_th = 30 + sell_shift
+        sell_th = 40 + sell_shift
+
+        if fg_score < 30:
+            reasons.append(f"恐贪{fg_score}(<30)：买入阈值下调5分")
+        elif fg_score > 70:
+            reasons.append(f"恐贪{fg_score}(>70)：卖出阈值下调5分(更易卖出)")
+
+    except Exception:
+        # 任何异常都不影响原流程
+        fg_score = 50
+        strong_buy_th = 70
+        buy_th = 60
+        strong_sell_th = 30
+        sell_th = 40
+
+    # 判断动作（结合恐贪阈值动态调整）
+    if score >= strong_buy_th:
         action = "strong_buy"
-    elif score >= 60:
+    elif score >= buy_th:
         action = "buy"
-    elif score <= 30:
+    elif score <= strong_sell_th:
         action = "strong_sell"
-    elif score <= 40:
+    elif score <= sell_th:
         action = "sell"
     else:
         action = "hold"
@@ -270,38 +346,129 @@ def generate_trade_decisions(account: Dict, watchlist: Dict, sentiment: Dict = N
             decision["cost_price"] = cost_price
             decision["pnl_pct"] = round(pnl_pct * 100, 2)
             
+            # === v3: ATR自适应止盈 ===
+            atr_pct = 0.02  # 默认2%
+            if calculate_hybrid_atr and klines:
+                atr_pct = calculate_hybrid_atr(klines, rt)
+            
+            tp_atr_mult = TRADING_RULES.get("take_profit_atr_multiplier", 2.0)
+            tp_full_atr_mult = TRADING_RULES.get("take_profit_full_atr_multiplier", 4.0)
+            atr_tp = atr_pct * tp_atr_mult  # ATR止盈减仓
+            atr_tp_full = atr_pct * tp_full_atr_mult  # ATR止盈全出
+            
+            # 取ATR止盈和固定止盈中更大的，避免低波蓝筹阈值太小
+            effective_tp = max(atr_tp, TRADING_RULES.get("take_profit_pct", 0.04))
+            effective_tp_full = max(atr_tp_full, TRADING_RULES.get("take_profit_full_pct", 0.08))
+            
+            # === v3: 追踪止盈 ===
+            trailing_trigger = atr_pct * TRADING_RULES.get("trailing_stop_trigger_atr_multiplier", 2.0)
+            trailing_drawdown = atr_pct * TRADING_RULES.get("trailing_stop_atr_multiplier", 1.5)
+            trailing_sell_pct = TRADING_RULES.get("trailing_stop_sell_pct", 0.6)
+            
+            # 更新持仓最高价记录
+            for h in account.get("holdings", []):
+                if h["code"] == code:
+                    if "high_since_entry" not in h:
+                        h["high_since_entry"] = max(rt["price"], cost_price)
+                    if rt["price"] > h["high_since_entry"]:
+                        h["high_since_entry"] = rt["price"]
+                    high_since = h["high_since_entry"]
+                    break
+            else:
+                high_since = rt["price"]
+            
+            # === v3: 残仓自动清理 ===
+            residual_threshold = TRADING_RULES.get("residual_clear_threshold_pct", 0.005)
+            holding_value = holding_qty * rt["price"]
+            is_residual = (holding_value / total_value) < residual_threshold if total_value > 0 else False
+            
             if pnl_pct <= TRADING_RULES["stop_loss_pct"]:
                 decision["action"] = "stop_loss"
                 decision["trade_type"] = "sell"
                 decision["quantity"] = can_sell_today(account, code)
-                decision["reasons"].append(f"触发止损({decision['pnl_pct']:.1f}%)")
-            elif pnl_pct >= TRADING_RULES["take_profit_full_pct"]:
-                decision["action"] = "take_profit_full"
+                decision["reasons"].append(f"触发止损({decision['pnl_pct']:.1f}% <= {TRADING_RULES['stop_loss_pct']*100:.1f}%)")
+            elif is_residual and holding_qty <= 300:
+                # v3: 残仓清理（<总资产0.5%且<=300股）
+                decision["action"] = "residual_clear"
                 decision["trade_type"] = "sell"
                 decision["quantity"] = can_sell_today(account, code)
-                decision["reasons"].append(f"触发止盈清仓({decision['pnl_pct']:.1f}%)")
-            elif pnl_pct >= TRADING_RULES["take_profit_pct"] and analysis["action"] in ["sell", "strong_sell"]:
+                decision["reasons"].append(f"残仓清理: {holding_qty}股 市值¥{holding_value:.0f} (<{residual_threshold*100:.1f}%)")
+            elif pnl_pct >= trailing_trigger and high_since > 0:
+                # v3: 追踪止盈检查
+                drawdown_from_high = (high_since - rt["price"]) / high_since if high_since > 0 else 0
+                if drawdown_from_high >= trailing_drawdown:
+                    sell_qty = int(can_sell_today(account, code) * trailing_sell_pct / 100) * 100
+                    if sell_qty >= 100:
+                        decision["action"] = "trailing_stop"
+                        decision["trade_type"] = "sell"
+                        decision["quantity"] = sell_qty
+                        decision["reasons"].append(f"追踪止盈: 从最高{high_since:.2f}回撤{drawdown_from_high*100:.1f}%>={trailing_drawdown*100:.1f}%")
+            elif pnl_pct >= effective_tp_full:
+                decision["action"] = "take_profit_full"
+                decision["trade_type"] = "sell"
+                sellable = can_sell_today(account, code)
+                first_batch = TRADING_RULES.get("clearance_first_batch_pct", 0.6)
+                decision["quantity"] = int(sellable * first_batch / 100) * 100 or sellable
+                decision["reasons"].append(f"ATR止盈清仓({decision['pnl_pct']:.1f}% >= {effective_tp_full*100:.1f}%)")
+            elif pnl_pct >= effective_tp and analysis["action"] in ["sell", "strong_sell", "hold"]:
                 decision["action"] = "take_profit_partial"
                 decision["trade_type"] = "sell"
-                decision["quantity"] = can_sell_today(account, code) // 2
-                decision["reasons"].append(f"止盈减仓({decision['pnl_pct']:.1f}%)")
+                sellable = can_sell_today(account, code)
+                first_batch = TRADING_RULES.get("clearance_first_batch_pct", 0.6)
+                decision["quantity"] = int(sellable * first_batch / 100) * 100 or (sellable // 2)
+                decision["reasons"].append(f"ATR止盈减仓({decision['pnl_pct']:.1f}% >= {effective_tp*100:.1f}%, ATR={atr_pct*100:.1f}%)")
             elif analysis["action"] in ["strong_sell"]:
                 decision["trade_type"] = "sell"
                 decision["quantity"] = can_sell_today(account, code)
         else:
             # 无持仓，考虑买入
             if analysis["action"] in ["buy", "strong_buy"]:
-                if current_position_pct < TRADING_RULES["max_total_position"]:
-                    max_amount = min(
-                        available_cash * 0.3,  # 单次最多用30%可用资金
-                        total_value * TRADING_RULES["max_position_pct"]  # 单只最大15%仓位
-                    )
-                    if max_amount >= TRADING_RULES["min_buy_amount"]:
-                        quantity = int(max_amount / rt["price"] / 100) * 100  # 整百股
-                        if quantity >= 100:
-                            decision["trade_type"] = "buy"
-                            decision["quantity"] = quantity
-                            decision["amount"] = round(quantity * rt["price"], 2)
+                # === v3: 涨停过滤 ===
+                pre_close = rt.get("pre_close", 0)
+                if pre_close > 0:
+                    daily_change_pct = (rt["price"] - pre_close) / pre_close
+                    # 3日累计涨幅过滤
+                    kline_3d_change = 0
+                    if klines and len(klines) >= 4:
+                        close_3d_ago = klines[-4]["close"]
+                        kline_3d_change = (rt["price"] - close_3d_ago) / close_3d_ago if close_3d_ago > 0 else 0
+                    
+                    limit_daily = TRADING_RULES.get("limit_up_filter_daily_pct", 0.07)
+                    limit_daily_soft = TRADING_RULES.get("limit_up_filter_daily_soft_pct", 0.05)
+                    limit_soft_score = TRADING_RULES.get("limit_up_filter_soft_min_score", 80)
+                    limit_3day = TRADING_RULES.get("limit_up_filter_3day_pct", 0.12)
+                    
+                    if daily_change_pct >= limit_daily:
+                        decision["reasons"].append(f"⛔涨停过滤: 涨幅{daily_change_pct*100:.1f}%>={limit_daily*100:.0f}%")
+                        decisions.append(decision)
+                        continue
+                    if daily_change_pct >= limit_daily_soft and analysis["score"] < limit_soft_score:
+                        decision["reasons"].append(f"⛔追高过滤: 涨幅{daily_change_pct*100:.1f}%且评分{analysis['score']:.0f}<{limit_soft_score}")
+                        decisions.append(decision)
+                        continue
+                    if kline_3d_change >= limit_3day:
+                        decision["reasons"].append(f"⛔3日累计过滤: 涨幅{kline_3d_change*100:.1f}%>={limit_3day*100:.0f}%")
+                        decisions.append(decision)
+                        continue
+                
+                # === v3: 仓位硬阻断 ===
+                max_total = TRADING_RULES.get("max_total_position", 0.50)
+                if current_position_pct >= max_total:
+                    decision["reasons"].append(f"⛔仓位硬阻断: 当前仓位{current_position_pct*100:.0f}%>={max_total*100:.0f}%")
+                    decisions.append(decision)
+                    continue
+                
+                max_amount = min(
+                    available_cash * 0.3,
+                    total_value * TRADING_RULES["max_position_pct"],
+                    total_value * (max_total - current_position_pct)  # v3: 不超过仓位上限
+                )
+                if max_amount >= TRADING_RULES["min_buy_amount"]:
+                    quantity = int(max_amount / rt["price"] / 100) * 100
+                    if quantity >= 100:
+                        decision["trade_type"] = "buy"
+                        decision["quantity"] = quantity
+                        decision["amount"] = round(quantity * rt["price"], 2)
         
         decisions.append(decision)
     
@@ -351,10 +518,10 @@ def execute_trade(account: Dict, decision: Dict) -> Dict:
         found = False
         for h in account["holdings"]:
             if h["code"] == code:
-                # 加仓，计算新成本
+                # 加仓，计算新成本（含手续费）
                 old_cost = h["cost_price"] * h["quantity"]
                 h["quantity"] += quantity
-                h["cost_price"] = round((old_cost + amount) / h["quantity"], 3)
+                h["cost_price"] = round((old_cost + amount + cost) / h["quantity"], 3)
                 h["last_buy_date"] = datetime.now().strftime("%Y-%m-%d")
                 found = True
                 break
@@ -364,7 +531,7 @@ def execute_trade(account: Dict, decision: Dict) -> Dict:
                 "code": code,
                 "name": name,
                 "quantity": quantity,
-                "cost_price": price,
+                "cost_price": round((amount + cost) / quantity, 3),
                 "last_buy_date": datetime.now().strftime("%Y-%m-%d")
             })
         
@@ -434,6 +601,30 @@ def run_trading_cycle():
     print(f"  现金: ¥{account['current_cash']:,.2f}")
     print(f"  持仓: {len(account.get('holdings', []))}只")
     
+    # 1.5 风控检查：回撤熔断 + 组合风险
+    try:
+        from risk_manager import check_drawdown_circuit_breaker, calculate_portfolio_risk
+        
+        cb = check_drawdown_circuit_breaker(account, max_dd=0.10)
+        if cb.get("triggered"):
+            print(f"\n🚨 [回撤熔断触发] 回撤 {cb.get('drawdown_pct', 0)*100:.1f}% > 10%")
+            print(f"   动作: {cb.get('action')} — 暂停所有买入，仅允许减仓")
+            # 保存更新后的 peak_value
+            save_account(account)
+        else:
+            dd_pct = cb.get('drawdown_pct', 0) * 100
+            print(f"\n✅ [风控] 回撤 {dd_pct:.1f}% (阈值10%)  峰值 ¥{cb.get('peak_value', 0):,.0f}")
+        
+        risk = calculate_portfolio_risk(account)
+        risk_level = risk.get("overall_risk", "unknown")
+        risk_emoji = {"high": "🔴", "medium": "🟡", "low": "🟢"}.get(risk_level, "⚪")
+        print(f"   {risk_emoji} 组合风险: {risk_level}  仓位: {risk.get('position_pct', 0)*100:.0f}%")
+        for w in risk.get("warnings", []):
+            print(f"   ⚠️ {w}")
+    except Exception as e:
+        print(f"\n⚠️ [风控检查异常] {e}")
+        cb = {}
+    
     # 2. 获取市场情绪
     print("\n[获取市场情绪...]")
     try:
@@ -464,6 +655,10 @@ def run_trading_cycle():
         print(f"   理由: {', '.join(d['reasons'][:3])}")
         
         if "trade_type" in d and d.get("quantity", 0) > 0:
+            # 熔断时跳过买入
+            if cb.get("triggered") and d.get("trade_type") == "buy":
+                print(f"   🚫 熔断中，跳过买入")
+                continue
             result = execute_trade(account, d)
             if result["success"]:
                 trade = result["trade"]
@@ -704,11 +899,21 @@ def run_enhanced_trading_cycle():
         if fs["score"] >= 65 and fs["recommendation"] in ["buy", "strong_buy"]:
             holding_qty, _, _ = get_holding_value(account, fs["code"])
             if holding_qty == 0:  # 未持仓
-                available_cash = get_available_cash(account)
+                # === v3: 仓位硬阻断 ===
+                total_val = account.get("total_value", 1000000)
+                cash_now = get_available_cash(account)
+                pos_pct = 1 - (cash_now / total_val) if total_val > 0 else 1
+                max_total = TRADING_RULES.get("max_total_position", 0.50)
+                if pos_pct >= max_total:
+                    print(f"  ⛔ 仓位硬阻断: {fs['name']} 当前仓位{pos_pct*100:.0f}%>={max_total*100:.0f}%")
+                    continue
+                
+                available_cash = cash_now
                 if available_cash > TRADING_RULES["min_buy_amount"]:
                     max_amount = min(
                         available_cash * 0.25,
-                        account.get("total_value", 1000000) * TRADING_RULES["max_position_pct"]
+                        total_val * TRADING_RULES["max_position_pct"],
+                        total_val * (max_total - pos_pct)  # v3: 不超仓位上限
                     )
                     quantity = int(max_amount / fs["price"] / 100) * 100
                     if quantity >= 100:

@@ -1,0 +1,1112 @@
+[
+  {
+    "timestamp": "2026-02-09T10:06:35.646794",
+    "time": "10:06:35",
+    "market": {
+      "sh000001": {
+        "name": "上证指数",
+        "price": 4103.5396,
+        "change_pct": 0.93,
+        "volume": 223805462.0,
+        "amount": 361622336522.0
+      },
+      "sz399001": {
+        "name": "深证成指",
+        "price": 14115.141,
+        "change_pct": 1.5,
+        "volume": 29192584180.0,
+        "amount": 502684852396.16
+      },
+      "sz399006": {
+        "name": "创业板指",
+        "price": 3299.597,
+        "change_pct": 1.95,
+        "volume": 9182441070.0,
+        "amount": 240617630803.78
+      }
+    },
+    "holdings": [
+      {
+        "code": "601318",
+        "name": "中国平安",
+        "price": 68.1,
+        "open": 67.45,
+        "high": 68.19,
+        "low": 67.11,
+        "prev_close": 66.74,
+        "change_pct": 2.04,
+        "volume": 31970417,
+        "amount": 2161705798.0,
+        "quantity": 2200,
+        "cost_price": 66.74,
+        "pnl_from_cost_pct": 2.04,
+        "market_value": 149820.0
+      },
+      {
+        "code": "300896",
+        "name": "爱美客",
+        "price": 153.45,
+        "open": 151.92,
+        "high": 154.55,
+        "low": 151.28,
+        "prev_close": 151.75,
+        "change_pct": 1.12,
+        "volume": 1957190,
+        "amount": 299039101.94,
+        "quantity": 900,
+        "cost_price": 151.75,
+        "pnl_from_cost_pct": 1.12,
+        "market_value": 138105.0
+      },
+      {
+        "code": "600036",
+        "name": "招商银行",
+        "price": 39.57,
+        "open": 39.6,
+        "high": 39.74,
+        "low": 39.33,
+        "prev_close": 39.48,
+        "change_pct": 0.23,
+        "volume": 22559600,
+        "amount": 891577509.0,
+        "quantity": 3700,
+        "cost_price": 39.48,
+        "pnl_from_cost_pct": 0.23,
+        "market_value": 146409.0
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "price": 78.82,
+        "open": 79.18,
+        "high": 79.34,
+        "low": 78.53,
+        "prev_close": 79.9,
+        "change_pct": -1.35,
+        "volume": 10586300,
+        "amount": 835549289.09,
+        "quantity": 1800,
+        "cost_price": 79.9,
+        "pnl_from_cost_pct": -1.35,
+        "market_value": 141876.0
+      },
+      {
+        "code": "300144",
+        "name": "宋城演艺",
+        "price": 8.82,
+        "open": 8.8,
+        "high": 8.83,
+        "low": 8.7,
+        "prev_close": 8.86,
+        "change_pct": -0.45,
+        "volume": 23335981,
+        "amount": 204806549.6,
+        "quantity": 16900,
+        "cost_price": 8.86,
+        "pnl_from_cost_pct": -0.45,
+        "market_value": 149058.0
+      }
+    ],
+    "cash": 276771.7800000001,
+    "total_value": 1002039.78
+  },
+  {
+    "timestamp": "2026-02-09T10:06:44.220761",
+    "time": "10:06:44",
+    "market": {
+      "sh000001": {
+        "name": "上证指数",
+        "price": 4103.5396,
+        "change_pct": 0.93,
+        "volume": 224153413.0,
+        "amount": 362315226914.0
+      },
+      "sz399001": {
+        "name": "深证成指",
+        "price": 14115.141,
+        "change_pct": 1.5,
+        "volume": 29240849152.0,
+        "amount": 503690483531.572
+      },
+      "sz399006": {
+        "name": "创业板指",
+        "price": 3299.597,
+        "change_pct": 1.95,
+        "volume": 9198229515.0,
+        "amount": 241137997740.6
+      }
+    },
+    "holdings": [
+      {
+        "code": "601318",
+        "name": "中国平安",
+        "price": 68.13,
+        "open": 67.45,
+        "high": 68.19,
+        "low": 67.11,
+        "prev_close": 66.74,
+        "change_pct": 2.08,
+        "volume": 32078717,
+        "amount": 2169082408.0,
+        "quantity": 2200,
+        "cost_price": 66.74,
+        "pnl_from_cost_pct": 2.08,
+        "market_value": 149886.0
+      },
+      {
+        "code": "300896",
+        "name": "爱美客",
+        "price": 153.4,
+        "open": 151.92,
+        "high": 154.55,
+        "low": 151.28,
+        "prev_close": 151.75,
+        "change_pct": 1.09,
+        "volume": 1959290,
+        "amount": 299361326.94,
+        "quantity": 900,
+        "cost_price": 151.75,
+        "pnl_from_cost_pct": 1.09,
+        "market_value": 138060.0
+      },
+      {
+        "code": "600036",
+        "name": "招商银行",
+        "price": 39.57,
+        "open": 39.6,
+        "high": 39.74,
+        "low": 39.33,
+        "prev_close": 39.48,
+        "change_pct": 0.23,
+        "volume": 22593200,
+        "amount": 892907117.0,
+        "quantity": 3700,
+        "cost_price": 39.48,
+        "pnl_from_cost_pct": 0.23,
+        "market_value": 146409.0
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "price": 78.84,
+        "open": 79.18,
+        "high": 79.34,
+        "low": 78.53,
+        "prev_close": 79.9,
+        "change_pct": -1.33,
+        "volume": 10598500,
+        "amount": 836511128.09,
+        "quantity": 1800,
+        "cost_price": 79.9,
+        "pnl_from_cost_pct": -1.33,
+        "market_value": 141912.0
+      },
+      {
+        "code": "300144",
+        "name": "宋城演艺",
+        "price": 8.82,
+        "open": 8.8,
+        "high": 8.83,
+        "low": 8.7,
+        "prev_close": 8.86,
+        "change_pct": -0.45,
+        "volume": 23350219,
+        "amount": 204932087.38,
+        "quantity": 16900,
+        "cost_price": 8.86,
+        "pnl_from_cost_pct": -0.45,
+        "market_value": 149058.0
+      }
+    ],
+    "cash": 276771.7800000001,
+    "total_value": 1002096.78
+  },
+  {
+    "timestamp": "2026-02-09T10:30:21.141452",
+    "time": "10:30:21",
+    "market": {
+      "sh000001": {
+        "name": "上证指数",
+        "price": 4103.5396,
+        "change_pct": 0.93,
+        "volume": 283815116.0,
+        "amount": 466536200785.0
+      },
+      "sz399001": {
+        "name": "深证成指",
+        "price": 14115.141,
+        "change_pct": 1.5,
+        "volume": 36814112655.0,
+        "amount": 646194862087.81
+      },
+      "sz399006": {
+        "name": "创业板指",
+        "price": 3299.597,
+        "change_pct": 1.95,
+        "volume": 11690203276.0,
+        "amount": 311503781295.86
+      }
+    },
+    "holdings": [
+      {
+        "code": "601318",
+        "name": "中国平安",
+        "price": 68.73,
+        "open": 67.45,
+        "high": 69.06,
+        "low": 67.11,
+        "prev_close": 66.74,
+        "change_pct": 2.98,
+        "volume": 54012419,
+        "amount": 3673415193.0,
+        "quantity": 2200,
+        "cost_price": 66.74,
+        "pnl_from_cost_pct": 2.98,
+        "market_value": 151206.0
+      },
+      {
+        "code": "300896",
+        "name": "爱美客",
+        "price": 153.0,
+        "open": 151.92,
+        "high": 154.55,
+        "low": 151.28,
+        "prev_close": 151.75,
+        "change_pct": 0.82,
+        "volume": 2245390,
+        "amount": 343219973.56,
+        "quantity": 900,
+        "cost_price": 151.75,
+        "pnl_from_cost_pct": 0.82,
+        "market_value": 137700.0
+      },
+      {
+        "code": "600036",
+        "name": "招商银行",
+        "price": 39.51,
+        "open": 39.6,
+        "high": 39.74,
+        "low": 39.33,
+        "prev_close": 39.48,
+        "change_pct": 0.08,
+        "volume": 29597969,
+        "amount": 1170060521.0,
+        "quantity": 3700,
+        "cost_price": 39.48,
+        "pnl_from_cost_pct": 0.08,
+        "market_value": 146187.0
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "price": 78.89,
+        "open": 79.18,
+        "high": 79.34,
+        "low": 78.53,
+        "prev_close": 79.9,
+        "change_pct": -1.26,
+        "volume": 13696792,
+        "amount": 1080955064.49,
+        "quantity": 1800,
+        "cost_price": 79.9,
+        "pnl_from_cost_pct": -1.26,
+        "market_value": 142002.0
+      },
+      {
+        "code": "300144",
+        "name": "宋城演艺",
+        "price": 8.83,
+        "open": 8.8,
+        "high": 8.88,
+        "low": 8.7,
+        "prev_close": 8.86,
+        "change_pct": -0.34,
+        "volume": 31588619,
+        "amount": 277823426.38,
+        "quantity": 16900,
+        "cost_price": 8.86,
+        "pnl_from_cost_pct": -0.34,
+        "market_value": 149227.0
+      }
+    ],
+    "cash": 276771.7800000001,
+    "total_value": 1003093.78
+  },
+  {
+    "timestamp": "2026-02-09T11:00:05.244434",
+    "time": "11:00:05",
+    "market": {
+      "sh000001": {
+        "name": "上证指数",
+        "price": 4103.5396,
+        "change_pct": 0.93,
+        "volume": 334872112.0,
+        "amount": 553750858074.0
+      },
+      "sz399001": {
+        "name": "深证成指",
+        "price": 14115.141,
+        "change_pct": 1.5,
+        "volume": 43049055263.0,
+        "amount": 768729772960.646
+      },
+      "sz399006": {
+        "name": "创业板指",
+        "price": 3299.597,
+        "change_pct": 1.95,
+        "volume": 13764174748.0,
+        "amount": 376440499701.33
+      }
+    },
+    "holdings": [
+      {
+        "code": "601318",
+        "name": "中国平安",
+        "price": 68.5,
+        "open": 67.45,
+        "high": 69.1,
+        "low": 67.11,
+        "prev_close": 66.74,
+        "change_pct": 2.64,
+        "volume": 65991938,
+        "amount": 4498450610.0,
+        "quantity": 1100,
+        "cost_price": 66.74,
+        "pnl_from_cost_pct": 2.64,
+        "market_value": 75350.0
+      },
+      {
+        "code": "300896",
+        "name": "爱美客",
+        "price": 153.03,
+        "open": 151.92,
+        "high": 154.55,
+        "low": 151.28,
+        "prev_close": 151.75,
+        "change_pct": 0.84,
+        "volume": 2533638,
+        "amount": 387340964.92,
+        "quantity": 900,
+        "cost_price": 151.75,
+        "pnl_from_cost_pct": 0.84,
+        "market_value": 137727.0
+      },
+      {
+        "code": "600036",
+        "name": "招商银行",
+        "price": 39.41,
+        "open": 39.6,
+        "high": 39.74,
+        "low": 39.33,
+        "prev_close": 39.48,
+        "change_pct": -0.18,
+        "volume": 37137145,
+        "amount": 1467859458.0,
+        "quantity": 3700,
+        "cost_price": 39.48,
+        "pnl_from_cost_pct": -0.18,
+        "market_value": 145817.0
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "price": 78.58,
+        "open": 79.18,
+        "high": 79.34,
+        "low": 78.53,
+        "prev_close": 79.9,
+        "change_pct": -1.65,
+        "volume": 17567900,
+        "amount": 1385857520.03,
+        "quantity": 1800,
+        "cost_price": 79.9,
+        "pnl_from_cost_pct": -1.65,
+        "market_value": 141444.0
+      },
+      {
+        "code": "300144",
+        "name": "宋城演艺",
+        "price": 9.14,
+        "open": 8.8,
+        "high": 9.2,
+        "low": 8.7,
+        "prev_close": 8.86,
+        "change_pct": 3.16,
+        "volume": 61551994,
+        "amount": 548103774.88,
+        "quantity": 16900,
+        "cost_price": 8.86,
+        "pnl_from_cost_pct": 3.16,
+        "market_value": 154466.0
+      }
+    ],
+    "cash": 352498.4800000001,
+    "total_value": 1007302.48
+  },
+  {
+    "timestamp": "2026-02-09T11:30:05.284750",
+    "time": "11:30:05",
+    "market": {
+      "sh000001": {
+        "name": "上证指数",
+        "price": 4103.5396,
+        "change_pct": 0.93,
+        "volume": 373304435.0,
+        "amount": 622570201201.0
+      },
+      "sz399001": {
+        "name": "深证成指",
+        "price": 14115.141,
+        "change_pct": 1.5,
+        "volume": 47969693555.0,
+        "amount": 868410154524.549
+      },
+      "sz399006": {
+        "name": "创业板指",
+        "price": 3299.597,
+        "change_pct": 1.95,
+        "volume": 15407611658.0,
+        "amount": 429372888723.77
+      }
+    },
+    "holdings": [
+      {
+        "code": "601318",
+        "name": "中国平安",
+        "price": 68.61,
+        "open": 67.45,
+        "high": 69.1,
+        "low": 67.11,
+        "prev_close": 66.74,
+        "change_pct": 2.8,
+        "volume": 70936752,
+        "amount": 4837691407.0,
+        "quantity": 1100,
+        "cost_price": 66.74,
+        "pnl_from_cost_pct": 2.8,
+        "market_value": 75471.0
+      },
+      {
+        "code": "300896",
+        "name": "爱美客",
+        "price": 153.85,
+        "open": 151.92,
+        "high": 154.55,
+        "low": 151.28,
+        "prev_close": 151.75,
+        "change_pct": 1.38,
+        "volume": 3121984,
+        "amount": 477565995.02,
+        "quantity": 900,
+        "cost_price": 151.75,
+        "pnl_from_cost_pct": 1.38,
+        "market_value": 138465.0
+      },
+      {
+        "code": "600036",
+        "name": "招商银行",
+        "price": 39.46,
+        "open": 39.6,
+        "high": 39.74,
+        "low": 39.33,
+        "prev_close": 39.48,
+        "change_pct": -0.05,
+        "volume": 42557845,
+        "amount": 1681522621.0,
+        "quantity": 3700,
+        "cost_price": 39.48,
+        "pnl_from_cost_pct": -0.05,
+        "market_value": 146002.0
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "price": 78.55,
+        "open": 79.18,
+        "high": 79.34,
+        "low": 78.41,
+        "prev_close": 79.9,
+        "change_pct": -1.69,
+        "volume": 21309973,
+        "amount": 1679637904.25,
+        "quantity": 1800,
+        "cost_price": 79.9,
+        "pnl_from_cost_pct": -1.69,
+        "market_value": 141390.0
+      },
+      {
+        "code": "300144",
+        "name": "宋城演艺",
+        "price": 9.09,
+        "open": 8.8,
+        "high": 9.2,
+        "low": 8.7,
+        "prev_close": 8.86,
+        "change_pct": 2.6,
+        "volume": 70883794,
+        "amount": 632818936.1,
+        "quantity": 8500,
+        "cost_price": 8.86,
+        "pnl_from_cost_pct": 2.6,
+        "market_value": 77265.0
+      }
+    ],
+    "cash": 429009.1900000001,
+    "total_value": 1007602.19
+  },
+  {
+    "timestamp": "2026-02-09T13:00:42.053832",
+    "time": "13:00:42",
+    "market": {
+      "sh000001": {
+        "name": "上证指数",
+        "price": 4103.5396,
+        "change_pct": 0.93,
+        "volume": 379544953.0,
+        "amount": 632224157271.0
+      },
+      "sz399001": {
+        "name": "深证成指",
+        "price": 14115.141,
+        "change_pct": 1.5,
+        "volume": 48784258378.0,
+        "amount": 882141154387.374
+      },
+      "sz399006": {
+        "name": "创业板指",
+        "price": 3299.597,
+        "change_pct": 1.95,
+        "volume": 15658810526.0,
+        "amount": 435958232179.29
+      }
+    },
+    "holdings": [
+      {
+        "code": "601318",
+        "name": "中国平安",
+        "price": 68.33,
+        "open": 67.45,
+        "high": 69.1,
+        "low": 67.11,
+        "prev_close": 66.74,
+        "change_pct": 2.38,
+        "volume": 72821652,
+        "amount": 4966539349.0,
+        "quantity": 1100,
+        "cost_price": 66.74,
+        "pnl_from_cost_pct": 2.38,
+        "market_value": 75163.0
+      },
+      {
+        "code": "300896",
+        "name": "爱美客",
+        "price": 153.33,
+        "open": 151.92,
+        "high": 154.55,
+        "low": 151.28,
+        "prev_close": 151.75,
+        "change_pct": 1.04,
+        "volume": 3173784,
+        "amount": 485536102.02,
+        "quantity": 900,
+        "cost_price": 151.75,
+        "pnl_from_cost_pct": 1.04,
+        "market_value": 137997.0
+      },
+      {
+        "code": "600036",
+        "name": "招商银行",
+        "price": 39.37,
+        "open": 39.6,
+        "high": 39.74,
+        "low": 39.33,
+        "prev_close": 39.48,
+        "change_pct": -0.28,
+        "volume": 43914545,
+        "amount": 1734990641.0,
+        "quantity": 3700,
+        "cost_price": 39.48,
+        "pnl_from_cost_pct": -0.28,
+        "market_value": 145669.0
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "price": 78.49,
+        "open": 79.18,
+        "high": 79.34,
+        "low": 78.41,
+        "prev_close": 79.9,
+        "change_pct": -1.76,
+        "volume": 21876700,
+        "amount": 1724130681.75,
+        "quantity": 1800,
+        "cost_price": 79.9,
+        "pnl_from_cost_pct": -1.76,
+        "market_value": 141282.0
+      },
+      {
+        "code": "300144",
+        "name": "宋城演艺",
+        "price": 9.06,
+        "open": 8.8,
+        "high": 9.2,
+        "low": 8.7,
+        "prev_close": 8.86,
+        "change_pct": 2.26,
+        "volume": 71482994,
+        "amount": 638256844.1,
+        "quantity": 8500,
+        "cost_price": 8.86,
+        "pnl_from_cost_pct": 2.26,
+        "market_value": 77010.0
+      }
+    ],
+    "cash": 429009.1900000001,
+    "total_value": 1006130.19
+  },
+  {
+    "timestamp": "2026-02-09T13:30:03.691880",
+    "time": "13:30:03",
+    "market": {
+      "sh000001": {
+        "name": "上证指数",
+        "price": 4103.5396,
+        "change_pct": 0.93,
+        "volume": 426003290.0,
+        "amount": 712679670314.0
+      },
+      "sz399001": {
+        "name": "深证成指",
+        "price": 14115.141,
+        "change_pct": 1.5,
+        "volume": 54466142726.0,
+        "amount": 985571796286.18
+      },
+      "sz399006": {
+        "name": "创业板指",
+        "price": 3299.597,
+        "change_pct": 1.95,
+        "volume": 17697621363.0,
+        "amount": 490062864070.8
+      }
+    },
+    "holdings": [
+      {
+        "code": "601318",
+        "name": "中国平安",
+        "price": 68.4,
+        "open": 67.45,
+        "high": 69.1,
+        "low": 67.11,
+        "prev_close": 66.74,
+        "change_pct": 2.49,
+        "volume": 78728752,
+        "amount": 5369760492.0,
+        "quantity": 1100,
+        "cost_price": 66.74,
+        "pnl_from_cost_pct": 2.49,
+        "market_value": 75240.0
+      },
+      {
+        "code": "300896",
+        "name": "爱美客",
+        "price": 154.1,
+        "open": 151.92,
+        "high": 154.55,
+        "low": 151.28,
+        "prev_close": 151.75,
+        "change_pct": 1.55,
+        "volume": 3428760,
+        "amount": 524672833.7,
+        "quantity": 900,
+        "cost_price": 151.75,
+        "pnl_from_cost_pct": 1.55,
+        "market_value": 138690.0
+      },
+      {
+        "code": "600036",
+        "name": "招商银行",
+        "price": 39.39,
+        "open": 39.6,
+        "high": 39.74,
+        "low": 39.33,
+        "prev_close": 39.48,
+        "change_pct": -0.23,
+        "volume": 49367514,
+        "amount": 1949803053.0,
+        "quantity": 3700,
+        "cost_price": 39.48,
+        "pnl_from_cost_pct": -0.23,
+        "market_value": 145743.0
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "price": 78.65,
+        "open": 79.18,
+        "high": 79.34,
+        "low": 78.41,
+        "prev_close": 79.9,
+        "change_pct": -1.56,
+        "volume": 24274800,
+        "amount": 1912594156.75,
+        "quantity": 1800,
+        "cost_price": 79.9,
+        "pnl_from_cost_pct": -1.56,
+        "market_value": 141570.0
+      },
+      {
+        "code": "300144",
+        "name": "宋城演艺",
+        "price": 9.04,
+        "open": 8.8,
+        "high": 9.2,
+        "low": 8.7,
+        "prev_close": 8.86,
+        "change_pct": 2.03,
+        "volume": 76920908,
+        "amount": 687476549.66,
+        "quantity": 4300,
+        "cost_price": 8.86,
+        "pnl_from_cost_pct": 2.03,
+        "market_value": 38872.0
+      }
+    ],
+    "cash": 467054.8100000001,
+    "total_value": 1007169.81
+  },
+  {
+    "timestamp": "2026-02-09T14:00:05.494471",
+    "time": "14:00:05",
+    "market": {
+      "sh000001": {
+        "name": "上证指数",
+        "price": 4103.5396,
+        "change_pct": 0.93,
+        "volume": 465817115.0,
+        "amount": 777495740685.0
+      },
+      "sz399001": {
+        "name": "深证成指",
+        "price": 14115.141,
+        "change_pct": 1.5,
+        "volume": 59122976595.0,
+        "amount": 1069105279875.6
+      },
+      "sz399006": {
+        "name": "创业板指",
+        "price": 3299.597,
+        "change_pct": 1.95,
+        "volume": 19165703867.0,
+        "amount": 529261084634.92
+      }
+    },
+    "holdings": [
+      {
+        "code": "601318",
+        "name": "中国平安",
+        "price": 68.3,
+        "open": 67.45,
+        "high": 69.1,
+        "low": 67.11,
+        "prev_close": 66.74,
+        "change_pct": 2.34,
+        "volume": 83532952,
+        "amount": 5698490416.0,
+        "quantity": 1100,
+        "cost_price": 66.74,
+        "pnl_from_cost_pct": 2.34,
+        "market_value": 75130.0
+      },
+      {
+        "code": "300896",
+        "name": "爱美客",
+        "price": 153.94,
+        "open": 151.92,
+        "high": 154.55,
+        "low": 151.28,
+        "prev_close": 151.75,
+        "change_pct": 1.44,
+        "volume": 3777220,
+        "amount": 578284385.5,
+        "quantity": 900,
+        "cost_price": 151.75,
+        "pnl_from_cost_pct": 1.44,
+        "market_value": 138546.0
+      },
+      {
+        "code": "600036",
+        "name": "招商银行",
+        "price": 39.41,
+        "open": 39.6,
+        "high": 39.74,
+        "low": 39.33,
+        "prev_close": 39.48,
+        "change_pct": -0.18,
+        "volume": 54104014,
+        "amount": 2136521986.0,
+        "quantity": 3700,
+        "cost_price": 39.48,
+        "pnl_from_cost_pct": -0.18,
+        "market_value": 145817.0
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "price": 78.64,
+        "open": 79.18,
+        "high": 79.34,
+        "low": 78.41,
+        "prev_close": 79.9,
+        "change_pct": -1.58,
+        "volume": 27323155,
+        "amount": 2152528675.88,
+        "quantity": 1800,
+        "cost_price": 79.9,
+        "pnl_from_cost_pct": -1.58,
+        "market_value": 141552.0
+      },
+      {
+        "code": "300144",
+        "name": "宋城演艺",
+        "price": 9.03,
+        "open": 8.8,
+        "high": 9.2,
+        "low": 8.7,
+        "prev_close": 8.86,
+        "change_pct": 1.92,
+        "volume": 81369788,
+        "amount": 727627622.48,
+        "quantity": 2200,
+        "cost_price": 8.86,
+        "pnl_from_cost_pct": 1.92,
+        "market_value": 19866.0
+      }
+    ],
+    "cash": 486014.4500000001,
+    "total_value": 1006925.45
+  },
+  {
+    "timestamp": "2026-02-09T14:30:07.160344",
+    "time": "14:30:07",
+    "market": {
+      "sh000001": {
+        "name": "上证指数",
+        "price": 4103.5396,
+        "change_pct": 0.93,
+        "volume": 504583477.0,
+        "amount": 841976567098.0
+      },
+      "sz399001": {
+        "name": "深证成指",
+        "price": 14115.141,
+        "change_pct": 1.5,
+        "volume": 63755509345.0,
+        "amount": 1151019719708.673
+      },
+      "sz399006": {
+        "name": "创业板指",
+        "price": 3299.597,
+        "change_pct": 1.95,
+        "volume": 20674829781.0,
+        "amount": 568266359172.37
+      }
+    },
+    "holdings": [
+      {
+        "code": "601318",
+        "name": "中国平安",
+        "price": 68.41,
+        "open": 67.45,
+        "high": 69.1,
+        "low": 67.11,
+        "prev_close": 66.74,
+        "change_pct": 2.5,
+        "volume": 87911352,
+        "amount": 5997651976.0,
+        "quantity": 1100,
+        "cost_price": 66.74,
+        "pnl_from_cost_pct": 2.5,
+        "market_value": 75251.0
+      },
+      {
+        "code": "300896",
+        "name": "爱美客",
+        "price": 153.66,
+        "open": 151.92,
+        "high": 154.55,
+        "low": 151.28,
+        "prev_close": 151.75,
+        "change_pct": 1.26,
+        "volume": 4074680,
+        "amount": 623981635.7,
+        "quantity": 900,
+        "cost_price": 151.75,
+        "pnl_from_cost_pct": 1.26,
+        "market_value": 138294.0
+      },
+      {
+        "code": "600036",
+        "name": "招商银行",
+        "price": 39.42,
+        "open": 39.6,
+        "high": 39.74,
+        "low": 39.33,
+        "prev_close": 39.48,
+        "change_pct": -0.15,
+        "volume": 58564514,
+        "amount": 2312351376.0,
+        "quantity": 3700,
+        "cost_price": 39.48,
+        "pnl_from_cost_pct": -0.15,
+        "market_value": 145854.0
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "price": 78.79,
+        "open": 79.18,
+        "high": 79.34,
+        "low": 78.41,
+        "prev_close": 79.9,
+        "change_pct": -1.39,
+        "volume": 30040073,
+        "amount": 2366500892.08,
+        "quantity": 1800,
+        "cost_price": 79.9,
+        "pnl_from_cost_pct": -1.39,
+        "market_value": 141822.0
+      },
+      {
+        "code": "300144",
+        "name": "宋城演艺",
+        "price": 9.01,
+        "open": 8.8,
+        "high": 9.2,
+        "low": 8.7,
+        "prev_close": 8.86,
+        "change_pct": 1.69,
+        "volume": 87327504,
+        "amount": 781284116.32,
+        "quantity": 1100,
+        "cost_price": 8.86,
+        "pnl_from_cost_pct": 1.69,
+        "market_value": 9911.0
+      }
+    ],
+    "cash": 495943.3100000001,
+    "total_value": 1007075.31
+  },
+  {
+    "timestamp": "2026-02-09T15:00:06.941893",
+    "time": "15:00:06",
+    "market": {
+      "sh000001": {
+        "name": "上证指数",
+        "price": 4103.5396,
+        "change_pct": 0.93,
+        "volume": 572632582.0,
+        "amount": 949726335966.0
+      },
+      "sz399001": {
+        "name": "深证成指",
+        "price": 14115.141,
+        "change_pct": 1.5,
+        "volume": 72636960194.0,
+        "amount": 1299746937980.243
+      },
+      "sz399006": {
+        "name": "创业板指",
+        "price": 3299.597,
+        "change_pct": 1.95,
+        "volume": 23531193301.0,
+        "amount": 639292445693.8
+      }
+    },
+    "holdings": [
+      {
+        "code": "601318",
+        "name": "中国平安",
+        "price": 68.7,
+        "open": 67.45,
+        "high": 69.1,
+        "low": 67.11,
+        "prev_close": 66.74,
+        "change_pct": 2.94,
+        "volume": 102123690,
+        "amount": 6973342327.0,
+        "quantity": 1100,
+        "cost_price": 66.74,
+        "pnl_from_cost_pct": 2.94,
+        "market_value": 75570.0
+      },
+      {
+        "code": "300896",
+        "name": "爱美客",
+        "price": 153.88,
+        "open": 151.92,
+        "high": 154.55,
+        "low": 151.28,
+        "prev_close": 151.75,
+        "change_pct": 1.4,
+        "volume": 4543636,
+        "amount": 696099910.02,
+        "quantity": 900,
+        "cost_price": 151.75,
+        "pnl_from_cost_pct": 1.4,
+        "market_value": 138492.0
+      },
+      {
+        "code": "600036",
+        "name": "招商银行",
+        "price": 39.48,
+        "open": 39.6,
+        "high": 39.74,
+        "low": 39.33,
+        "prev_close": 39.48,
+        "change_pct": 0.0,
+        "volume": 65894891,
+        "amount": 2601539089.0,
+        "quantity": 3700,
+        "cost_price": 39.48,
+        "pnl_from_cost_pct": 0.0,
+        "market_value": 146076.0
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "price": 79.16,
+        "open": 79.18,
+        "high": 79.34,
+        "low": 78.41,
+        "prev_close": 79.9,
+        "change_pct": -0.93,
+        "volume": 33466953,
+        "amount": 2637206616.13,
+        "quantity": 1800,
+        "cost_price": 79.9,
+        "pnl_from_cost_pct": -0.93,
+        "market_value": 142488.0
+      },
+      {
+        "code": "300144",
+        "name": "宋城演艺",
+        "price": 9.01,
+        "open": 8.8,
+        "high": 9.2,
+        "low": 8.7,
+        "prev_close": 8.86,
+        "change_pct": 1.69,
+        "volume": 95989204,
+        "amount": 859393716.99,
+        "quantity": 1100,
+        "cost_price": 8.86,
+        "pnl_from_cost_pct": 1.69,
+        "market_value": 9911.0
+      }
+    ],
+    "cash": 495943.3100000001,
+    "total_value": 1008480.31
+  }
+]

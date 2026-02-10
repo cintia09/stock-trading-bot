@@ -1,0 +1,138 @@
+{
+  "overall_sentiment": 43,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "银行",
+      5,
+      0.2
+    ],
+    [
+      "光伏",
+      4,
+      0.75
+    ],
+    [
+      "AI",
+      3,
+      1.33
+    ],
+    [
+      "房地产",
+      2,
+      0.5
+    ],
+    [
+      "贵金属",
+      1,
+      2.0
+    ],
+    [
+      "新能源车",
+      1,
+      0.0
+    ],
+    [
+      "消费",
+      1,
+      2.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "AI产业链情绪持续回暖 智谱大涨超9%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "大涨",
+          "回暖"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "2026-02-09 10:25:10"
+    },
+    {
+      "title": "歌礼制药-B早盘涨超8% 获GIC斥资7.81亿港元增持歌礼制药",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增持",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770604021"
+    },
+    {
+      "title": "美元走弱与央行需求共振支撑金价，但美伊谈判或压制短期上行空间",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "反弹",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1770603060"
+    },
+    {
+      "title": "中信建投期货：2月9日工业品早报",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "反弹",
+          "主力"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "消费"
+      ],
+      "time": "1770602991"
+    },
+    {
+      "title": "阅文集团盘中涨超9% 机构看好阅文在AI应用浪潮里的发展良机",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "看好"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770602222"
+    },
+    {
+      "title": "美图公司盘初高开近6% 预计去年经调整归母净利润同比增长约60%至66%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770601398"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-09T10:31:04.670928"
+}

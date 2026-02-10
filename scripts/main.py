@@ -136,8 +136,8 @@ def run_full_cycle():
     print("\n" + report)
     
     return {
-        "trades": len(result.get("trades", [])),
-        "account": result.get("account", {}),
+        "trades": len(result.get("trades", [])) if result else 0,
+        "account": result.get("account", {}) if result else {},
         "report": report
     }
 

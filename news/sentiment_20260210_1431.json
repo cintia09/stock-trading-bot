@@ -1,0 +1,100 @@
+{
+  "overall_sentiment": 24,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      8,
+      0.88
+    ],
+    [
+      "银行",
+      3,
+      0.33
+    ],
+    [
+      "医药",
+      3,
+      1.0
+    ],
+    [
+      "新能源车",
+      2,
+      1.0
+    ],
+    [
+      "消费",
+      1,
+      -1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "小摩：降福耀玻璃评级至“中性” 行业首选敏实集团",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "新能源车"
+      ],
+      "time": "1770704710"
+    },
+    {
+      "title": "大面积涨停！603000，1分钟封板！超23万手封死",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "涨停",
+          "反弹"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI",
+        "医药"
+      ],
+      "time": "1770696585"
+    },
+    {
+      "title": "富瑞：美图公司去年经调整盈利指引中位数符预期 予“买入”评级",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "增长",
+          "盈利",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770696492"
+    },
+    {
+      "title": "瑞银：看好敏实集团机器人业务布局 目标价升至45.5港元",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "看好",
+          "盈利"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770696443"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-10T14:31:05.701821"
+}

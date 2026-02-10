@@ -1,19 +1,19 @@
 {
   "initial_capital": 1000000,
-  "current_cash": 276771.7800000001,
-  "total_value": 999877.78,
+  "current_cash": 381273.0400000001,
+  "total_value": 1005270.19,
   "created_at": "2026-02-06T00:23:00+08:00",
-  "last_updated": "2026-02-06T09:34:29.330127",
+  "last_updated": "2026-02-10T15:00:07.604626",
   "holdings": [
     {
       "code": "601318",
       "name": "中国平安",
-      "quantity": 2200,
+      "quantity": 1100,
       "cost_price": 66.74,
       "last_buy_date": "2026-02-06",
-      "market_value": 147180.0,
-      "current_price": 66.9,
-      "pnl_pct": 0.24
+      "market_value": 74998.0,
+      "current_price": 68.18,
+      "pnl_pct": 2.16
     },
     {
       "code": "300896",
@@ -21,9 +21,9 @@
       "quantity": 900,
       "cost_price": 151.75,
       "last_buy_date": "2026-02-06",
-      "market_value": 136215.0,
-      "current_price": 151.35,
-      "pnl_pct": -0.26
+      "market_value": 134487.0,
+      "current_price": 149.43,
+      "pnl_pct": -1.53
     },
     {
       "code": "600036",
@@ -31,9 +31,9 @@
       "quantity": 3700,
       "cost_price": 39.48,
       "last_buy_date": "2026-02-06",
-      "market_value": 146261.0,
-      "current_price": 39.53,
-      "pnl_pct": 0.13
+      "market_value": 145484.0,
+      "current_price": 39.32,
+      "pnl_pct": -0.41
     },
     {
       "code": "000333",
@@ -41,19 +41,29 @@
       "quantity": 1800,
       "cost_price": 79.9,
       "last_buy_date": "2026-02-06",
-      "market_value": 144054.0,
-      "current_price": 80.03,
-      "pnl_pct": 0.16
+      "market_value": 144144.0,
+      "current_price": 80.08,
+      "pnl_pct": 0.23
     },
     {
       "code": "300144",
       "name": "宋城演艺",
-      "quantity": 16900,
+      "quantity": 235,
       "cost_price": 8.86,
       "last_buy_date": "2026-02-06",
-      "market_value": 149396.0,
-      "current_price": 8.84,
-      "pnl_pct": -0.23
+      "market_value": 3122.2,
+      "current_price": 9.32,
+      "pnl_pct": 5.19
+    },
+    {
+      "code": "300251",
+      "name": "光线传媒",
+      "quantity": 4800,
+      "cost_price": 25.567,
+      "last_buy_date": "2026-02-10",
+      "market_value": 122688.0,
+      "current_price": 25.56,
+      "pnl_pct": -0.03
     }
   ],
   "frozen_sells": [
@@ -81,10 +91,15 @@
       "code": "300144",
       "quantity": 16900,
       "buy_date": "2026-02-06"
+    },
+    {
+      "code": "300251",
+      "quantity": 4800,
+      "buy_date": "2026-02-10"
     }
   ],
   "daily_pnl": 0,
-  "total_pnl": -122.22,
-  "total_pnl_pct": -0.01,
+  "total_pnl": 5270.19,
+  "total_pnl_pct": 0.53,
   "trade_count": 0
 }

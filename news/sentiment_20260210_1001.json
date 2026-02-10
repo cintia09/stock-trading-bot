@@ -1,0 +1,76 @@
+{
+  "overall_sentiment": 28,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      6,
+      0.5
+    ],
+    [
+      "贵金属",
+      4,
+      0.5
+    ],
+    [
+      "银行",
+      4,
+      0.5
+    ],
+    [
+      "医药",
+      3,
+      0.33
+    ],
+    [
+      "新能源车",
+      2,
+      1.0
+    ],
+    [
+      "消费",
+      1,
+      0.0
+    ],
+    [
+      "房地产",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "阅文集团早盘高开逾6% 公司内部信明确加速布局AI漫剧",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "大涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770687407"
+    },
+    {
+      "title": "光大期货：2月10日矿钢煤焦日报",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "弱势",
+          "下跌"
+        ]
+      },
+      "sectors": [],
+      "time": "1770685770"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-10T10:01:04.410285"
+}

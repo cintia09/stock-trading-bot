@@ -1,0 +1,50 @@
+{
+  "overall_sentiment": 19,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "贵金属",
+      3,
+      0.33
+    ],
+    [
+      "医药",
+      3,
+      0.0
+    ],
+    [
+      "新能源车",
+      2,
+      0.5
+    ],
+    [
+      "AI",
+      2,
+      0.0
+    ],
+    [
+      "银行",
+      2,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "光大期货：2月10日矿钢煤焦日报",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "弱势",
+          "下跌"
+        ]
+      },
+      "sectors": [],
+      "time": "1770685770"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-10T09:31:04.774378"
+}

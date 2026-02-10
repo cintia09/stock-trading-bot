@@ -1,0 +1,109 @@
+{
+  "overall_sentiment": 42,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "贵金属",
+      5,
+      1.4
+    ],
+    [
+      "银行",
+      3,
+      -0.33
+    ],
+    [
+      "AI",
+      2,
+      2.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "阅文集团盘中涨超9% 机构看好阅文在AI应用浪潮里的发展良机",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "看好"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770602222"
+    },
+    {
+      "title": "美图公司盘初高开近6% 预计去年经调整归母净利润同比增长约60%至66%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770601398"
+    },
+    {
+      "title": "高市早苗胜选助推日元贬值，美联储独立性疑云再起：多重利好支撑金价重回5000关口",
+      "sentiment": {
+        "score": 5,
+        "label": "very_positive",
+        "positive": [
+          "利好",
+          "上涨",
+          "突破",
+          "买入",
+          "强势"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1770600292"
+    },
+    {
+      "title": "快讯：恒指高开1.59% 科指涨1.9% 科网股、黄金股普涨 芯片股高开 智能驾驶概念股活跃 文远知行涨超8%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "反弹",
+          "回暖"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属",
+        "AI"
+      ],
+      "time": "1770600051"
+    },
+    {
+      "title": "高市早苗赢得议会选举，日股大涨国债下跌",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "飙升",
+          "新高",
+          "大涨"
+        ],
+        "negative": [
+          "下跌"
+        ]
+      },
+      "sectors": [],
+      "time": "1770599988"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-09T10:01:21.774035"
+}

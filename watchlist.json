@@ -173,8 +173,63 @@
       "reason": "旅游酒店龙头",
       "priority": "B",
       "added_at": "2026-02-06T00:53:15.651797"
+    },
+    {
+      "code": "688041",
+      "name": "海光信息",
+      "market": "SH",
+      "latest_price": 242.68,
+      "price_date": "2026-02-07",
+      "change_pct": 1.89,
+      "reason": "北向资金",
+      "priority": "A",
+      "added_at": "2026-02-07T13:12:40.424875"
+    },
+    {
+      "code": "300666",
+      "name": "江丰电子",
+      "market": "SZ",
+      "latest_price": 123.61,
+      "price_date": "2026-02-07",
+      "change_pct": 8.93,
+      "reason": "北向资金",
+      "priority": "B",
+      "added_at": "2026-02-07T13:12:40.424889"
+    },
+    {
+      "code": "000657",
+      "name": "中钨高新",
+      "market": "SZ",
+      "latest_price": 47.93,
+      "price_date": "2026-02-07",
+      "change_pct": 5.46,
+      "reason": "北向资金",
+      "priority": "B",
+      "added_at": "2026-02-07T13:12:40.424897"
+    },
+    {
+      "code": "300750",
+      "name": "宁德时代",
+      "market": "SZ",
+      "latest_price": 369.11,
+      "price_date": "2026-02-07",
+      "change_pct": 1.7,
+      "reason": "成交额榜",
+      "priority": "B",
+      "added_at": "2026-02-07T13:12:40.424904"
+    },
+    {
+      "code": "300394",
+      "name": "天孚通信",
+      "market": "SZ",
+      "latest_price": 252.97,
+      "price_date": "2026-02-07",
+      "change_pct": 0.42,
+      "reason": "成交额榜",
+      "priority": "B",
+      "added_at": "2026-02-07T13:12:40.424909"
     }
   ],
-  "last_updated": "2026-02-06T00:53:15.651800",
+  "last_updated": "2026-02-10T15:32:46.579768",
   "update_source": "新浪财经实时行情"
 }

@@ -1,0 +1,132 @@
+{
+  "overall_sentiment": 32,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "贵金属",
+      8,
+      0.25
+    ],
+    [
+      "AI",
+      8,
+      0.5
+    ],
+    [
+      "银行",
+      4,
+      0.25
+    ],
+    [
+      "消费",
+      3,
+      0.33
+    ],
+    [
+      "光伏",
+      3,
+      0.67
+    ],
+    [
+      "新能源车",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "300364，“一”字涨停！人形机器人将集中亮相马年春晚，融资客抢筹7只业绩增长股",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-02-09 12:22:46"
+    },
+    {
+      "title": "建滔积层板午前涨逾8% 花旗首予“增持”评级",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "增持",
+          "上涨",
+          "盈利"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770609278"
+    },
+    {
+      "title": "威胜控股午前涨超4%再创新高 拟拆分惟远能源赴港上市",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "上涨",
+          "新高",
+          "创新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770609110"
+    },
+    {
+      "title": "长飞光纤光缆午前涨逾16% 机构看好公司业绩随光纤价格上涨改善",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "上涨",
+          "新高",
+          "看好"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770608014"
+    },
+    {
+      "title": "黄金回收、“以旧换新”业务量大涨 这些套路要小心",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "新高",
+          "大涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1770606551"
+    },
+    {
+      "title": "金山云早盘涨逾8% 公司有望受惠持续强劲LLM训练需求",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "扩张"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770604892"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-09T13:01:04.604091"
+}

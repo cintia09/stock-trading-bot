@@ -1,0 +1,152 @@
+{
+  "overall_sentiment": 48,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      8,
+      0.88
+    ],
+    [
+      "消费",
+      6,
+      0.83
+    ],
+    [
+      "贵金属",
+      5,
+      1.2
+    ],
+    [
+      "银行",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "影视ETF（516620）点评——游戏+AI双轮驱动，板块强势反弹，春节催化在即",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "反弹",
+          "强势"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "2026-02-09 13:26:03"
+    },
+    {
+      "title": "大洋集团午后涨超13% 拟成立合资公司进军AI陪伴机器人赛道",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "大涨",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770614371"
+    },
+    {
+      "title": "美银证券：美图公司去年经调整净利微胜预期 维持“买入”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770613477"
+    },
+    {
+      "title": "美银证券：维持信达生物“买入”评级 目标价113.5港元",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770613322"
+    },
+    {
+      "title": "建滔积层板午前涨逾8% 花旗首予“增持”评级",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "增持",
+          "盈利",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770609278"
+    },
+    {
+      "title": "威胜控股午前涨超4%再创新高 拟拆分惟远能源赴港上市",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "创新高",
+          "上涨",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770609110"
+    },
+    {
+      "title": "长飞光纤光缆午前涨逾16% 机构看好公司业绩随光纤价格上涨改善",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "看好",
+          "上涨",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770608014"
+    },
+    {
+      "title": "黄金回收、“以旧换新”业务量大涨 这些套路要小心",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "大涨",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1770606551"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-09T13:31:13.009875"
+}

@@ -1,0 +1,124 @@
+{
+  "overall_sentiment": 31,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "贵金属",
+      3,
+      0.33
+    ],
+    [
+      "AI",
+      3,
+      0.67
+    ],
+    [
+      "银行",
+      2,
+      1.0
+    ],
+    [
+      "医药",
+      2,
+      0.0
+    ],
+    [
+      "消费",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "商业航天概念回暖 再升科技涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "涨停",
+          "回暖"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-02-11 09:58:57"
+    },
+    {
+      "title": "影视院线板块回调，横店影视、金逸影视跌停",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "回调",
+          "跌停"
+        ]
+      },
+      "sectors": [],
+      "time": "2026-02-11 09:57:25"
+    },
+    {
+      "title": "药明生物发盈喜后涨超2% 预期2025年净利润同比增长46.3%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770774189"
+    },
+    {
+      "title": "华泰期货：烧碱昨日上涨 节后市场情绪有望进一步回暖",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "主力",
+          "上涨",
+          "回暖"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770773628"
+    },
+    {
+      "title": "韩国2月前10天出口同比增长44.4%，芯片出口飙升137.6%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "飙升",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770772608"
+    },
+    {
+      "title": "光大期货：2月11日农产品日报",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "新高",
+          "创新高",
+          "强势"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770772380"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-11T10:01:11.233161"
+}

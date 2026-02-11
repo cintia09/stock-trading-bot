@@ -1,0 +1,72 @@
+{
+  "overall_sentiment": 18,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "医药",
+      3,
+      -0.33
+    ],
+    [
+      "AI",
+      2,
+      1.0
+    ],
+    [
+      "贵金属",
+      1,
+      0.0
+    ],
+    [
+      "消费",
+      1,
+      0.0
+    ],
+    [
+      "银行",
+      1,
+      1.0
+    ],
+    [
+      "光伏",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "韩国2月前10天出口同比增长44.4%，芯片出口飙升137.6%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "飙升"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770772608"
+    },
+    {
+      "title": "光大期货：2月11日农产品日报",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "强势",
+          "新高",
+          "创新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770772380"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-11T09:31:11.400020"
+}

@@ -1,9 +1,9 @@
 {
   "initial_capital": 1000000,
-  "current_cash": 381273.0400000001,
-  "total_value": 1005270.19,
+  "current_cash": 506415.2400000001,
+  "total_value": 1013987.29,
   "created_at": "2026-02-06T00:23:00+08:00",
-  "last_updated": "2026-02-10T15:00:07.604626",
+  "last_updated": "2026-02-11T14:31:25.095067",
   "holdings": [
     {
       "code": "601318",
@@ -11,9 +11,9 @@
       "quantity": 1100,
       "cost_price": 66.74,
       "last_buy_date": "2026-02-06",
-      "market_value": 74998.0,
-      "current_price": 68.18,
-      "pnl_pct": 2.16
+      "market_value": 74305.0,
+      "current_price": 67.55,
+      "pnl_pct": 1.21
     },
     {
       "code": "300896",
@@ -21,9 +21,9 @@
       "quantity": 900,
       "cost_price": 151.75,
       "last_buy_date": "2026-02-06",
-      "market_value": 134487.0,
-      "current_price": 149.43,
-      "pnl_pct": -1.53
+      "market_value": 134568.0,
+      "current_price": 149.52,
+      "pnl_pct": -1.47
     },
     {
       "code": "600036",
@@ -31,9 +31,9 @@
       "quantity": 3700,
       "cost_price": 39.48,
       "last_buy_date": "2026-02-06",
-      "market_value": 145484.0,
-      "current_price": 39.32,
-      "pnl_pct": -0.41
+      "market_value": 145854.0,
+      "current_price": 39.42,
+      "pnl_pct": -0.15
     },
     {
       "code": "000333",
@@ -41,9 +41,9 @@
       "quantity": 1800,
       "cost_price": 79.9,
       "last_buy_date": "2026-02-06",
-      "market_value": 144144.0,
-      "current_price": 80.08,
-      "pnl_pct": 0.23
+      "market_value": 143514.0,
+      "current_price": 79.73,
+      "pnl_pct": -0.21
     },
     {
       "code": "300144",
@@ -51,19 +51,19 @@
       "quantity": 235,
       "cost_price": 8.86,
       "last_buy_date": "2026-02-06",
-      "market_value": 3122.2,
-      "current_price": 9.32,
-      "pnl_pct": 5.19
+      "market_value": 2122.05,
+      "current_price": 9.03,
+      "pnl_pct": 1.92
     },
     {
       "code": "300251",
       "name": "光线传媒",
-      "quantity": 4800,
+      "quantity": 267,
       "cost_price": 25.567,
       "last_buy_date": "2026-02-10",
-      "market_value": 122688.0,
-      "current_price": 25.56,
-      "pnl_pct": -0.03
+      "market_value": 7209.0,
+      "current_price": 27.0,
+      "pnl_pct": 5.6
     }
   ],
   "frozen_sells": [
@@ -99,7 +99,7 @@
     }
   ],
   "daily_pnl": 0,
-  "total_pnl": 5270.19,
-  "total_pnl_pct": 0.53,
+  "total_pnl": 13987.29,
+  "total_pnl_pct": 1.4,
   "trade_count": 0
 }

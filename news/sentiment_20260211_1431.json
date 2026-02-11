@@ -1,0 +1,92 @@
+{
+  "overall_sentiment": 28,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      6,
+      0.17
+    ],
+    [
+      "新能源车",
+      5,
+      0.2
+    ],
+    [
+      "贵金属",
+      4,
+      0.5
+    ],
+    [
+      "消费",
+      3,
+      0.0
+    ],
+    [
+      "银行",
+      2,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "西锐午后涨超7% 海通国际维持其“优于大市”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770789808"
+    },
+    {
+      "title": "凯德投资因2025年利润下降而股价下跌",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "下跌",
+          "大跌"
+        ]
+      },
+      "sectors": [],
+      "time": "1770785728"
+    },
+    {
+      "title": "新加坡交易所股价创历史新高 此前与芝加哥商业交易所打通外汇交易平台",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770784949"
+    },
+    {
+      "title": "紫金矿业午前涨近4% 美银证券维持“买入”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770782472"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-11T14:31:13.789004"
+}

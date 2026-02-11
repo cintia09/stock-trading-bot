@@ -1,0 +1,150 @@
+{
+  "overall_sentiment": 38,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      7,
+      0.43
+    ],
+    [
+      "贵金属",
+      4,
+      1.0
+    ],
+    [
+      "消费",
+      3,
+      0.0
+    ],
+    [
+      "银行",
+      2,
+      -1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "贵金属板块盘中震荡反弹 宝地矿业涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "涨停",
+          "反弹"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "2026-02-11 13:23:56"
+    },
+    {
+      "title": "凯德投资因2025年利润下降而股价下跌",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "下跌",
+          "大跌"
+        ]
+      },
+      "sectors": [],
+      "time": "1770785728"
+    },
+    {
+      "title": "新加坡交易所股价创历史新高 此前与芝加哥商业交易所打通外汇交易平台",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770784949"
+    },
+    {
+      "title": "紫金矿业午前涨近4% 美银证券维持“买入”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770782472"
+    },
+    {
+      "title": "力勤资源午前涨逾7% 机构指镍价有望从底部逐步回暖",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "回暖",
+          "上涨",
+          "主力"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770781335"
+    },
+    {
+      "title": "洛阳钼业午前涨超4% 花旗维持“买入”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770780553"
+    },
+    {
+      "title": "MONGOL MINING盘中涨超15% 旗下BKH金矿投产放量",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "放量"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1770780389"
+    },
+    {
+      "title": "MSCI新兴市场股票指数创历史新高 受AI乐观情绪提振",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770780297"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-11T13:31:13.296983"
+}

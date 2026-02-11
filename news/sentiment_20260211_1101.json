@@ -1,0 +1,132 @@
+{
+  "overall_sentiment": 39,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      10,
+      0.6
+    ],
+    [
+      "贵金属",
+      7,
+      0.57
+    ],
+    [
+      "银行",
+      2,
+      0.5
+    ],
+    [
+      "新能源车",
+      1,
+      1.0
+    ],
+    [
+      "消费",
+      1,
+      0.0
+    ],
+    [
+      "医药",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "招银国际：铝价看涨+成本下降双重利好催化 上调中国宏桥目标价至45港元",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "利好",
+          "盈利"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770778645"
+    },
+    {
+      "title": "建滔系早盘走高 建滔积层板大涨逾11%建滔集团涨逾4%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "大涨",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770778110"
+    },
+    {
+      "title": "LG电子股价大涨16% 有望创下自2020年12月23日以来最大单日涨幅",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "大涨",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770777651"
+    },
+    {
+      "title": "万国黄金集团早盘涨逾7%盘中创新高 公司受益于金价提升",
+      "sentiment": {
+        "score": 4,
+        "label": "very_positive",
+        "positive": [
+          "创新高",
+          "提升",
+          "新高",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1770776718"
+    },
+    {
+      "title": "药明生物发盈喜后涨超2% 预期2025年净利润同比增长46.3%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770774189"
+    },
+    {
+      "title": "华泰期货：烧碱昨日上涨 节后市场情绪有望进一步回暖",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "主力",
+          "回暖",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770773628"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-11T11:01:11.838830"
+}

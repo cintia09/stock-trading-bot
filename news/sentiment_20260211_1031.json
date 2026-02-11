@@ -1,0 +1,94 @@
+{
+  "overall_sentiment": 32,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "贵金属",
+      5,
+      1.0
+    ],
+    [
+      "AI",
+      4,
+      0.5
+    ],
+    [
+      "医药",
+      3,
+      0.33
+    ],
+    [
+      "银行",
+      2,
+      0.5
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "万国黄金集团早盘涨逾7%盘中创新高 公司受益于金价提升",
+      "sentiment": {
+        "score": 4,
+        "label": "very_positive",
+        "positive": [
+          "提升",
+          "新高",
+          "上涨",
+          "创新高"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1770776718"
+    },
+    {
+      "title": "药明生物发盈喜后涨超2% 预期2025年净利润同比增长46.3%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770774189"
+    },
+    {
+      "title": "华泰期货：烧碱昨日上涨 节后市场情绪有望进一步回暖",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "回暖",
+          "上涨",
+          "主力"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770773628"
+    },
+    {
+      "title": "韩国2月前10天出口同比增长44.4%，芯片出口飙升137.6%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "飙升",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770772608"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-11T10:31:11.755361"
+}

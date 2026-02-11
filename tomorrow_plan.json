@@ -1,0 +1,72 @@
+{
+  "date": "2026-02-12",
+  "plans": [
+    {
+      "type": "clear_residual",
+      "code": "sz.300144",
+      "name": "宋城演艺",
+      "qty": 235,
+      "reason": "残仓清理(第3次提出,0.21%总资产,纪律必须执行)",
+      "done": false
+    },
+    {
+      "type": "reduce",
+      "code": "sz.300896",
+      "name": "爱美客",
+      "qty": 450,
+      "threshold": 148.0,
+      "condition": "价格<148则减仓50%(连续5天弱势,距止损仅2.1%)",
+      "done": false
+    },
+    {
+      "type": "sell",
+      "code": "sz.300896",
+      "name": "爱美客",
+      "qty": "all",
+      "threshold": 145.4,
+      "condition": "触发止损-4.2%或继续跑输大盘>1个百分点",
+      "done": false
+    },
+    {
+      "type": "monitor",
+      "code": "sz.300251",
+      "name": "光线传媒",
+      "qty": 267,
+      "threshold": 25.567,
+      "condition": "残仓观察期(2天),跌破成本25.567则清仓",
+      "done": false
+    },
+    {
+      "type": "hold",
+      "code": "sh.601318",
+      "name": "中国平安",
+      "qty": 1100,
+      "reason": "持有,逆势走强+1.14%",
+      "done": false
+    },
+    {
+      "type": "hold",
+      "code": "sh.600036",
+      "name": "招商银行",
+      "qty": 3700,
+      "reason": "持有,微跌-0.20%在可接受范围",
+      "done": false
+    },
+    {
+      "type": "hold",
+      "code": "sz.000333",
+      "name": "美的集团",
+      "qty": 1800,
+      "reason": "持有,微跌-0.26%在可接受范围",
+      "done": false
+    }
+  ],
+  "no_new_positions": true,
+  "no_new_positions_reason": "等大盘方向明确+代码欠债清零后再考虑",
+  "code_debt": [
+    "均线过滤入代码(4次未实现)",
+    "首批减仓一次性执行bug",
+    "累计弱势预警入代码",
+    "残仓定时清理"
+  ]
+}

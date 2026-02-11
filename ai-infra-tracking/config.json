@@ -1,0 +1,34 @@
+{
+  "name": "AI基础设施股票跟踪",
+  "description": "跟踪A股AI基础设施相关标的（硬盘、内存、芯片、服务器、算力）",
+  "created": "2026-02-11",
+  "last_updated": "2026-02-11",
+  "categories": {
+    "存储_硬盘": {
+      "logic": "AI训练和推理产生海量数据，存储需求指数级增长",
+      "stocks": []
+    },
+    "内存_DRAM": {
+      "logic": "HBM/DDR5需求暴增，AI服务器单台内存用量远超传统服务器",
+      "stocks": []
+    },
+    "芯片_GPU_ASIC": {
+      "logic": "AI算力核心硬件，GPU/NPU供不应求",
+      "stocks": []
+    },
+    "服务器_算力": {
+      "logic": "AI服务器出货量高增，液冷/电源/PCB等配套",
+      "stocks": []
+    },
+    "网络_光模块": {
+      "logic": "AI集群互联需要高速光模块和交换机",
+      "stocks": []
+    },
+    "IDC_数据中心": {
+      "logic": "AI算力需要大规模数据中心承载",
+      "stocks": []
+    }
+  },
+  "tracking_data": {},
+  "analysis_history": []
+}

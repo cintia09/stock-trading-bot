@@ -6,7 +6,8 @@
       "code": "sz.300144",
       "name": "宋城演艺",
       "qty": 235,
-      "reason": "残仓清理，第4次提出，开盘即执行",
+      "reason": "残仓清理，第6次提出！！开盘即执行，不再讨论",
+      "priority": "CRITICAL",
       "done": false
     },
     {
@@ -24,7 +25,7 @@
       "name": "爱美客",
       "qty": "all",
       "threshold": 145.37,
-      "condition": "触发止损-4.2%",
+      "condition": "触发止损-4.2%，绝对止损线",
       "done": false
     },
     {
@@ -37,5 +38,12 @@
       "done": false
     }
   ],
-  "notes": "宋城必清(第4次!)。爱美客双线:148主动减仓+145.37绝对止损。光线267股2天观察期。"
+  "code_priorities": [
+    "均线过滤入码(第8次提出!!)",
+    "首批一次性卖出(sell函数target_qty)",
+    "残仓自动清理(sell后检查<0.5%)",
+    "累计弱势预警(intraday_monitor连续跑输检查)",
+    "param_code_audit.py(诊断断裂)"
+  ],
+  "notes": "v3.3参数不变。全部精力修代码。宋城第6次必清！爱美客双线防守。子代理slot竞争第6次失败。"
 }

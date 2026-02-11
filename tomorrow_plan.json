@@ -6,8 +6,15 @@
       "code": "sz.300144",
       "name": "宋城演艺",
       "qty": 235,
-      "reason": "残仓清理，第6次提出！！开盘即执行，不再讨论",
-      "priority": "CRITICAL",
+      "reason": "残仓清理，第6次提出！开盘市价卖出，不纠结价格",
+      "done": false
+    },
+    {
+      "type": "clear_residual",
+      "code": "sz.300251",
+      "name": "光线传媒",
+      "qty": 267,
+      "reason": "残仓清理，三模型共识不再等观察期，开盘市价卖出",
       "done": false
     },
     {
@@ -16,7 +23,7 @@
       "name": "爱美客",
       "qty": 450,
       "threshold": 148.0,
-      "condition": "开盘价<148则减仓50%(450股)，连续5天弱势主动干预",
+      "condition": "开盘价<148则减仓50%(450股)，连续5天弱势主动干预(Gemini vs Opus折中方案)",
       "done": false
     },
     {
@@ -25,25 +32,15 @@
       "name": "爱美客",
       "qty": "all",
       "threshold": 145.37,
-      "condition": "触发止损-4.2%，绝对止损线",
-      "done": false
-    },
-    {
-      "type": "sell",
-      "code": "sz.300251",
-      "name": "光线传媒",
-      "qty": 267,
-      "threshold": 25.567,
-      "condition": "跌破成本价清残仓，观察期到2/13",
+      "condition": "绝对止损-4.2%，不可更改",
       "done": false
     }
   ],
   "code_priorities": [
-    "均线过滤入码(第8次提出!!)",
-    "首批一次性卖出(sell函数target_qty)",
-    "残仓自动清理(sell后检查<0.5%)",
-    "累计弱势预警(intraday_monitor连续跑输检查)",
-    "param_code_audit.py(诊断断裂)"
+    "P0: 残仓一键清理功能(intraday_monitor.py)",
+    "P1: 均线过滤入码(score_stock(), 第8次提出!)",
+    "P2: 7处参数→代码断裂修复",
+    "P3: 蒙特卡洛暂不参考(样本<50)"
   ],
-  "notes": "v3.3参数不变。全部精力修代码。宋城第6次必清！爱美客双线防守。子代理slot竞争第6次失败。"
+  "notes": "三模型共识：先修代码再调参数。宋城+光线双残仓必清。爱美客条件减仓+绝对止损双保险。v3.3不变。"
 }

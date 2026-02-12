@@ -16,12 +16,12 @@
   "rsi_overbought": 70,
   "daily_max_loss": 30000,
   "extreme_volatility_threshold": 0.08,
-  "extreme_volatility_first_batch_pct": 0.70,
+  "extreme_volatility_first_batch_pct": 0.7,
   "underperform_cumulative_days": 3,
   "underperform_cumulative_pct": -0.02,
-  "version": 3.3,
-  "last_updated": "2026-02-11T17:00:00",
-  "notes": "v3.3: 极端波动阈值10%→8% | 其余保持v3.2 | 均线过滤+累计弱势预警待入代码",
+  "version": 3.4,
+  "last_updated": "2026-02-12T16:45:00",
+  "notes": "v3.4: +止损后同日禁买 +reasons空阻断 +max_daily_buys=2 +MA5均线过滤(10次终于入码)",
   "underperform_alert_pct": -0.015,
   "underperform_consecutive_days_to_act": 2,
   "underperform_reduce_pct": 0.5,
@@ -34,5 +34,8 @@
   "limit_up_filter_3day_pct": 0.12,
   "atr_period": 20,
   "atr_fast_period": 5,
-  "atr_use_hybrid": true
+  "atr_use_hybrid": true,
+  "max_daily_buys": 2,
+  "same_day_rebuy_ban": true,
+  "buy_reasons_required": true
 }

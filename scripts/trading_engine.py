@@ -63,7 +63,8 @@ def _load_strategy_params():
                      "limit_up_filter_soft_min_score", "limit_up_filter_3day_pct",
                      "atr_period", "atr_fast_period", "atr_use_hybrid",
                      "underperform_consecutive_days_to_act", "underperform_reduce_pct",
-                     "min_score"]:
+                     "min_score",
+                     "max_daily_buys", "same_day_rebuy_ban", "buy_reasons_required"]:
             if key in params:
                 TRADING_RULES[key] = params[key]
 
@@ -115,6 +116,45 @@ def calculate_trade_cost(amount: float, is_sell: bool = False) -> float:
 def get_available_cash(account: Dict) -> float:
     """获取可用现金"""
     return account.get("current_cash", 0)
+
+
+def get_today_stop_loss_codes() -> set:
+    """获取今日止损卖出的股票代码（24h内禁止买回）"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    tx_file = BASE_DIR / "transactions.json"
+    if not tx_file.exists():
+        return set()
+    try:
+        with open(tx_file, 'r') as f:
+            transactions = json.load(f)
+        stop_loss_codes = set()
+        for t in transactions:
+            if (t.get("type") == "sell" and
+                t.get("timestamp", "").startswith(today) and
+                any("止损" in r for r in t.get("reasons", []))):
+                stop_loss_codes.add(t["code"])
+        return stop_loss_codes
+    except Exception:
+        return set()
+
+
+def get_today_buy_count() -> int:
+    """获取今日已买入的股票数量（不同代码去重）"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    tx_file = BASE_DIR / "transactions.json"
+    if not tx_file.exists():
+        return 0
+    try:
+        with open(tx_file, 'r') as f:
+            transactions = json.load(f)
+        buy_codes = set()
+        for t in transactions:
+            if (t.get("type") == "buy" and
+                t.get("timestamp", "").startswith(today)):
+                buy_codes.add(t["code"])
+        return len(buy_codes)
+    except Exception:
+        return 0
 
 def get_holding_value(account: Dict, code: str) -> Tuple[int, float, float]:
     """获取持仓信息: (数量, 成本价, 市值)"""
@@ -173,6 +213,19 @@ def score_stock(code: str, realtime: Dict, klines: List[Dict], sentiment: Dict) 
     elif trend["trend"] == "bearish":
         score -= 8
         reasons.append("下跌趋势")
+    
+    # === P0: MA5均线过滤（10次复盘提出，终于入码！） ===
+    if len(closes) >= 5:
+        ma5 = sum(closes[-5:]) / 5
+        current_close = closes[-1]
+        if realtime and realtime.get("price", 0) > 0:
+            current_close = realtime["price"]
+        if current_close < ma5:
+            score -= 20
+            reasons.append(f"⚠️均线过滤: 价格{current_close:.2f}<MA5({ma5:.2f})")
+        elif current_close > ma5 * 1.02:
+            score += 5
+            reasons.append(f"价格站上MA5({ma5:.2f})+2%")
     
     # 3. 量价关系
     if realtime:
@@ -508,6 +561,35 @@ def execute_trade(account: Dict, decision: Dict) -> Dict:
     }
     
     if trade_type == "buy":
+        # === P0: 止损后同日禁买 ===
+        stop_loss_codes = get_today_stop_loss_codes()
+        if code in stop_loss_codes:
+            return {"success": False, "reason": f"⛔止损后同日禁买: {name}({code})今日已止损"}
+
+        # === P0: reasons空阻断 ===
+        if not decision.get("reasons") and not decision.get("reason"):
+            return {"success": False, "reason": f"⛔reasons空阻断: {name}({code})无买入理由"}
+
+        # === P0: max_daily_buys限制 ===
+        max_daily_buys = TRADING_RULES.get("max_daily_buys", 2)
+        today_buys = get_today_buy_count()
+        # 检查是否是新股（今天还没买过这只）
+        today = datetime.now().strftime("%Y-%m-%d")
+        tx_file = BASE_DIR / "transactions.json"
+        already_bought_today = False
+        if tx_file.exists():
+            try:
+                with open(tx_file, 'r') as f:
+                    txns = json.load(f)
+                already_bought_today = any(
+                    t.get("type") == "buy" and t.get("code") == code and t.get("timestamp", "").startswith(today)
+                    for t in txns
+                )
+            except Exception:
+                pass
+        if not already_bought_today and today_buys >= max_daily_buys:
+            return {"success": False, "reason": f"⛔日买入限制: 今日已买{today_buys}只(上限{max_daily_buys})"}
+
         total_cost = amount + cost
         if total_cost > account["current_cash"]:
             return {"success": False, "reason": "现金不足"}

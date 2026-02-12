@@ -1,0 +1,59 @@
+{
+  "overall_sentiment": 3,
+  "overall_label": "neutral",
+  "hot_sectors": [
+    [
+      "AI",
+      15,
+      -0.53
+    ],
+    [
+      "消费",
+      14,
+      -0.5
+    ],
+    [
+      "医药",
+      4,
+      0.0
+    ],
+    [
+      "贵金属",
+      2,
+      0.5
+    ],
+    [
+      "银行",
+      2,
+      0.0
+    ],
+    [
+      "新能源车",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "华西证券：维持澳优“增持”评级 海外扛增长大旗",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "增持",
+          "增长",
+          "扩张",
+          "盈利"
+        ],
+        "negative": [
+          "下调"
+        ]
+      },
+      "sectors": [],
+      "time": "1770882271"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-12T16:49:31.322285"
+}

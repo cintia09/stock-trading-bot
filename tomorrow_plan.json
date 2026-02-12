@@ -1,7 +1,7 @@
 {
   "date": "2026-02-13",
-  "generated_by": "final_ruling_opus45_only",
-  "generated_at": "2026-02-13T01:50:00",
+  "generated_by": "final_ruling_opus45_gpt52",
+  "generated_at": "2026-02-13T01:55:00",
   "status": "final",
   "sentiment_context": {
     "overall": "中性偏暖",
@@ -16,7 +16,7 @@
       "name": "招商银行",
       "condition": "open",
       "quantity": 700,
-      "reason": "单只占14.3%>12%上限，减仓至合规(~12%); 纪律优先",
+      "reason": "单只14.3%>12%上限，两模型一致减仓",
       "priority": "P0",
       "method": "market_sell_at_open"
     },
@@ -26,7 +26,7 @@
       "name": "美的集团",
       "condition": "open",
       "quantity": 300,
-      "reason": "单只占14.2%>12%上限，减仓至合规(~12%)",
+      "reason": "单只14.2%>12%上限，两模型一致减仓",
       "priority": "P0",
       "method": "market_sell_at_open"
     },
@@ -45,7 +45,7 @@
       "name": "爱美客",
       "condition": "price <= 143",
       "quantity": "all",
-      "reason": "止损¥143(-2.5%), 仓位极小(1.5%)",
+      "reason": "止损¥143(-2.5%), 仓位极小",
       "priority": "P1"
     },
     {
@@ -54,7 +54,7 @@
       "name": "中国中免",
       "condition": "price <= 90",
       "quantity": "all",
-      "reason": "止损¥90(-4.4%); 消费谨慎舆情",
+      "reason": "止损¥90(-4.4%); 消费谨慎舆情; 收盘仍<3%且无利好→2/14清掉",
       "priority": "P1"
     },
     {
@@ -63,20 +63,26 @@
       "name": "比亚迪",
       "condition": "price <= 87.5",
       "quantity": "all",
-      "reason": "止损¥87.5(-4%); 关税舆论风险",
+      "reason": "止损¥87.5(-4%); 关税舆论; 收盘仍<3%且无利好→2/14清掉",
       "priority": "P1"
     }
   ],
   "no_buy_reasons": [
-    "4个P0 bug刚修，需1-2个交易日验证代码稳定性",
+    "4个P0 bug刚修，需验证代码稳定性",
     "52.8%仓位适中，不加仓",
-    "bull regime但量能弱，观望为主"
+    "GPT建议: 不留无效仓位，宁可提高现金等待"
   ],
   "code_improvements": [
-    {"priority": "P1", "order": 1, "task": "单只>12%自动减仓"},
-    {"priority": "P1", "order": 2, "task": "残仓自动清理(代码级)"},
-    {"priority": "P1", "order": 3, "task": "日内跌幅过滤"},
-    {"priority": "P2", "order": 4, "task": "情绪模块0.0bug"},
-    {"priority": "P2", "order": 5, "task": "一次性submit卖出"}
-  ]
+    {"priority": "P1", "order": 1, "task": "单只>12%自动减仓(Opus投票)"},
+    {"priority": "P1", "order": 2, "task": "最小有效建仓阈值≥5%/¥50K(GPT投票,新)"},
+    {"priority": "P1", "order": 3, "task": "残仓自动清理(代码级,9次提出)"},
+    {"priority": "P1", "order": 4, "task": "日内跌幅过滤"},
+    {"priority": "P2", "order": 5, "task": "情绪模块0.0bug"},
+    {"priority": "P2", "order": 6, "task": "一次性submit卖出"}
+  ],
+  "small_position_rule": {
+    "note": "GPT建议: 中免/比亚迪/爱美客收盘仍<3%且无明显利好→2/14清掉",
+    "threshold_pct": 3,
+    "deadline": "2026-02-14"
+  }
 }

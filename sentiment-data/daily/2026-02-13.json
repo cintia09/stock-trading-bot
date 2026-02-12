@@ -14,7 +14,9 @@
         "sentiment": "中性",
         "reliability": "中",
         "impact_score": 3,
-        "related_sectors": ["媒体互联网"],
+        "related_sectors": [
+          "媒体互联网"
+        ],
         "related_stocks": [],
         "source": "https://www.sina.cn/news/detail/5265086329651704.html"
       },
@@ -25,7 +27,9 @@
         "sentiment": "中性",
         "reliability": "中",
         "impact_score": 2,
-        "related_sectors": ["娱乐"],
+        "related_sectors": [
+          "娱乐"
+        ],
         "related_stocks": [],
         "source": "https://news.qq.com/rain/a/20260211A02O8E00"
       },
@@ -36,11 +40,13 @@
         "sentiment": "中性",
         "reliability": "中",
         "impact_score": 3,
-        "related_sectors": ["消费", "互联网"],
+        "related_sectors": [
+          "消费",
+          "互联网"
+        ],
         "related_stocks": [],
         "source": "https://m.sohu.com/a/986358121_211762"
       },
-
       {
         "category": "小红书趋势",
         "title": "讨论：AI助手可能冲击小红书的‘消费决策’场景",
@@ -48,7 +54,11 @@
         "sentiment": "中性",
         "reliability": "中",
         "impact_score": 4,
-        "related_sectors": ["互联网", "AI", "消费"],
+        "related_sectors": [
+          "互联网",
+          "AI",
+          "消费"
+        ],
         "related_stocks": [],
         "source": "https://finance.sina.cn/stock/jdts/2026-02-11/detail-inhmkyvr7822500.d.html"
       },
@@ -59,7 +69,10 @@
         "sentiment": "中性",
         "reliability": "中",
         "impact_score": 3,
-        "related_sectors": ["互联网", "广告营销"],
+        "related_sectors": [
+          "互联网",
+          "广告营销"
+        ],
         "related_stocks": [],
         "source": "https://m.sohu.com/a/986663546_129720"
       },
@@ -70,11 +83,13 @@
         "sentiment": "正面",
         "reliability": "中",
         "impact_score": 3,
-        "related_sectors": ["消费", "娱乐"],
+        "related_sectors": [
+          "消费",
+          "娱乐"
+        ],
         "related_stocks": [],
         "source": "https://www.sina.cn/news/detail/5265265648206559.html"
       },
-
       {
         "category": "抖音B站",
         "title": "抖音本地生活推出独立App‘抖省省’引发关注",
@@ -82,7 +97,11 @@
         "sentiment": "正面",
         "reliability": "中",
         "impact_score": 4,
-        "related_sectors": ["互联网", "本地生活", "消费"],
+        "related_sectors": [
+          "互联网",
+          "本地生活",
+          "消费"
+        ],
         "related_stocks": [],
         "source": "https://tech.sina.cn/2026-02-12/detail-inhmpqkh3082904.d.html"
       },
@@ -93,7 +112,10 @@
         "sentiment": "正面",
         "reliability": "高",
         "impact_score": 3,
-        "related_sectors": ["食品饮料", "消费"],
+        "related_sectors": [
+          "食品饮料",
+          "消费"
+        ],
         "related_stocks": [],
         "source": "http://www.news.cn/food/20260212/1a70ef0e8afc477ab76f968f4fcd29f6/c.html"
       },
@@ -104,11 +126,13 @@
         "sentiment": "中性",
         "reliability": "中",
         "impact_score": 3,
-        "related_sectors": ["互联网", "教育"],
+        "related_sectors": [
+          "互联网",
+          "教育"
+        ],
         "related_stocks": [],
         "source": "https://36kr.com/p/953198690515336"
       },
-
       {
         "category": "闲鱼淘宝",
         "title": "闲鱼上线‘帮卖’：上门质检、三段式出清被解读为提升交易效率",
@@ -116,7 +140,11 @@
         "sentiment": "正面",
         "reliability": "中",
         "impact_score": 4,
-        "related_sectors": ["消费", "电商", "二手经济"],
+        "related_sectors": [
+          "消费",
+          "电商",
+          "二手经济"
+        ],
         "related_stocks": [],
         "source": "https://36kr.com/p/2428367291720448"
       },
@@ -127,7 +155,11 @@
         "sentiment": "正面",
         "reliability": "中",
         "impact_score": 4,
-        "related_sectors": ["消费", "电商", "物流"],
+        "related_sectors": [
+          "消费",
+          "电商",
+          "物流"
+        ],
         "related_stocks": [],
         "source": "https://www.163.com/dy/article/KLDUIEGF05568W0A.html"
       },
@@ -138,11 +170,12 @@
         "sentiment": "中性",
         "reliability": "低",
         "impact_score": 2,
-        "related_sectors": ["消费"],
+        "related_sectors": [
+          "消费"
+        ],
         "related_stocks": [],
         "source": "https://www.bilibili.com/video/BV1go4y1U7Y3/"
       },
-
       {
         "category": "A股财经",
         "title": "盘面解读：算力板块开盘领涨，节前量能偏弱、结构性机会为主",
@@ -150,8 +183,14 @@
         "sentiment": "中性",
         "reliability": "中",
         "impact_score": 4,
-        "related_sectors": ["AI基础设施", "有色金属", "化工"],
-        "related_stocks": ["紫金矿业"],
+        "related_sectors": [
+          "AI基础设施",
+          "有色金属",
+          "化工"
+        ],
+        "related_stocks": [
+          "紫金矿业"
+        ],
         "source": "https://finance.sina.com.cn/stock/hkstock/hkstocknews/2026-02-12/doc-inhmpkak3166930.shtml"
       },
       {
@@ -161,7 +200,9 @@
         "sentiment": "中性",
         "reliability": "高",
         "impact_score": 3,
-        "related_sectors": ["军工"],
+        "related_sectors": [
+          "军工"
+        ],
         "related_stocks": [],
         "source": "https://finance.sina.com.cn/stock/relnews/2026-02-12/doc-inhmpcun3220769.shtml"
       },
@@ -172,11 +213,17 @@
         "sentiment": "正面",
         "reliability": "中",
         "impact_score": 4,
-        "related_sectors": ["银行", "保险", "周期"],
-        "related_stocks": ["招商银行", "中国平安"],
+        "related_sectors": [
+          "银行",
+          "保险",
+          "周期"
+        ],
+        "related_stocks": [
+          "招商银行",
+          "中国平安"
+        ],
         "source": "https://36kr.com/p/3679973622771331"
       },
-
       {
         "category": "政策信号",
         "title": "官方发布会信息被转载：2025年市场监管服务高质量发展‘成效明显’",
@@ -184,7 +231,9 @@
         "sentiment": "正面",
         "reliability": "高",
         "impact_score": 3,
-        "related_sectors": ["宏观政策"],
+        "related_sectors": [
+          "宏观政策"
+        ],
         "related_stocks": [],
         "source": "https://www.ln.gov.cn/web/ywdt/rdgz/2026020608453412065/index.shtml"
       },
@@ -195,7 +244,10 @@
         "sentiment": "中性",
         "reliability": "中",
         "impact_score": 3,
-        "related_sectors": ["国企改革", "政治"],
+        "related_sectors": [
+          "国企改革",
+          "政治"
+        ],
         "related_stocks": [],
         "source": "https://www.sohu.com/a/984381081_120070887"
       },
@@ -206,11 +258,15 @@
         "sentiment": "负面",
         "reliability": "低",
         "impact_score": 3,
-        "related_sectors": ["半导体", "外贸"],
-        "related_stocks": ["比亚迪"],
+        "related_sectors": [
+          "半导体",
+          "外贸"
+        ],
+        "related_stocks": [
+          "比亚迪"
+        ],
         "source": "https://www.sohu.com/a/986436715_122157611"
       },
-
       {
         "category": "国际大事",
         "title": "俄乌方向：外媒称乌方或将公布选举与和平公投筹备信息（2/24）",
@@ -218,8 +274,13 @@
         "sentiment": "中性",
         "reliability": "中",
         "impact_score": 4,
-        "related_sectors": ["宏观", "大宗商品"],
-        "related_stocks": ["紫金矿业"],
+        "related_sectors": [
+          "宏观",
+          "大宗商品"
+        ],
+        "related_stocks": [
+          "紫金矿业"
+        ],
         "source": "https://www.reuters.com/world/europe/ukraines-zelenskiy-intends-announce-election-plan-february-24-ft-reports-2026-02-11/"
       },
       {
@@ -229,7 +290,10 @@
         "sentiment": "负面",
         "reliability": "中",
         "impact_score": 3,
-        "related_sectors": ["宏观", "军工"],
+        "related_sectors": [
+          "宏观",
+          "军工"
+        ],
         "related_stocks": [],
         "source": "https://www.theguardian.com/world/2026/feb/11/ukraine-war-briefing-uk-promises-to-double-troop-numbers-in-norway-to-deter-putin"
       },
@@ -240,11 +304,13 @@
         "sentiment": "中性",
         "reliability": "中",
         "impact_score": 3,
-        "related_sectors": ["政治", "科技"],
+        "related_sectors": [
+          "政治",
+          "科技"
+        ],
         "related_stocks": [],
         "source": "https://www.sohu.com/a/986284528_120094090"
       },
-
       {
         "category": "AI科技",
         "title": "算力产业讨论：HBM与‘内存墙’成为GPU迭代关键（算力竞速解读）",
@@ -252,7 +318,11 @@
         "sentiment": "正面",
         "reliability": "中",
         "impact_score": 4,
-        "related_sectors": ["AI基础设施", "半导体", "存储"],
+        "related_sectors": [
+          "AI基础设施",
+          "半导体",
+          "存储"
+        ],
         "related_stocks": [],
         "source": "https://36kr.com/p/3677454332162565"
       },
@@ -263,7 +333,10 @@
         "sentiment": "中性",
         "reliability": "中",
         "impact_score": 3,
-        "related_sectors": ["AI", "消费电子"],
+        "related_sectors": [
+          "AI",
+          "消费电子"
+        ],
         "related_stocks": [],
         "source": "https://36kr.com/p/3677441629528964"
       },
@@ -274,11 +347,13 @@
         "sentiment": "中性",
         "reliability": "低",
         "impact_score": 2,
-        "related_sectors": ["AI", "航天"],
+        "related_sectors": [
+          "AI",
+          "航天"
+        ],
         "related_stocks": [],
         "source": "https://www.bilibili.com/video/BV1AhFqzoEpe/"
       },
-
       {
         "category": "民生社会",
         "title": "收入/就业讨论：部分地区居民收入增速‘赶不上经济增速’引发关注",
@@ -286,7 +361,10 @@
         "sentiment": "负面",
         "reliability": "中",
         "impact_score": 4,
-        "related_sectors": ["社会", "宏观"],
+        "related_sectors": [
+          "社会",
+          "宏观"
+        ],
         "related_stocks": [],
         "source": "https://www.sohu.com/a/986346106_118622"
       },
@@ -297,7 +375,9 @@
         "sentiment": "负面",
         "reliability": "低",
         "impact_score": 3,
-        "related_sectors": ["社会"],
+        "related_sectors": [
+          "社会"
+        ],
         "related_stocks": [],
         "source": "https://www.bilibili.com/video/BV1nRcgzJEMK/"
       },
@@ -308,7 +388,10 @@
         "sentiment": "负面",
         "reliability": "低",
         "impact_score": 3,
-        "related_sectors": ["社会", "消费"],
+        "related_sectors": [
+          "社会",
+          "消费"
+        ],
         "related_stocks": [],
         "source": "https://www.bilibili.com/video/BV16wr5BkEas/"
       }
@@ -326,6 +409,436 @@
       "AI与平台竞争开始影响‘消费决策入口’：内容社区与AI助手的注意力争夺",
       "本地生活与即时零售继续被加码，显示消费需求在场景化与下沉市场上仍有韧性",
       "收入/物价体感讨论偏多，社会情绪整体谨慎但未出现极端悲观事件"
+    ]
+  },
+  {
+    "timestamp": "2026-02-13T06:15:00+08:00",
+    "hour": 6,
+    "social_temperature": "中性",
+    "market_sentiment": "中性",
+    "fear_greed_estimate": 52,
+    "consumer_confidence": "升温",
+    "items": [
+      {
+        "category": "微博热搜",
+        "title": "《2025微博热搜趋势报告》扩散：‘回应’成高频关键词",
+        "summary": "热搜‘回应/进展’类叙事占比高，反映公众对权威解释与事件结果的持续关注。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "媒体互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sina.cn/news/detail/5265086329651704.html"
+      },
+      {
+        "category": "微博热搜",
+        "title": "汽车热搜榜讨论：小米汽车、鸿蒙智行热度领跑被引用",
+        "summary": "智能电动与生态话题占据注意力，舆论呈‘科技品牌化’倾向。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "汽车",
+          "科技"
+        ],
+        "related_stocks": [
+          "比亚迪"
+        ],
+        "source": "https://www.sina.cn/news/detail/5265064141521006.html"
+      },
+      {
+        "category": "微博热搜",
+        "title": "热搜娱乐榜单类资讯继续占据流量入口",
+        "summary": "榜单/名场面类内容推动娱乐化讨论，对宏观风险偏好影响有限。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": [
+          "娱乐"
+        ],
+        "related_stocks": [],
+        "source": "https://news.qq.com/rain/a/20260211A02O8E00"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "小红书估值与IPO预期相关报道升温",
+        "summary": "资本市场关注度上行，反映内容社区在‘消费决策’链路上的商业价值被重估。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "互联网",
+          "广告营销",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/stock/hkstock/hkzmt/2026-02-05/doc-inhkucci5855440.shtml"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "行业解读：小红书向‘信任驱动’电商与助农直播倾斜",
+        "summary": "生鲜/地方农品通过内容种草破圈，强调体验分享而非冲动消费。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "电商",
+          "消费",
+          "农业"
+        ],
+        "related_stocks": [],
+        "source": "https://www.ebrun.com/20260206/639167.shtml"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "平台增长与内容形态调整讨论增多（中视频/生活流）",
+        "summary": "用户增长压力与结构调整并存，侧面提示品牌投放更重ROI与精细化。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "互联网",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/984614208_477902"
+      },
+      {
+        "category": "抖音B站",
+        "title": "抖音下线‘付费合集’并统一转免费（2/5起）",
+        "summary": "内容付费变现路径收缩，平台更强调广告/电商等闭环；对创作者收入预期偏负面。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "互联网",
+          "内容"
+        ],
+        "related_stocks": [],
+        "source": "https://aiyoubucuo.com/202602.html"
+      },
+      {
+        "category": "抖音B站",
+        "title": "年货消费趋势解读：非遗/智能设备等品类热度上行",
+        "summary": "‘懒人经济+送礼刚需’带动智能清洁、暖菜板等上榜，显示效率型消费升温。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "家电"
+        ],
+        "related_stocks": [
+          "美的集团"
+        ],
+        "source": "https://news.qq.com/rain/a/20260211A06VWO00"
+      },
+      {
+        "category": "抖音B站",
+        "title": "B站硬件内容：内存价格上涨引发装机/显卡避坑讨论",
+        "summary": "‘内存涨价’成为大众感知的科技通胀点，影响DIY与部分电子消费意愿。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "科技",
+          "消费电子",
+          "存储"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1KsFjz3E2v/"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "闲鱼二手市场‘进化史/平台分化’讨论走热",
+        "summary": "二手经济从个人交易向服务化/平台化推进，反映大众更重性价比与闲置变现。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "电商",
+          "二手经济"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1Cv2FBHEVX/"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "闲鱼‘帮卖’服务被报道：质检+估价+推广一站式",
+        "summary": "提升交易效率与价格发现，利于以旧换新、降低交易摩擦。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "电商"
+        ],
+        "related_stocks": [],
+        "source": "https://36kr.com/p/2428367291720448"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "年货包裹数据：淘宝在新疆全面包邮带动滑雪等品类订单增长",
+        "summary": "物流/履约改善对边远地区消费拉动明显，节前消费热度提升。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "电商",
+          "物流"
+        ],
+        "related_stocks": [],
+        "source": "http://yn.people.com.cn/n2/2026/0212/c378439-41500584.html"
+      },
+      {
+        "category": "A股财经",
+        "title": "银河证券策略：节前资金偏好高股息、低估值与消费防御",
+        "summary": "市场震荡下风险偏好偏谨慎，‘红利/防御’资产更受青睐。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "银行",
+          "保险",
+          "消费"
+        ],
+        "related_stocks": [
+          "招商银行",
+          "中国平安"
+        ],
+        "source": "https://finance.sina.com.cn/jjxw/2026-02-12/doc-inhmpcup9964490.shtml"
+      },
+      {
+        "category": "A股财经",
+        "title": "A股快讯：闻泰科技/安世半导体荷兰控制权相关事项进展被关注",
+        "summary": "半导体供应链合规与海外监管不确定性仍是风险点，消息面扰动偏多。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "半导体"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/headline/2026-02-12/doc-inhmpcur7081446.shtml"
+      },
+      {
+        "category": "A股财经",
+        "title": "盘面轮动：有色/煤炭/石油/化工等周期方向阶段性走强被解读",
+        "summary": "节前资金做‘确定性+低位’交易，周期与资源品关注度提升。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "有色金属",
+          "能源",
+          "化工"
+        ],
+        "related_stocks": [
+          "紫金矿业"
+        ],
+        "source": "https://finance.sina.com.cn/tech/roll/2026-02-11/doc-inhmnahy3631642.shtml"
+      },
+      {
+        "category": "政策信号",
+        "title": "央行等8部门：明确虚拟货币相关业务非法，禁止RWA代币化活动",
+        "summary": "金融风险处置与监管协同强化，对相关灰产与炒作情绪形成压制。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "金融监管"
+        ],
+        "related_stocks": [],
+        "source": "https://www.jcgov.gov.cn/dtxx/gnyw/202602/t20260207_2318569.shtml"
+      },
+      {
+        "category": "政策信号",
+        "title": "海南自贸港：岛内居民消费进境商品‘零关税’政策落地",
+        "summary": "利好离岛/岛内消费与相关零售场景，短期对旅游消费预期偏正面。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "旅游"
+        ],
+        "related_stocks": [
+          "中国中免"
+        ],
+        "source": "https://finance.sina.com.cn/stock/y/2026-02-06/doc-inhkvret2348581.shtml"
+      },
+      {
+        "category": "政策信号",
+        "title": "市场监管总局发布会：强调提升综合监管能力、维护市场秩序",
+        "summary": "基调‘稳预期+强监管’，对消费环境与营商环境偏正面。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "宏观政策"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/tech/roll/2026-02-06/doc-inhkvvnr2262730.shtml"
+      },
+      {
+        "category": "国际大事",
+        "title": "美众议院表决终止对加拿大关税措施的决议（报道汇总）",
+        "summary": "贸易政策不确定性仍在，若反复可能扰动风险偏好与外贸链预期。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "宏观",
+          "外贸"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/headline/2026-02-12/doc-inhmpcut4183602.shtml"
+      },
+      {
+        "category": "国际大事",
+        "title": "欧洲议会通过援乌贷款相关表决（报道汇总）",
+        "summary": "地缘议题延续，避险需求或阶段性升温，影响能源/金属价格预期。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "宏观",
+          "大宗商品"
+        ],
+        "related_stocks": [
+          "紫金矿业"
+        ],
+        "source": "https://finance.sina.com.cn/jjxw/2026-02-12/doc-inhmpcut4193157.shtml"
+      },
+      {
+        "category": "国际大事",
+        "title": "隔夜市场：油价走高、金属（镍等）波动与科技公司资本开支话题并行",
+        "summary": "大宗价格与科技CapEx共同影响全球风险偏好与A股周期/算力链预期。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "能源",
+          "有色金属",
+          "科技"
+        ],
+        "related_stocks": [
+          "紫金矿业"
+        ],
+        "source": "https://finance.sina.com.cn/world/2026-02-12/doc-inhmpcun3198579.shtml"
+      },
+      {
+        "category": "AI科技",
+        "title": "算力/IDC板块走强：海外云厂商CapEx大增带动算力需求预期",
+        "summary": "北美云厂资本开支高增成为算力链催化，利好光模块/服务器/IDC等方向情绪。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 5,
+        "related_sectors": [
+          "AI基础设施",
+          "IDC",
+          "服务器",
+          "光模块"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/jjxw/2026-02-10/doc-inhmihnk1364622.shtml"
+      },
+      {
+        "category": "AI科技",
+        "title": "研究解读：数据中心产业链‘超级周期’叙事升温",
+        "summary": "AI重塑数据中心投资节奏，‘租赁扩容+自建控制’并行，行业景气预期偏强。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI基础设施",
+          "数据中心"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/cj/2026-02-10/doc-inhmitai5507500.shtml"
+      },
+      {
+        "category": "AI科技",
+        "title": "算力概念股大额采购服务器引发风险提示（异动公告解读）",
+        "summary": "算力概念热度高但易伴随炒作与风险提示，需警惕‘题材-业绩’错配。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "AI基础设施",
+          "服务器"
+        ],
+        "related_stocks": [],
+        "source": "https://cn.investing.com/news/stock-market-news/article-3214087"
+      },
+      {
+        "category": "民生社会",
+        "title": "多地稳就业举措：内蒙古推进‘家门口’就业服务站建设",
+        "summary": "政策端继续加码就业服务供给，对社会预期形成托底，但体感改善需时间。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": [
+          "社会",
+          "政策"
+        ],
+        "related_stocks": [],
+        "source": "https://www.news.cn/politics/20260206/112e40865d7346a28c109f578d351f99/c.html"
+      },
+      {
+        "category": "民生社会",
+        "title": "新就业形态劳动者权益：多部门对平台企业开展用工行政指导（报道）",
+        "summary": "对外卖/即时零售等平台用工合规要求趋严，利好劳动者权益但或抬升企业成本。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "社会",
+          "监管",
+          "互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.caiwennews.com/article/1417938.shtml"
+      },
+      {
+        "category": "民生社会",
+        "title": "消费端观望情绪与汽车行业‘内卷’叙事被强化（行业评论）",
+        "summary": "价格战反噬信任、消费者延迟决策的讨论增多，社会情绪偏谨慎。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "汽车"
+        ],
+        "related_stocks": [
+          "比亚迪"
+        ],
+        "source": "https://36kr.com/p/3676762961420936"
+      }
+    ],
+    "key_signals": [
+      "节前市场偏防御：高股息/低估值/消费防御受青睐，科技与周期更多轮动交易",
+      "政策端‘强监管+防风险’延续：虚拟货币/RWA代币化被明确禁止，金融秩序信号更强",
+      "算力/IDC景气预期升温：海外云厂CapEx高增成为AI基础设施链催化",
+      "节前消费呈‘场景化回暖’：网上年货节、包邮覆盖等带动礼盒/智能家电/冰雪装备增长",
+      "社会情绪总体中性偏谨慎：就业与平台用工合规讨论提升，消费端仍重性价比与确定性"
+    ],
+    "portfolio_alerts": [
+      "中国中免：海南‘零关税’岛内居民消费进境商品政策对免税/旅游消费预期偏正面（影响：中等）",
+      "招商银行/中国平安：节前资金偏好防御与低估值，金融权重情绪边际改善（影响：中等）",
+      "紫金矿业：海外宏观/地缘与金属价格波动仍可能放大短期波动（影响：中等）",
+      "美的集团：年货消费中‘智能清洁/效率型家电’热度上行，需求预期偏正面（影响：中等）",
+      "比亚迪：汽车行业‘价格战/观望’叙事仍在，短期情绪扰动偏多（影响：中等）"
+    ],
+    "social_highlights": [
+      "政策强监管明确化（虚拟货币/RWA代币化），风险偏好更重‘合规’",
+      "AI算力/IDC进入高景气叙事窗口，产业投资与二级市场讨论同步升温",
+      "年货消费与包邮覆盖带动需求回暖，但大众消费心态仍偏理性与谨慎"
     ]
   }
 ]

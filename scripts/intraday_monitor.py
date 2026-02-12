@@ -110,7 +110,16 @@ def analyze_trend(snapshots):
         return {"trend": "首次采集", "signals": ["📡 首次采集数据，下次开始对比"], "market_change": sh_now, "snapshot_count": len(snapshots)}
     
     latest = snapshots[-1]
-    prev = snapshots[-2]
+    # Find a valid prev snapshot (holdings must be a list with dicts, not a dict-of-dicts)
+    prev = None
+    for i in range(len(snapshots) - 2, -1, -1):
+        h = snapshots[i].get("holdings", [])
+        if isinstance(h, list) and len(h) > 0 and isinstance(h[0], dict) and "code" in h[0]:
+            prev = snapshots[i]
+            break
+    if prev is None:
+        sh_now = latest["market"].get("sh000001", {}).get("change_pct", 0)
+        return {"trend": "无可比数据", "signals": ["📡 无有效历史快照可对比"], "market_change": sh_now, "snapshot_count": len(snapshots)}
     first = snapshots[0]
     
     signals = []
@@ -206,8 +215,14 @@ def make_dynamic_decisions(snapshot, analysis, snapshots):
         # 计算盘中趋势（最近几个快照的价格变化方向）
         recent_prices = []
         for s in snapshots[-4:]:  # 最近4个快照（约2小时）
-            for sh in s["holdings"]:
-                if sh["code"] == code:
+            holdings_data = s.get("holdings", [])
+            # Handle dict-of-dicts format (code as keys)
+            if isinstance(holdings_data, dict):
+                if code in holdings_data:
+                    recent_prices.append(holdings_data[code].get("price", 0))
+                continue
+            for sh in holdings_data:
+                if isinstance(sh, dict) and sh.get("code") == code:
                     recent_prices.append(sh["price"])
                     break
         

@@ -1,0 +1,138 @@
+{
+  "overall_sentiment": 31,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "银行",
+      5,
+      0.6
+    ],
+    [
+      "新能源车",
+      4,
+      0.75
+    ],
+    [
+      "贵金属",
+      3,
+      0.33
+    ],
+    [
+      "消费",
+      2,
+      0.0
+    ],
+    [
+      "光伏",
+      2,
+      0.5
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "靶材概念持续走强 欧莱新材20cm涨停创历史新高",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "新高",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-02-12 11:21:48"
+    },
+    {
+      "title": "靶材概念持续走强 欧莱新材触及20cm涨停创历史新高",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "新高",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-02-12 11:18:12"
+    },
+    {
+      "title": "光通信概念股普遍走高 长飞光纤光缆大涨逾12%鸿腾精密涨逾10%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "大涨",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770866077"
+    },
+    {
+      "title": "大摩：料药明生物股价未来45日上升 目标价升至50港元",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "扩张"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770865225"
+    },
+    {
+      "title": "潍柴动力早盘涨超5%再创新高 高盛将目标价上调至37港元",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "新高",
+          "创新高",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770864262"
+    },
+    {
+      "title": "华泰期货：美国1月非农超预期，多项关键指标超预期反弹",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "增长",
+          "超预期",
+          "反弹"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770863385"
+    },
+    {
+      "title": "华泰期货：碳酸锂昨日上涨，节前需关注持仓风险",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "主力",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "新能源车"
+      ],
+      "time": "1770863157"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-12T11:24:02.272908"
+}

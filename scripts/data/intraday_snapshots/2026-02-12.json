@@ -1,0 +1,91 @@
+[
+  {
+    "timestamp": "2026-02-12T09:52:37.567232",
+    "time": "09:52:37",
+    "market": {
+      "sh000001": {
+        "name": "上证指数",
+        "price": 4136.99,
+        "change_pct": 0.12
+      },
+      "sz399001": {
+        "name": "深证成指",
+        "price": 14177.967,
+        "change_pct": 0.12
+      },
+      "sz399006": {
+        "name": "创业板指",
+        "price": 3294.571,
+        "change_pct": 0.3
+      }
+    },
+    "holdings": [
+      {
+        "code": "601318",
+        "name": "中国平安",
+        "price": 67.18,
+        "open": 67.6,
+        "high": 67.68,
+        "low": 67.0,
+        "prev_close": 66.74,
+        "change_pct": 0.66,
+        "volume": 9920096,
+        "amount": 667640231.0,
+        "quantity": 1100,
+        "cost_price": 66.74,
+        "pnl_from_cost_pct": 0.66,
+        "market_value": 73898.0
+      },
+      {
+        "code": "300896",
+        "name": "爱美客",
+        "price": 148.03,
+        "open": 148.74,
+        "high": 149.35,
+        "low": 147.5,
+        "prev_close": 151.75,
+        "change_pct": -2.45,
+        "volume": 752826,
+        "amount": 111611672.67,
+        "quantity": 900,
+        "cost_price": 151.75,
+        "pnl_from_cost_pct": -2.45,
+        "market_value": 133227.0
+      },
+      {
+        "code": "600036",
+        "name": "招商银行",
+        "price": 38.94,
+        "open": 39.4,
+        "high": 39.42,
+        "low": 38.92,
+        "prev_close": 39.48,
+        "change_pct": -1.37,
+        "volume": 17078400,
+        "amount": 668362421.0,
+        "quantity": 3700,
+        "cost_price": 39.48,
+        "pnl_from_cost_pct": -1.37,
+        "market_value": 144078.0
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "price": 79.36,
+        "open": 79.46,
+        "high": 79.87,
+        "low": 79.3,
+        "prev_close": 79.9,
+        "change_pct": -0.68,
+        "volume": 3195306,
+        "amount": 254175664.02,
+        "quantity": 1800,
+        "cost_price": 79.9,
+        "pnl_from_cost_pct": -0.68,
+        "market_value": 142848.0
+      }
+    ],
+    "cash": 515691.7700000001,
+    "total_value": 1009742.77
+  }
+]

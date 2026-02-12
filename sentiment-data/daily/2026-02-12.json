@@ -1,0 +1,100 @@
+[
+  {
+    "timestamp": "2026-02-12T18:00:00+08:00",
+    "hour": 18,
+    "social_temperature": "中性",
+    "market_sentiment": "中性",
+    "fear_greed_estimate": 45,
+    "consumer_confidence": "稳定",
+    "items": [
+      {
+        "category": "微博热搜",
+        "title": "2025微博热搜趋势报告：活跃度创新高，热点高频爆发",
+        "summary": "微博热搜呈现高活跃，娱乐、社会、垂直话题三足鼎立。关注‘回应’类关键词成日常。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": ["娱乐","社会"],
+        "related_stocks": [],
+        "source": "https://m.sohu.com/a/986358121_211762?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+      },
+      {
+        "category": "微博热搜",
+        "title": "微博艺人热度榜：肖战位列第一，流量格局未变",
+        "summary": "微博热搜艺人榜上肖战、刘宇宁、迪丽热巴霸榜，流量明星仍是关注中心。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": ["娱乐"],
+        "related_stocks": [],
+        "source": "https://news.qq.com/rain/a/20260211A02O8E00"
+      },
+      {
+        "category": "抖音B站",
+        "title": "挑战萨莉亚600块钱餐品，网络热点话题探真伪",
+        "summary": "网络关于餐饮话题再度热议，部分内容带有娱乐化探讨色彩，评论积极。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": ["消费","娱乐"],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV17gFCzvEWt/"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "2025年中俄贸易商品流转与价格关注",
+        "summary": "二手/跨境商品流转活跃，经济相关话题持续上榜，未见极端情绪。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": ["消费","跨境"],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1Xs6cBxELY/"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "月薪5000真实水平讨论，关注收入分布现状",
+        "summary": "民众对收入水平有共鸣，调侃但整体较为理性，未见强烈焦虑。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": ["民生"],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1iUzpBxEnt/"
+      },
+      {
+        "category": "国际大事",
+        "title": "中美核军控对抗持续发酵，外交部严正回应美方指控",
+        "summary": "中美舆论交锋，聚焦核军控，美方对中国核爆指控被中方驳斥。",
+        "sentiment": "负面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": ["政治","国际"],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/986284528_120094090"
+      },
+      {
+        "category": "国际大事",
+        "title": "以色列局势升温：以总理紧急访美，伊朗示强",
+        "summary": "中东区域局势紧张，关注叙以、伊朗、美国最新外交动态。",
+        "sentiment": "负面",
+        "reliability": "高",
+        "impact_score": 5,
+        "related_sectors": ["国际","安全"],
+        "related_stocks": [],
+        "source": "https://www.youtube.com/watch?v=HiqzF866VAw"
+      }
+    ],
+    "key_signals": [
+      "国际战略局势升温（中美、中东焦点）",
+      "月薪与消费相关话题持续受关注，情绪未见明显极端化",
+      "娱乐与网络热点持续活跃，整体理性对待社会现象"
+    ],
+    "portfolio_alerts": [],
+    "social_highlights": [
+      "国际安全形势升级，关注政策与风险管理",
+      "收入分配、消费现实成为民众舆论中心",
+      "社会整体情绪中性，缺乏极端乐观或恐慌体现"
+    ]
+  }
+]

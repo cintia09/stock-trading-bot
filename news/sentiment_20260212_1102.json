@@ -1,0 +1,186 @@
+{
+  "overall_sentiment": 44,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      6,
+      0.5
+    ],
+    [
+      "银行",
+      6,
+      0.67
+    ],
+    [
+      "贵金属",
+      4,
+      0.25
+    ],
+    [
+      "新能源车",
+      2,
+      1.0
+    ],
+    [
+      "消费",
+      1,
+      0.0
+    ],
+    [
+      "光伏",
+      1,
+      1.0
+    ],
+    [
+      "医药",
+      1,
+      0.0
+    ],
+    [
+      "房地产",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "液冷服务器概念拉升 申菱环境一度涨停续创新高",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "创新高",
+          "涨停",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-02-12 10:59:46"
+    },
+    {
+      "title": "大摩：料药明生物股价未来45日上升 目标价升至50港元",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "扩张"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770865225"
+    },
+    {
+      "title": "潍柴动力早盘涨超5%再创新高 高盛将目标价上调至37港元",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "上涨",
+          "创新高",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770864262"
+    },
+    {
+      "title": "华泰期货：美国1月非农超预期，多项关键指标超预期反弹",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "增长",
+          "反弹",
+          "超预期"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770863385"
+    },
+    {
+      "title": "华泰期货：碳酸锂昨日上涨，节前需关注持仓风险",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "主力"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "新能源车"
+      ],
+      "time": "1770863157"
+    },
+    {
+      "title": "药明生物盘初涨超6% 去年下半年经调整纯利远胜预期毛利率显著增长",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "银行"
+      ],
+      "time": "1770862098"
+    },
+    {
+      "title": "MINIMAX-WP早盘涨近6% 摩根大通给予“增持”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "增持"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770861977"
+    },
+    {
+      "title": "中国东方教育早盘涨超6% 预期年度纯利同比增长46%至51%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770861826"
+    },
+    {
+      "title": "中国重汽早盘涨超3% 中国重汽1月份重卡出口销量超1.6万辆再创历史新高",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770861293"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-12T11:02:10.013411"
+}

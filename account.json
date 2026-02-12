@@ -1,9 +1,9 @@
 {
   "initial_capital": 1000000,
-  "current_cash": 506415.2400000001,
-  "total_value": 1013987.29,
+  "current_cash": 476582.4100000001,
+  "total_value": 1008680.41,
   "created_at": "2026-02-06T00:23:00+08:00",
-  "last_updated": "2026-02-11T14:31:25.095067",
+  "last_updated": "2026-02-12T15:00:17",
   "holdings": [
     {
       "code": "601318",
@@ -11,19 +11,10 @@
       "quantity": 1100,
       "cost_price": 66.74,
       "last_buy_date": "2026-02-06",
-      "market_value": 74305.0,
-      "current_price": 67.55,
-      "pnl_pct": 1.21
-    },
-    {
-      "code": "300896",
-      "name": "爱美客",
-      "quantity": 900,
-      "cost_price": 151.75,
-      "last_buy_date": "2026-02-06",
-      "market_value": 134568.0,
-      "current_price": 149.52,
-      "pnl_pct": -1.47
+      "market_value": 73194.0,
+      "current_price": 66.54,
+      "pnl_pct": -0.3,
+      "high_since_entry": 66.74
     },
     {
       "code": "600036",
@@ -31,9 +22,10 @@
       "quantity": 3700,
       "cost_price": 39.48,
       "last_buy_date": "2026-02-06",
-      "market_value": 145854.0,
-      "current_price": 39.42,
-      "pnl_pct": -0.15
+      "market_value": 144263.0,
+      "current_price": 38.99,
+      "pnl_pct": -1.24,
+      "high_since_entry": 39.48
     },
     {
       "code": "000333",
@@ -41,29 +33,54 @@
       "quantity": 1800,
       "cost_price": 79.9,
       "last_buy_date": "2026-02-06",
-      "market_value": 143514.0,
-      "current_price": 79.73,
-      "pnl_pct": -0.21
+      "market_value": 143640.0,
+      "current_price": 79.8,
+      "pnl_pct": -0.13,
+      "high_since_entry": 79.9
     },
     {
-      "code": "300144",
-      "name": "宋城演艺",
-      "quantity": 235,
-      "cost_price": 8.86,
-      "last_buy_date": "2026-02-06",
-      "market_value": 2122.05,
-      "current_price": 9.03,
-      "pnl_pct": 1.92
+      "code": "601899",
+      "name": "紫金矿业",
+      "quantity": 3000,
+      "cost_price": 39.921,
+      "last_buy_date": "2026-02-12",
+      "current_price": 39.75,
+      "market_value": 119250.0,
+      "high_since_entry": 39.921,
+      "pnl_pct": -0.43
     },
     {
-      "code": "300251",
-      "name": "光线传媒",
-      "quantity": 267,
-      "cost_price": 25.567,
-      "last_buy_date": "2026-02-10",
-      "market_value": 7209.0,
-      "current_price": 27.0,
-      "pnl_pct": 5.6
+      "code": "002594",
+      "name": "比亚迪",
+      "quantity": 200,
+      "cost_price": 91.217,
+      "last_buy_date": "2026-02-12",
+      "market_value": 18232.0,
+      "current_price": 91.16,
+      "pnl_pct": -0.06,
+      "high_since_entry": 91.16
+    },
+    {
+      "code": "300896",
+      "name": "爱美客",
+      "quantity": 100,
+      "cost_price": 146.733,
+      "last_buy_date": "2026-02-12",
+      "market_value": 14685.0,
+      "current_price": 146.85,
+      "pnl_pct": 0.08,
+      "high_since_entry": 146.85
+    },
+    {
+      "code": "601888",
+      "name": "中国中免",
+      "quantity": 200,
+      "cost_price": 94.327,
+      "last_buy_date": "2026-02-12",
+      "market_value": 18834.0,
+      "current_price": 94.17,
+      "pnl_pct": -0.17,
+      "high_since_entry": 94.17
     }
   ],
   "frozen_sells": [
@@ -96,10 +113,46 @@
       "code": "300251",
       "quantity": 4800,
       "buy_date": "2026-02-10"
+    },
+    {
+      "code": "601899",
+      "quantity": 3000,
+      "buy_date": "2026-02-12"
+    },
+    {
+      "code": "002594",
+      "quantity": 200,
+      "buy_date": "2026-02-12"
+    },
+    {
+      "code": "300896",
+      "quantity": 100,
+      "buy_date": "2026-02-12"
+    },
+    {
+      "code": "601888",
+      "quantity": 200,
+      "buy_date": "2026-02-12"
     }
   ],
   "daily_pnl": 0,
-  "total_pnl": 13987.29,
-  "total_pnl_pct": 1.4,
-  "trade_count": 0
+  "total_pnl": 8680.41,
+  "total_pnl_pct": 0.87,
+  "trade_count": 1,
+  "trades": [
+    {
+      "date": "2026-02-12",
+      "time": "10:52:30",
+      "code": "300896",
+      "name": "爱美客",
+      "type": "sell",
+      "quantity": 900,
+      "price": 147.15,
+      "amount": 132435.0,
+      "reason": "止损: 盘中低点触¥147(复盘共识止损线), 当前¥147.15",
+      "pnl": -4140.0,
+      "pnl_pct": -3.03
+    }
+  ],
+  "peak_value": 1008850.44
 }

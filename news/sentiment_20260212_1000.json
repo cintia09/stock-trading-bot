@@ -1,0 +1,82 @@
+{
+  "overall_sentiment": 31,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      2,
+      -0.5
+    ],
+    [
+      "贵金属",
+      1,
+      1.0
+    ],
+    [
+      "银行",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "中国重汽早盘涨超3% 中国重汽1月份重卡出口销量超1.6万辆再创历史新高",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770861293"
+    },
+    {
+      "title": "惠理集团早盘涨超9% 预计去年利润大幅增长至6.6亿港元",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770861130"
+    },
+    {
+      "title": "东方电气盘初涨超5% 美银证券首予“买入”投资评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770861023"
+    },
+    {
+      "title": "资生堂股价创近八年最大涨幅 之前业绩超出预期",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "大涨",
+          "飙升"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770857603"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-12T10:00:55.403252"
+}

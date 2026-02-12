@@ -1,0 +1,146 @@
+{
+  "overall_sentiment": 30,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      11,
+      0.45
+    ],
+    [
+      "银行",
+      2,
+      0.5
+    ],
+    [
+      "贵金属",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "沪深两市成交额突破1.5万亿 较上一日此时放量超400亿",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "放量",
+          "突破"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-02-12 13:26:56"
+    },
+    {
+      "title": "联想季度营收超预期 受益于AI服务器业务以及存储芯片涨价前提前购机",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "超预期"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770873760"
+    },
+    {
+      "title": "韩国股市盘中一度突破5500点，为有史以来首次",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "突破"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770872751"
+    },
+    {
+      "title": "受AI担忧影响 印度印孚瑟斯、塔塔咨询引领印度软件股抛售",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "抛售",
+          "下跌"
+        ]
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770871025"
+    },
+    {
+      "title": "联想集团Q3再创历史新高：营收1575亿元，净利增速达营收两倍",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770870929"
+    },
+    {
+      "title": "新加坡股指跨越5000点新里程碑",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "突破",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770870753"
+    },
+    {
+      "title": "智谱在香港大涨至新高 公司上调AI编程订阅套餐价格并将推出新模型",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "上涨",
+          "大涨",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770870707"
+    },
+    {
+      "title": "中核国际午前涨逾7% 铀贸易业务交易量提升带动全年收入及利润显著增长",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "增长",
+          "提升",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770868555"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-12T13:33:54.165426"
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-02-13",
+  "generated_by": "intraday_monitor_1430",
+  "generated_at": "2026-02-12T14:30:00",
+  "status": "pending_review",
+  "note": "盘中监控补充，待晚间复盘确认/覆盖",
+  "actions": [
+    {
+      "type": "sell",
+      "code": "300896",
+      "name": "爱美客",
+      "condition": "open_price <= 147",
+      "quantity": 100,
+      "reason": "今日新建仓@146.733, 收盘价¥147.0正好在止损线上, T+1明日可卖",
+      "priority": "P0",
+      "done": false
+    }
+  ]
+}

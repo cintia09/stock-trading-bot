@@ -1,103 +1,156 @@
 {
-  "date": "2026-02-12",
-  "generated_by": "cross_examination_opus45_gpt52",
-  "generated_at": "2026-02-11T20:42:00",
-  "status": "final",
+  "date": "2026-02-13",
+  "generated_by": "opus45_initial_ruling",
+  "generated_at": "2026-02-12T15:40:00",
+  "status": "preliminary",
   "actions": [
     {
-      "type": "clear_residual",
-      "code": "300144",
-      "name": "宋城演艺",
-      "quantity": 235,
-      "reason": "残仓¥2,122(<0.5%总资产), 9次提出未清",
-      "priority": "P0",
-      "method": "market_sell_at_open"
-    },
-    {
-      "type": "clear_residual",
-      "code": "300251",
-      "name": "光线传媒",
-      "quantity": 267,
-      "reason": "残仓¥7,209(0.71%), ATR止盈后残余",
+      "type": "reduce",
+      "code": "600036",
+      "name": "招商银行",
+      "condition": "open",
+      "quantity": 700,
+      "reason": "单只占14.3%>12%上限，减仓至合规(~12%)",
       "priority": "P0",
       "method": "market_sell_at_open"
     },
     {
       "type": "reduce",
-      "code": "300896",
-      "name": "爱美客",
-      "condition": "open_price < 148",
-      "quantity": 450,
-      "reason": "连续5天弱势, 两模型共识止损上移至¥147",
+      "code": "000333",
+      "name": "美的集团",
+      "condition": "open",
+      "quantity": 300,
+      "reason": "单只占14.2%>12%上限，减仓至合规(~12%)",
+      "priority": "P0",
+      "method": "market_sell_at_open"
+    },
+    {
+      "type": "sell",
+      "code": "601899",
+      "name": "紫金矿业",
+      "condition": "price <= 39.2",
+      "quantity": "all",
+      "reason": "新建仓止损线¥39.2(-1.8%), 冲高回落需警惕",
       "priority": "P0"
     },
     {
       "type": "sell",
       "code": "300896",
       "name": "爱美客",
-      "condition": "price <= 147",
+      "condition": "price <= 143",
       "quantity": "all",
-      "reason": "两模型共识止损¥147(从¥145.37上移), 连弱5天结构位",
-      "priority": "P0"
+      "reason": "新建仓100股止损¥143(-2.5%), 仓位极小",
+      "priority": "P1"
+    },
+    {
+      "type": "sell",
+      "code": "601888",
+      "name": "中国中免",
+      "condition": "price <= 90",
+      "quantity": "all",
+      "reason": "新建仓止损¥90(-4.4%), 观察1天",
+      "priority": "P1"
+    },
+    {
+      "type": "sell",
+      "code": "002594",
+      "name": "比亚迪",
+      "condition": "price <= 87.5",
+      "quantity": "all",
+      "reason": "新建仓止损¥87.5(-4%), 观察1天",
+      "priority": "P1"
     }
   ],
   "code_improvements": [
     {
       "priority": "P0",
       "order": 1,
-      "task": "均线过滤入码",
-      "file": "scripts/stock_scoring.py",
-      "location": "score_stock函数",
-      "action": "价格<5日均线时扣20分, 3-5行代码",
-      "verify": "grep -n 'ma5\\|moving_avg\\|均线' scripts/*.py",
-      "debt_count": 9,
-      "note": "9次提出未做, 最简单最快落地"
+      "task": "止损后同日禁买",
+      "file": "scripts/intraday_monitor.py",
+      "location": "scan_watchlist_opportunities函数或buy逻辑前",
+      "action": "buy前检查today_sells列表, 如该code有止损类sell记录则skip",
+      "verify": "grep -n 'today_sells\\|rebuy_ban\\|same_day' scripts/*.py",
+      "debt_count": 1,
+      "note": "新发现P0↑↑: 爱美客止损900→又买回100, 逻辑矛盾"
     },
     {
       "priority": "P0",
       "order": 2,
-      "task": "一次性卖出submit",
+      "task": "reasons空阻断下单",
       "file": "trading_engine.py",
-      "location": "ATR止盈触发逻辑",
-      "action": "计算target_qty=持仓×sell_pct, 一次submit, 加trade_executed_this_round标志",
-      "verify": "grep -n 'target_qty\\|executed_this_round' trading_engine.py",
-      "debt_count": 6,
-      "note": "改动~20行, 直接减少分批利润损耗"
+      "location": "execute_buy函数",
+      "action": "if not reasons: log warning, reject order",
+      "verify": "grep -n 'reasons.*empty\\|reasons.*required' trading_engine.py",
+      "debt_count": 1,
+      "note": "紫金矿业¥119K无reasons, 不可追溯"
     },
     {
       "priority": "P0",
       "order": 3,
-      "task": "残仓自动清理",
-      "file": "trading_engine.py",
-      "location": "sell函数末尾",
-      "action": "卖出后检查剩余市值<总资产0.5%则追加市价清仓",
-      "verify": "grep -n 'residual\\|残仓\\|clear' trading_engine.py",
-      "debt_count": 7
+      "task": "max_daily_buys硬限制",
+      "file": "scripts/intraday_monitor.py",
+      "location": "scan_watchlist_opportunities",
+      "action": "全局日级计数器today_buys_count, 超2只停止买入",
+      "verify": "grep -n 'daily_buys\\|max_daily_buys\\|buy_count' scripts/*.py",
+      "debt_count": 1
+    },
+    {
+      "priority": "P0",
+      "order": 4,
+      "task": "均线过滤入码(MA5)",
+      "file": "scripts/stock_scoring.py",
+      "location": "score_stock函数",
+      "action": "price<5日均线→score-=20, 3-5行代码",
+      "verify": "grep -n 'ma5\\|MA5\\|moving_avg' scripts/stock_scoring.py",
+      "debt_count": 10,
+      "note": "第10次提出!!!"
     },
     {
       "priority": "P1",
-      "order": 4,
-      "task": "累计弱势预警入码",
+      "order": 5,
+      "task": "单只>12%自动减仓",
       "file": "scripts/intraday_monitor.py",
-      "location": "monitor_holdings函数",
-      "action": "读underperform_cumulative_days参数, 连续N天跑输>阈值则自动减仓",
-      "verify": "grep -n 'underperform\\|cumulative' scripts/intraday_monitor.py"
+      "location": "monitor_holdings",
+      "action": "开盘检查各持仓占比, >12%→减仓至10%",
+      "verify": "grep -n 'overweight\\|position_pct\\|auto_reduce' scripts/*.py"
+    },
+    {
+      "priority": "P1",
+      "order": 6,
+      "task": "残仓自动清理",
+      "file": "trading_engine.py",
+      "location": "sell函数末尾",
+      "action": "卖出后检查剩余市值<0.5%总资产→追加清仓",
+      "verify": "grep -n 'residual\\|残仓' trading_engine.py"
     },
     {
       "priority": "P2",
-      "order": 5,
-      "task": "热区补采",
-      "file": "scripts/intraday_monitor.py",
-      "location": "采样逻辑末尾",
-      "action": "检测振幅>8%的持仓, 5分钟后补采一次",
-      "verify": "grep -n 'hotzone\\|补采\\|extra_sample' scripts/intraday_monitor.py"
+      "order": 7,
+      "task": "一次性submit",
+      "file": "trading_engine.py",
+      "location": "ATR止盈逻辑",
+      "action": "target_qty单次提交, 加executed_this_round标志",
+      "verify": "grep -n 'target_qty\\|one_shot' trading_engine.py"
+    },
+    {
+      "priority": "P2",
+      "order": 8,
+      "task": "情绪模块0.0检查",
+      "file": "scripts/sentiment_enhanced.py",
+      "location": "个股情绪计算",
+      "action": "返回0.0时标记数据缺失, 不给默认50分",
+      "verify": "grep -n 'default.*50\\|sentiment.*0.0' scripts/sentiment_enhanced.py"
     }
   ],
   "cross_examination_consensus": {
     "params_change": false,
-    "aimeke_stop_loss": 147,
-    "code_priority": "均线过滤(简单先落地) > 一次性submit(改动大但收益直接) > 残仓清理",
-    "position": "维持50%, 不加仓",
-    "monitoring": "全局5分钟(两模型共识)"
+    "new_params_suggested": {
+      "max_daily_buys": 2,
+      "same_day_rebuy_ban": true,
+      "buy_reasons_required": true
+    },
+    "code_priority": "止损后禁买 > reasons空阻断 > max_daily_buys > 均线过滤(MA5) > 单只超限减仓 > 残仓清理 > 一次性submit > 情绪模块",
+    "position": "52.8%, 减仓招行/美的至12%合规后约50%",
+    "market": "震荡偏暖, 不加仓"
   }
 }

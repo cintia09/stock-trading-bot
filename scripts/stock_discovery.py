@@ -4,7 +4,8 @@
 增强内容：
 - 新增 fetch_strong_stocks(): 近 3 天连续上涨且每日至少 +2%（通过今日涨幅榜 Top50 + 3 日 K 线验证）
 - 新增 fetch_institution_holdings(): 近期机构/主力增持（按主力净流入 f62 排序，筛选 >5000 万的前 10）
-- discover_stocks() 评分加入：连涨 +10 分，机构增持 +15 分
+- 新增 fetch_ai_infra_stocks(): 读取AI基础设施股票研究结果，给高共识AI基础设施股加分(+20)
+- discover_stocks() 评分加入：连涨 +10 分，机构增持 +15 分，AI基础设施 +20 分
 
 约束：不修改既有对外接口，只新增函数/在原逻辑末尾追加。
 """
@@ -299,6 +300,67 @@ def fetch_institution_holdings() -> List[Dict]:
         return []
 
 
+def fetch_ai_infra_stocks() -> List[Dict]:
+    """读取AI基础设施股票研究结果（每日05:00三模型并行研究+交叉质询）。
+
+    数据来源: stock-trading/ai-infra-tracking/daily/YYYY-MM-DD.json
+    读取最新一天的top10_final，返回标准格式的股票列表。
+    AI基础设施股在选股中获得额外加分(+20)，体现投资偏好。
+    """
+    stocks: List[Dict] = []
+    try:
+        tracking_dir = BASE_DIR / "ai-infra-tracking" / "daily"
+        if not tracking_dir.exists():
+            print("  AI基础设施跟踪目录不存在")
+            return []
+
+        # 找最新的文件
+        files = sorted(tracking_dir.glob("*.json"), reverse=True)
+        if not files:
+            print("  无AI基础设施研究数据")
+            return []
+
+        latest_file = files[0]
+        # 只用最近3天的数据
+        file_date = latest_file.stem  # "2026-02-12"
+        try:
+            from datetime import timedelta
+            fd = datetime.strptime(file_date, "%Y-%m-%d")
+            if (datetime.now() - fd).days > 3:
+                print(f"  AI基础设施数据过旧({file_date})，跳过")
+                return []
+        except ValueError:
+            pass
+
+        with open(latest_file, 'r') as f:
+            data = json.load(f)
+
+        top10 = data.get("top10_final", [])
+        print(f"  读取AI基础设施研究({file_date}): {len(top10)}只股票")
+
+        for item in top10:
+            code = str(item.get("code", "")).zfill(6)
+            ai_score = item.get("ai_score", 0)
+            consensus = item.get("consensus", "")
+
+            stocks.append({
+                "code": code,
+                "name": item.get("name", ""),
+                "price": 0,  # 实时价从其他源获取
+                "change_pct": 0,
+                "ai_infra_score": ai_score,
+                "ai_infra_category": item.get("category", ""),
+                "ai_infra_consensus": consensus,
+                "ai_infra_reason": item.get("reason", ""),
+                "source": "AI基础设施研究",
+            })
+
+        return stocks
+    except Exception as e:
+        print(f"AI基础设施数据获取失败: {e}")
+        return []
+
+
 # ============ 原有逻辑 ============
 
 def filter_quality_stocks(stocks: List[Dict]) -> List[Dict]:
@@ -326,20 +388,20 @@ def filter_quality_stocks(stocks: List[Dict]) -> List[Dict]:
         if abs(change_pct) >= 9.9:
             continue
 
-        # 过滤低价股 (< 5元)
+        # 过滤低价股 (< 5元) — AI基础设施研究来源豁免（price=0是因为没实时数据）
         try:
             price = float(s.get("price", 0))
         except (ValueError, TypeError):
             price = 0
-        if price < 5:
+        if price < 5 and s.get("source") != "AI基础设施研究":
             continue
 
-        # 过滤市值过小 (< 100亿)
+        # 过滤市值过小 (< 100亿) — AI基础设施研究来源豁免
         try:
             market_cap = float(s.get("market_cap", 0))
         except (ValueError, TypeError):
             market_cap = 0
-        if market_cap > 0 and market_cap < 10000000000:  # 100亿
+        if market_cap > 0 and market_cap < 10000000000 and s.get("source") != "AI基础设施研究":  # 100亿
             continue
 
         seen_codes.add(code)
@@ -384,12 +446,18 @@ def discover_stocks() -> Dict:
     inst = fetch_institution_holdings()
     all_stocks.extend(inst)
 
+    # 7. 新增：AI基础设施研究（投资偏好）
+    print("  获取AI基础设施研究...")
+    ai_infra = fetch_ai_infra_stocks()
+    all_stocks.extend(ai_infra)
+
     # 过滤
     print("  过滤质量股票...")
     quality = filter_quality_stocks(all_stocks)
 
     strong_set = {s.get("code") for s in strong if s.get("code")}
     inst_set = {s.get("code") for s in inst if s.get("code")}
+    ai_infra_map = {s.get("code"): s for s in ai_infra if s.get("code")}
 
     # 去重并评分
     stock_scores = {}
@@ -402,6 +470,7 @@ def discover_stocks() -> Dict:
                 "sources": [],
                 "_bonus_strong": False,
                 "_bonus_inst": False,
+                "_bonus_ai_infra": False,
             }
 
         # 来源越多分数越高
@@ -434,10 +503,26 @@ def discover_stocks() -> Dict:
             stock_scores[code]["discovery_score"] += 15
             stock_scores[code]["_bonus_inst"] = True
 
+        # 新增：AI基础设施研究加分（投资偏好，+20分）
+        if (code in ai_infra_map) and (not stock_scores[code].get("_bonus_ai_infra")):
+            infra_data = ai_infra_map[code]
+            ai_score = infra_data.get("ai_infra_score", 0)
+            # 基础加分20，高共识(3/3)额外+5，高AI评分(>=9)额外+5
+            bonus = 20
+            if "3/3" in str(infra_data.get("ai_infra_consensus", "")):
+                bonus += 5
+            if ai_score >= 9:
+                bonus += 5
+            stock_scores[code]["discovery_score"] += bonus
+            stock_scores[code]["ai_infra_category"] = infra_data.get("ai_infra_category", "")
+            stock_scores[code]["ai_infra_reason"] = infra_data.get("ai_infra_reason", "")
+            stock_scores[code]["_bonus_ai_infra"] = True
+
     # 清理内部字段
     for v in stock_scores.values():
         v.pop("_bonus_strong", None)
         v.pop("_bonus_inst", None)
+        v.pop("_bonus_ai_infra", None)
 
     # 排序
     ranked = sorted(stock_scores.values(), key=lambda x: x["discovery_score"], reverse=True)

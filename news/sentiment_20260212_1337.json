@@ -1,0 +1,132 @@
+{
+  "overall_sentiment": 26,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      11,
+      0.45
+    ],
+    [
+      "银行",
+      2,
+      0.5
+    ],
+    [
+      "贵金属",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "联想季度营收超预期 受益于AI服务器业务以及存储芯片涨价前提前购机",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "超预期",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770873760"
+    },
+    {
+      "title": "韩国股市盘中一度突破5500点，为有史以来首次",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "突破",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770872751"
+    },
+    {
+      "title": "受AI担忧影响 印度印孚瑟斯、塔塔咨询引领印度软件股抛售",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "下跌",
+          "抛售"
+        ]
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770871025"
+    },
+    {
+      "title": "联想集团Q3再创历史新高：营收1575亿元，净利增速达营收两倍",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "新高",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770870929"
+    },
+    {
+      "title": "新加坡股指跨越5000点新里程碑",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "新高",
+          "突破"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770870753"
+    },
+    {
+      "title": "智谱在香港大涨至新高 公司上调AI编程订阅套餐价格并将推出新模型",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "大涨",
+          "新高",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770870707"
+    },
+    {
+      "title": "中核国际午前涨逾7% 铀贸易业务交易量提升带动全年收入及利润显著增长",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "提升",
+          "上涨",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770868555"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-12T13:37:54.245257"
+}

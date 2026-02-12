@@ -1,0 +1,114 @@
+{
+  "overall_sentiment": 32,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      5,
+      0.2
+    ],
+    [
+      "银行",
+      2,
+      1.0
+    ],
+    [
+      "消费",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "药明生物盘初涨超6% 去年下半年经调整纯利远胜预期毛利率显著增长",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "银行"
+      ],
+      "time": "1770862098"
+    },
+    {
+      "title": "MINIMAX-WP早盘涨近6% 摩根大通给予“增持”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增持",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770861977"
+    },
+    {
+      "title": "中国东方教育早盘涨超6% 预期年度纯利同比增长46%至51%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770861826"
+    },
+    {
+      "title": "中国重汽早盘涨超3% 中国重汽1月份重卡出口销量超1.6万辆再创历史新高",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770861293"
+    },
+    {
+      "title": "惠理集团早盘涨超9% 预计去年利润大幅增长至6.6亿港元",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770861130"
+    },
+    {
+      "title": "东方电气盘初涨超5% 美银证券首予“买入”投资评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770861023"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-12T10:12:04.898208"
+}

@@ -1,0 +1,331 @@
+[
+  {
+    "timestamp": "2026-02-13T01:19:00+08:00",
+    "hour": 1,
+    "social_temperature": "中性",
+    "market_sentiment": "中性",
+    "fear_greed_estimate": 55,
+    "consumer_confidence": "稳定",
+    "items": [
+      {
+        "category": "微博热搜",
+        "title": "微博发布《2025微博热搜趋势报告》：‘回应’成高频关键词",
+        "summary": "热搜内容呈‘社会/娱乐/垂直’三分结构，社会议题中‘回应’类叙事占比高，反映公众对权威解释与事件进展的持续关注。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": ["媒体互联网"],
+        "related_stocks": [],
+        "source": "https://www.sina.cn/news/detail/5265086329651704.html"
+      },
+      {
+        "category": "微博热搜",
+        "title": "热搜文娱榜单相关内容在资讯平台扩散",
+        "summary": "‘热搜艺人/影视’榜单类内容继续占据注意力，情绪偏娱乐化与轻讨论，对宏观风险偏好影响有限。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": ["娱乐"],
+        "related_stocks": [],
+        "source": "https://news.qq.com/rain/a/20260211A02O8E00"
+      },
+      {
+        "category": "微博热搜",
+        "title": "热搜趋势解读文章强调‘爆发高频’与‘垂直兴趣圈层’",
+        "summary": "舆论热点更碎片化、垂直化，意味着品牌与消费风向更容易在细分圈层形成爆点。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": ["消费", "互联网"],
+        "related_stocks": [],
+        "source": "https://m.sohu.com/a/986358121_211762"
+      },
+
+      {
+        "category": "小红书趋势",
+        "title": "讨论：AI助手可能冲击小红书的‘消费决策’场景",
+        "summary": "信息整合/一站式决策类AI产品被认为会分流‘种草—拔草’链路的注意力，小红书向视频化发力被视作应对。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": ["互联网", "AI", "消费"],
+        "related_stocks": [],
+        "source": "https://finance.sina.cn/stock/jdts/2026-02-11/detail-inhmkyvr7822500.d.html"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "小红书社区产品形态探索：语音/多模态与创作工具升级",
+        "summary": "平台强调提升互动与内容形态（语音、多模态），有利于提升停留时长，但对‘消费转化’的拉动仍待观察。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": ["互联网", "广告营销"],
+        "related_stocks": [],
+        "source": "https://m.sohu.com/a/986663546_129720"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "明星/热点入驻带动平台关注度讨论",
+        "summary": "娱乐热点在小红书扩散，往往会带动生活方式与同款消费笔记增长，是短期消费风向的重要放大器。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": ["消费", "娱乐"],
+        "related_stocks": [],
+        "source": "https://www.sina.cn/news/detail/5265265648206559.html"
+      },
+
+      {
+        "category": "抖音B站",
+        "title": "抖音本地生活推出独立App‘抖省省’引发关注",
+        "summary": "从内容内嵌交易走向独立决策入口，显示平台在本地生活/团购战场组织形态升级，利好到店与即时零售生态。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": ["互联网", "本地生活", "消费"],
+        "related_stocks": [],
+        "source": "https://tech.sina.cn/2026-02-12/detail-inhmpqkh3082904.d.html"
+      },
+      {
+        "category": "抖音B站",
+        "title": "调饮/自制饮品话题热度数据披露：UGC带动品牌‘调饮化’传播",
+        "summary": "社媒平台对‘自制饮品/调酒’内容持续高热，显示年轻消费更偏体验与玩法，利好低糖/功能饮料与相关品牌营销。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": ["食品饮料", "消费"],
+        "related_stocks": [],
+        "source": "http://www.news.cn/food/20260212/1a70ef0e8afc477ab76f968f4fcd29f6/c.html"
+      },
+      {
+        "category": "抖音B站",
+        "title": "知识视频赛道竞争被讨论（百度/知乎/B站/抖快等）",
+        "summary": "平台对‘知识视频’投入增加，意味着内容供给从娱乐向效率/知识转移，用户注意力结构持续变化。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": ["互联网", "教育"],
+        "related_stocks": [],
+        "source": "https://36kr.com/p/953198690515336"
+      },
+
+      {
+        "category": "闲鱼淘宝",
+        "title": "闲鱼上线‘帮卖’：上门质检、三段式出清被解读为提升交易效率",
+        "summary": "二手交易向标准化服务升级，有助于提升闲置流通与价格发现效率，反映大众‘理性消费/以旧换新’趋势延续。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": ["消费", "电商", "二手经济"],
+        "related_stocks": [],
+        "source": "https://36kr.com/p/2428367291720448"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "淘宝闪购：春节年货订单增长、低线城市增幅显著",
+        "summary": "数据显示返乡场景+即时消费推动订单增长，低线城市增幅更高，指向‘下沉市场’消费韧性仍在。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": ["消费", "电商", "物流"],
+        "related_stocks": [],
+        "source": "https://www.163.com/dy/article/KLDUIEGF05568W0A.html"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "闲鱼交易‘防坑/砍价’内容热度高，反映用户对交易安全的焦虑",
+        "summary": "二手交易相关的避坑内容传播，显示用户更注重风险控制与性价比，情绪偏谨慎。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": ["消费"],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1go4y1U7Y3/"
+      },
+
+      {
+        "category": "A股财经",
+        "title": "盘面解读：算力板块开盘领涨，节前量能偏弱、结构性机会为主",
+        "summary": "市场缩量、轮动快，算力/科技仍是主线之一但追高风险在；红利周期（有色化工等）穿插表现。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": ["AI基础设施", "有色金属", "化工"],
+        "related_stocks": ["紫金矿业"],
+        "source": "https://finance.sina.com.cn/stock/hkstock/hkstocknews/2026-02-12/doc-inhmpkak3166930.shtml"
+      },
+      {
+        "category": "A股财经",
+        "title": "辟谣类公告：个股被传‘航天订单/火箭回收龙头’后公司声明不实",
+        "summary": "节前题材炒作与传闻仍多，监管与公司辟谣频率提升，短线资金博弈特征明显。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": ["军工"],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/stock/relnews/2026-02-12/doc-inhmpcun3220769.shtml"
+      },
+      {
+        "category": "A股财经",
+        "title": "风格讨论：科技成长高位 vs 顺周期低位，市场关注‘高低切换’可能性",
+        "summary": "市场开始讨论从AI等高位赛道向周期/价值切换的节奏，对持仓中银行/保险等‘低波动资产’情绪偏友好。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": ["银行", "保险", "周期"],
+        "related_stocks": ["招商银行", "中国平安"],
+        "source": "https://36kr.com/p/3679973622771331"
+      },
+
+      {
+        "category": "政策信号",
+        "title": "官方发布会信息被转载：2025年市场监管服务高质量发展‘成效明显’",
+        "summary": "监管侧强调维护统一大市场与提升综合监管能力，基调偏‘稳预期’；对消费环境与营商环境属中性偏正面。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": ["宏观政策"],
+        "related_stocks": [],
+        "source": "https://www.ln.gov.cn/web/ywdt/rdgz/2026020608453412065/index.shtml"
+      },
+      {
+        "category": "政策信号",
+        "title": "国资国企合规与投资责任追究话题持续被解读",
+        "summary": "对违规经营投资问责的讨论提升，利好规范治理，但也会压制部分高风险扩张与激进投资冲动。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": ["国企改革", "政治"],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/984381081_120070887"
+      },
+      {
+        "category": "政策信号",
+        "title": "涉外关税/芯片相关评论文章增多，显示外部不确定性仍在",
+        "summary": "围绕关税与芯片的舆论增量，提示外部环境扰动可能影响科技链预期（需以权威与官方口径为准）。",
+        "sentiment": "负面",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": ["半导体", "外贸"],
+        "related_stocks": ["比亚迪"],
+        "source": "https://www.sohu.com/a/986436715_122157611"
+      },
+
+      {
+        "category": "国际大事",
+        "title": "俄乌方向：外媒称乌方或将公布选举与和平公投筹备信息（2/24）",
+        "summary": "若相关议程推进，可能影响地缘风险溢价与大宗商品预期；但进展仍高度不确定。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": ["宏观", "大宗商品"],
+        "related_stocks": ["紫金矿业"],
+        "source": "https://www.reuters.com/world/europe/ukraines-zelenskiy-intends-announce-election-plan-february-24-ft-reports-2026-02-11/"
+      },
+      {
+        "category": "国际大事",
+        "title": "欧洲安全：英国拟增加在挪威驻军以威慑俄方（外媒报道）",
+        "summary": "欧洲安全议题升温，短期不确定性偏负面，可能推升避险需求。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": ["宏观", "军工"],
+        "related_stocks": [],
+        "source": "https://www.theguardian.com/world/2026/feb/11/ukraine-war-briefing-uk-promises-to-double-troop-numbers-in-norway-to-deter-putin"
+      },
+      {
+        "category": "国际大事",
+        "title": "中美军控舆论：美方相关指责与中方回应被报道",
+        "summary": "地缘政治口水战对市场更多是‘噪音’，但在科技与外贸板块会通过情绪影响风险偏好。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": ["政治", "科技"],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/986284528_120094090"
+      },
+
+      {
+        "category": "AI科技",
+        "title": "算力产业讨论：HBM与‘内存墙’成为GPU迭代关键（算力竞速解读）",
+        "summary": "市场对HBM/高带宽内存、先进封装与算力供给瓶颈关注度上升，利好‘AI基础设施’链条情绪。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": ["AI基础设施", "半导体", "存储"],
+        "related_stocks": [],
+        "source": "https://36kr.com/p/3677454332162565"
+      },
+      {
+        "category": "AI科技",
+        "title": "大厂AI硬件竞赛：软硬一体更易、生态入口更难（评论）",
+        "summary": "‘入口之争’延续到终端与硬件生态，短期更利好具备渠道与生态的平台型企业。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": ["AI", "消费电子"],
+        "related_stocks": [],
+        "source": "https://36kr.com/p/3677441629528964"
+      },
+      {
+        "category": "AI科技",
+        "title": "太空数据中心/轨道算力概念讨论增多",
+        "summary": "概念前沿但落地不确定性大，更多体现科技想象力与资本叙事热度。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": ["AI", "航天"],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1AhFqzoEpe/"
+      },
+
+      {
+        "category": "民生社会",
+        "title": "收入/就业讨论：部分地区居民收入增速‘赶不上经济增速’引发关注",
+        "summary": "舆论对‘增长与体感’落差仍敏感，容易转化为对消费谨慎与对未来预期的保守。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": ["社会", "宏观"],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/986346106_118622"
+      },
+      {
+        "category": "民生社会",
+        "title": "物价‘低水平运行’与政策讨论内容在视频平台扩散",
+        "summary": "围绕物价、工资、养老金等话题的讨论升温，情绪偏焦虑/吐槽，反映对购买力与分配的关注。",
+        "sentiment": "负面",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": ["社会"],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1nRcgzJEMK/"
+      },
+      {
+        "category": "民生社会",
+        "title": "‘躺平/职场压力/房价物价’叙事持续有流量",
+        "summary": "生活压力类内容持续，提示社会情绪总体偏谨慎，消费端更重性价比与确定性。",
+        "sentiment": "负面",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": ["社会", "消费"],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV16wr5BkEas/"
+      }
+    ],
+    "key_signals": [
+      "平台型消费决策入口争夺升级：抖音本地生活独立App、AI助手对内容社区‘决策链路’的潜在分流",
+      "A股结构性行情：算力/科技仍强但量能偏弱、风格切换（向周期/价值）讨论升温",
+      "民生层面对收入/物价的讨论偏谨慎，性价比与风险控制情绪强化"
+    ],
+    "portfolio_alerts": [
+      "招商银行/中国平安：市场出现‘高低切换’讨论，对低估值金融权重情绪偏友好（影响：中等）",
+      "紫金矿业：地缘事件进展不确定，可能通过大宗商品预期影响相关标的波动（影响：中等）"
+    ],
+    "social_highlights": [
+      "AI与平台竞争开始影响‘消费决策入口’：内容社区与AI助手的注意力争夺",
+      "本地生活与即时零售继续被加码，显示消费需求在场景化与下沉市场上仍有韧性",
+      "收入/物价体感讨论偏多，社会情绪整体谨慎但未出现极端悲观事件"
+    ]
+  }
+]

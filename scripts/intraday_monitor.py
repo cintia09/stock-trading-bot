@@ -15,7 +15,8 @@ from fetch_stock_data import fetch_realtime_sina, fetch_market_overview, fetch_k
 from technical_analysis import generate_signals, calculate_volume_ratio
 from trading_engine import (load_account, save_account, execute_trade, TRADING_RULES,
                             load_watchlist, save_watchlist, score_stock, get_holding_value,
-                            get_available_cash, calculate_trade_cost)
+                            get_available_cash, calculate_trade_cost,
+                            get_today_stop_loss_codes, get_today_buy_count)
 
 BASE_DIR = Path(__file__).parent.parent
 DATA_DIR = BASE_DIR / "data"
@@ -343,6 +344,17 @@ def scan_watchlist_opportunities(snapshot, analysis):
     if current_position_pct >= max_pos or cash < TRADING_RULES.get("min_buy_amount", 5000):
         return opportunities
     
+    # === P0: 日买入数量限制 ===
+    max_daily_buys = TRADING_RULES.get("max_daily_buys", 2)
+    today_buys = get_today_buy_count()
+    if today_buys >= max_daily_buys:
+        print(f"   ⛔ 日买入限制: 今日已买{today_buys}只(上限{max_daily_buys})，跳过watchlist扫描")
+        return opportunities
+    remaining_buys = max_daily_buys - today_buys
+    
+    # === P0: 获取今日止损代码 ===
+    stop_loss_codes = get_today_stop_loss_codes()
+    
     # 获取持仓代码（排除已持仓）
     holding_codes = {h["code"] for h in account.get("holdings", [])}
     
@@ -362,6 +374,11 @@ def scan_watchlist_opportunities(snapshot, analysis):
         code = c["code"]
         rt = realtime.get(code, {})
         if not rt or rt.get("price", 0) == 0:
+            continue
+        
+        # === P0: 止损后同日禁买 ===
+        if code in stop_loss_codes:
+            print(f"   ⛔ 跳过{rt.get('name', code)}: 今日已止损，禁止买回")
             continue
         
         price = rt["price"]
@@ -410,9 +427,9 @@ def scan_watchlist_opportunities(snapshot, analysis):
                         "source": c.get("reason", "watchlist")
                     })
     
-    # 按分数排序，只取最好的2只（避免一次买太多）
+    # 按分数排序，只取最好的（受日买入限制）
     opportunities.sort(key=lambda x: x["score"], reverse=True)
-    return opportunities[:2]
+    return opportunities[:remaining_buys]
 
 
 def run_monitor():

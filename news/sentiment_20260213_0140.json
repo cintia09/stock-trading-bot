@@ -1,0 +1,116 @@
+{
+  "overall_sentiment": -12,
+  "overall_label": "negative",
+  "hot_sectors": [
+    [
+      "贵金属",
+      9,
+      -1.0
+    ],
+    [
+      "AI",
+      8,
+      0.38
+    ],
+    [
+      "消费",
+      3,
+      0.33
+    ],
+    [
+      "银行",
+      3,
+      0.33
+    ],
+    [
+      "房地产",
+      2,
+      -0.5
+    ],
+    [
+      "光伏",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "深夜突变！金价闪崩，直线暴跌3%！美股全线跳水，超4100股下跌，苹果市值蒸发超8000亿元，中概股跌幅扩大",
+      "sentiment": {
+        "score": -3,
+        "label": "very_negative",
+        "positive": [],
+        "negative": [
+          "下跌",
+          "跳水",
+          "暴跌"
+        ]
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "2026-02-13 00:59:31"
+    },
+    {
+      "title": "突发利空！603959，债务逾期！昨日股价跌停",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "跌停",
+          "利空"
+        ]
+      },
+      "sectors": [],
+      "time": "2026-02-13 00:25:42"
+    },
+    {
+      "title": "午盘：美股走低道指下跌逾600点 思科重挫11.7%",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "下跌",
+          "大跌"
+        ]
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1770916106"
+    },
+    {
+      "title": "电价涨幅达通胀率两倍，数据中心需求致电价难回落",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770915055"
+    },
+    {
+      "title": "卡夫亨氏叫停分拆计划，下调业绩展望",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "下跌",
+          "下调"
+        ]
+      },
+      "sectors": [],
+      "time": "1770911697"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-13T01:40:41.111302"
+}

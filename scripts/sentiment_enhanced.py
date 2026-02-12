@@ -110,9 +110,10 @@ def fetch_stock_news_eastmoney_search(stock_name: str, page_size: int = 10) -> L
             return items
 
         # 尝试兼容不同返回结构
-        # 常见：data["result"]["cmsArticleWebOld"]["data"]
+        # 实际返回: data["result"]["cmsArticleWebOld"] 直接是列表
         node = None
         for path in [
+            ("result", "cmsArticleWebOld"),
             ("result", "cmsArticleWebOld", "data"),
             ("result", "cmsArticleWebOld", "datas"),
             ("result", "data"),

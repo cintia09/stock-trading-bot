@@ -247,6 +247,11 @@ def score_stock(code: str, realtime: Dict, klines: List[Dict], sentiment: Dict) 
                 reasons.append(f"今日弱势{change_pct:.1f}%")
             elif change_pct < -1:
                 score -= 5
+            
+            # === P1: 日内跌幅过滤（当日跌>2%额外扣30分，防止买入当日暴跌股） ===
+            if change_pct <= -2:
+                score -= 30
+                reasons.append(f"⚠️日内跌幅过滤: 今日{change_pct:.1f}%(<=-2%)扣30分")
         
         # 量比
         volumes = [k["volume"] for k in klines]
@@ -707,6 +712,44 @@ def run_trading_cycle():
         print(f"\n⚠️ [风控检查异常] {e}")
         cb = {}
     
+    # 1.6 仓位再平衡：单只>max_position_pct自动减仓至10%
+    rebalance_trades = []
+    try:
+        total_val = account.get("total_value", 1000000)
+        max_single_pct = TRADING_RULES.get("max_position_pct", 0.12)
+        target_pct = 0.10  # 减仓目标：10%
+        realtime_rb = fetch_realtime_sina([h["code"] for h in account.get("holdings", [])])
+        for h in account.get("holdings", []):
+            rt = realtime_rb.get(h["code"], {})
+            price = rt.get("price", h.get("current_price", h["cost_price"]))
+            if price <= 0:
+                continue
+            holding_value = h["quantity"] * price
+            weight = holding_value / total_val if total_val > 0 else 0
+            if weight > max_single_pct:
+                target_value = total_val * target_pct
+                excess_value = holding_value - target_value
+                sell_qty = int(excess_value / price / 100) * 100
+                sellable = can_sell_today(account, h["code"])
+                sell_qty = min(sell_qty, sellable)
+                if sell_qty >= 100:
+                    print(f"\n⚖️ [仓位再平衡] {h['name']}({h['code']}) 占比{weight*100:.1f}%>{max_single_pct*100:.0f}%，减{sell_qty}股至~{target_pct*100:.0f}%")
+                    result = execute_trade(account, {
+                        "code": h["code"],
+                        "name": h["name"],
+                        "price": price,
+                        "trade_type": "sell",
+                        "quantity": sell_qty,
+                        "reasons": [f"仓位再平衡: {weight*100:.1f}%>{max_single_pct*100:.0f}%，减至{target_pct*100:.0f}%"]
+                    })
+                    if result["success"]:
+                        rebalance_trades.append(result["trade"])
+                        account = load_account()
+                    else:
+                        print(f"   ⚠️ 再平衡未执行: {result['reason']}")
+    except Exception as e:
+        print(f"\n⚠️ [仓位再平衡异常] {e}")
+
     # 2. 获取市场情绪
     print("\n[获取市场情绪...]")
     try:
@@ -767,6 +810,31 @@ def run_trading_cycle():
     account["total_pnl_pct"] = round(account["total_pnl"] / account["initial_capital"] * 100, 2)
     save_account(account)
     
+    # 6.5 残仓自动清理：交易后检查是否有残仓需要清理
+    residual_threshold = TRADING_RULES.get("residual_clear_threshold_pct", 0.005)
+    total_val = account.get("total_value", 1000000)
+    for h in list(account.get("holdings", [])):
+        rt_price = realtime.get(h["code"], {}).get("price", h.get("current_price", h["cost_price"]))
+        h_value = h["quantity"] * rt_price
+        if total_val > 0 and (h_value / total_val) < residual_threshold and h["quantity"] <= 300:
+            sellable = can_sell_today(account, h["code"])
+            if sellable > 0:
+                print(f"\n🧹 [残仓清理] {h['name']}({h['code']}) {h['quantity']}股 市值¥{h_value:.0f} (<{residual_threshold*100:.1f}%)")
+                result = execute_trade(account, {
+                    "code": h["code"],
+                    "name": h["name"],
+                    "price": rt_price,
+                    "trade_type": "sell",
+                    "quantity": sellable,
+                    "reasons": [f"残仓自动清理: {h['quantity']}股 市值¥{h_value:.0f} (<总资产{residual_threshold*100:.1f}%)"]
+                })
+                if result["success"]:
+                    trades_executed.append(result["trade"])
+                    account = load_account()
+                    print(f"   ✅ 已清理")
+                else:
+                    print(f"   ⚠️ 清理失败: {result['reason']}")
+
     # 7. 生成报告
     print(f"\n{'='*60}")
     print("[账户总览]")
@@ -782,13 +850,14 @@ def run_trading_cycle():
             print(f"  {emoji} {h['name']}({h['code']}): {h['quantity']}股 @ ¥{h.get('current_price', h['cost_price'])}")
             print(f"      成本¥{h['cost_price']} 盈亏{h.get('pnl_pct', 0):+.2f}%")
     
-    print(f"\n本次交易: {len(trades_executed)}笔")
+    all_trades = rebalance_trades + trades_executed
+    print(f"\n本次交易: {len(all_trades)}笔 (再平衡{len(rebalance_trades)}笔 + 常规{len(trades_executed)}笔)")
     print('='*60)
     
     return {
         "timestamp": datetime.now().isoformat(),
         "account": account,
-        "trades": trades_executed,
+        "trades": all_trades,
         "decisions_count": len(decisions)
     }
 

@@ -2729,5 +2729,415 @@
       "AI算力基础设施相关话题在资本市场与资讯端持续发酵（CPO/光模块/液冷）",
       "消费呈理性与提效并存：一手年货‘提效家电’与二手回收‘价格敏感’并行"
     ]
+  },
+  {
+    "timestamp": "2026-02-13T14:15:00+08:00",
+    "hour": 14,
+    "social_temperature": "中性",
+    "market_sentiment": "偏多",
+    "fear_greed_estimate": 58,
+    "consumer_confidence": "稳定",
+    "items": [
+      {
+        "category": "微博热搜",
+        "title": "2025微博热搜趋势报告继续传播：社会/娱乐/垂直热点三分",
+        "summary": "热搜更‘回应/进展’叙事与垂直圈层化，公共舆论更碎片化、追踪事件结果的需求更强。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "媒体互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sina.cn/news/detail/5264793058417084.html"
+      },
+      {
+        "category": "微博热搜",
+        "title": "2025年微博十大热搜艺人榜单资讯扩散",
+        "summary": "娱乐榜单类内容占据注意力，情绪更偏轻松娱乐，对宏观风险偏好影响有限。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": [
+          "娱乐"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sina.cn/news/detail/5264456780089344.html"
+      },
+      {
+        "category": "微博热搜",
+        "title": "热搜关键词盘点类内容传播（全年434次“爆”）",
+        "summary": "‘爆点高频’强调舆论密度提升，热点更易快速外溢但也更快衰减。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "媒体互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sina.cn/news/detail/5265146725269764.html"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "2026年小红书经营趋势预判：兴趣圈层营销深化、AI赋能内容",
+        "summary": "内容社区向兴趣化、精细化运营演进，品牌更依赖细分人群与深度内容。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "互联网",
+          "广告营销",
+          "AI"
+        ],
+        "related_stocks": [],
+        "source": "https://www.woshipm.com/operate/6336917.html"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "2026年小红书7个经营趋势：单点爆文优势减弱、经营更体系化",
+        "summary": "投放与内容运营门槛抬升，商家更看重ROI与全链路转化。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.woshipm.com/share/6332534.html"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "小红书文旅种草：旅行从‘目的地’转向‘兴趣出发’",
+        "summary": "追星/非遗/博物夜游/户外等细分兴趣持续涌现，文旅消费更场景化。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "文旅"
+        ],
+        "related_stocks": [],
+        "source": "https://news.qq.com/rain/a/20260126A060IN00"
+      },
+      {
+        "category": "抖音B站",
+        "title": "B站视频：国内新闻APP热度排行类内容获关注",
+        "summary": "信息获取与‘工具型内容’需求仍强，用户对高效聚合资讯的偏好上升。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/av28852174/"
+      },
+      {
+        "category": "抖音B站",
+        "title": "B站游戏内容：新春二游入坑/强度榜类视频热",
+        "summary": "‘强度榜/入坑指南’反映年轻群体娱乐消费仍在，但更重性价比与信息密度。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "娱乐",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV16k6bBmEaK/"
+      },
+      {
+        "category": "抖音B站",
+        "title": "抖音热榜检索结果较分散（更多被财经热榜/二次分发覆盖）",
+        "summary": "外部检索到的‘抖音热榜’信息噪音偏多，提示需要依赖官方热榜/客户端内数据做核验。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://m.163.com/dy/article/KLKR5L7T0512B07B.html"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "新机涨价倒逼二手手机市场繁荣（腾讯报道）",
+        "summary": "新机价格上行+补贴使消费者更接受二手与置换，二手平台价格发现功能强化。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "二手经济",
+          "消费电子"
+        ],
+        "related_stocks": [],
+        "source": "https://news.qq.com/rain/a/20260130A02JSG00"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "闲鱼收费/交易成本相关讨论与吐槽内容出现",
+        "summary": "平台费用变化容易引发卖家敏感，短期情绪偏负面但对大盘影响有限。",
+        "sentiment": "负面",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "消费",
+          "互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1gotweDEPg/"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "二手市场进化史讨论：闲鱼与转转分化",
+        "summary": "二手行业从C2C向服务化、标准化推进，反映整体消费更理性与‘闲置变现’需求。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "二手经济"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1Cv2FBHEVX/"
+      },
+      {
+        "category": "A股财经",
+        "title": "四大证券报头版摘要：AI应用端/影视游戏主题ETF受追捧",
+        "summary": "资金继续围绕AI应用与传媒弹性交易，市场风险偏好回暖但结构性明显。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI",
+          "传媒"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/stock/y/2026-02-13/doc-inhmrhtt3398148.shtml"
+      },
+      {
+        "category": "A股财经",
+        "title": "A股热点：液冷服务器、CPO、铜缆高速连接等算力硬件走强",
+        "summary": "算力硬件成为强势方向，多股创新高，提示AI基础设施交易热度高、波动也可能加大。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 5,
+        "related_sectors": [
+          "AI基础设施",
+          "光模块",
+          "服务器"
+        ],
+        "related_stocks": [],
+        "source": "https://k.sina.com.cn/article_7857201856_1d45362c001902c37s.html"
+      },
+      {
+        "category": "A股财经",
+        "title": "隔夜要闻：海外‘AI颠覆’叙事波及传统行业股价",
+        "summary": "AI主题外溢到传统行业估值重估，强化市场对‘AI改变商业模式’的共识。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "AI",
+          "宏观"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/headline/2026-02-13/doc-inhmrhtt3395232.shtml"
+      },
+      {
+        "category": "政策信号",
+        "title": "国务院公布：修改和废止部分行政法规（3/20起施行）",
+        "summary": "制度层面的规则清理与更新释放‘规范治理’信号，整体偏稳定预期。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": [
+          "政策",
+          "法治"
+        ],
+        "related_stocks": [],
+        "source": "https://cpc.people.com.cn/n1/2026/0206/c64094-40660547.html"
+      },
+      {
+        "category": "政策信号",
+        "title": "证监会：境内资产境外发行‘资产支持证券代币’监管指引",
+        "summary": "对跨境代币化/证券化的合规边界进一步明确，压制灰色创新、利好规范化。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "金融监管"
+        ],
+        "related_stocks": [],
+        "source": "https://news.qq.com/rain/a/20260206A07I6C00"
+      },
+      {
+        "category": "政策信号",
+        "title": "海南自贸港：岛内居民消费进境商品‘零关税’政策实施（媒体转载）",
+        "summary": "对岛内消费与旅游零售预期偏正面，可能带动免税/旅游消费关注度。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "旅游"
+        ],
+        "related_stocks": [
+          "中国中免"
+        ],
+        "source": "https://finance.sina.cn/stock/ywgg/2026-02-06/detail-inhkvret2348581.d.html?vt=4"
+      },
+      {
+        "category": "国际大事",
+        "title": "英国称将向乌克兰移交千枚多用途防空导弹（俄媒）",
+        "summary": "俄乌相关安全议题延续，地缘不确定性仍可能影响避险与大宗商品波动。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "宏观",
+          "军工"
+        ],
+        "related_stocks": [],
+        "source": "https://sputniknews.cn/20260213/1069764623.html"
+      },
+      {
+        "category": "国际大事",
+        "title": "美军完成从叙利亚坦夫基地撤军（俄媒）",
+        "summary": "中东安全态势与美军部署调整可能带来阶段性风险溢价变化。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "宏观",
+          "能源"
+        ],
+        "related_stocks": [],
+        "source": "https://sputniknews.cn/20260213/1069764489.html"
+      },
+      {
+        "category": "国际大事",
+        "title": "美方涉格陵兰控制权谈判表述（俄媒）",
+        "summary": "地缘政治话题对市场更多是情绪扰动，需关注权威与多源交叉验证。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "政治",
+          "宏观"
+        ],
+        "related_stocks": [],
+        "source": "https://sputniknews.cn/20260213/1069772051.html"
+      },
+      {
+        "category": "AI科技",
+        "title": "海光DCU完成对智谱GLM-5的Day0适配与联合优化",
+        "summary": "国产算力/软件栈生态推进，提升大模型部署可用性，对算力基础设施情绪偏正面。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI基础设施",
+          "芯片",
+          "服务器"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/tech/roll/2026-02-12/doc-inhmpkap7016995.shtml"
+      },
+      {
+        "category": "AI科技",
+        "title": "光模块供需失衡讨论：800G/1.6T需求旺、出货不足",
+        "summary": "算力互联仍是瓶颈之一，利好光模块/CPO等景气预期，但也提示扩产周期与分化风险。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 5,
+        "related_sectors": [
+          "AI基础设施",
+          "光模块",
+          "CPO"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sina.cn/news/detail/5264396357470153.html"
+      },
+      {
+        "category": "AI科技",
+        "title": "36氪：竞争焦点从训练转向推理侧，推理性价比重构采购逻辑",
+        "summary": "推理调用量爆发带动芯片/云服务定价与企业采购逻辑变化，利好高效算力与基础设施。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI",
+          "云计算",
+          "芯片"
+        ],
+        "related_stocks": [],
+        "source": "https://36kr.com/p/3675788799959937"
+      },
+      {
+        "category": "民生社会",
+        "title": "全国房价止跌信号被传播：多地二手房成交回暖（搜狐）",
+        "summary": "楼市情绪出现边际修复叙事，有助于托底居民预期，但真实性需看统计口径与持续性。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "房地产",
+          "宏观"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/984522582_121333745"
+      },
+      {
+        "category": "民生社会",
+        "title": "36氪：汽车行业销量波动与‘消费降级’叙事再起",
+        "summary": "汽车链仍受价格战与需求波动影响，消费者更谨慎、延迟决策倾向仍在。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "汽车"
+        ],
+        "related_stocks": [
+          "比亚迪"
+        ],
+        "source": "https://36kr.com/p/3676762961420936"
+      },
+      {
+        "category": "民生社会",
+        "title": "内蒙古稳岗扩容：计划新建‘家门口’就业服务站500个（新华）",
+        "summary": "稳就业政策持续加码，对社会预期有托底作用，但体感改善需要时间。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": [
+          "民生",
+          "政策"
+        ],
+        "related_stocks": [],
+        "source": "https://www.news.cn/politics/20260206/112e40865d7346a28c109f578d351f99/c.html"
+      }
+    ],
+    "key_signals": [
+      "A股结构性偏多：算力硬件（液冷/CPO/铜缆高速连接等）继续强势，AI基础设施主线明确",
+      "政策端继续强化合规边界：跨境‘资产支持证券代币’监管指引提示去灰色化方向",
+      "消费与资产体感分化：楼市边际修复叙事出现，但汽车等大件消费仍承压、偏谨慎",
+      "二手经济与以旧换新延续：新机涨价+补贴推动二手手机/置换需求",
+      "国际地缘信息单一来源占比高，需警惕标题党对风险偏好的短线扰动"
+    ],
+    "portfolio_alerts": [
+      "中国中免：海南‘零关税’相关政策被转发，旅游零售预期偏正面（关注细则与落地规模）",
+      "比亚迪：汽车行业‘消费降级/价格战’叙事延续，短期情绪扰动偏负面",
+      "AI基础设施链条：光模块/互联供需紧张讨论升温，相关板块波动可能放大（注意追高风险）"
+    ],
+    "social_highlights": [
+      "AI基础设施热度从股市延伸到大众讨论：‘算力—互联—供需’成为高频主题",
+      "消费心态更理性：二手/置换与兴趣场景（文旅种草）同步升温",
+      "资产与就业叙事分化：楼市边际修复信息增多，但大件消费与就业体感仍偏谨慎"
+    ]
   }
 ]

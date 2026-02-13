@@ -1,0 +1,50 @@
+{
+  "overall_sentiment": 31,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "贵金属",
+      1,
+      0.0
+    ],
+    [
+      "新能源车",
+      1,
+      0.0
+    ],
+    [
+      "AI",
+      1,
+      0.0
+    ],
+    [
+      "消费",
+      1,
+      0.0
+    ],
+    [
+      "银行",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "微创机器人-B早盘高开逾3% 图迈®腔镜手术机器人全球商业化订单突破200台",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "突破",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1770946684"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-13T09:50:38.658867"
+}

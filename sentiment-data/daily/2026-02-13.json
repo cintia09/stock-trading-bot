@@ -840,5 +840,367 @@
       "AI算力/IDC进入高景气叙事窗口，产业投资与二级市场讨论同步升温",
       "年货消费与包邮覆盖带动需求回暖，但大众消费心态仍偏理性与谨慎"
     ]
+  },
+  {
+    "timestamp": "2026-02-13T08:15:00+08:00",
+    "hour": 8,
+    "social_temperature": "中性",
+    "market_sentiment": "中性偏空",
+    "fear_greed_estimate": 45,
+    "consumer_confidence": "稳定",
+    "items": [
+      {
+        "category": "微博热搜",
+        "title": "热议：对AI说‘谢谢’也会消耗电力与冷却水？",
+        "summary": "围绕‘礼貌用语是否浪费算力/能源’的讨论发酵，折射公众对AI资源成本与环保议题的关注。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI",
+          "算力",
+          "能源"
+        ],
+        "related_stocks": [],
+        "source": "https://k.sina.com.cn/article_7857201856_1d45362c001902btqe.html"
+      },
+      {
+        "category": "微博热搜",
+        "title": "《2025微博热搜趋势报告》继续扩散：垂直兴趣圈层升温",
+        "summary": "报告强调垂直领域占比提升、兴趣圈层热度攀升，品牌投放更依赖细分人群与场景。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "互联网",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sina.cn/news/detail/5264793058417084.html"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "行业解读：2026品牌营销趋势强调AI与跨界生态联动",
+        "summary": "营销侧更强调AI工具、异业合作与场景化触达，小红书被频繁提及为消费决策阵地。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "广告营销",
+          "AI"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/roll/2026-02-05/doc-inhkuptf2832714.shtml"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "讨论：小红书‘3500亿时刻’与内容金字塔结构预测",
+        "summary": "外部文章预测小红书内容分层与商业化空间，反映市场对内容社区估值与增长想象仍强。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "互联网",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/984614208_477902"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "助农直播案例：信任驱动的生鲜/地方产品在小红书破圈",
+        "summary": "内容种草+口碑扩散成为生鲜消费的重要决策机制，偏向理性、看体验分享的消费风向。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "电商",
+          "农业"
+        ],
+        "related_stocks": [],
+        "source": "https://www.ebrun.com/20260206/639167.shtml"
+      },
+      {
+        "category": "抖音B站",
+        "title": "抖音升级长辈模式：新增反诈风险预警、紧急联系人通知",
+        "summary": "反诈功能强化，反映平台治理与老年人数字安全成为社会关注点。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "互联网",
+          "社会治理"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/stock/t/2026-02-12/doc-inhmpusm3954164.shtml"
+      },
+      {
+        "category": "抖音B站",
+        "title": "抖音重申：官方客服不会以扣费/解除风险要求转账或共享屏幕",
+        "summary": "针对电诈高发场景的权威提醒，有助于降风险但也反映诈骗压力仍大。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "社会",
+          "互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.cn/stock/jdts/2026-02-12/detail-inhmpusf9768099.d.html"
+      },
+      {
+        "category": "抖音B站",
+        "title": "抖音生活服务发布冰雪消费数据：冰雪团购订单同比增长",
+        "summary": "冰雪内容与团购增长显示体验型消费、文旅场景热度延续。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "文旅"
+        ],
+        "related_stocks": [],
+        "source": "https://xxsb.gz-cmc.com/pages/2026/02/12/20ff6b879332455dadfc2197e179a1dc.html"
+      },
+      {
+        "category": "抖音B站",
+        "title": "B站直播电商动作被讨论：带货权限与独立入口探索",
+        "summary": "平台电商化仍在推进，内容社区变现从广告向交易闭环延伸。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "互联网",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://36kr.com/p/1963992290585093"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "现象：百万元‘拆迁房票’在闲鱼/小红书上交易引发关注",
+        "summary": "灰色交易与资产处置话题扩散，映射部分群体对住房/资产流动性的焦虑与机会主义行为。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "房地产",
+          "社会"
+        ],
+        "related_stocks": [],
+        "source": "https://news.southcn.com/node_812903b83a/343af2f252.shtml"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "淘宝天猫商家服务大会：高分服务商家增长更快",
+        "summary": "平台强调服务体验与复购，指向存量竞争中‘服务质量’对成交更关键。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "电商",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://www.36kr.com/newsflashes/3648587195862662"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "淘宝闪购发力家电：4小时送达、年货搜索量大增",
+        "summary": "即时零售/快履约带动春节消费，利好家电与物流链条。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "家电",
+          "物流"
+        ],
+        "related_stocks": [
+          "美的集团"
+        ],
+        "source": "https://m.ebrun.com/638724.html"
+      },
+      {
+        "category": "A股财经",
+        "title": "北交所IPO审核节奏加快、上会更密集（盘后热点汇总）",
+        "summary": "IPO审核提速带来一级/二级相关情绪变化，短期对题材活跃度有支撑。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "券商",
+          "资本市场"
+        ],
+        "related_stocks": [],
+        "source": "https://k.sina.com.cn/article_7857201856_1d45362c001902cfh6.html"
+      },
+      {
+        "category": "A股财经",
+        "title": "券商观点：资金从高估值方向转向高确定性资产（红利、银行等）",
+        "summary": "风险偏好偏谨慎，资金更偏防御配置；对银行/保险权重情绪偏友好。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "银行",
+          "保险"
+        ],
+        "related_stocks": [
+          "招商银行",
+          "中国平安"
+        ],
+        "source": "https://finance.sina.com.cn/roll/2026-02-12/doc-inhmpkak3148937.shtml"
+      },
+      {
+        "category": "A股财经",
+        "title": "电力设备板块与‘算力用电’叙事共振被解读",
+        "summary": "‘老化电网+万亿算力’叙事强化，电网设备与数据中心配套成为市场关注点。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "电力设备",
+          "AI基础设施"
+        ],
+        "related_stocks": [],
+        "source": "https://www.caiwennews.com/article/1418563.shtml"
+      },
+      {
+        "category": "政策信号",
+        "title": "央行等8部门联合发文：进一步防范处置虚拟货币等风险",
+        "summary": "明确虚拟货币相关业务非法金融活动，并强调风险处置协同；对相关炒作情绪形成压制。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "金融监管"
+        ],
+        "related_stocks": [],
+        "source": "https://www.news.cn/fortune/20260206/3b6176933a40466f9adc8927a957cc9f/c.html"
+      },
+      {
+        "category": "民生社会",
+        "title": "发改委周度热点：全国价格工作先进集体/个人表彰会举行",
+        "summary": "官方系统强调价格治理与监管能力建设，物价与民生议题持续被关注。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": [
+          "民生",
+          "宏观政策"
+        ],
+        "related_stocks": [],
+        "source": "https://www.ndrc.gov.cn/fggz/202602/t20260209_1403641.html"
+      },
+      {
+        "category": "国际大事",
+        "title": "米兰-科尔蒂纳冬奥会赛事进行中，多国媒体关注高山滑雪伤情等",
+        "summary": "体育大事件吸走部分全球注意力；对资产影响较弱但提升欧洲曝光与旅游相关叙事。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": [
+          "体育",
+          "文旅"
+        ],
+        "related_stocks": [],
+        "source": "https://www.olympics.com/en/milano-cortina-2026/news/winter-olympics-2026-how-to-watch-team-usa-live-full-schedule-and-medal-events-on-thursday-12-february"
+      },
+      {
+        "category": "国际大事",
+        "title": "全球政治日程：孟加拉国大选/宪法公投举行（资料汇总）",
+        "summary": "对地区政治与风险预期有一定影响，但对国内资产更多是背景信息。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": [
+          "政治",
+          "宏观"
+        ],
+        "related_stocks": [],
+        "source": "https://en.wikipedia.org/wiki/2026"
+      },
+      {
+        "category": "AI科技",
+        "title": "思科发布AI数据中心网络芯片/路由器，与英伟达/博通竞逐",
+        "summary": "AI基础设施投入继续向网络与数据中心互联延伸，利好‘网络设备/数据中心’链条预期。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI基础设施",
+          "网络设备",
+          "数据中心"
+        ],
+        "related_stocks": [],
+        "source": "https://www.reuters.com/business/media-telecom/cisco-unveils-new-ai-networking-chip-taking-broadcom-and-nvidia-2026-02-10/"
+      },
+      {
+        "category": "AI科技",
+        "title": "路透：字节跳动据称自研AI芯片，并与三星谈制造/存储供应",
+        "summary": "算力竞赛延伸至自研芯片与存储供应链，突出HBM/内存供给紧张这一关键瓶颈。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 5,
+        "related_sectors": [
+          "AI基础设施",
+          "半导体",
+          "存储"
+        ],
+        "related_stocks": [],
+        "source": "https://www.reuters.com/world/asia-pacific/bytedance-developing-ai-chip-manufacturing-talks-with-samsung-sources-say-2026-02-11/"
+      },
+      {
+        "category": "AI科技",
+        "title": "MIT Tech Review：超大规模AI数据中心成为新型基础设施，能耗与供给受关注",
+        "summary": "AI数据中心扩张引发能耗、供电与冷却议题，长期利好IDC/电力/冷却等配套产业链。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI基础设施",
+          "IDC",
+          "电力"
+        ],
+        "related_stocks": [],
+        "source": "https://www.technologyreview.com/2026/01/12/1129982/hyperscale-ai-data-centers-energy-usage-2026-breakthrough-technology/"
+      },
+      {
+        "category": "A股财经",
+        "title": "比亚迪舆情：销量与股价阶段性承压的解读文章传播",
+        "summary": "市场讨论‘销量下滑/价格战’带来的压力，短期情绪偏负面但需以公司公告与权威数据为准。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "汽车",
+          "消费"
+        ],
+        "related_stocks": [
+          "比亚迪"
+        ],
+        "source": "https://www.sina.cn/news/detail/5263442388719780.html"
+      }
+    ],
+    "key_signals": [
+      "AI算力→能源/网络/存储三大瓶颈成为舆论与产业共同焦点（网络芯片、存储紧缺、数据中心能耗）",
+      "平台治理与反诈议题升温：抖音长辈模式升级、官方反诈提醒扩散",
+      "消费端仍呈‘服务体验/即时履约’拉动：淘宝强调服务分层、闪购家电快送",
+      "市场风格偏防御：资金更偏银行/红利等高确定性资产，风险偏好略降",
+      "房地产相关灰色交易（拆迁房票）话题引发关注，反映部分群体资产焦虑"
+    ],
+    "portfolio_alerts": [
+      "比亚迪：销量/价格战叙事带来短期负面情绪扰动（影响：中等偏高）",
+      "招商银行/中国平安：风险偏好回落时‘低估值/高确定性’金融权重可能受益（影响：中等）",
+      "美的集团：即时零售/家电快送与年货需求对家电消费情绪偏正面（影响：中等）"
+    ],
+    "social_highlights": [
+      "AI‘成本’成为大众议题：算力能耗与水资源讨论从科技圈外溢到大众层面",
+      "反诈与数字安全继续占据公共讨论：老年人防骗工具与官方提醒扩散",
+      "消费更看重‘快与省’：即时履约与服务评分成为平台竞争关键词"
+    ]
   }
 ]

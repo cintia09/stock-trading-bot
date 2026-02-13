@@ -49,20 +49,25 @@
       "related_sectors": ["AI基础设施","半导体"],
       "related_stocks": [],
       "source": "https://36kr.com/p/3677454332162565"
+    },
+    {
+      "category": "AI科技",
+      "title": "大模型与推理芯片发展并驾齐驱",
+      "summary": "云天计算指引认为，中国与边缘AI发展机会紧密相关。",
+      "sentiment": "正面",
+      "reliability": "高",
+      "impact_score": 5,
+      "related_sectors": ["AI基础设施"],
+      "related_stocks": [],
+      "source": "https://www.stcn.com/article/detail/3344660.html"
+    },
+    {
+      "category": "民生社会",
+      "title": "居民住房稳定措施强调落实",
+      "summary": "三部委提出地价与租房并轨举措，强调中产及低收入购与最长保护线。",
+      "sentiment": "中性偏正",
+      "reliability": "方向治理",
+      "impact_score": 3,
+      "related_sectors": ["个人物局简单影响.CHHAH(轻重资产周流,,政府股(增加丝续政策努力租方."超级供应其通官力量之一T回调...
     }
-  ],
-  "key_signals": [
-    "航空航天、周期板块在节后连续获得资金关注，市场风格偏积极",
-    "短视频平台年轻人娱乐化消费在春节后依然活跃，释放乐观信号",
-    "AI技术应用场景继续吸引舆论与资本注意，基础设施潜力较强"
-  ],
-  "portfolio_alerts": [
-    "航天股整体向好，建议关注科技与周期的联动机会",
-    "算力板块热度延续，技术落地型相关个股短期波动可能更大"
-  ],
-  "social_highlights": [
-    "疫情叠加节后复工形成社会讨论主线",
-    "资本市场节奏向科技周流动",
-    "AI概念及其技术进展成核心关注点"
-  ]
-}
+}"]}

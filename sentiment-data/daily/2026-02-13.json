@@ -1622,5 +1622,417 @@
       "AI算力基础设施叙事增强，推理侧需求被反复讨论",
       "社会关注仍围绕就业与住房确定性，整体情绪偏稳但不亢奋"
     ]
+  },
+  {
+    "timestamp": "2026-02-13T11:00:00+08:00",
+    "hour": 11,
+    "social_temperature": "中性",
+    "market_sentiment": "中性偏多",
+    "fear_greed_estimate": 56,
+    "consumer_confidence": "稳定",
+    "items": [
+      {
+        "category": "微博热搜",
+        "title": "中央网信办启动“清朗·2026年营造喜庆祥和春节网络环境”专项行动",
+        "summary": "专项行动要求平台加强首页首屏、热搜榜单、信息流与评论巡查，春节期间内容治理将更严格。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "政治",
+          "社会",
+          "互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.news.cn/politics/20260212/c1cd9342cd4641d7a5ad01f7ac1bc2b4/c.html"
+      },
+      {
+        "category": "微博热搜",
+        "title": "新华网评论：热搜榜不应成为流量生意场",
+        "summary": "舆论呼吁热搜回归公共属性，反映公众对“榜单操控/低俗炒作”的反感与监管预期。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": [
+          "社会",
+          "政治",
+          "互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.news.cn/politics/20250930/08107783bb0842129e207ae5466a62ce/c.html"
+      },
+      {
+        "category": "微博热搜",
+        "title": "BBC：社交媒体热搜榜成为“清朗”治理对象（背景）",
+        "summary": "“清朗”对热搜榜/涉企黑嘴等整治被反复提及，平台侧合规成本与内容生态将持续调整。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "政治",
+          "社会",
+          "互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bbc.com/zhongwen/articles/czewd15n32yo/trad"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "亿邦动力：助农直播案例带动行业重新看小红书电商",
+        "summary": "内容社区的“信任”优势被强调，生鲜/农品更依赖口碑分享而非价格刺激。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "电商"
+        ],
+        "related_stocks": [],
+        "source": "https://www.ebrun.com/20260206/639167.shtml"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "Sohu：2026小红书算法规则讨论（互动质量权重更高）",
+        "summary": "流量分发更看重评论/转发等深互动，品牌与博主更卷内容质量与种草转化。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "互联网",
+          "营销"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/985894666_121973594"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "Sohu：关于小红书海外/增长的预测文章传播",
+        "summary": "海外不均衡增长与内容侧重点被讨论，属于趋势判断但不确定性较大。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "互联网",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/984614208_477902"
+      },
+      {
+        "category": "抖音B站",
+        "title": "腾讯新闻：2026年货消费趋势—非遗好物订单增长",
+        "summary": "“非遗/国潮”消费增长被提及，显示体验与文化认同驱动的消费升温。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://news.qq.com/rain/a/20260211A06VWO00"
+      },
+      {
+        "category": "抖音B站",
+        "title": "Sohu：2026年2月抖音热门歌曲TOP10榜单文章走热",
+        "summary": "节后短视频内容仍围绕音乐/情绪共鸣，娱乐型内容带动UGC创作。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "娱乐"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/985098612_122635185"
+      },
+      {
+        "category": "抖音B站",
+        "title": "B站：手机推荐类视频播放走高",
+        "summary": "高关注的性价比购机内容提示消费者决策更理性、比价更强。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "科技"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1Xm61BEEde/"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "新浪财经：阿里继续大投入淘宝闪购（即时零售）",
+        "summary": "即时零售投入加码，履约“更快更近”成为平台竞争焦点，利好快消/家电等场景。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "电商",
+          "物流"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/stock/marketresearch/2026-02-11/doc-inhmnahy3613858.shtml"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "新浪新闻：淘宝闪购年货节开启，券包+30分钟到家",
+        "summary": "节前“即时到家”促销加码，消费回暖更多来自场景刺激而非全面扩张。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "电商"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sina.cn/news/detail/5263687573050332.html"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "B站：闲鱼收费/交易摩擦讨论",
+        "summary": "二手交易的收费/砍价等内容热度高，反映价格敏感与“想卖得掉”的现实压力。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "二手经济"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1gotweDEPg/"
+      },
+      {
+        "category": "A股财经",
+        "title": "新浪财经：稀土主要品种价格一路走高，稀土永磁板块领涨",
+        "summary": "氧化镨/钕等价格上行被归因于供给收紧+新兴需求（人形机器人/低空经济），题材热度偏多。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "有色金属",
+          "机器人"
+        ],
+        "related_stocks": [
+          "紫金矿业"
+        ],
+        "source": "https://finance.sina.com.cn/headline/2026-02-13/doc-inhmrhtn2362961.shtml"
+      },
+      {
+        "category": "A股财经",
+        "title": "新浪新闻：2/12 A股收评—赚钱效应集中在AI算力、小金属",
+        "summary": "指数分化、结构轮动，算力与小金属成为少数强势方向，节前追高风险仍在。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI基础设施",
+          "有色金属"
+        ],
+        "related_stocks": [
+          "紫金矿业"
+        ],
+        "source": "https://k.sina.com.cn/article_1656954260_62c31d94001018fv6.html"
+      },
+      {
+        "category": "A股财经",
+        "title": "财闻网：电网设备板块受“万亿算力+电网改造”叙事催化",
+        "summary": "算力用电与电网改造共振，电力设备关注度提升，属于“AI扩散到基础设施”的侧面信号。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "电力设备",
+          "AI基础设施"
+        ],
+        "related_stocks": [],
+        "source": "https://www.caiwennews.com/article/1418563.shtml"
+      },
+      {
+        "category": "政策信号",
+        "title": "新华网：启动“清朗·2026年春节网络环境”专项行动",
+        "summary": "春节期间内容治理与平台责任进一步强化，热搜榜/热点推荐等将被重点巡查。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "政治",
+          "互联网监管"
+        ],
+        "related_stocks": [],
+        "source": "https://www.news.cn/legal/20260212/c7ad9636adb44ce7a89f41d6f4a15376/c.html"
+      },
+      {
+        "category": "政策信号",
+        "title": "新华网：最高检等谈“网络开盒”涉嫌侵犯公共利益",
+        "summary": "对“开盒”个人信息泄露的治理信号更强，社会对隐私安全敏感度提升。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "社会",
+          "法治",
+          "互联网安全"
+        ],
+        "related_stocks": [],
+        "source": "https://www.news.cn/politics/20260206/b3ecda4f07a946a0b1748b0a3c01e973/c.html"
+      },
+      {
+        "category": "政策信号",
+        "title": "36氪：春节专项行动强调曝光典型案例、严处账号与MCN",
+        "summary": "治理强调“震慑效应”，短期可能带来热点“降温”、舆论更趋谨慎。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "政治",
+          "互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.36kr.com/p/3679941609041797"
+      },
+      {
+        "category": "国际大事",
+        "title": "Reuters：孟加拉国大选，BNP大胜（媒体口径）",
+        "summary": "政局或走向稳定的预期升温，但对国内市场影响有限，属全球风险背景。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": [
+          "国际政治"
+        ],
+        "related_stocks": [],
+        "source": "https://www.reuters.com/world/china/bangladesh-votes-landmark-election-after-gen-z-revolution-2026-02-11/"
+      },
+      {
+        "category": "国际大事",
+        "title": "Reuters：美国众议院表决反对对加拿大关税（罕见反弹）",
+        "summary": "贸易政策不确定性仍在，可能扰动全球风险偏好与外贸链预期。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": [
+          "国际政治",
+          "外贸"
+        ],
+        "related_stocks": [],
+        "source": "https://www.reuters.com/world/us/us-house-backs-bid-end-canada-tariffs-rare-rebuke-trump-2026-02-11/"
+      },
+      {
+        "category": "国际大事",
+        "title": "Sputnik：英国拟向乌克兰移交防空导弹（单一来源）",
+        "summary": "地缘风险议题延续，但来源单一且偏立场媒体，需交叉验证。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "国际政治",
+          "军工"
+        ],
+        "related_stocks": [],
+        "source": "https://sputniknews.cn/20260213/1069764623.html"
+      },
+      {
+        "category": "AI科技",
+        "title": "新浪财经：内存价格持续大涨，DRAM/NAND/HBM全品类创新高",
+        "summary": "一季度内存价格较去年末大幅上涨，通用服务器DRAM与HBM需求成为推手，AI基础设施“存储瓶颈”更突出。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 5,
+        "related_sectors": [
+          "AI基础设施",
+          "存储",
+          "服务器"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/jjxw/2026-02-11/doc-inhmkcry1115580.shtml"
+      },
+      {
+        "category": "AI科技",
+        "title": "Sohu：HBM合约价涨幅预测文章（AI驱动存储超级周期）",
+        "summary": "HBM涨价预期被放大，利好存储链景气，但属解读文章需结合权威机构跟踪。",
+        "sentiment": "正面",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": [
+          "AI基础设施",
+          "存储"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/984483640_122635138"
+      },
+      {
+        "category": "AI科技",
+        "title": "B站：内存涨价/显卡装机避坑内容热度",
+        "summary": "大众层面“内存涨价”体感增强，可能抑制部分DIY与消费电子需求但利好上游景气预期。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费电子",
+          "存储"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1KsFjz3E2v/"
+      },
+      {
+        "category": "民生社会",
+        "title": "腾讯新闻：2026年房价走向讨论—新房销售面积可能继续下滑",
+        "summary": "房地产销售与投资仍承压的预期强化，居民资产与预期管理压力偏大。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "房地产",
+          "宏观",
+          "社会"
+        ],
+        "related_stocks": [],
+        "source": "https://news.qq.com/rain/a/20260209A04TYV00"
+      },
+      {
+        "category": "民生社会",
+        "title": "B站：工资/物价/房价吐槽类内容持续高互动",
+        "summary": "生活压力叙事仍有流量，情绪偏焦虑与自嘲，消费更重性价比。",
+        "sentiment": "负面",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": [
+          "社会",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV16wr5BkEas/"
+      },
+      {
+        "category": "民生社会",
+        "title": "新华网：春节网络环境专项行动整治网络戾气/低俗炒作",
+        "summary": "对“戾气/对立/造谣”治理加强，有利于情绪降温但也提示社会对冲突内容敏感。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": [
+          "社会",
+          "政治"
+        ],
+        "related_stocks": [],
+        "source": "https://www.news.cn/politics/20260212/c1cd9342cd4641d7a5ad01f7ac1bc2b4/c.html"
+      }
+    ],
+    "key_signals": [
+      "春节前平台治理加码（清朗专项行动）：热搜榜/信息流/评论等将被重点巡查，舆论可能更趋谨慎",
+      "A股热点聚焦“稀土涨价+AI算力/电网配套”，结构性行情延续；资源品与算力基建同框",
+      "AI基础设施侧“存储/内存涨价”信号强，HBM供需紧张叙事升温",
+      "即时零售继续被加码（淘宝闪购），消费回暖更多来自场景刺激与履约效率"
+    ],
+    "portfolio_alerts": [
+      "紫金矿业：资源品价格与“小金属/稀土”情绪共振，短线波动可能放大（影响：中等）",
+      "美的集团：年货季+即时零售履约加码，对家电消费情绪偏正面（影响：中等）"
+    ],
+    "social_highlights": [
+      "“清朗”专项行动启动：春节期间平台内容治理加强，热搜与评论区更敏感",
+      "“内存/存储涨价”外溢到大众讨论，AI基础设施成本成为显性话题",
+      "即时零售与年货促销延续，消费信心偏稳但仍以性价比与便利为主"
+    ]
   }
 ]

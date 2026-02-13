@@ -1,0 +1,330 @@
+{
+  "timestamp": "2026-02-14T06:15:00+08:00",
+  "hour": 6,
+  "social_temperature": "中性",
+  "market_sentiment": "中性",
+  "fear_greed_estimate": 52,
+  "consumer_confidence": "稳定",
+  "items": [
+    {
+      "category": "微博热搜",
+      "title": "微博热搜采集受限：需登录/反爬导致公开热榜抓取失败",
+      "summary": "公开入口跳转访客系统，第三方聚合页多为JS渲染，热搜明细未能稳定获取",
+      "sentiment": "中性",
+      "reliability": "高",
+      "impact_score": 2,
+      "related_sectors": ["社会"],
+      "related_stocks": [],
+      "source": "https://s.weibo.com/top/summary"
+    },
+    {
+      "category": "微博热搜",
+      "title": "全平台热搜引擎/历史热搜聚合工具被检索到",
+      "summary": "可作为替代数据源，但需进一步验证实时性与可用性",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 2,
+      "related_sectors": ["社会"],
+      "related_stocks": [],
+      "source": "https://weibo.zhaoyizhe.com/"
+    },
+    {
+      "category": "微博热搜",
+      "title": "今日热榜（多平台热搜聚合）检索到，但正文抓取受JS影响",
+      "summary": "站点可作为入口线索；当前文本抓取未获取到榜单条目",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 2,
+      "related_sectors": ["社会"],
+      "related_stocks": [],
+      "source": "https://rebang.today/"
+    },
+
+    {
+      "category": "小红书趋势",
+      "title": "巴恩风（Barn style）穿搭成为阶段性热点",
+      "summary": "偏向“经久耐穿/祛滤镜感”的实用主义审美，反映性价比与务实消费",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 3,
+      "related_sectors": ["消费"],
+      "related_stocks": [],
+      "source": "https://www.itopmarketing.com/info18960"
+    },
+    {
+      "category": "小红书趋势",
+      "title": "Citywalk等低成本出行生活方式被持续讨论",
+      "summary": "日常化、轻量化的城市漫游内容热度延续，消费更偏体验而非大额购买",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 2,
+      "related_sectors": ["消费", "社会"],
+      "related_stocks": [],
+      "source": "https://socialbeta.com/article/109294"
+    },
+    {
+      "category": "小红书趋势",
+      "title": "大健康/轻运动/养生相关内容被数据平台总结为长期趋势",
+      "summary": "围绕睡眠、疲劳、肠胃等痛点的细分需求扩张，偏刚需型消费",
+      "sentiment": "正面",
+      "reliability": "中",
+      "impact_score": 3,
+      "related_sectors": ["消费", "社会"],
+      "related_stocks": ["爱美客"],
+      "source": "https://www.qian-gua.com/information/detail/3149"
+    },
+
+    {
+      "category": "抖音B站",
+      "title": "抖音话题榜/热词榜入口被检索到（新榜等第三方）",
+      "summary": "外部工具可观测热话题涨跌，但需登录/JS渲染导致直接抓取有限",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 2,
+      "related_sectors": ["娱乐", "消费"],
+      "related_stocks": [],
+      "source": "https://www.newrank.cn/ranktopic/douyin"
+    },
+    {
+      "category": "抖音B站",
+      "title": "抖音搜索“今天有啥热门话题”入口可用但内容动态",
+      "summary": "可用于人工抽样热点；自动化采集需要浏览器环境",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 2,
+      "related_sectors": ["娱乐"],
+      "related_stocks": [],
+      "source": "https://www.douyin.com/search/%E4%BB%8A%E5%A4%A9%E6%9C%89%E5%95%A5%E7%83%AD%E9%97%A8%E8%AF%9D%E9%A2%98"
+    },
+    {
+      "category": "抖音B站",
+      "title": "短视频数据平台（蝉妈妈）提供话题榜但依赖JS",
+      "summary": "作为趋势观测工具的线索存在，采集可行性取决于浏览器+权限",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 2,
+      "related_sectors": ["消费"],
+      "related_stocks": [],
+      "source": "https://www.chanmama.com/awemeRank/topic/"
+    },
+
+    {
+      "category": "闲鱼淘宝",
+      "title": "闲鱼二手市场“价格趋势/分析图”被讨论",
+      "summary": "二手价格波动常与开学季/促销季相关，反映居民对性价比与现金流敏感",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 3,
+      "related_sectors": ["消费"],
+      "related_stocks": [],
+      "source": "https://bk.taobao.com/k/xianyu_229/d9c8e541c5d1ad8d9bd2d1787ad807e4.html"
+    },
+    {
+      "category": "闲鱼淘宝",
+      "title": "二手电商用户规模与下沉市场高价值二手需求被报告化",
+      "summary": "二手消费从“省钱”向“渠道常态化”迁移，奢侈品/高客单在下沉增长",
+      "sentiment": "正面",
+      "reliability": "中",
+      "impact_score": 3,
+      "related_sectors": ["消费"],
+      "related_stocks": [],
+      "source": "http://www.100ec.cn/detail--6648624.html"
+    },
+    {
+      "category": "闲鱼淘宝",
+      "title": "“谷子（二次元周边）”在闲鱼成为年轻人流动性资产的叙事",
+      "summary": "二次元周边二手交易活跃，体现年轻群体用低门槛资产对冲消费压力",
+      "sentiment": "中性",
+      "reliability": "低",
+      "impact_score": 2,
+      "related_sectors": ["消费", "娱乐"],
+      "related_stocks": ["中国中免"],
+      "source": "https://zhuanlan.zhihu.com/p/1905980629457311667"
+    },
+
+    {
+      "category": "A股财经",
+      "title": "证券时报等媒体持续跟踪热门板块（如商业航天）大幅波动",
+      "summary": "主题行情波动大、情绪交易明显，短线资金偏好仍在",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 3,
+      "related_sectors": ["财经"],
+      "related_stocks": [],
+      "source": "https://www.stcn.com/article/list/gs.html"
+    },
+    {
+      "category": "A股财经",
+      "title": "有色等高景气行业被提及（‘家里有矿’叙事）",
+      "summary": "资源品景气叙事延续，对紫金矿业等矿业链条关注度可能抬升",
+      "sentiment": "正面",
+      "reliability": "中",
+      "impact_score": 4,
+      "related_sectors": ["财经"],
+      "related_stocks": ["紫金矿业"],
+      "source": "https://www.stcn.com/article/list/gs.html"
+    },
+    {
+      "category": "A股财经",
+      "title": "东方财富等作为盘面与板块热度入口",
+      "summary": "可用于后续补充：热门板块/情绪指标/资金流向（需进一步抓取）",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 2,
+      "related_sectors": ["财经"],
+      "related_stocks": [],
+      "source": "https://stock.eastmoney.com/"
+    },
+
+    {
+      "category": "政策信号",
+      "title": "中国政府网“最新政策”栏目作为权威政策入口",
+      "summary": "政策发布节奏稳定，适合作为监管/民生/产业政策的主信源",
+      "sentiment": "中性",
+      "reliability": "高",
+      "impact_score": 3,
+      "related_sectors": ["政治", "财经"],
+      "related_stocks": [],
+      "source": "https://www.gov.cn/zhengce/zuixin/"
+    },
+    {
+      "category": "政策信号",
+      "title": "中央一号文件提及承包地经营权流转“规范”与风险监测预警",
+      "summary": "土地流转强调规范化与风险监测，利于农业经营稳定预期",
+      "sentiment": "中性",
+      "reliability": "高",
+      "impact_score": 3,
+      "related_sectors": ["政治", "社会"],
+      "related_stocks": [],
+      "source": "https://www.gov.cn/zhengce/"
+    },
+    {
+      "category": "政策信号",
+      "title": "发改委发布/解读：推动低空保险高质量发展等文件线索",
+      "summary": "低空经济相关制度与配套加速，利于产业链与金融保险服务扩展",
+      "sentiment": "正面",
+      "reliability": "高",
+      "impact_score": 4,
+      "related_sectors": ["政治", "财经"],
+      "related_stocks": ["中国平安"],
+      "source": "https://www.ndrc.gov.cn/xxgk/"
+    },
+
+    {
+      "category": "国际大事",
+      "title": "联合国/非盟等呼吁苏丹冲突各方停止敌对并推动人道停火",
+      "summary": "非洲地缘风险延续，对大宗商品与航运情绪构成扰动",
+      "sentiment": "负面",
+      "reliability": "中",
+      "impact_score": 3,
+      "related_sectors": ["政治", "财经"],
+      "related_stocks": ["紫金矿业"],
+      "source": "https://news.cctv.com/world/"
+    },
+    {
+      "category": "国际大事",
+      "title": "外媒中文报道聚焦美国外交政策强势扩张的讨论",
+      "summary": "大国博弈叙事可能抬升全球风险溢价，影响权益与汇率预期",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 3,
+      "related_sectors": ["政治", "财经"],
+      "related_stocks": [],
+      "source": "https://www.bbc.com/zhongwen/simp"
+    },
+    {
+      "category": "国际大事",
+      "title": "关于“爱泼斯坦相关文件披露”的国际舆论关注持续",
+      "summary": "名流/权贵名单等议题对舆论冲击大但信息噪声高，需谨慎甄别",
+      "sentiment": "负面",
+      "reliability": "低",
+      "impact_score": 2,
+      "related_sectors": ["社会", "政治"],
+      "related_stocks": [],
+      "source": "https://www.bbc.com/zhongwen/simp"
+    },
+
+    {
+      "category": "AI科技",
+      "title": "算力需求结构转向“推理”被行业文章强调",
+      "summary": "推理侧需求上升利好服务器/IDC/加速卡生态，训练侧增速或放缓",
+      "sentiment": "正面",
+      "reliability": "中",
+      "impact_score": 4,
+      "related_sectors": ["科技", "财经"],
+      "related_stocks": [],
+      "source": "https://www.stcn.com/article/detail/1848638.html"
+    },
+    {
+      "category": "AI科技",
+      "title": "国产算力调优与异构计算平台发布（以评促用）",
+      "summary": "从单卡可用到集群好用的工程化推进，利好国产芯片生态与智算中心",
+      "sentiment": "正面",
+      "reliability": "中",
+      "impact_score": 4,
+      "related_sectors": ["科技"],
+      "related_stocks": [],
+      "source": "https://app.xinhuanet.com/news/article.html?articleId=79888906fd9b4df21f16c6e97e298c93"
+    },
+    {
+      "category": "AI科技",
+      "title": "大模型驱动算力革命与国产AI芯片机遇的讨论",
+      "summary": "“政策+需求”双轮驱动叙事延续，市场对国产推理芯片预期偏积极",
+      "sentiment": "正面",
+      "reliability": "中",
+      "impact_score": 3,
+      "related_sectors": ["科技", "财经"],
+      "related_stocks": ["比亚迪"],
+      "source": "https://www.stcn.com/article/detail/3344660.html"
+    },
+
+    {
+      "category": "民生社会",
+      "title": "民生热点的官方集中回应（就业、住房、养老等）仍是长期焦点",
+      "summary": "公众关切集中在就业稳定与住房预期，情绪总体偏谨慎",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 4,
+      "related_sectors": ["社会", "政治"],
+      "related_stocks": ["招商银行", "中国平安"],
+      "source": "https://www.gov.cn/zhengce/202503/content_7012403.htm"
+    },
+    {
+      "category": "民生社会",
+      "title": "城市消费/收入/房价/就业‘成绩单’类内容传播",
+      "summary": "各城市体感差异被放大，择城与机会叙事容易引发焦虑/比较心理",
+      "sentiment": "中性",
+      "reliability": "低",
+      "impact_score": 2,
+      "related_sectors": ["社会"],
+      "related_stocks": [],
+      "source": "https://news.qq.com/rain/a/20250928A00KR300"
+    },
+    {
+      "category": "民生社会",
+      "title": "稳楼市与就业支持仍是主叙事（媒体转述）",
+      "summary": "稳预期取向明确，但市场与居民端信心修复仍需时间",
+      "sentiment": "中性",
+      "reliability": "中",
+      "impact_score": 3,
+      "related_sectors": ["社会", "财经"],
+      "related_stocks": ["招商银行"],
+      "source": "https://finance.sina.cn/2025-03-10/detail-inepcfvz3998449.d.html"
+    }
+  ],
+  "key_signals": [
+    "公开平台热搜（微博/部分聚合站）采集在当前环境下不稳定：需要浏览器登录态或替代数据源",
+    "消费风向偏务实：穿搭‘耐用/去滤镜’、Citywalk等低成本体验持续",
+    "AI算力叙事更偏推理侧：服务器/IDC/推理芯片与调优平台关注度升"
+  ],
+  "portfolio_alerts": [
+    "紫金矿业：国际地缘风险+资源品景气叙事叠加，关注风险溢价变化",
+    "中国平安：低空保险等政策文件线索可能带来主题催化（需进一步核实具体条文）",
+    "爱美客：大健康/轻运动/养生内容热度延续，偏中性正面"
+  ],
+  "social_highlights": [
+    "热搜类数据源的可采集性本身成为风险点：需要建立稳定抓取路径",
+    "务实消费与低成本生活方式延续，社会情绪偏谨慎但未显著悲观",
+    "AI基础设施关注从训练转向推理与工程化落地，产业信心偏正面"
+  ]
+}

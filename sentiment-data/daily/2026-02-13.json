@@ -1202,5 +1202,425 @@
       "反诈与数字安全继续占据公共讨论：老年人防骗工具与官方提醒扩散",
       "消费更看重‘快与省’：即时履约与服务评分成为平台竞争关键词"
     ]
+  },
+  {
+    "timestamp": "2026-02-13T10:15:00+08:00",
+    "hour": 10,
+    "social_temperature": "中性",
+    "market_sentiment": "中性",
+    "fear_greed_estimate": 52,
+    "consumer_confidence": "稳定",
+    "items": [
+      {
+        "category": "微博热搜",
+        "title": "微博实时热点入口/聚合热搜榜持续成为流量入口",
+        "summary": "全网热榜/热搜引擎类站点仍被频繁引用，说明大众对‘即时热点’的获取依赖度高、议题切换快。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "媒体互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://weibo.com/a/hot/realtime"
+      },
+      {
+        "category": "微博热搜",
+        "title": "第三方‘微博实时热点’聚合页面传播",
+        "summary": "第三方聚合页面以‘榜单化’形式二次分发热搜，利于话题外溢但内容真实性需二次核验。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "媒体互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.aewz.com/details/wbssrd"
+      },
+      {
+        "category": "微博热搜",
+        "title": "全网热榜工具（今日热榜）聚合微博/抖音/B站等热点",
+        "summary": "跨平台热榜聚合强化‘同题共振’，更容易形成短时的全民讨论峰值。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "媒体互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://rebang.today/"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "小红书数据工具/热榜服务成为品牌监测常用入口（新红/千瓜等）",
+        "summary": "品牌侧更依赖第三方数据平台做趋势洞察，反映‘种草’仍是消费链路关键环节。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "互联网",
+          "营销"
+        ],
+        "related_stocks": [
+          "爱美客"
+        ],
+        "source": "https://xh.newrank.cn/"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "‘巴恩风穿搭’等务实耐用风格被解读为阶段性消费心理",
+        "summary": "趋势解读强调‘经久耐穿/祛滤镜’偏好，映射消费者更看重性价比与实用主义。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "服饰"
+        ],
+        "related_stocks": [],
+        "source": "https://www.itopmarketing.com/info18960"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "年度生活方式趋势（Citywalk/显眼包等）持续影响内容供给",
+        "summary": "生活方式内容持续火热，利好本地生活/户外/文旅相关消费心智的延续。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "旅游"
+        ],
+        "related_stocks": [
+          "中国中免"
+        ],
+        "source": "https://socialbeta.com/article/109294"
+      },
+      {
+        "category": "抖音B站",
+        "title": "抖音话题榜（新榜等）作为热点追踪入口",
+        "summary": "短视频平台热点仍以‘话题榜’方式快速迭代，娱乐/生活化内容占比高。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "娱乐",
+          "媒体互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.newrank.cn/ranktopic/douyin"
+      },
+      {
+        "category": "抖音B站",
+        "title": "抖音热点榜‘实时热点+代表视频’机制被用于带货/流量捕捉",
+        "summary": "热点内容与电商转化绑定更紧，利好快消/低客单价爆品的短周期放量。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "电商"
+        ],
+        "related_stocks": [],
+        "source": "https://dy.feigua.cn/help/detail/3/190.html"
+      },
+      {
+        "category": "抖音B站",
+        "title": "B站热搜/热榜被当作年轻人兴趣风向标（方法类文章提及）",
+        "summary": "内容消费更多由兴趣驱动，‘知识/科技/二次元’易形成圈层共振。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": [
+          "娱乐",
+          "科技"
+        ],
+        "related_stocks": [],
+        "source": "https://zhuanlan.zhihu.com/p/1903403406552471534"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "闲鱼二手分析图/价格趋势被大众化科普",
+        "summary": "二手交易的‘价格曲线/波动’被更多用户关注，说明消费更精细化、倾向择时与比价。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "电商"
+        ],
+        "related_stocks": [],
+        "source": "https://bk.taobao.com/k/xianyu_229/d9c8e541c5d1ad8d9bd2d1787ad807e4.html"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "二手电商用户规模/下沉市场二手奢侈品需求增长被报告化",
+        "summary": "行业报告称二手电商用户规模持续扩大、下沉市场高价值二手需求上行，反映‘理性消费+资产再配置’趋势。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "电商"
+        ],
+        "related_stocks": [],
+        "source": "https://www.100ec.cn/detail--6648624.html"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "‘谷子’（二次元周边）在闲鱼被视为年轻人硬通货（趋势报告）",
+        "summary": "年轻人对二次元周边的交易活跃度高，可能体现‘低门槛情绪消费+可转卖’的组合偏好。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "娱乐"
+        ],
+        "related_stocks": [],
+        "source": "https://zhuanlan.zhihu.com/p/1905980629457311667"
+      },
+      {
+        "category": "A股财经",
+        "title": "证券时报提及有色金属高景气、相关个股受关注",
+        "summary": "媒体表述显示有色板块景气仍被反复讨论，偏向周期上行叙事；与资源股情绪相关。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "财经",
+          "有色金属"
+        ],
+        "related_stocks": [
+          "紫金矿业"
+        ],
+        "source": "https://www.stcn.com/article/list/gs.html"
+      },
+      {
+        "category": "A股财经",
+        "title": "东方财富/同花顺等成为‘今日热门板块/复盘’信息入口",
+        "summary": "投资者对板块轮动与短线题材的关注度高，但信息多为二次加工，需结合公告与交易数据核验。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "财经"
+        ],
+        "related_stocks": [],
+        "source": "https://stock.eastmoney.com/"
+      },
+      {
+        "category": "A股财经",
+        "title": "同花顺‘财经要闻/复盘/投资日历’被用于跟踪政策与事件驱动",
+        "summary": "事件驱动型交易仍活跃，市场对政策、产业催化和风格切换敏感。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "财经"
+        ],
+        "related_stocks": [],
+        "source": "http://news.10jqka.com.cn/"
+      },
+      {
+        "category": "政策信号",
+        "title": "中国政府网‘最新政策’持续更新（权威口径）",
+        "summary": "政策发布节奏保持常态化更新，是市场与舆论的‘定调/纠偏’核心信息源。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "政治",
+          "宏观"
+        ],
+        "related_stocks": [],
+        "source": "https://www.gov.cn/zhengce/zuixin/"
+      },
+      {
+        "category": "政策信号",
+        "title": "中央一号文件强调规范承包地经营权流转、加强风险监测预警",
+        "summary": "农业农村政策强调‘规范化与风险预警’，对涉农金融、土地流转相关产业预期偏稳。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "政治",
+          "农业",
+          "宏观"
+        ],
+        "related_stocks": [],
+        "source": "https://www.gov.cn/zhengce/"
+      },
+      {
+        "category": "政策信号",
+        "title": "财政部信息：在港发行人民币国债等（资金面与对外融资信号）",
+        "summary": "公开信息显示财政部继续通过离岸渠道发行人民币国债，释放稳资金、拓渠道的信号。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "宏观",
+          "金融"
+        ],
+        "related_stocks": [
+          "招商银行",
+          "中国平安"
+        ],
+        "source": "https://www.mof.gov.cn/index.htm"
+      },
+      {
+        "category": "国际大事",
+        "title": "央视国际新闻：联合国等敦促苏丹冲突方在斋月前实施人道停火",
+        "summary": "地区冲突与人道议题仍在，短期对风险偏好偏扰动，但对国内资产更多通过情绪与大宗路径传导。",
+        "sentiment": "负面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "国际",
+          "政治"
+        ],
+        "related_stocks": [],
+        "source": "https://news.cctv.com/world/"
+      },
+      {
+        "category": "国际大事",
+        "title": "国际新闻滚动（中新网）作为信息入口",
+        "summary": "国际事件呈多点分布，舆论关注点碎片化，市场更多聚焦‘能源/通胀/地缘’三条主线。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": [
+          "国际",
+          "宏观"
+        ],
+        "related_stocks": [],
+        "source": "https://www.chinanews.com.cn/world.shtml"
+      },
+      {
+        "category": "国际大事",
+        "title": "Investing等平台提示关注就业数据/通胀/关税等宏观变量",
+        "summary": "海外宏观数据节点仍是全球市场波动来源之一，对汇率与风险资产偏短线影响。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "国际",
+          "宏观"
+        ],
+        "related_stocks": [],
+        "source": "https://cn.investing.com/news/latest-news"
+      },
+      {
+        "category": "AI科技",
+        "title": "华为发布Atlas SuperPoD超节点/集群（算力基础设施）",
+        "summary": "超节点产品强调大规模昇腾卡互联与内存/互联能力，AI基础设施（服务器/IDC/互联）叙事增强。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 5,
+        "related_sectors": [
+          "科技",
+          "AI基础设施",
+          "服务器",
+          "IDC"
+        ],
+        "related_stocks": [],
+        "source": "https://www.huawei.com/cn/news/2025/9/hc-lingqu-ai-superpod"
+      },
+      {
+        "category": "AI科技",
+        "title": "媒体讨论：DeepSeek等推动算力需求从训练向推理迁移",
+        "summary": "‘推理侧算力’需求占比提升的观点增多，利好推理芯片、推理集群与算力网络相关方向。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "科技",
+          "AI基础设施",
+          "芯片"
+        ],
+        "related_stocks": [],
+        "source": "https://www.stcn.com/article/detail/1848638.html"
+      },
+      {
+        "category": "AI科技",
+        "title": "媒体：国产AI推理芯片迎来机遇（政策+需求驱动叙事）",
+        "summary": "国产推理芯片与端边云协同被视为机会窗口，关注产业链景气与订单验证。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "科技",
+          "芯片"
+        ],
+        "related_stocks": [],
+        "source": "https://www.stcn.com/article/detail/3344660.html"
+      },
+      {
+        "category": "民生社会",
+        "title": "政府网/媒体集中回应工资、住房、养老、就业等民生议题（回顾类）",
+        "summary": "民生关注点仍围绕‘就业稳定、住房预期、养老医疗’三件套，舆论对确定性政策表述更敏感。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "社会",
+          "政治",
+          "房地产"
+        ],
+        "related_stocks": [
+          "招商银行",
+          "中国平安"
+        ],
+        "source": "https://www.gov.cn/zhengce/202503/content_7012403.htm"
+      },
+      {
+        "category": "民生社会",
+        "title": "‘稳楼市/保就业’话题在财经媒体持续出现（回顾类报道）",
+        "summary": "楼市与就业仍是社会情绪的核心锚，短期更偏‘观望+求稳’。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "社会",
+          "房地产",
+          "宏观"
+        ],
+        "related_stocks": [
+          "招商银行",
+          "中国平安"
+        ],
+        "source": "https://finance.sina.cn/2025-03-10/detail-inepcfvz3998449.d.html"
+      },
+      {
+        "category": "民生社会",
+        "title": "地方/媒体发布‘民生清单’强化公共服务预期（回顾类）",
+        "summary": "政策目标以‘托底民生’为主线，利于稳定社会预期，但改善体感仍取决于就业与收入。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "社会",
+          "宏观"
+        ],
+        "related_stocks": [],
+        "source": "https://invest.beijing.gov.cn/zwgk/ywsd/202501/t20250120_3993279.html"
+      }
+    ],
+    "key_signals": [
+      "消费内容风向：务实耐用/性价比叙事增强（小红书‘巴恩风’等）",
+      "AI基础设施：超节点/推理算力需求上升叙事增强",
+      "政策端：权威渠道持续更新、强调规范与风险监测"
+    ],
+    "portfolio_alerts": [
+      "紫金矿业：媒体继续强化有色景气讨论（情绪偏多，需结合价格/业绩验证）",
+      "招行/平安：民生与稳楼市/稳就业叙事仍是宏观情绪锚（偏中性）",
+      "中国中免：生活方式/文旅内容热度延续对出行消费心智偏正面（但需订单数据验证）"
+    ],
+    "social_highlights": [
+      "务实型消费（耐用/性价比）继续抬头，‘买得值/能转卖’成为共识",
+      "AI算力基础设施叙事增强，推理侧需求被反复讨论",
+      "社会关注仍围绕就业与住房确定性，整体情绪偏稳但不亢奋"
+    ]
   }
 ]

@@ -2034,5 +2034,291 @@
       "“内存/存储涨价”外溢到大众讨论，AI基础设施成本成为显性话题",
       "即时零售与年货促销延续，消费信心偏稳但仍以性价比与便利为主"
     ]
+  },
+  {
+    "timestamp": "2026-02-13T12:00:00+08:00",
+    "hour": 12,
+    "social_temperature": "中性偏谨慎",
+    "market_sentiment": "中性偏多",
+    "fear_greed_estimate": 57,
+    "consumer_confidence": "稳定",
+    "items": [
+      {
+        "category": "微博热搜",
+        "title": "春节档与地方春晚话题仍在发酵（湖南春晚热度/热搜）",
+        "summary": "文娱内容继续占据公共注意力，情绪偏轻松但对宏观风险偏好影响有限。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": [
+          "娱乐",
+          "媒体互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://m.voc.com.cn/xhn/news/202602/31556855.html"
+      },
+      {
+        "category": "微博热搜",
+        "title": "“私房早餐/智商税”类消费吐槽内容传播",
+        "summary": "对高溢价概念消费的反感与审慎增强，反映大众更重性价比与真实体验。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "社会"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1JJFSz9EAB/"
+      },
+      {
+        "category": "微博热搜",
+        "title": "“韩国投资者大量买入中国股票”话题被媒体复盘",
+        "summary": "外资关注中国科技与AI主题的叙事强化，带来情绪层面的风险偏好提振。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "财经",
+          "科技"
+        ],
+        "related_stocks": [],
+        "source": "https://www.stheadline.com/zh-hans/stock-market/3544209/"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "行业观察：小红书电商更强调“信任驱动”，助农/生鲜破圈",
+        "summary": "消费决策更依赖体验分享与口碑，冲动消费弱化，适合做长期品牌心智。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "电商"
+        ],
+        "related_stocks": [],
+        "source": "https://www.ebrun.com/20260206/639167.shtml"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "内容创作者讨论：2026小红书算法/限流与起号规则话题升温",
+        "summary": "创作者对流量不确定性更敏感，平台侧“内容质量与互动”权重预期提高。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "互联网",
+          "营销"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/985894666_121973594"
+      },
+      {
+        "category": "抖音B站",
+        "title": "B站热门：三国/游戏/娱乐向内容占据热榜",
+        "summary": "大众注意力仍以娱乐休闲为主，情绪总体平稳；教育/知识类也有增量但非主线。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": [
+          "娱乐"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV16Zi2BdEo1/"
+      },
+      {
+        "category": "抖音B站",
+        "title": "硬件圈讨论：内存涨价带动“装机成本上升”话题扩散",
+        "summary": "AI带动存储/内存供需紧张在大众端显性化，可能抑制部分消费电子换新。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "科技",
+          "消费电子",
+          "存储"
+        ],
+        "related_stocks": [],
+        "source": "https://www.nytimes.com/2026/01/29/technology/ai-memory-chips-pc-smartphone.html"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "闲鱼“帮卖”服务报道：质检/估价/推广一站式出清",
+        "summary": "二手交易进一步标准化，强化价格发现与“理性消费/以旧换新”趋势。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "电商",
+          "二手经济"
+        ],
+        "related_stocks": [],
+        "source": "https://36kr.com/p/2428367291720448"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "年货消费趋势：智能清洁/暖菜板等“省心型”家电走热",
+        "summary": "“懒人经济+时间稀缺”驱动效率型家电进入年货清单，利好家电龙头。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "家电"
+        ],
+        "related_stocks": [
+          "美的集团"
+        ],
+        "source": "https://news.qq.com/rain/a/20260211A06VWO00"
+      },
+      {
+        "category": "A股财经",
+        "title": "四大证券报头条摘要：AI应用/影视游戏主题ETF走强受关注",
+        "summary": "多模态视频生成与传媒应用带动风险偏好，资金偏向“AI应用落地”主题。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI应用",
+          "传媒",
+          "游戏"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/stock/y/2026-02-13/doc-inhmrhtt3398148.shtml"
+      },
+      {
+        "category": "A股财经",
+        "title": "稀土价格上行、稀土永磁板块领涨的报道增多",
+        "summary": "资源品涨价强化周期交易情绪，关注扩散到人形机器人/低空经济等需求叙事。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "有色金属",
+          "稀土",
+          "机器人"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/headline/2026-02-13/doc-inhmrhtn2362961.shtml"
+      },
+      {
+        "category": "政策信号",
+        "title": "8部门联合强化虚拟货币监管：强调非法金融活动、处置协同",
+        "summary": "监管合力压制投机炒作，稳定金融秩序信号明确；对合规科技金融影响偏中性。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "金融监管"
+        ],
+        "related_stocks": [],
+        "source": "https://www.news.cn/fortune/20260206/3b6176933a40466f9adc8927a957cc9f/c.html"
+      },
+      {
+        "category": "政策信号",
+        "title": "海南自贸港“零关税”政策（岛内居民消费进境商品）实施",
+        "summary": "对海南消费与旅游链条预期偏正面，免税/旅游零售关注度提升。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "旅游"
+        ],
+        "related_stocks": [
+          "中国中免"
+        ],
+        "source": "https://finance.sina.com.cn/stock/y/2026-02-06/doc-inhkvret2348581.shtml"
+      },
+      {
+        "category": "国际大事",
+        "title": "孟加拉国大选计票与结果进展引发关注",
+        "summary": "地区政治变动对风险偏好影响有限但提示新兴市场不确定性仍在。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": [
+          "宏观",
+          "政治"
+        ],
+        "related_stocks": [],
+        "source": "https://www.thehindu.com/news/international/bangladesh-elections-live-updates-thursday-february-12-2026/article70622357.ece"
+      },
+      {
+        "category": "AI科技",
+        "title": "三星宣布量产新一代AI内存芯片（TechXplore）",
+        "summary": "HBM/先进内存供给扩张有望缓解“内存墙”，利好AI基础设施链景气延续。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI基础设施",
+          "存储",
+          "半导体"
+        ],
+        "related_stocks": [],
+        "source": "https://techxplore.com/news/2026-02-samsung-mass-production-gen-ai.html"
+      },
+      {
+        "category": "AI科技",
+        "title": "AI带动内存涨价成为全球话题（NYT/TrendForce预测被引用）",
+        "summary": "存储/内存价格上行是AI景气的“通胀指标”，对终端电子形成成本传导压力。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI基础设施",
+          "存储",
+          "消费电子"
+        ],
+        "related_stocks": [],
+        "source": "https://www.tomshardware.com/tech-industry/semiconductors/memory-makers-are-set-to-earn-usd551-billion-from-the-ai-boom-twice-as-much-as-contract-chip-manufacturers-forecasts-suggest-that-2026-revenue-will-skyrocket-thanks-to-data-center-demand"
+      },
+      {
+        "category": "民生社会",
+        "title": "就业与房地产仍是舆论主轴：地产行业承压与观望情绪延续",
+        "summary": "对房价与行业风险的担忧仍在，拖累部分家庭资产预期与大额消费意愿。",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "社会",
+          "房地产"
+        ],
+        "related_stocks": [],
+        "source": "https://news.pedaily.cn/202602/560936.shtml"
+      },
+      {
+        "category": "民生社会",
+        "title": "消费复盘文章强调“情绪消费/体验消费”与政策补贴窗口",
+        "summary": "消费从实物转向体验，政策补贴被视作托底变量，情绪总体偏谨慎但不恐慌。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "宏观"
+        ],
+        "related_stocks": [],
+        "source": "https://openaxo.com/trends/2025-china-consumption-trends-2026-policy"
+      }
+    ],
+    "key_signals": [
+      "AI基础设施信号更强：内存/HBM涨价与量产扩产并行，算力景气向存储与数据中心链条外溢",
+      "政策端继续“防风险+强监管”：虚拟货币/RWA相关监管组合拳强化合规预期",
+      "消费风向偏“省心/性价比”：效率型家电、二手帮卖服务走热，冲动消费被吐槽为“智商税”"
+    ],
+    "portfolio_alerts": [
+      "美的集团：年货“省心型”家电热度上行，消费情绪边际利好（影响：中等）",
+      "中国中免：海南零关税政策对旅游零售关注度有提振（影响：中等）",
+      "招商银行/中国平安：市场情绪中性偏多但仍偏防御，金融权重短期或受益（影响：中等）",
+      "紫金矿业：周期/资源品（稀土、有色）涨价叙事增强，关注大宗波动传导（影响：中等）"
+    ],
+    "social_highlights": [
+      "AI带动的“内存涨价/算力成本”从产业新闻外溢到大众讨论",
+      "监管组合拳强化金融秩序预期，投机炒作氛围受抑",
+      "消费端更务实：省心型家电+二手服务化，性价比与反“智商税”情绪增强"
+    ]
   }
 ]

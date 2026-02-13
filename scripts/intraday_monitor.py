@@ -408,14 +408,21 @@ def scan_watchlist_opportunities(snapshot, analysis):
         # 3. 今日涨幅合理（-1% ~ +5%，不追涨停）
         if score >= 65 and action in ["buy", "strong_buy"] and market_neutral:
             if -1 < change_pct < 5:
-                # 计算买入数量
+                # 计算买入数量（P1: 新仓分批制 + 最小有效建仓阈值）
+                first_buy_max = TRADING_RULES.get("first_buy_max_pct", 0.07)
+                min_position_pct = TRADING_RULES.get("min_position_pct", 0.05)
+                min_amount = total_value * min_position_pct
                 max_buy_amount = min(
                     cash * 0.25,  # 单次最多用25%可用现金
-                    total_value * TRADING_RULES.get("max_position_pct", 0.15)  # 单只最大仓位
+                    total_value * first_buy_max  # 首笔上限7%（而非12%）
                 )
                 buy_qty = int(max_buy_amount / price // 100) * 100
                 
                 if buy_qty >= 100:
+                    actual_amount = buy_qty * price
+                    if actual_amount < min_amount:
+                        print(f"   ⛔ 最小仓位过滤: {rt.get('name', code)} ¥{actual_amount:.0f}<{min_position_pct*100:.0f}%总资产(¥{min_amount:.0f})")
+                        continue
                     opportunities.append({
                         "code": code,
                         "name": rt.get("name", c.get("name", code)),

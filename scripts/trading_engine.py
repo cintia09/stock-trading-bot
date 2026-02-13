@@ -64,7 +64,9 @@ def _load_strategy_params():
                      "atr_period", "atr_fast_period", "atr_use_hybrid",
                      "underperform_consecutive_days_to_act", "underperform_reduce_pct",
                      "min_score",
-                     "max_daily_buys", "same_day_rebuy_ban", "buy_reasons_required"]:
+                     "max_daily_buys", "same_day_rebuy_ban", "buy_reasons_required",
+                     "min_position_pct", "first_buy_max_pct",
+                     "ineffective_position_pct", "intraday_high_zone_pct"]:
             if key in params:
                 TRADING_RULES[key] = params[key]
 
@@ -252,6 +254,17 @@ def score_stock(code: str, realtime: Dict, klines: List[Dict], sentiment: Dict) 
             if change_pct <= -2:
                 score -= 30
                 reasons.append(f"⚠️日内跌幅过滤: 今日{change_pct:.1f}%(<=-2%)扣30分")
+            
+            # === P1: 日内高位过滤（冲高回落区降权，防止追高买入） ===
+            high = rt.get("high", 0)
+            low = rt.get("low", 0)
+            intraday_range = high - low
+            high_zone_pct = TRADING_RULES.get("intraday_high_zone_pct", 0.75)
+            if intraday_range > 0 and high > 0:
+                position_in_range = (current_price - low) / intraday_range
+                if position_in_range >= high_zone_pct and change_pct > 2:
+                    score -= 15
+                    reasons.append(f"⚠️日内高位: 价格在振幅{position_in_range*100:.0f}%位置(>{high_zone_pct*100:.0f}%)且涨{change_pct:.1f}%，降权15分")
         
         # 量比
         volumes = [k["volume"] for k in klines]
@@ -444,7 +457,15 @@ def generate_trade_decisions(account: Dict, watchlist: Dict, sentiment: Dict = N
                 decision["action"] = "stop_loss"
                 decision["trade_type"] = "sell"
                 decision["quantity"] = can_sell_today(account, code)
-                decision["reasons"].append(f"触发止损({decision['pnl_pct']:.1f}% <= {TRADING_RULES['stop_loss_pct']*100:.1f}%)")
+                # ATR自适应止损：使用max(固定止损, -2×ATR)，高波动股用更宽止损
+                fixed_sl = TRADING_RULES["stop_loss_pct"]
+                atr_sl = -(atr_pct * 2)  # 2倍ATR作为止损线
+                effective_sl = min(fixed_sl, atr_sl)  # 取更宽的（更负的值）
+                if pnl_pct <= effective_sl:
+                    decision["reasons"].append(f"触发ATR止损({decision['pnl_pct']:.1f}% <= {effective_sl*100:.1f}%, ATR={atr_pct*100:.1f}%)")
+                else:
+                    # 固定止损触发但ATR止损未触发 → 仍止损但标注
+                    decision["reasons"].append(f"触发固定止损({decision['pnl_pct']:.1f}% <= {fixed_sl*100:.1f}%, ATR止损线={atr_sl*100:.1f}%)")
             elif is_residual and holding_qty <= 300:
                 # v3: 残仓清理（<总资产0.5%且<=300股）
                 decision["action"] = "residual_clear"
@@ -516,17 +537,28 @@ def generate_trade_decisions(account: Dict, watchlist: Dict, sentiment: Dict = N
                     decisions.append(decision)
                     continue
                 
+                # === P1: 新仓分批制 + 最小有效建仓阈值 ===
+                first_buy_max = TRADING_RULES.get("first_buy_max_pct", 0.07)
+                min_position = TRADING_RULES.get("min_position_pct", 0.05)
                 max_amount = min(
                     available_cash * 0.3,
-                    total_value * TRADING_RULES["max_position_pct"],
+                    total_value * first_buy_max,  # 首笔上限(默认7%，而非12%)
                     total_value * (max_total - current_position_pct)  # v3: 不超过仓位上限
                 )
-                if max_amount >= TRADING_RULES["min_buy_amount"]:
+                min_amount = total_value * min_position  # 最小有效建仓金额(5%)
+                if max_amount >= min_amount and max_amount >= TRADING_RULES["min_buy_amount"]:
                     quantity = int(max_amount / rt["price"] / 100) * 100
                     if quantity >= 100:
-                        decision["trade_type"] = "buy"
-                        decision["quantity"] = quantity
-                        decision["amount"] = round(quantity * rt["price"], 2)
+                        actual_amount = quantity * rt["price"]
+                        if actual_amount >= min_amount:
+                            decision["trade_type"] = "buy"
+                            decision["quantity"] = quantity
+                            decision["amount"] = round(actual_amount, 2)
+                        else:
+                            decision["reasons"].append(f"⛔最小仓位过滤: ¥{actual_amount:.0f}<{min_position*100:.0f}%总资产(¥{min_amount:.0f})")
+                else:
+                    if max_amount < min_amount:
+                        decision["reasons"].append(f"⛔最小仓位过滤: 可用¥{max_amount:.0f}<{min_position*100:.0f}%总资产(¥{min_amount:.0f})")
         
         decisions.append(decision)
     
@@ -810,23 +842,34 @@ def run_trading_cycle():
     account["total_pnl_pct"] = round(account["total_pnl"] / account["initial_capital"] * 100, 2)
     save_account(account)
     
-    # 6.5 残仓自动清理：交易后检查是否有残仓需要清理
+    # 6.5 残仓+无效仓位自动清理
+    # 残仓: <0.5%总资产且<=300股 → 立即清理
+    # 无效仓位: <3%总资产 → 立即清理（复盘9次提出，终于入码！）
     residual_threshold = TRADING_RULES.get("residual_clear_threshold_pct", 0.005)
+    ineffective_threshold = TRADING_RULES.get("ineffective_position_pct", 0.03)
     total_val = account.get("total_value", 1000000)
     for h in list(account.get("holdings", [])):
         rt_price = realtime.get(h["code"], {}).get("price", h.get("current_price", h["cost_price"]))
         h_value = h["quantity"] * rt_price
-        if total_val > 0 and (h_value / total_val) < residual_threshold and h["quantity"] <= 300:
+        weight = h_value / total_val if total_val > 0 else 0
+        
+        # 残仓清理（<0.5%且<=300股）
+        is_residual = weight < residual_threshold and h["quantity"] <= 300
+        # 无效仓位清理（<3%总资产）
+        is_ineffective = weight < ineffective_threshold and not is_residual
+        
+        if is_residual or is_ineffective:
             sellable = can_sell_today(account, h["code"])
             if sellable > 0:
-                print(f"\n🧹 [残仓清理] {h['name']}({h['code']}) {h['quantity']}股 市值¥{h_value:.0f} (<{residual_threshold*100:.1f}%)")
+                label = "残仓" if is_residual else "无效仓位"
+                print(f"\n🧹 [{label}清理] {h['name']}({h['code']}) {h['quantity']}股 市值¥{h_value:.0f} (占比{weight*100:.1f}%<{(residual_threshold if is_residual else ineffective_threshold)*100:.1f}%)")
                 result = execute_trade(account, {
                     "code": h["code"],
                     "name": h["name"],
                     "price": rt_price,
                     "trade_type": "sell",
                     "quantity": sellable,
-                    "reasons": [f"残仓自动清理: {h['quantity']}股 市值¥{h_value:.0f} (<总资产{residual_threshold*100:.1f}%)"]
+                    "reasons": [f"{label}自动清理: {h['quantity']}股 市值¥{h_value:.0f} (占比{weight*100:.1f}%<{(residual_threshold if is_residual else ineffective_threshold)*100:.1f}%)"]
                 })
                 if result["success"]:
                     trades_executed.append(result["trade"])
@@ -1061,13 +1104,20 @@ def run_enhanced_trading_cycle():
                 
                 available_cash = cash_now
                 if available_cash > TRADING_RULES["min_buy_amount"]:
+                    first_buy_max = TRADING_RULES.get("first_buy_max_pct", 0.07)
+                    min_pos = TRADING_RULES.get("min_position_pct", 0.05)
+                    min_amount = total_val * min_pos
                     max_amount = min(
                         available_cash * 0.25,
-                        total_val * TRADING_RULES["max_position_pct"],
+                        total_val * first_buy_max,  # 首笔上限7%
                         total_val * (max_total - pos_pct)  # v3: 不超仓位上限
                     )
                     quantity = int(max_amount / fs["price"] / 100) * 100
                     if quantity >= 100:
+                        actual_amount = quantity * fs["price"]
+                        if actual_amount < min_amount:
+                            print(f"  ⛔ 最小仓位过滤: {fs['name']} ¥{actual_amount:.0f}<{min_pos*100:.0f}%总资产")
+                            continue
                         result = execute_trade(account, {
                             "code": fs["code"],
                             "name": fs["name"],

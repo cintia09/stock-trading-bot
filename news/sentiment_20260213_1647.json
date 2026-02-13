@@ -1,0 +1,62 @@
+{
+  "overall_sentiment": 27,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      10,
+      -0.2
+    ],
+    [
+      "银行",
+      8,
+      0.0
+    ],
+    [
+      "贵金属",
+      5,
+      -0.2
+    ],
+    [
+      "房地产",
+      2,
+      0.0
+    ],
+    [
+      "新能源车",
+      1,
+      0.0
+    ],
+    [
+      "消费",
+      1,
+      0.0
+    ],
+    [
+      "光伏",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "在华尔街最新一轮人工智能相关股票抛售之后 欧洲股市预计开盘走势分化",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "下跌",
+          "抛售"
+        ]
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1770970055"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-13T16:47:33.545456"
+}

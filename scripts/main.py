@@ -93,7 +93,7 @@ def generate_report() -> str:
             report.append("**【今日交易】**")
             for t in today_tx:
                 emoji = "📈" if t["type"] == "buy" else "📉"
-                report.append(f"{emoji} {t['type'].upper()} {t['name']} {t['quantity']}股 @ ¥{t['price']}")
+                report.append(f"{emoji} {t['type'].upper()} {t.get('name', t.get('code', '?'))} {t['quantity']}股 @ ¥{t['price']}")
                 if t.get("pnl"):
                     report.append(f"   盈亏: ¥{t['pnl']:+,.2f}")
             report.append("")

@@ -3534,5 +3534,199 @@
       "虚拟货币监管升级与“清朗”专项行动同步推进，强调风险防控与网络环境治理",
       "AI基础设施热度持续：高速光模块与算力投资预期被反复强化"
     ]
+  },
+  {
+    "timestamp": "2026-02-13T17:00:00+08:00",
+    "hour": 17,
+    "social_temperature": "中性",
+    "market_sentiment": "中性",
+    "fear_greed_estimate": 50,
+    "consumer_confidence": "稳定",
+    "items": [
+      {
+        "category": "微博热搜",
+        "title": "跨平台热榜聚合工具持续走红（今日热榜/热搜引擎类）",
+        "summary": "大众获取热点更依赖榜单聚合与二次分发，话题更碎片化、切换更快。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "媒体互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://rebang.today/"
+      },
+      {
+        "category": "微博热搜",
+        "title": "第三方微博热搜聚合页面传播（需二次核验）",
+        "summary": "聚合页能放大话题外溢，但信息来源不一、真实性需回到官方/权威媒体核对。",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "媒体互联网"
+        ],
+        "related_stocks": [],
+        "source": "https://www.aewz.com/details/wbssrd"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "第三方小红书数据工具成为品牌趋势入口（新红/千瓜等）",
+        "summary": "品牌侧更依赖数据平台洞察种草风向，消费决策链路仍以“内容信任”为核心。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "广告营销",
+          "互联网"
+        ],
+        "related_stocks": [
+          "爱美客"
+        ],
+        "source": "https://xh.newrank.cn/"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "趋势解读：实用主义/性价比风格（务实耐用穿搭等）被反复提及",
+        "summary": "“经久耐穿/去滤镜”式审美与生活方式走强，折射消费更谨慎、追求确定性。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "服饰"
+        ],
+        "related_stocks": [],
+        "source": "https://www.itopmarketing.com/info18960"
+      },
+      {
+        "category": "抖音B站",
+        "title": "抖音话题榜/新榜等工具被用来追踪“今日热门话题”",
+        "summary": "短视频热点运营工具化，平台热点更像“可交易的注意力资产”。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "互联网",
+          "内容"
+        ],
+        "related_stocks": [],
+        "source": "https://www.newrank.cn/ranktopic/douyin"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "闲鱼“行情参考/历史趋势”等价格发现功能被科普讨论",
+        "summary": "二手交易更依赖平台定价与成交数据，反映大众“以旧换新/理性消费”延续。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "电商",
+          "二手经济"
+        ],
+        "related_stocks": [],
+        "source": "https://bk.taobao.com/k/xianyu_229/d9c8e541c5d1ad8d9bd2d1787ad807e4.html"
+      },
+      {
+        "category": "A股财经",
+        "title": "主流行情/资讯入口：东方财富、证券时报、每经等持续聚合市场热点",
+        "summary": "板块轮动与主题讨论更多依赖头部资讯平台聚合，短线情绪仍偏结构性博弈。",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "资本市场"
+        ],
+        "related_stocks": [],
+        "source": "https://stock.eastmoney.com/"
+      },
+      {
+        "category": "政策信号",
+        "title": "中国政府网政策栏目持续更新，中央一号文件强调土地流转“规范与风险监测预警”",
+        "summary": "政策基调偏“稳、规范、防风险”，涉农村土地经营权流转强调风险监测。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "宏观政策",
+          "农业"
+        ],
+        "related_stocks": [],
+        "source": "https://www.gov.cn/zhengce/"
+      },
+      {
+        "category": "政策信号",
+        "title": "财政部发布政策与新闻：人民币国债发行等信息更新",
+        "summary": "财政端融资与债务管理信息持续公开，整体偏中性，对市场更多是利率/流动性背景。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": [
+          "宏观",
+          "利率债"
+        ],
+        "related_stocks": [],
+        "source": "https://www.mof.gov.cn/index.htm"
+      },
+      {
+        "category": "国际大事",
+        "title": "联合国等机构敦促苏丹冲突各方停火并在斋月期间实施人道主义停火（央视网转引）",
+        "summary": "地区冲突与人道议题持续，对全球风险偏好影响有限但反映地缘不确定性仍在。",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 3,
+        "related_sectors": [
+          "国际政治",
+          "宏观"
+        ],
+        "related_stocks": [],
+        "source": "https://news.cctv.com/world/"
+      },
+      {
+        "category": "AI科技",
+        "title": "国产AI芯片/算力“突围”讨论升温（含超节点/集群架构等）",
+        "summary": "围绕推理算力增长、系统级创新与国产生态建设的讨论增多，利好算力基础设施情绪。",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI基础设施",
+          "半导体",
+          "服务器"
+        ],
+        "related_stocks": [],
+        "source": "https://news.sina.cn/bignews/insight/2026-02-12/detail-inhmqfhc6779271.d.html"
+      },
+      {
+        "category": "AI科技",
+        "title": "华为发布Atlas 950/960 SuperPoD超节点（官方信息）",
+        "summary": "超节点产品强调大规模昇腾卡集群能力，强化国产算力基础设施叙事与生态预期。",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "AI基础设施",
+          "芯片",
+          "IDC"
+        ],
+        "related_stocks": [],
+        "source": "https://www.huawei.com/cn/news/2025/9/hc-lingqu-ai-superpod"
+      }
+    ],
+    "key_signals": [
+      "消费风向偏实用主义与性价比：穿搭/生活方式趋势解读强调“耐用、去滤镜、务实”",
+      "政策基调继续“稳与规范”：中央一号文件对土地流转强调风险监测预警",
+      "国产算力基础设施叙事延续：超节点/集群与推理算力需求成为焦点"
+    ],
+    "portfolio_alerts": [
+      "爱美客：小红书仍是医美/美妆核心种草阵地之一，品牌侧对数据化趋势洞察依赖增强（影响：中等）"
+    ],
+    "social_highlights": [
+      "消费更理性：实用主义与性价比风格成为内容平台高频叙事",
+      "政策强调“规范+风险预警”，社会预期更重“稳定与可控”",
+      "国产算力与AI基础设施讨论持续升温（超节点/推理算力/集群）"
+    ]
   }
 ]

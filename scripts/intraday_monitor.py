@@ -6,6 +6,7 @@
 import sys
 import json
 import os
+import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -17,6 +18,9 @@ from trading_engine import (load_account, save_account, execute_trade, TRADING_R
                             load_watchlist, save_watchlist, score_stock, get_holding_value,
                             get_available_cash, calculate_trade_cost,
                             get_today_stop_loss_codes, get_today_buy_count)
+
+# 可转债扫描（盘中增量接入）
+from cb_scanner import fetch_cb_list, scan
 
 BASE_DIR = Path(__file__).parent.parent
 DATA_DIR = BASE_DIR / "data"
@@ -127,8 +131,8 @@ def analyze_trend(snapshots):
     
     # 大盘趋势
     sh_now = latest["market"].get("sh000001", {}).get("change_pct", 0)
-    sh_prev = prev["market"].get("sh000001", {}).get("change_pct", 0)
-    sh_first = first["market"].get("sh000001", {}).get("change_pct", 0)
+    sh_prev = prev.get("market", {}).get("sh000001", {}).get("change_pct", 0)
+    sh_first = first.get("market", {}).get("sh000001", {}).get("change_pct", 0)
     
     if sh_now > sh_prev + 0.3:
         signals.append("📈 大盘加速上涨")
@@ -500,15 +504,61 @@ def run_monitor():
                 print(f"      ❌ 未执行: {result['reason']}")
     else:
         print("\n💤 无交易信号，继续持有观望")
-    
-    # 4. 当前持仓摘要
+
+    # 5. 可转债套利扫描（不影响主流程，设超时防挂起）
+    cb_over_50 = []
+    cb_scan_ok = False
+    try:
+        import signal
+        def _cb_timeout(signum, frame):
+            raise TimeoutError("CB scan timed out after 90s")
+        old_handler = signal.signal(signal.SIGALRM, _cb_timeout)
+        signal.alarm(90)  # 90秒超时
+        cb_list = fetch_cb_list()
+        cb_opps = scan(cb_list) if cb_list else []
+        signal.alarm(0)  # 取消超时
+        signal.signal(signal.SIGALRM, old_handler)
+
+        # 保存扫描结果（看板数据源依赖该文件）
+        cb_output = DATA_DIR / "cb_opportunities.json"
+        cb_output.parent.mkdir(parents=True, exist_ok=True)
+        cb_result = {
+            "scan_time": datetime.now().isoformat(),
+            "total_listed": len(cb_list) if cb_list else 0,
+            "opportunities_found": len(cb_opps),
+            "opportunities": cb_opps[:30],
+        }
+        with open(cb_output, "w", encoding="utf-8") as f:
+            json.dump(cb_result, f, ensure_ascii=False, indent=2)
+
+        cb_scan_ok = True
+
+        # 评分>50 的机会（给飞书/看板简要提示）
+        cb_over_50 = [op for op in cb_opps if float(op.get('score', 0) or 0) > 50]
+        if cb_over_50:
+            top = cb_over_50[:3]
+            brief = "；".join([
+                f"{x.get('bond_name','')}({x.get('bond_code','')}) 评分{x.get('score')} 溢价{x.get('premium_rate')}%"
+                for x in top
+            ])
+            analysis["signals"].append(f"💎 转债套利机会(>50分): {brief}")
+        else:
+            analysis["signals"].append("💎 转债套利机会: 暂无>50分")
+
+        # 更新看板数据（update_data.py 内部会确保HTTP服务启动）
+        dashboard_script = BASE_DIR.parent / "dashboard" / "update_data.py"
+        subprocess.run([sys.executable, str(dashboard_script)], check=False)
+    except Exception as e:
+        print(f"⚠️ 可转债扫描失败(已忽略，不影响主监控): {e}")
+
+    # 6. 当前持仓摘要
     print(f"\n{'─'*40}")
     print(f"💰 总资产: ¥{snapshot['total_value']:,.2f}")
     print(f"💵 现金: ¥{snapshot['cash']:,.2f}")
     for h in snapshot["holdings"]:
         emoji = "🔴" if h["pnl_from_cost_pct"] >= 0 else "🟢"
         print(f"   {emoji} {h['name']} ¥{h['price']} ({h['change_pct']:+.1f}%) 成本盈亏{h['pnl_from_cost_pct']:+.1f}%")
-    
+
     # 返回结构化结果（供cron任务使用）
     return {
         "status": "ok",
@@ -521,6 +571,9 @@ def run_monitor():
         "trades": trades_made,
         "total_value": snapshot["total_value"],
         "snapshot_count": len(all_snapshots),
+        "cb_scan_ok": cb_scan_ok,
+        "cb_opportunities_over_50": len(cb_over_50),
+        "cb_top_over_50": cb_over_50[:5],
     }
 
 

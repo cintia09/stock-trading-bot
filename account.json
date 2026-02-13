@@ -1,9 +1,50 @@
 {
   "initial_capital": 1000000,
-  "current_cash": 476576.3900000001,
-  "total_value": 1008680.41,
+  "current_cash": 446283.85,
+  "total_value": 1000437.75,
   "created_at": "2026-02-06T00:23:00+08:00",
-  "last_updated": "2026-02-12T16:49:04.116146",
+  "last_updated": "2026-02-13T15:00:42.960773",
+  "cb_holdings": [
+    {
+      "bond_code": "127042",
+      "bond_name": "嘉美转债",
+      "shares": 100,
+      "cost_price": 496.2,
+      "buy_time": "2026-02-13T09:15:45",
+      "strategy": "负溢价转股套利",
+      "target_stock_code": "002969",
+      "transfer_price": 4.87,
+      "current_price": 496.2,
+      "market_value": 49620.0,
+      "pnl_pct": 0.0
+    },
+    {
+      "bond_code": "123159",
+      "bond_name": "崧盛转债",
+      "shares": 210,
+      "cost_price": 156.11,
+      "buy_time": "2026-02-13T09:15:45",
+      "strategy": "负溢价转股套利",
+      "target_stock_code": "301002",
+      "transfer_price": 24.95,
+      "current_price": 156.11,
+      "market_value": 32783.1,
+      "pnl_pct": 0.0
+    },
+    {
+      "bond_code": "127071",
+      "bond_name": "天箭转债",
+      "shares": 80,
+      "cost_price": 125.155,
+      "buy_time": "2026-02-13T09:15:45",
+      "strategy": "低溢价套利",
+      "target_stock_code": "003009",
+      "transfer_price": 53.11,
+      "current_price": 125.8,
+      "market_value": 10064.0,
+      "pnl_pct": 0.5154
+    }
+  ],
   "holdings": [
     {
       "code": "601318",
@@ -11,43 +52,32 @@
       "quantity": 1100,
       "cost_price": 66.74,
       "last_buy_date": "2026-02-06",
-      "market_value": 73194.0,
-      "current_price": 66.54,
-      "pnl_pct": -0.3,
+      "market_value": 71819.0,
+      "current_price": 65.29,
+      "pnl_pct": -2.17,
       "high_since_entry": 66.74
     },
     {
       "code": "600036",
       "name": "招商银行",
-      "quantity": 3700,
+      "quantity": 3000,
       "cost_price": 39.48,
       "last_buy_date": "2026-02-06",
-      "market_value": 144263.0,
-      "current_price": 38.99,
-      "pnl_pct": -1.24,
+      "market_value": 116130.0,
+      "current_price": 38.71,
+      "pnl_pct": -1.95,
       "high_since_entry": 39.48
     },
     {
       "code": "000333",
       "name": "美的集团",
-      "quantity": 1800,
+      "quantity": 1500,
       "cost_price": 79.9,
       "last_buy_date": "2026-02-06",
-      "market_value": 143640.0,
-      "current_price": 79.8,
-      "pnl_pct": -0.13,
-      "high_since_entry": 79.9
-    },
-    {
-      "code": "601899",
-      "name": "紫金矿业",
-      "quantity": 3000,
-      "cost_price": 39.921,
-      "last_buy_date": "2026-02-12",
-      "current_price": 39.75,
-      "market_value": 119250.0,
-      "high_since_entry": 39.921,
-      "pnl_pct": -0.43
+      "market_value": 118575.0,
+      "current_price": 79.05,
+      "pnl_pct": -1.06,
+      "high_since_entry": 79.99
     },
     {
       "code": "002594",
@@ -55,9 +85,9 @@
       "quantity": 200,
       "cost_price": 91.217,
       "last_buy_date": "2026-02-12",
-      "market_value": 18232.0,
-      "current_price": 91.16,
-      "pnl_pct": -0.06,
+      "market_value": 18054.0,
+      "current_price": 90.27,
+      "pnl_pct": -1.04,
       "high_since_entry": 91.16
     },
     {
@@ -66,10 +96,10 @@
       "quantity": 100,
       "cost_price": 146.733,
       "last_buy_date": "2026-02-12",
-      "market_value": 14685.0,
-      "current_price": 146.85,
-      "pnl_pct": 0.08,
-      "high_since_entry": 146.85
+      "market_value": 14524.0,
+      "current_price": 145.24,
+      "pnl_pct": -1.02,
+      "high_since_entry": 147.43
     },
     {
       "code": "601888",
@@ -77,10 +107,21 @@
       "quantity": 200,
       "cost_price": 94.327,
       "last_buy_date": "2026-02-12",
-      "market_value": 18834.0,
-      "current_price": 94.17,
-      "pnl_pct": -0.17,
-      "high_since_entry": 94.17
+      "market_value": 18928.0,
+      "current_price": 94.64,
+      "pnl_pct": 0.33,
+      "high_since_entry": 95.55
+    },
+    {
+      "code": "688041",
+      "name": "海光信息",
+      "quantity": 400,
+      "cost_price": 262.801,
+      "last_buy_date": "2026-02-13",
+      "current_price": 259.06,
+      "market_value": 103624.0,
+      "pnl_pct": -1.42,
+      "high_since_entry": 264.49
     }
   ],
   "frozen_sells": [
@@ -133,11 +174,16 @@
       "code": "601888",
       "quantity": 200,
       "buy_date": "2026-02-12"
+    },
+    {
+      "code": "688041",
+      "quantity": 400,
+      "buy_date": "2026-02-13"
     }
   ],
   "daily_pnl": 0,
-  "total_pnl": 8680.41,
-  "total_pnl_pct": 0.87,
+  "total_pnl": 437.75,
+  "total_pnl_pct": 0.04,
   "trade_count": 1,
   "trades": [
     {

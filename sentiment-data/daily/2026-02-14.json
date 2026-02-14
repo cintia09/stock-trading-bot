@@ -1,57 +1,292 @@
-{
-  "timestamp": "2026-02-14T07:15:00+08:00",
-  "hour": 7,
-  "social_temperature": "中性",
-  "market_sentiment": "中性",
-  "fear_greed_estimate": 55,
-  "consumer_confidence": "稳定",
-  "items": [
-    {
-      "category": "AI科技",
-      "title": "算力需求结构转向“推理”被行业文章强调",
-      "summary": "推理侧需求上升利好服务器/IDC/加速卡生态，训练侧增速或放缓",
-      "sentiment": "正面",
-      "reliability": "中",
-      "impact_score": 4,
-      "related_sectors": ["科技", "财经"],
-      "related_stocks": [],
-      "source": "https://www.stcn.com/article/detail/1848638.html"
-    },
-    {
-      "category": "国际大事",
-      "title": "联合国/非盟等呼吁苏丹冲突各方停止敌对并推动人道停火",
-      "summary": "非洲地缘风险延续，对大宗商品与航运情绪构成扰动",
-      "sentiment": "负面",
-      "reliability": "中",
-      "impact_score": 3,
-      "related_sectors": ["政治", "财经"],
-      "related_stocks": ["紫金矿业"],
-      "source": "https://news.cctv.com/world/"
-    },
-    {
-      "category": "小红书趋势",
-      "title": "巴恩风（Barn style）穿搭成为阶段性热点",
-      "summary": "偏向“经久耐穿/祛滤镜感”的实用主义审美，反映性价比与务实消费",
-      "sentiment": "中性",
-      "reliability": "中",
-      "impact_score": 3,
-      "related_sectors": ["消费"],
-      "related_stocks": [],
-      "source": "https://www.itopmarketing.com/info18960"
-    }
-  ],
-  "key_signals": [
-    "务实消费与低成本生活方式继续成为小红书主要话题，反映一定程度的消费降级趋势",
-    "AI基础设施相关关注热点转向推理算力需求，工程化与产业落地信心延续",
-    "苏丹冲突升级及广泛关注，或长期影响资源品价格波动"
-  ],
-  "portfolio_alerts": [
-    "紫金矿业：因苏丹地缘风险相关的资源价格波动，需关注全球供需变化",
-    "爱美客：伴随健康消费与养生趋势，长期看机遇向好"
-  ],
-  "social_highlights": [
-    "地缘政治风险依然是本周国际社会关注的焦点，增加了市场不确定性",
-    "人工智能核心算力需求转向推理设施，相关领域或迎来增量市场",
-    "务实消费风格逐步渗透更多领域，反映当前经济环境下消费者心理趋势"
-  ]
-}
+[
+  {
+    "timestamp": "2026-02-14T07:15:00+08:00",
+    "hour": 7,
+    "social_temperature": "中性",
+    "market_sentiment": "中性",
+    "fear_greed_estimate": 55,
+    "consumer_confidence": "稳定",
+    "items": [
+      {
+        "category": "AI科技",
+        "title": "算力需求结构转向“推理”被行业文章强调",
+        "summary": "推理侧需求上升利好服务器/IDC/加速卡生态，训练侧增速或放缓",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "科技",
+          "财经"
+        ],
+        "related_stocks": [],
+        "source": "https://www.stcn.com/article/detail/1848638.html"
+      },
+      {
+        "category": "国际大事",
+        "title": "联合国/非盟等呼吁苏丹冲突各方停止敌对并推动人道停火",
+        "summary": "非洲地缘风险延续，对大宗商品与航运情绪构成扰动",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "政治",
+          "财经"
+        ],
+        "related_stocks": [
+          "紫金矿业"
+        ],
+        "source": "https://news.cctv.com/world/"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "巴恩风（Barn style）穿搭成为阶段性热点",
+        "summary": "偏向“经久耐穿/祛滤镜感”的实用主义审美，反映性价比与务实消费",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://www.itopmarketing.com/info18960"
+      }
+    ],
+    "key_signals": [
+      "务实消费与低成本生活方式继续成为小红书主要话题，反映一定程度的消费降级趋势",
+      "AI基础设施相关关注热点转向推理算力需求，工程化与产业落地信心延续",
+      "苏丹冲突升级及广泛关注，或长期影响资源品价格波动"
+    ],
+    "portfolio_alerts": [
+      "紫金矿业：因苏丹地缘风险相关的资源价格波动，需关注全球供需变化",
+      "爱美客：伴随健康消费与养生趋势，长期看机遇向好"
+    ],
+    "social_highlights": [
+      "地缘政治风险依然是本周国际社会关注的焦点，增加了市场不确定性",
+      "人工智能核心算力需求转向推理设施，相关领域或迎来增量市场",
+      "务实消费风格逐步渗透更多领域，反映当前经济环境下消费者心理趋势"
+    ]
+  },
+  {
+    "timestamp": "2026-02-14T08:15:00+08:00",
+    "hour": 8,
+    "social_temperature": "中性",
+    "market_sentiment": "偏多",
+    "fear_greed_estimate": 60,
+    "consumer_confidence": "稳定",
+    "items": [
+      {
+        "category": "政策信号",
+        "title": "国务院办公厅印发完善全国统一电力市场体系实施意见",
+        "summary": "提出未来5-10年电力市场体系目标任务，强调跨省跨区交易与清洁能源消纳",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "政治",
+          "财经",
+          "新能源",
+          "公用事业"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/jjxw/2026-02-11/doc-inhmmvzi4680102.shtml"
+      },
+      {
+        "category": "政策信号",
+        "title": "国务院国资委部署央企“AI+”专项行动（媒体转述）",
+        "summary": "强调扩大算力有效投资、推进“算力+电力”协同、攻关大模型与关键技术",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 5,
+        "related_sectors": [
+          "科技",
+          "财经",
+          "政治",
+          "IDC",
+          "电力"
+        ],
+        "related_stocks": [],
+        "source": "https://m.jrj.com.cn/madapter/stock/2026/02/12074955805351.shtml"
+      },
+      {
+        "category": "政策信号",
+        "title": "多部门进一步防范和处置虚拟货币及RWA代币化相关风险（地方金融办转载）",
+        "summary": "强调对虚拟货币、境内权益境外代币化等业务从严监管",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "政治",
+          "财经",
+          "金融科技"
+        ],
+        "related_stocks": [
+          "中国平安"
+        ],
+        "source": "https://jrj.sh.gov.cn/YWTBZCCX166/20260209/1a0687ac1c6241678898b12622ee4f86.html"
+      },
+      {
+        "category": "AI科技",
+        "title": "三星宣布出货商用HBM4（AI计算）",
+        "summary": "HBM4量产/出货强化AI基础设施供给预期，利好内存链条与数据中心需求叙事",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 5,
+        "related_sectors": [
+          "科技",
+          "半导体",
+          "存储",
+          "算力"
+        ],
+        "related_stocks": [],
+        "source": "https://news.samsung.com/global/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing"
+      },
+      {
+        "category": "AI科技",
+        "title": "机构/媒体讨论AI带动存储行业收入在2026年显著增长",
+        "summary": "数据中心对HBM/DRAM/SSD需求推动存储景气度，关注国内相关供应链",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "科技",
+          "半导体",
+          "存储",
+          "服务器"
+        ],
+        "related_stocks": [],
+        "source": "https://www.tomshardware.com/tech-industry/semiconductors/memory-makers-are-set-to-earn-usd551-billion-from-the-ai-boom-twice-as-much-as-contract-chip-manufacturers-forecasts-suggest-that-2026-revenue-will-skyrocket-thanks-to-data-center-demand"
+      },
+      {
+        "category": "国际大事",
+        "title": "乌克兰相关谈判与欧美安全会议报道增多（多家外媒）",
+        "summary": "和谈/停火预期与分歧并存，可能影响风险偏好、能源与军工链条情绪",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "政治",
+          "财经",
+          "能源"
+        ],
+        "related_stocks": [
+          "紫金矿业"
+        ],
+        "source": "https://www.politico.com/news/2026/02/13/munich-security-conference-ukraine-fate-00779545"
+      },
+      {
+        "category": "A股财经",
+        "title": "市场讨论2026年A股主线：科技重估向顺周期扩散、分化加剧",
+        "summary": "研报/媒体总结强调盈利兑现与资本纪律，关注板块轮动节奏",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "财经"
+        ],
+        "related_stocks": [
+          "招商银行",
+          "中国平安",
+          "比亚迪",
+          "美的集团"
+        ],
+        "source": "https://finance.sina.com.cn/roll/2026-02-10/doc-inhminue4568130.shtml"
+      },
+      {
+        "category": "A股财经",
+        "title": "化工、油气等周期股阶段性走强（板块轮动）",
+        "summary": "周期品价格与政策预期驱动，若延续将带动资源与化工链情绪修复",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "财经",
+          "化工",
+          "能源"
+        ],
+        "related_stocks": [
+          "紫金矿业"
+        ],
+        "source": "https://finance.sina.com.cn/stock/relnews/cn/2026-02-07/doc-inhkxuct1595857.shtml"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "“年货消费趋势”报道：暖菜板、智能清洁家电、智能电动车进入春节清单",
+        "summary": "春节场景带动家电与出行“效率投资”类消费，偏改善型但仍重性价比",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "家电",
+          "出行"
+        ],
+        "related_stocks": [
+          "美的集团",
+          "比亚迪"
+        ],
+        "source": "https://news.qq.com/rain/a/20260211A06VWO00"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "网上年货节带动“马年礼盒/装饰”等关键词搜索升温（媒体引用平台数据）",
+        "summary": "节庆消费短期升温，礼品与装饰品类或受益",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费"
+        ],
+        "related_stocks": [
+          "中国中免"
+        ],
+        "source": "https://news.qq.com/rain/a/20260210A019SN00"
+      },
+      {
+        "category": "抖音B站",
+        "title": "“私房早餐/智商税”类讨论在视频平台发酵",
+        "summary": "舆论对高溢价噱头消费更敏感，性价比与反套路情绪增强",
+        "sentiment": "负面",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "娱乐",
+          "社会"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1JJFSz9EAB/"
+      },
+      {
+        "category": "微博热搜",
+        "title": "“白头发与压力”相关话题被媒体复盘引用热搜词条",
+        "summary": "压力/健康焦虑仍是常见讨论主题，反映一定心理紧绷感",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": [
+          "社会",
+          "健康"
+        ],
+        "related_stocks": [
+          "爱美客"
+        ],
+        "source": "https://www.sina.cn/news/detail/5264180061932339.html"
+      }
+    ],
+    "key_signals": [
+      "政策端“电力市场+跨区交易”与“央企AI+算力投资”共振，利好算力与电力协同叙事",
+      "AI基础设施继续围绕HBM/存储供给与数据中心需求扩张，产业链景气预期偏正面",
+      "春节消费呈结构性改善：家电/出行效率型产品更受关注，但反溢价情绪也在上升"
+    ],
+    "portfolio_alerts": [
+      "美的集团/比亚迪：春节“家电+出行效率投资”类消费报道偏多，关注订单与补贴/促销节奏",
+      "中国平安：虚拟货币/RWA代币化监管趋严相关信号，关注金融监管口径变化",
+      "紫金矿业：地缘政治新闻与周期板块轮动仍可能带来资源品波动"
+    ],
+    "social_highlights": [
+      "政策信号指向“算力+电力”协同与全国电力市场建设，产业投资预期升温",
+      "AI硬件基础设施（HBM/存储）成为全球科技新闻高频点，算力链条关注度上行",
+      "大众消费更看重实用与性价比，舆论对高溢价噱头更敏感"
+    ]
+  }
+]

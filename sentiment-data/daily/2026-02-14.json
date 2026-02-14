@@ -515,5 +515,431 @@
       "AI硬件（光模块/CPO/互联）仍是讨论核心，但高位波动与投资者分歧上升",
       "楼市出现“止跌/成交回暖”叙事，居民预期边际修复但仍偏谨慎"
     ]
+  },
+  {
+    "timestamp": "2026-02-14T16:00:00+08:00",
+    "hour": 16,
+    "social_temperature": "中性",
+    "market_sentiment": "偏多",
+    "fear_greed_estimate": 58,
+    "consumer_confidence": "稳定",
+    "items": [
+      {
+        "category": "微博热搜",
+        "title": "热搜信息获取受限：公开搜索结果分散，出现大量‘情人节/节日消费’相关内容",
+        "summary": "情人节+春节临近带动送礼/餐饮/花卉等讨论，但平台热搜榜单在搜索引擎侧可见度有限",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "社会",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV17gFCzvEWt/"
+      },
+      {
+        "category": "微博热搜",
+        "title": "上海警方通报：有人用AI生成并传播‘嘉闵线施工塌陷’谣言被行拘",
+        "summary": "针对AI造谣的执法与辟谣强化，提示社会对信息真伪更敏感",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "社会",
+          "政治"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/wm/2026-02-14/doc-inhmtwhv9543000.shtml"
+      },
+      {
+        "category": "微博热搜",
+        "title": "情人节线下花店/年花消费忙碌的报道（港媒）",
+        "summary": "节日消费带动鲜花等即时消费，偏情绪价值型支出",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "社会"
+        ],
+        "related_stocks": [],
+        "source": "https://www.stheadline.com/breaking-news/3544789"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "小红书“2026算法/起号”内容走热（营销类文章）",
+        "summary": "创作者对流量规则与商业化更关注，反映平台内卷与变现焦虑",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "消费",
+          "科技"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sohu.com/a/985894666_121973594"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "“保命主义/年度消费复盘”被媒体总结：理性消费与健康优先",
+        "summary": "年轻人更强调健康、降低试错成本与情绪安全感",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "社会"
+        ],
+        "related_stocks": [
+          "爱美客"
+        ],
+        "source": "https://36kr.com/p/3681210182889090"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "内容平台“做社交/做关系链”的讨论持续（36氪）",
+        "summary": "平台试图通过社交关系提升内容分发与复访，间接影响消费种草路径",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": [
+          "科技",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://36kr.com/p/2961853229846785"
+      },
+      {
+        "category": "抖音B站",
+        "title": "B站高热内容之一：‘外网为什么突然接受中国文化’类视频传播",
+        "summary": "身份认同/文化叙事带来讨论热度，但观点分化明显",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": [
+          "社会",
+          "娱乐"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV16zw8e1EMh/"
+      },
+      {
+        "category": "抖音B站",
+        "title": "B站游戏/娱乐热点：暗黑2第六幕等话题视频有热度",
+        "summary": "线上娱乐热度稳定，偏消遣型内容占比高",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 1,
+        "related_sectors": [
+          "娱乐"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1j2cwzXE9j/"
+      },
+      {
+        "category": "抖音B站",
+        "title": "“屏蔽热搜/话题”类工具教程视频受关注",
+        "summary": "部分用户对平台话题/热搜内容反感，反映信息疲劳与情绪管理需求",
+        "sentiment": "负面",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "社会",
+          "科技"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV148411v7zF/"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "腾讯新闻：2026年货消费8大趋势（引用淘宝家居等数据）",
+        "summary": "暖菜板、智能清洁家电、AI眼镜、智能电动车等‘效率/智能’商品进入清单",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "家电",
+          "出行"
+        ],
+        "related_stocks": [
+          "美的集团",
+          "比亚迪"
+        ],
+        "source": "https://news.qq.com/rain/a/20260211A06VWO00"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "新浪科技：00后买年货，马年文创/健康轻食等搜索与销量增长（引用淘宝数据）",
+        "summary": "国潮文创与健康标签消费增长，‘情感共鸣+健康’成核心卖点",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费"
+        ],
+        "related_stocks": [
+          "中国中免"
+        ],
+        "source": "https://finance.sina.com.cn/tech/roll/2026-02-10/doc-inhmihnh4571611.shtml"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "36氪：电商告别红利，平台与商家进入‘硬仗’与更长促销周期",
+        "summary": "行业竞争激烈、消费者更理性，促销常态化",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "财经"
+        ],
+        "related_stocks": [],
+        "source": "https://36kr.com/p/3678848506261120"
+      },
+      {
+        "category": "A股财经",
+        "title": "字节跳动官宣：豆包大模型进入2.0阶段（财经媒体）",
+        "summary": "国内大模型竞争加剧，产业链对推理算力/应用落地预期升温",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "科技",
+          "财经"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/stock/t/2026-02-14/doc-inhmuhwq2246992.shtml"
+      },
+      {
+        "category": "A股财经",
+        "title": "新浪：市场快讯汇总提到隔夜美股普跌、科技板块偏弱",
+        "summary": "外盘波动对A股风险偏好有扰动，短线情绪可能偏谨慎",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "财经"
+        ],
+        "related_stocks": [
+          "招商银行",
+          "中国平安",
+          "比亚迪"
+        ],
+        "source": "https://finance.sina.com.cn/headline/2026-02-13/doc-inhmrnzm9043034.shtml"
+      },
+      {
+        "category": "A股财经",
+        "title": "板块/个股并购消息：建发股份拟收购美凯龙部分股权（资讯汇总中提及）",
+        "summary": "地产/家居链条并购整合信号，偏结构性主题",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 2,
+        "related_sectors": [
+          "财经",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://k.sina.com.cn/article_7857201856_1d45362c001902cra0.html"
+      },
+      {
+        "category": "政策信号",
+        "title": "新华社：金融监管总局鼓励针对数字/绿色/智能等新型消费场景定制金融产品",
+        "summary": "政策取向偏‘促消费+金融支持’，利好耐用消费品与分期/金融服务场景",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "政治",
+          "财经",
+          "消费"
+        ],
+        "related_stocks": [
+          "招商银行",
+          "中国平安"
+        ],
+        "source": "http://www.news.cn/20260211/d3753dc3df5d4b0bad173632ba0baf1a/c.html"
+      },
+      {
+        "category": "政策信号",
+        "title": "商务部通知：春节9天假期内保障以旧换新/购新补贴申领（官方）",
+        "summary": "家电、数码、汽车以旧换新政策延续，刺激节日期间线下消费",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 5,
+        "related_sectors": [
+          "政治",
+          "消费",
+          "家电",
+          "汽车"
+        ],
+        "related_stocks": [
+          "美的集团",
+          "比亚迪"
+        ],
+        "source": "https://www.mofcom.gov.cn/zcfb/gnmygl/art/2026/art_fc5f339422f442bf8d9b8514223f9bd5.html"
+      },
+      {
+        "category": "政策信号",
+        "title": "多地金融监管局工作会议释放信号：化解中小金融机构风险、严监管（36氪）",
+        "summary": "监管更强调‘守住不爆雷底线’，对银行/保险风险偏好形成约束",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "政治",
+          "财经"
+        ],
+        "related_stocks": [
+          "招商银行",
+          "中国平安"
+        ],
+        "source": "https://36kr.com/p/3677258655572609"
+      },
+      {
+        "category": "国际大事",
+        "title": "卫星通讯社：北约前秘书长呼吁重启对俄军控对话",
+        "summary": "军控议题回到舆论场，地缘不确定性仍对风险资产构成扰动",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": [
+          "政治"
+        ],
+        "related_stocks": [],
+        "source": "https://sputniknews.cn/20260214/1069786720.html"
+      },
+      {
+        "category": "国际大事",
+        "title": "卫星通讯社：印尼加入金砖国家新开发银行议题仍在推进",
+        "summary": "新兴市场金融合作叙事延续，但落地节奏不确定",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "政治",
+          "财经"
+        ],
+        "related_stocks": [],
+        "source": "https://sputniknews.cn/20260214/1069786330.html"
+      },
+      {
+        "category": "国际大事",
+        "title": "VOA：美国国务院推出商业外交计划（CDE）等报道",
+        "summary": "美国对外经贸与企业支持政策动向持续，可能影响贸易预期",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "政治",
+          "财经"
+        ],
+        "related_stocks": [],
+        "source": "https://www.voachinese.com/z/1746"
+      },
+      {
+        "category": "AI科技",
+        "title": "AI算力投资‘黄金窗口期’等主题基金/媒体报道增多（新浪）",
+        "summary": "市场继续强化‘算力=投资主线’叙事，关注服务器/IDC/光模块细分",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "科技",
+          "财经",
+          "IDC",
+          "服务器"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/jjxw/2026-02-12/doc-inhmpusm3995319.shtml"
+      },
+      {
+        "category": "AI科技",
+        "title": "光模块/CPO：1.6T放量、板块高位分化提示（新浪）",
+        "summary": "高速互联需求强，但估值与业绩兑现分歧上升，波动加大",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 5,
+        "related_sectors": [
+          "科技",
+          "光模块"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sina.cn/news/detail/5264396357470153.html"
+      },
+      {
+        "category": "AI科技",
+        "title": "TrendForce：800G以上光模块出货占比预计到2026年突破60%（转述）",
+        "summary": "AI数据中心网络升级确定性增强，利好光模块/交换机/光纤产业链",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "科技",
+          "光模块",
+          "IDC"
+        ],
+        "related_stocks": [],
+        "source": "https://cn.investing.com/news/stock-market-news/article-3208267"
+      },
+      {
+        "category": "民生社会",
+        "title": "人民网：做好春节重要民生商品保供稳价，蔬菜均价较高点回落",
+        "summary": "供给保障增强，物价短期压力可控，有助于稳定社会情绪",
+        "sentiment": "正面",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "社会",
+          "政治"
+        ],
+        "related_stocks": [],
+        "source": "https://cpc.people.com.cn/n1/2026/0207/c64387-40661404.html"
+      },
+      {
+        "category": "民生社会",
+        "title": "国新办发布会：商务部称节前生活必需品供需两旺、价格总体平稳（腾讯转述）",
+        "summary": "节前消费与供应同旺，‘稳价稳供’有助于降低焦虑",
+        "sentiment": "正面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "社会",
+          "消费",
+          "政治"
+        ],
+        "related_stocks": [],
+        "source": "https://news.qq.com/rain/a/20260211A03F1E00"
+      },
+      {
+        "category": "民生社会",
+        "title": "消费心理：‘要高性价比，也要爱你老己’年货趋势报道（新浪）",
+        "summary": "消费结构呈‘刚需打底+品质礼赠’，情绪价值与理性并存",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "社会"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.com.cn/cj/2026-02-11/doc-inhmmvzf7616161.shtml"
+      }
+    ],
+    "key_signals": [
+      "节前政策与供给侧共同发力：以旧换新/促消费+保供稳价，消费情绪总体稳定",
+      "AI基础设施话题热度高：光模块/CPO/高速互联的确定性仍强，但高位分化与波动风险提示增多",
+      "执法辟谣强调AI造谣治理，公众对信息真实性敏感度上升"
+    ],
+    "portfolio_alerts": [
+      "美的集团/比亚迪：商务部以旧换新政策明确覆盖春节假期（impact=5），关注终端销量与渠道节奏",
+      "招商银行/中国平安：监管鼓励新型消费场景金融产品（impact=4），利好消费金融与场景金融机会"
+    ],
+    "social_highlights": [
+      "商务部春节假期以旧换新政策落地（家电/数码/汽车），对线下消费有直接拉动",
+      "节前保供稳价信息密集发布，蔬菜等价格出现回落信号，缓解‘物价焦虑’",
+      "AI造谣被行政处罚案例强化，社会对‘AI生成内容’信任门槛提高"
+    ]
   }
 ]

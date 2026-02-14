@@ -1,9 +1,9 @@
 // 投资看板数据文件 - 自动生成，请勿手动编辑
-// 生成时间: 2026-02-15T00:30:15
+// 生成时间: 2026-02-15T00:33:32
 
 window.DASHBOARD_DATA = {
   "_meta": {
-    "generated_at": "2026-02-15T00:30:15",
+    "generated_at": "2026-02-15T00:33:32",
     "generator": "realtime_updater.py",
     "version": "1.2"
   },
@@ -14,7 +14,7 @@ window.DASHBOARD_DATA = {
         "current_cash": 446283.85,
         "total_value": 1000404.95,
         "created_at": "2026-02-06T00:23:00+08:00",
-        "last_updated": "2026-02-15T00:30:19",
+        "last_updated": "2026-02-15T00:33:36",
         "cb_holdings": [
           {
             "bond_code": "127042",

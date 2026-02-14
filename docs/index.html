@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投资看板 Dashboard</title>
+    <style>
+        /* ============================================
+           基础样式 - 深色金融主题
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            /* 深色背景 */
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-card: #1c2128;
+            --bg-hover: #262c36;
+            
+            /* 文字颜色 */
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
+            
+            /* A股配色：红涨绿跌 */
+            --color-profit: #f85149;   /* 红色 = 盈利/上涨 */
+            --color-loss: #3fb950;     /* 绿色 = 亏损/下跌 */
+            --color-neutral: #8b949e;
+            
+            /* 强调色 */
+            --color-accent: #58a6ff;
+            --color-warning: #d29922;
+            --color-info: #79c0ff;
+            
+            /* 边框 */
+            --border-color: #30363d;
+            
+            /* 阴影 */
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+        
+        /* ============================================
+           顶部概览区域
+           ============================================ */
+        .header {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
+            padding: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .header-content {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .header-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .header-time {
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .update-status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.03) inset;
+        }
+
+        .update-status-dot.green { background: #2ea043; }
+        .update-status-dot.gray { background: #6e7681; }
+        .update-status-dot.red { background: #f85149; }
+        
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .overview-item {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .overview-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .overview-value {
+            font-size: 28px;
+            font-weight: 700;
+            font-family: 'SF Mono', Consolas, monospace;
+        }
+        
+        .overview-sub {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        
+        /* ============================================
+           主内容区域
+           ============================================ */
+        .main-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        
+        @media (max-width: 1200px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        
+        @media (max-width: 900px) {
+            .bottom-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* ============================================
+           卡片样式
+           ============================================ */
+        .card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+        
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .card-time {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        
+        .card-body {
+            padding: 16px 20px;
+        }
+        
+        .card-empty {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+        }
+        
+        /* ============================================
+           表格样式
+           ============================================ */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        .data-table th {
+            text-align: left;
+            padding: 12px 8px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .data-table td {
+            padding: 12px 8px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+        
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .data-table tr:hover {
+            background: var(--bg-hover);
+        }
+        
+        .text-right {
+            text-align: right;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mono {
+            font-family: 'SF Mono', Consolas, monospace;
+        }
+        
+        /* ============================================
+           颜色工具类
+           ============================================ */
+        .profit { color: var(--color-profit); }
+        .loss { color: var(--color-loss); }
+        .neutral { color: var(--text-secondary); }
+        .accent { color: var(--color-accent); }
+        .warning { color: var(--color-warning); }
+        
+        /* ============================================
+           标签样式
+           ============================================ */
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .tag-buy {
+            background: rgba(248, 81, 73, 0.15);
+            color: var(--color-profit);
+        }
+        
+        .tag-sell {
+            background: rgba(63, 185, 80, 0.15);
+            color: var(--color-loss);
+        }
+        
+        .tag-priority-a {
+            background: rgba(248, 81, 73, 0.15);
+            color: var(--color-profit);
+        }
+        
+        .tag-priority-b {
+            background: rgba(88, 166, 255, 0.15);
+            color: var(--color-accent);
+        }
+        
+        .tag-p0 {
+            background: rgba(248, 81, 73, 0.2);
+            color: var(--color-profit);
+        }
+        
+        .tag-p1 {
+            background: rgba(210, 153, 34, 0.2);
+            color: var(--color-warning);
+        }
+        
+        /* ============================================
+           策略参数卡片
+           ============================================ */
+        .params-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+        }
+        
+        .param-item {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .param-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+        
+        .param-value {
+            font-size: 18px;
+            font-weight: 600;
+            font-family: 'SF Mono', Consolas, monospace;
+        }
+        
+        /* ============================================
+           计划操作列表
+           ============================================ */
+        .action-list {
+            list-style: none;
+        }
+        
+        .action-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .action-item:last-child {
+            border-bottom: none;
+        }
+        
+        .action-type {
+            flex-shrink: 0;
+            width: 60px;
+        }
+        
+        .action-content {
+            flex: 1;
+        }
+        
+        .action-stock {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .action-detail {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .action-priority {
+            flex-shrink: 0;
+            margin-left: 12px;
+        }
+
+        /* ============================================
+           新闻简报
+           ============================================ */
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .news-item {
+            display: grid;
+            grid-template-columns: 58px 84px 1fr;
+            gap: 10px;
+            align-items: center;
+            padding: 10px 12px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+        }
+
+        .news-item:hover {
+            background: var(--bg-hover);
+        }
+
+        .news-time {
+            font-family: 'SF Mono', Consolas, monospace;
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .news-source {
+            font-size: 12px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+            padding: 2px 8px;
+            border-radius: 999px;
+            border: 1px solid rgba(139, 148, 158, 0.35);
+            background: rgba(139, 148, 158, 0.08);
+        }
+
+        .news-title {
+            font-size: 13px;
+            color: var(--text-primary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .news-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .news-title a:hover {
+            color: var(--color-accent);
+            text-decoration: underline;
+        }
+
+        /* ============================================
+           舆情简报增强样式
+           ============================================ */
+        .sentiment-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .sentiment-metric {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+        }
+
+        .sentiment-metric .label {
+            color: var(--text-muted);
+        }
+
+        .sentiment-metric .value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .sentiment-section {
+            margin-bottom: 16px;
+        }
+
+        .sentiment-section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .sentiment-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sentiment-list li {
+            padding: 6px 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sentiment-list li:last-child {
+            border-bottom: none;
+        }
+
+        .sentiment-divider {
+            border: none;
+            border-top: 1px dashed var(--border-color);
+            margin: 16px 0;
+        }
+
+        .news-category-group {
+            margin-bottom: 12px;
+        }
+
+        .news-category-title {
+            font-size: 12px;
+            color: var(--text-muted);
+            padding: 4px 0;
+            margin-bottom: 4px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .news-item-v2 {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 8px 0;
+            font-size: 13px;
+            border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+        }
+
+        .news-item-v2:last-child {
+            border-bottom: none;
+        }
+
+        .news-item-v2 .impact {
+            flex-shrink: 0;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .news-item-v2 .content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .news-item-v2 .title {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .news-item-v2 .title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .news-item-v2 .title a:hover {
+            color: var(--color-accent);
+            text-decoration: underline;
+        }
+
+        .news-item-v2 .summary {
+            color: var(--text-secondary);
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
+        .news-item-v2.positive .title { color: var(--color-profit); }
+        .news-item-v2.negative .title { color: var(--color-loss); }
+        .news-item-v2.neutral .title { color: var(--text-secondary); }
+        
+        /* ============================================
+           进度条
+           ============================================ */
+        .progress-bar {
+            height: 6px;
+            background: var(--bg-secondary);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--color-accent);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+        
+        /* ============================================
+           响应式调整
+           ============================================ */
+        @media (max-width: 768px) {
+            .header {
+                padding: 16px;
+            }
+            
+            .overview-value {
+                font-size: 22px;
+            }
+            
+            .main-content {
+                padding: 16px;
+            }
+            
+            .card-body {
+                padding: 12px;
+            }
+            
+            .data-table {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部概览 -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-top">
+                <h1 class="header-title">📊 投资看板</h1>
+                <div class="header-time">
+                    <span class="update-status-dot gray" id="updateStatusDot" title="数据刷新状态"></span>
+                    最后更新: <span id="lastUpdate">--</span>
+                </div>
+            </div>
+            <!-- 顶部总览行 -->
+            <div class="overview-grid" style="margin-bottom: 16px;">
+                <div class="overview-item">
+                    <div class="overview-label">总资产</div>
+                    <div class="overview-value" id="totalValue">--</div>
+                    <div class="overview-sub" id="initialCapital">初始资金: --</div>
+                </div>
+                <div class="overview-item">
+                    <div class="overview-label">总盈亏</div>
+                    <div class="overview-value" id="totalPnl">--</div>
+                    <div class="overview-sub" id="totalPnlPct">--</div>
+                </div>
+                <div class="overview-item">
+                    <div class="overview-label">当日盈亏</div>
+                    <div class="overview-value" id="dailyPnl">--</div>
+                    <div class="overview-sub" id="tradeCount">今日交易: --</div>
+                </div>
+                <div class="overview-item">
+                    <div class="overview-label">仓位比例</div>
+                    <div class="overview-value" id="positionPct">--</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="positionBar" style="width: 0%"></div>
+                    </div>
+                    <div class="overview-sub" id="cashInfo">现金: --</div>
+                </div>
+            </div>
+            <!-- 分类详情行：股票 / 转债 / 现金 -->
+            <div class="overview-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="overview-item" style="background: linear-gradient(135deg, rgba(248, 81, 73, 0.1), var(--bg-card));">
+                    <div class="overview-label">📈 股票持仓</div>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 8px;">
+                        <span class="mono" style="font-size: 20px; font-weight: 600;" id="stockValue">--</span>
+                        <span class="mono" style="font-size: 14px;" id="stockCount">0只</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 13px;">
+                        <span style="color: var(--text-secondary);">盈亏</span>
+                        <span class="mono" id="stockPnl">--</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 13px;">
+                        <span style="color: var(--text-secondary);">今日</span>
+                        <span class="mono" id="stockDailyPnl">--</span>
+                    </div>
+                </div>
+                <div class="overview-item" style="background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), var(--bg-card));">
+                    <div class="overview-label">📊 转债持仓</div>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 8px;">
+                        <span class="mono" style="font-size: 20px; font-weight: 600;" id="cbValue">--</span>
+                        <span class="mono" style="font-size: 14px;" id="cbCount">0只</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 13px;">
+                        <span style="color: var(--text-secondary);">盈亏</span>
+                        <span class="mono" id="cbPnl">--</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 13px;">
+                        <span style="color: var(--text-secondary);">今日</span>
+                        <span class="mono" id="cbDailyPnl">--</span>
+                    </div>
+                </div>
+                <div class="overview-item" style="background: linear-gradient(135deg, rgba(210, 153, 34, 0.15), var(--bg-card));">
+                    <div class="overview-label">💰 现金</div>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 8px;">
+                        <span class="mono" style="font-size: 20px; font-weight: 600;" id="cashValue">--</span>
+                        <span class="mono" style="font-size: 14px; color: var(--text-secondary);" id="cashPct">--%</span>
+                    </div>
+                    <div style="margin-top: 12px; font-size: 13px; color: var(--text-muted);">
+                        可用于买入
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容 -->
+    <main class="main-content">
+        <div class="content-grid">
+            <!-- 左列 -->
+            <div class="left-column">
+                <!-- 持仓详情 -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">📈 持仓详情</span>
+                        <span class="card-time" id="accountTime">--</span>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table" id="holdingsTable">
+                            <thead>
+                                <tr>
+                                    <th>股票</th>
+                                    <th class="text-right">数量</th>
+                                    <th class="text-right">成本</th>
+                                    <th class="text-right">现价</th>
+                                    <th class="text-right">市值</th>
+                                    <th class="text-right">盈亏%</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 交易记录 -->
+                <div class="card" style="margin-top: 24px;">
+                    <div class="card-header">
+                        <span class="card-title">📋 最近交易</span>
+                        <span class="card-time" id="transactionsTime">--</span>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table" id="transactionsTable">
+                            <thead>
+                                <tr>
+                                    <th>时间</th>
+                                    <th>股票</th>
+                                    <th class="text-center">类型</th>
+                                    <th class="text-right">价格</th>
+                                    <th class="text-right">数量</th>
+                                    <th class="text-right">金额</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右列 -->
+            <div class="right-column">
+                <!-- 可转债套利 -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">💰 可转债套利机会</span>
+                        <span class="card-time" id="cbTime">--</span>
+                    </div>
+                    <div class="card-body" id="cbContent">
+                        <div class="card-empty">📦 数据待加载</div>
+                    </div>
+                </div>
+
+                <!-- Watchlist -->
+                <div class="card" style="margin-top: 24px;">
+                    <div class="card-header">
+                        <span class="card-title">👀 关注列表</span>
+                        <span class="card-time" id="watchlistTime">--</span>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table" id="watchlistTable">
+                            <thead>
+                                <tr>
+                                    <th>股票</th>
+                                    <th class="text-center">优先级</th>
+                                    <th>原因</th>
+                                    <th class="text-right">最新价</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部区域 -->
+        <div class="bottom-grid">
+            <!-- 策略参数 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">⚙️ 策略参数</span>
+                    <span class="card-time" id="strategyTime">--</span>
+                </div>
+                <div class="card-body">
+                    <div class="params-grid" id="paramsGrid"></div>
+                </div>
+            </div>
+
+            <!-- 明日计划 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">📝 明日计划</span>
+                    <span class="card-time" id="planTime">--</span>
+                </div>
+                <div class="card-body">
+                    <ul class="action-list" id="planList"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 舆情简报 -->
+        <div class="card" style="margin-top: 24px;">
+            <div class="card-header">
+                <span class="card-title" id="newsTitle">📰 新闻简报</span>
+                <span class="card-time" id="newsTime">--</span>
+            </div>
+            <div class="card-body" id="newsBriefingContent">
+                <div class="card-empty">数据加载中...</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 数据文件 -->
+    <script src="data.js"></script>
+    
+    <!-- 渲染逻辑 -->
+    <script>
+        // ============================================
+        // 工具函数
+        // ============================================
+        
+        /**
+         * 格式化货币
+         */
+        function formatCurrency(value, decimals = 2) {
+            if (value === null || value === undefined) return '--';
+            return '¥' + value.toLocaleString('zh-CN', { 
+                minimumFractionDigits: decimals,
+                maximumFractionDigits: decimals 
+            });
+        }
+        
+        /**
+         * 格式化百分比
+         */
+        function formatPercent(value, showSign = true) {
+            if (value === null || value === undefined) return '--';
+            const sign = showSign && value > 0 ? '+' : '';
+            return sign + value.toFixed(2) + '%';
+        }
+        
+        /**
+         * 获取盈亏颜色类名 (A股配色：红涨绿跌)
+         */
+        function getPnlClass(value) {
+            if (value > 0) return 'profit';
+            if (value < 0) return 'loss';
+            return 'neutral';
+        }
+        
+        /**
+         * 格式化时间
+         */
+        function formatTime(isoString) {
+            if (!isoString) return '--';
+            const date = new Date(isoString);
+            return date.toLocaleString('zh-CN', {
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+        
+        /**
+         * 格式化日期
+         */
+        function formatDate(isoString) {
+            if (!isoString) return '--';
+            const date = new Date(isoString);
+            return date.toLocaleDateString('zh-CN');
+        }
+        
+        // ============================================
+        // 渲染函数
+        // ============================================
+        
+        /**
+         * 渲染顶部概览
+         */
+        function renderOverview(account) {
+            if (!account) return;
+            
+            // 总资产
+            document.getElementById('totalValue').textContent = formatCurrency(account.total_value);
+            document.getElementById('initialCapital').textContent = '初始资金: ' + formatCurrency(account.initial_capital);
+            
+            // 总盈亏
+            const totalPnlEl = document.getElementById('totalPnl');
+            totalPnlEl.textContent = formatCurrency(account.total_pnl);
+            totalPnlEl.className = 'overview-value ' + getPnlClass(account.total_pnl);
+            document.getElementById('totalPnlPct').textContent = formatPercent(account.total_pnl_pct);
+            
+            // 当日盈亏
+            const dailyPnlEl = document.getElementById('dailyPnl');
+            dailyPnlEl.textContent = formatCurrency(account.daily_pnl);
+            dailyPnlEl.className = 'overview-value ' + getPnlClass(account.daily_pnl);
+            document.getElementById('tradeCount').textContent = '今日交易: ' + (account.trade_count || 0) + ' 笔';
+            
+            // 仓位
+            const cash = account.current_cash || 0;
+            const totalValue = account.total_value || 1;
+            const positionValue = totalValue - cash;
+            const positionPct = (positionValue / totalValue * 100).toFixed(1);
+            document.getElementById('positionPct').textContent = positionPct + '%';
+            document.getElementById('positionBar').style.width = positionPct + '%';
+            document.getElementById('cashInfo').textContent = '现金: ' + formatCurrency(cash);
+            
+            // 股票分类详情
+            const stockValueEl = document.getElementById('stockValue');
+            const stockPnlEl = document.getElementById('stockPnl');
+            const stockDailyPnlEl = document.getElementById('stockDailyPnl');
+            const stockCountEl = document.getElementById('stockCount');
+            
+            if (stockValueEl) {
+                stockValueEl.textContent = formatCurrency(account.stock_holdings_value || 0);
+            }
+            if (stockCountEl) {
+                stockCountEl.textContent = (account.stock_count || 0) + '只';
+            }
+            if (stockPnlEl) {
+                const stockPnl = account.stock_pnl || 0;
+                stockPnlEl.textContent = formatCurrency(stockPnl);
+                stockPnlEl.className = 'mono ' + getPnlClass(stockPnl);
+            }
+            if (stockDailyPnlEl) {
+                const stockDailyPnl = account.stock_daily_pnl || 0;
+                stockDailyPnlEl.textContent = formatCurrency(stockDailyPnl);
+                stockDailyPnlEl.className = 'mono ' + getPnlClass(stockDailyPnl);
+            }
+            
+            // 转债分类详情
+            const cbValueEl = document.getElementById('cbValue');
+            const cbPnlEl = document.getElementById('cbPnl');
+            const cbDailyPnlEl = document.getElementById('cbDailyPnl');
+            const cbCountEl = document.getElementById('cbCount');
+            
+            if (cbValueEl) {
+                cbValueEl.textContent = formatCurrency(account.cb_holdings_value || 0);
+            }
+            if (cbCountEl) {
+                cbCountEl.textContent = (account.cb_count || 0) + '只';
+            }
+            if (cbPnlEl) {
+                const cbPnl = account.cb_pnl || 0;
+                cbPnlEl.textContent = formatCurrency(cbPnl);
+                cbPnlEl.className = 'mono ' + getPnlClass(cbPnl);
+            }
+            if (cbDailyPnlEl) {
+                const cbDailyPnl = account.cb_daily_pnl || 0;
+                cbDailyPnlEl.textContent = formatCurrency(cbDailyPnl);
+                cbDailyPnlEl.className = 'mono ' + getPnlClass(cbDailyPnl);
+            }
+            
+            // 现金详情
+            const cashValueEl = document.getElementById('cashValue');
+            const cashPctEl = document.getElementById('cashPct');
+            if (cashValueEl) {
+                cashValueEl.textContent = formatCurrency(cash);
+            }
+            if (cashPctEl) {
+                const cashPct = totalValue > 0 ? (cash / totalValue * 100).toFixed(1) : 0;
+                cashPctEl.textContent = cashPct + '%';
+            }
+        }
+        
+        /**
+         * 渲染持仓表格
+         */
+        function renderHoldings(account) {
+            const tbody = document.querySelector('#holdingsTable tbody');
+            tbody.innerHTML = '';
+
+            const stockHoldings = (account && account.holdings) ? account.holdings : [];
+            const cbHoldings = (account && account.cb_holdings) ? account.cb_holdings : [];
+
+            if ((!stockHoldings || stockHoldings.length === 0) && (!cbHoldings || cbHoldings.length === 0)) {
+                tbody.innerHTML = '<tr><td colspan="6" class="text-center" style="padding: 20px;">暂无持仓</td></tr>';
+                return;
+            }
+
+            // 股票：按市值排序
+            if (stockHoldings && stockHoldings.length > 0) {
+                const sorted = [...stockHoldings].sort((a, b) => (b.market_value || 0) - (a.market_value || 0));
+                sorted.forEach(h => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>
+                            <div style="font-weight: 600;">${h.name || h.stock_name || h.code || '未知'}</div>
+                            <div style="font-size: 12px; color: var(--text-muted);">${h.code || ''}</div>
+                        </td>
+                        <td class="text-right mono">${(h.quantity || 0).toLocaleString()}</td>
+                        <td class="text-right mono">${(h.cost_price || 0).toFixed(2)}</td>
+                        <td class="text-right mono">${(h.current_price !== null && h.current_price !== undefined) ? Number(h.current_price).toFixed(2) : '--'}</td>
+                        <td class="text-right mono">${formatCurrency(h.market_value)}</td>
+                        <td class="text-right mono ${getPnlClass(h.pnl_pct)}">${formatPercent(h.pnl_pct)}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+
+            // 可转债：追加渲染 cb_holdings
+            if (cbHoldings && cbHoldings.length > 0) {
+                // 分隔行
+                const sep = document.createElement('tr');
+                sep.innerHTML = '<td colspan="6" class="text-center" style="padding: 10px; color: var(--text-muted);">── 可转债 ──</td>';
+                tbody.appendChild(sep);
+
+                const sortedCb = [...cbHoldings].sort((a, b) => (b.market_value || 0) - (a.market_value || 0));
+                sortedCb.forEach(cb => {
+                    const pnlPct = (cb.pnl_pct !== null && cb.pnl_pct !== undefined) ? cb.pnl_pct : (cb.profit_pct || 0);
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>
+                            <div style="font-weight: 600;">${cb.bond_name || cb.name || cb.bond_code || '未知'}</div>
+                            <div style="font-size: 12px; color: var(--text-muted);">${cb.bond_code || ''}</div>
+                        </td>
+                        <td class="text-right mono">${(cb.shares || cb.quantity || 0).toLocaleString()}</td>
+                        <td class="text-right mono">${(cb.cost_price || 0).toFixed(2)}</td>
+                        <td class="text-right mono">${(cb.current_price !== null && cb.current_price !== undefined) ? Number(cb.current_price).toFixed(2) : '--'}</td>
+                        <td class="text-right mono">${formatCurrency(cb.market_value)}</td>
+                        <td class="text-right mono ${getPnlClass(pnlPct)}">${formatPercent(Number(pnlPct) || 0)}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+        }
+        
+        /**
+         * 渲染交易记录
+         */
+        function renderTransactions(transactions) {
+            const tbody = document.querySelector('#transactionsTable tbody');
+            tbody.innerHTML = '';
+
+            if (!transactions || transactions.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="text-center" style="padding: 20px;">暂无交易记录</td></tr>';
+                return;
+            }
+
+            // 取最近10条
+            const recent = transactions.slice(-10).reverse();
+
+            recent.forEach(t => {
+                const typeClass = t.type === 'buy' ? 'tag-buy' : 'tag-sell';
+                const typeText = t.type === 'buy' ? '买入' : '卖出';
+                const time = t.timestamp ? new Date(t.timestamp) : null;
+                const timeStr = time ? `${(time.getMonth()+1).toString().padStart(2,'0')}-${time.getDate().toString().padStart(2,'0')} ${time.getHours().toString().padStart(2,'0')}:${time.getMinutes().toString().padStart(2,'0')}` : '--';
+
+                // 兼容股票(name/stock_name)与转债(bond_name)
+                const displayName = t.name || t.bond_name || t.stock_name || t.code || '未知';
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td style="font-size: 12px;">${timeStr}</td>
+                    <td>
+                        <div style="font-weight: 500;">${displayName}</div>
+                    </td>
+                    <td class="text-center"><span class="tag ${typeClass}">${typeText}</span></td>
+                    <td class="text-right mono">${Number(t.price || 0).toFixed(2)}</td>
+                    <td class="text-right mono">${(t.quantity || 0).toLocaleString()}</td>
+                    <td class="text-right mono">${formatCurrency(t.amount)}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+        
+        /**
+         * 渲染Watchlist
+         */
+        function renderWatchlist(watchlist) {
+            const tbody = document.querySelector('#watchlistTable tbody');
+            tbody.innerHTML = '';
+            
+            if (!watchlist || !watchlist.stocks || watchlist.stocks.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" class="text-center" style="padding: 20px;">暂无关注</td></tr>';
+                return;
+            }
+            
+            // 按优先级排序 A > B > others
+            const sorted = [...watchlist.stocks].sort((a, b) => {
+                const order = { 'A': 0, 'B': 1 };
+                return (order[a.priority] ?? 2) - (order[b.priority] ?? 2);
+            });
+            
+            // 只显示前15条
+            sorted.slice(0, 15).forEach(s => {
+                const priorityClass = s.priority === 'A' ? 'tag-priority-a' : 'tag-priority-b';
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <div style="font-weight: 500;">${s.name}</div>
+                        <div style="font-size: 12px; color: var(--text-muted);">${s.code}</div>
+                    </td>
+                    <td class="text-center"><span class="tag ${priorityClass}">${s.priority || '-'}</span></td>
+                    <td style="font-size: 13px; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${s.reason || ''}">${s.reason || '--'}</td>
+                    <td class="text-right mono">${s.latest_price?.toFixed(2) || '--'}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+        
+        /**
+         * 渲染策略参数
+         */
+        function renderStrategyParams(params) {
+            const grid = document.getElementById('paramsGrid');
+            grid.innerHTML = '';
+            
+            if (!params) {
+                grid.innerHTML = '<div class="card-empty">暂无参数</div>';
+                return;
+            }
+            
+            const keyParams = [
+                { key: 'stop_loss_pct', label: '止损线', format: v => (v * 100).toFixed(1) + '%' },
+                { key: 'take_profit_atr_multiplier', label: '止盈倍数', format: v => v + 'x ATR' },
+                { key: 'max_position_pct', label: '单只上限', format: v => (v * 100).toFixed(0) + '%' },
+                { key: 'max_total_position', label: '总仓位上限', format: v => (v * 100).toFixed(0) + '%' },
+                { key: 'min_score', label: '最低评分', format: v => v + '分' },
+                { key: 'version', label: '版本', format: v => 'v' + v }
+            ];
+            
+            keyParams.forEach(p => {
+                const value = params[p.key];
+                if (value !== undefined) {
+                    const item = document.createElement('div');
+                    item.className = 'param-item';
+                    item.innerHTML = `
+                        <div class="param-label">${p.label}</div>
+                        <div class="param-value">${p.format(value)}</div>
+                    `;
+                    grid.appendChild(item);
+                }
+            });
+        }
+        
+        /**
+         * 渲染明日计划
+         */
+        function renderTomorrowPlan(plan) {
+            const list = document.getElementById('planList');
+            list.innerHTML = '';
+            
+            if (!plan || !plan.actions || plan.actions.length === 0) {
+                list.innerHTML = '<li class="card-empty">暂无计划</li>';
+                return;
+            }
+            
+            plan.actions.forEach(action => {
+                const typeClass = action.type === 'sell' || action.type === 'reduce' ? 'tag-sell' : 'tag-buy';
+                const typeText = action.type === 'sell' ? '卖出' : action.type === 'reduce' ? '减仓' : '买入';
+                const priorityClass = action.priority === 'P0' ? 'tag-p0' : 'tag-p1';
+                
+                const li = document.createElement('li');
+                li.className = 'action-item';
+                li.innerHTML = `
+                    <div class="action-type">
+                        <span class="tag ${typeClass}">${typeText}</span>
+                    </div>
+                    <div class="action-content">
+                        <div class="action-stock">${action.name} (${action.code})</div>
+                        <div class="action-detail">${action.reason || '--'}</div>
+                        ${action.condition ? `<div class="action-detail accent">条件: ${action.condition}</div>` : ''}
+                    </div>
+                    <div class="action-priority">
+                        <span class="tag ${priorityClass}">${action.priority || '--'}</span>
+                    </div>
+                `;
+                list.appendChild(li);
+            });
+        }
+        
+        /**
+         * 渲染可转债套利机会
+         */
+        function renderCBOpportunities(cbData) {
+            const content = document.getElementById('cbContent');
+            
+            if (!cbData || !cbData.opportunities || cbData.opportunities.length === 0) {
+                content.innerHTML = '<div class="card-empty">📦 数据待加载</div>';
+                return;
+            }
+            
+            let html = `
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>转债名称</th>
+                            <th class="text-right">溢价率</th>
+                            <th class="text-right">得分</th>
+                            <th>策略</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            cbData.opportunities.slice(0, 10).forEach(cb => {
+                html += `
+                    <tr>
+                        <td>${cb.name || cb.bond_name || '--'}</td>
+                        <td class="text-right mono">${cb.premium_rate?.toFixed(2) || '--'}%</td>
+                        <td class="text-right mono">${cb.score?.toFixed(1) || '--'}</td>
+                        <td>${cb.strategy_type || cb.strategy || '--'}</td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            content.innerHTML = html;
+        }
+
+        /**
+         * 渲染舆情简报
+         * data 结构来自 sources.news_briefing.data
+         */
+        function renderNewsBriefing(briefingData) {
+            const container = document.getElementById('newsBriefingContent');
+            const timeEl = document.getElementById('newsTime');
+            
+            if (!container) return;
+
+            if (!briefingData) {
+                if (timeEl) timeEl.textContent = '--';
+                container.innerHTML = '<div class="card-empty">暂无舆情数据</div>';
+                return;
+            }
+
+            if (timeEl) timeEl.textContent = formatTime(briefingData.updated_at);
+
+            let html = '';
+
+            // 顶部指标
+            html += `
+                <div class="sentiment-header">
+                    <div class="sentiment-metric">
+                        <span class="label">🌡 社会温度:</span>
+                        <span class="value">${briefingData.social_temperature || '--'}</span>
+                    </div>
+                    <div class="sentiment-metric">
+                        <span class="label">📈 市场情绪:</span>
+                        <span class="value">${briefingData.market_sentiment || '--'}</span>
+                    </div>
+                    <div class="sentiment-metric">
+                        <span class="label">😰 恐贪指数:</span>
+                        <span class="value">${briefingData.fear_greed ?? '--'}</span>
+                    </div>
+                    <div class="sentiment-metric">
+                        <span class="label">🛒 消费信心:</span>
+                        <span class="value">${briefingData.consumer_confidence || '--'}</span>
+                    </div>
+                </div>
+            `;
+
+            // 重要信号
+            const signals = briefingData.key_signals || [];
+            if (signals.length > 0) {
+                html += `
+                    <div class="sentiment-section">
+                        <div class="sentiment-section-title">🔥 重要信号</div>
+                        <ol class="sentiment-list" style="list-style: decimal; padding-left: 20px;">
+                            ${signals.map(s => `<li>${s}</li>`).join('')}
+                        </ol>
+                    </div>
+                `;
+            }
+
+            // 持仓关联
+            const alerts = briefingData.portfolio_alerts || [];
+            if (alerts.length > 0) {
+                html += `
+                    <div class="sentiment-section">
+                        <div class="sentiment-section-title">📌 持仓关联</div>
+                        <ul class="sentiment-list">
+                            ${alerts.map(a => `<li>${a}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+
+            // 社会热点
+            const highlights = briefingData.social_highlights || [];
+            if (highlights.length > 0) {
+                html += `
+                    <div class="sentiment-section">
+                        <div class="sentiment-section-title">📱 社会热点</div>
+                        <ul class="sentiment-list">
+                            ${highlights.map(h => `<li>${h}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+
+            // 详细资讯（按分类分组，只显示 impact >= 3）
+            const items = (briefingData.items || []).filter(item => (item.impact_score || 0) >= 3);
+            if (items.length > 0) {
+                html += '<hr class="sentiment-divider">';
+                html += '<div class="sentiment-section-title">━━ 详细资讯 ━━</div>';
+
+                // 按分类分组
+                const grouped = {};
+                items.forEach(item => {
+                    const cat = item.category || '其他';
+                    if (!grouped[cat]) grouped[cat] = [];
+                    grouped[cat].push(item);
+                });
+
+                // 渲染每个分类
+                for (const [category, catItems] of Object.entries(grouped)) {
+                    html += `
+                        <div class="news-category-group">
+                            <div class="news-category-title">🏷 ${category}</div>
+                    `;
+
+                    catItems.forEach(item => {
+                        const sentiment = (item.sentiment || '').toLowerCase();
+                        let sentimentClass = 'neutral';
+                        if (sentiment.includes('正面') || sentiment === 'positive') sentimentClass = 'positive';
+                        else if (sentiment.includes('负面') || sentiment === 'negative') sentimentClass = 'negative';
+
+                        const impact = item.impact_score || 0;
+                        const stars = '⭐'.repeat(Math.min(impact, 5));
+                        
+                        const titleHtml = item.source 
+                            ? `<a href="${item.source}" target="_blank" rel="noopener noreferrer">${item.title || '--'}</a>`
+                            : (item.title || '--');
+
+                        html += `
+                            <div class="news-item-v2 ${sentimentClass}">
+                                <span class="impact">${stars}</span>
+                                <div class="content">
+                                    <div class="title">${titleHtml}</div>
+                                    ${item.summary ? `<div class="summary">— ${item.summary}</div>` : ''}
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    html += '</div>';
+                }
+            }
+
+            container.innerHTML = html || '<div class="card-empty">暂无重要资讯</div>';
+        }
+        
+        // ============================================
+        // 初始化
+        // ============================================
+        
+        function formatClock(isoString) {
+            if (!isoString) return '--';
+            const date = new Date(isoString);
+            const hh = date.getHours().toString().padStart(2, '0');
+            const mm = date.getMinutes().toString().padStart(2, '0');
+            const ss = date.getSeconds().toString().padStart(2, '0');
+            return `${hh}:${mm}:${ss}`;
+        }
+
+        function setUpdateStatus(color, title) {
+            const dot = document.getElementById('updateStatusDot');
+            if (!dot) return;
+            dot.classList.remove('green', 'gray', 'red');
+            dot.classList.add(color);
+            if (title) dot.title = title;
+        }
+
+        function renderFromData(data) {
+            if (!data || !data.sources) return;
+            const sources = data.sources;
+
+            // 顶部“最后更新”要求只显示 HH:MM:SS
+            document.getElementById('lastUpdate').textContent = formatClock(data._meta?.generated_at);
+
+            // 账户数据
+            if (sources.account?.available) {
+                const account = sources.account.data;
+                renderOverview(account);
+                renderHoldings(account);
+                document.getElementById('accountTime').textContent = formatTime(sources.account.last_updated);
+            }
+
+            // 交易记录
+            if (sources.transactions?.available) {
+                renderTransactions(sources.transactions.data);
+                document.getElementById('transactionsTime').textContent = formatTime(sources.transactions.last_updated);
+            }
+
+            // Watchlist
+            if (sources.watchlist?.available) {
+                renderWatchlist(sources.watchlist.data);
+                document.getElementById('watchlistTime').textContent = formatTime(sources.watchlist.last_updated);
+            }
+
+            // 策略参数
+            if (sources.strategy_params?.available) {
+                renderStrategyParams(sources.strategy_params.data);
+                document.getElementById('strategyTime').textContent = formatTime(sources.strategy_params.last_updated);
+            }
+
+            // 明日计划
+            if (sources.tomorrow_plan?.available) {
+                renderTomorrowPlan(sources.tomorrow_plan.data);
+                document.getElementById('planTime').textContent = formatTime(sources.tomorrow_plan.last_updated);
+            }
+
+            // 可转债套利
+            if (sources.cb_opportunities?.available) {
+                renderCBOpportunities(sources.cb_opportunities.data);
+                document.getElementById('cbTime').textContent = formatTime(sources.cb_opportunities.last_updated);
+            }
+
+            // 舆情简报
+            if (sources.news_briefing?.available) {
+                renderNewsBriefing(sources.news_briefing.data);
+            } else {
+                renderNewsBriefing(null);
+            }
+        }
+
+        let lastGoodFetchAt = null;
+
+        async function pollAndRefresh() {
+            try {
+                const resp = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
+                if (!resp.ok) throw new Error('HTTP ' + resp.status);
+
+                const data = await resp.json();
+
+                // 不整页 reload，只更新数据和 DOM
+                window.DASHBOARD_DATA = data;
+                renderFromData(data);
+
+                lastGoodFetchAt = Date.now();
+
+                // 绿点：10秒内有更新
+                const genAt = data?._meta?.generated_at ? new Date(data._meta.generated_at).getTime() : null;
+                const fresh = genAt && (Date.now() - genAt <= 10_000);
+                setUpdateStatus(fresh ? 'green' : 'gray', fresh ? '已在10秒内刷新' : '数据可能已过期');
+            } catch (e) {
+                // 失败：不清空页面，保持上次数据
+                setUpdateStatus('red', '刷新失败：' + (e?.message || e));
+            }
+
+            // 如果长时间未成功刷新，置灰
+            if (lastGoodFetchAt && Date.now() - lastGoodFetchAt > 12_000) {
+                setUpdateStatus('gray', '超过10秒未成功刷新');
+            }
+        }
+
+        function init() {
+            // 初次渲染：兼容 data.js（如果存在）
+            if (typeof window.DASHBOARD_DATA !== 'undefined') {
+                renderFromData(window.DASHBOARD_DATA);
+                setUpdateStatus('gray', '等待首次轮询刷新');
+            } else {
+                // 未加载也不要清空页面，等待轮询
+                setUpdateStatus('red', '尚未加载到数据');
+            }
+
+            // 立即拉一次，之后每10秒轮询
+            pollAndRefresh();
+            setInterval(pollAndRefresh, 10_000);
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

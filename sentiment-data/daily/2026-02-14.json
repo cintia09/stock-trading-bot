@@ -288,5 +288,232 @@
       "AI硬件基础设施（HBM/存储）成为全球科技新闻高频点，算力链条关注度上行",
       "大众消费更看重实用与性价比，舆论对高溢价噱头更敏感"
     ]
+  },
+  {
+    "timestamp": "2026-02-14T10:15:00+08:00",
+    "hour": 10,
+    "social_temperature": "中性",
+    "market_sentiment": "中性",
+    "fear_greed_estimate": 45,
+    "consumer_confidence": "降温",
+    "items": [
+      {
+        "category": "微博热搜",
+        "title": "“私房早餐/智商税”相关内容在平台传播",
+        "summary": "对高溢价噱头消费的反感情绪在发酵，折射性价比诉求增强",
+        "sentiment": "负面",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "社会"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1JJFSz9EAB/"
+      },
+      {
+        "category": "微博热搜",
+        "title": "“挑战萨莉亚600元餐品”类话题带动讨论",
+        "summary": "“低价餐饮/性价比”与“猎奇挑战”结合，反映大众对价格敏感度仍高",
+        "sentiment": "中性",
+        "reliability": "低",
+        "impact_score": 2,
+        "related_sectors": [
+          "消费",
+          "娱乐"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV17gFCzvEWt/"
+      },
+      {
+        "category": "微博热搜",
+        "title": "“外网评论/国际观感”类内容在视频平台被广泛讨论",
+        "summary": "涉及国际舆论与身份认同话题，易引发情绪对立与争议传播",
+        "sentiment": "负面",
+        "reliability": "低",
+        "impact_score": 3,
+        "related_sectors": [
+          "社会",
+          "政治"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1epr8B5E61/"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "“一个人过年/反向过年”叙事持续",
+        "summary": "年轻人对节日安排更自主，消费偏向“取悦自己+小而确定”的体验",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "社会"
+        ],
+        "related_stocks": [],
+        "source": "https://36kr.com/p/3678616053752709"
+      },
+      {
+        "category": "小红书趋势",
+        "title": "小红书加码AI搜索/AI剪辑能力建设的报道增多",
+        "summary": "内容平台对AI工具/搜索入口焦虑上升，流量与交易转化争夺加剧",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "科技",
+          "互联网",
+          "消费"
+        ],
+        "related_stocks": [],
+        "source": "https://finance.sina.cn/stock/jdts/2026-02-09/detail-inhmfivi9231740.d.html"
+      },
+      {
+        "category": "抖音B站",
+        "title": "“三亚贵得去不起”等旅游价格讨论反复出现（媒体话题延伸）",
+        "summary": "出行消费仍被“性价比/住宿餐饮溢价”左右，情绪偏谨慎",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 3,
+        "related_sectors": [
+          "消费",
+          "旅游"
+        ],
+        "related_stocks": [
+          "中国中免"
+        ],
+        "source": "https://36kr.com/information/web_news/"
+      },
+      {
+        "category": "闲鱼淘宝",
+        "title": "二手交易“消费清醒/二手价锚定一手价”讨论升温",
+        "summary": "闲鱼成为“价格发现”参照，折射部分人群消费更谨慎、更重回报率",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "消费",
+          "电商"
+        ],
+        "related_stocks": [],
+        "source": "https://www.bilibili.com/video/BV1wXFSzcE8u/"
+      },
+      {
+        "category": "A股财经",
+        "title": "美股普跌背景下，市场担忧对A股开盘与科技风险偏好传导",
+        "summary": "外盘波动强化短线谨慎情绪，科技估值与“AI建设边际放缓”讨论增多",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "财经",
+          "科技"
+        ],
+        "related_stocks": [
+          "比亚迪",
+          "招商银行",
+          "中国平安"
+        ],
+        "source": "https://finance.sina.com.cn/headline/2026-02-13/doc-inhmrnzm9043034.shtml"
+      },
+      {
+        "category": "A股财经",
+        "title": "深交所披露对异常交易行为采取自律监管措施（周度统计）",
+        "summary": "交易监管趋严信号延续，短线题材/异常波动股票风险偏好或受压制",
+        "sentiment": "中性",
+        "reliability": "高",
+        "impact_score": 4,
+        "related_sectors": [
+          "财经",
+          "监管"
+        ],
+        "related_stocks": [],
+        "source": "https://36kr.com/newsflashes/3681557363142533?f=rss"
+      },
+      {
+        "category": "政策信号",
+        "title": "央行等8部门强调虚拟货币相关业务属非法金融活动，明确禁止RWA代币化",
+        "summary": "金融监管对加密资产与代币化从严，合规边界进一步收紧",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "政治",
+          "财经",
+          "金融监管"
+        ],
+        "related_stocks": [
+          "中国平安",
+          "招商银行"
+        ],
+        "source": "https://www.jcgov.gov.cn/dtxx/gnyw/202602/t20260207_2318569.shtml"
+      },
+      {
+        "category": "国际大事",
+        "title": "俄美乌三方会谈消息与欧洲远程导弹研发讨论被媒体报道",
+        "summary": "地缘不确定性与军备话题升温，影响风险偏好与资源品情绪",
+        "sentiment": "负面",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "政治",
+          "财经",
+          "军工"
+        ],
+        "related_stocks": [
+          "紫金矿业"
+        ],
+        "source": "https://sputniknews.cn/20260214/1069782569.html"
+      },
+      {
+        "category": "AI科技",
+        "title": "CPO/光模块景气讨论延续：1.6T产品放量、板块高位分化提示增多",
+        "summary": "AI算力互联仍是主线，但高位波动加大；关注光模块、光纤、服务器与IDC",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 5,
+        "related_sectors": [
+          "科技",
+          "光模块",
+          "服务器",
+          "IDC"
+        ],
+        "related_stocks": [],
+        "source": "https://www.sina.cn/news/detail/5264396357470153.html"
+      },
+      {
+        "category": "民生社会",
+        "title": "“房价止跌信号/二手房成交回暖、房东惜售”话题被媒体集中报道",
+        "summary": "楼市情绪出现边际修复信号，但市场分化仍大，居民预期偏谨慎",
+        "sentiment": "中性",
+        "reliability": "中",
+        "impact_score": 4,
+        "related_sectors": [
+          "社会",
+          "财经",
+          "地产"
+        ],
+        "related_stocks": [
+          "招商银行",
+          "中国平安"
+        ],
+        "source": "https://www.sohu.com/a/984522582_121333745"
+      }
+    ],
+    "key_signals": [
+      "AI基础设施链条仍强：光模块/CPO/高速互联景气讨论高频，但高位分化与波动风险上升",
+      "金融监管对虚拟货币与RWA代币化从严，合规边界收紧（对金融机构风控与合规有提示意义）",
+      "消费端“价格敏感+反溢价”情绪增强，二手市场被用作价格锚，消费信心偏谨慎"
+    ],
+    "portfolio_alerts": [
+      "中国平安/招商银行：8部门重申虚拟货币非法、禁止RWA代币化；关注金融监管口径与合规影响",
+      "中国中免：旅游“性价比/价格争议”话题延续，关注目的地价格舆情对出行决策影响",
+      "紫金矿业：地缘不确定性消息增加，可能加剧大宗商品情绪波动"
+    ],
+    "social_highlights": [
+      "二手价成为“价格锚”，反映更多人倾向“消费清醒/谨慎支出”",
+      "AI硬件（光模块/CPO/互联）仍是讨论核心，但高位波动与投资者分歧上升",
+      "楼市出现“止跌/成交回暖”叙事，居民预期边际修复但仍偏谨慎"
+    ]
   }
 ]

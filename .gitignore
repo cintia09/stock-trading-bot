@@ -27,3 +27,23 @@ Thumbs.db
 *.key
 *.pem
 secrets.json
+
+# 数据文件（敏感+大文件）
+account.json
+transactions.json
+watchlist.json
+tomorrow_plan.json
+qlib-env/
+qlib_data/
+mlruns/
+models/*.pkl
+data/intraday_snapshots/
+ai-infra-tracking/daily/
+*.tar.gz
+*.log
+logs/
+
+# 临时文件
+run_backtest.py
+run_benchmark.py
+dump_bin.py

@@ -301,6 +301,41 @@ def score_stock(code: str, realtime: Dict, klines: List[Dict], sentiment: Dict) 
         score -= 5
         reasons.append("市场情绪悲观")
     
+    # === P0: A股特色因子（连板 + 融资融券） ===
+    try:
+        from china_factors import score_china_factors
+        china_result = score_china_factors(code)
+        score += china_result['score']
+        reasons.extend(china_result['reasons'])
+    except Exception:
+        pass  # 不影响原有流程
+    
+    # ============ 新增：Qlib LightGBM ML打分 ============
+    # 影子模式：qlib_enabled=false时只记录不影响打分
+    ml_score = None
+    try:
+        _sp_file = Path(__file__).parent.parent / "strategy_params.json"
+        _sp = {}
+        if _sp_file.exists():
+            with open(_sp_file, 'r') as _f:
+                _sp = json.load(_f)
+        qlib_enabled = _sp.get("qlib_enabled", False)
+        qlib_weight = _sp.get("qlib_weight", 0.4)
+
+        from qlib_scorer import get_ml_scores
+        _ml_results = get_ml_scores([code])
+        if code in _ml_results:
+            ml_score = _ml_results[code]
+            if qlib_enabled:
+                rule_score = score
+                score = rule_score * (1 - qlib_weight) + ml_score * qlib_weight
+                reasons.append(f"🤖ML混合: 规则{rule_score:.0f}*{1-qlib_weight:.0%} + ML{ml_score:.0f}*{qlib_weight:.0%} = {score:.0f}")
+            else:
+                reasons.append(f"🤖ML影子: ml_score={ml_score:.0f}(未启用,仅记录)")
+    except Exception as _e:
+        import traceback as _tb
+        logging.getLogger("qlib_scorer").debug(f"ML打分跳过: {_e}")
+
     # ============ 新增：AI增强情绪因子（权重15%） ============
     # 说明：不改变既有接口，仅在 score_stock 内追加融合逻辑。
     # - 个股情绪 analyze_stock_sentiment: [-10, +10] -> 映射到 [0, 100]

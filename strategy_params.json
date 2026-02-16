@@ -41,5 +41,11 @@
   "min_position_pct": 0.05,
   "first_buy_max_pct": 0.07,
   "ineffective_position_pct": 0.03,
-  "intraday_high_zone_pct": 0.75
+  "intraday_high_zone_pct": 0.75,
+  "qlib_enabled": false,
+  "qlib_weight": 0.4,
+  "debate_llm": {
+    "provider": "openclaw",
+    "model": "github-copilot/gemini-2.0-flash"
+  }
 }

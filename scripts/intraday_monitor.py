@@ -21,6 +21,7 @@ from trading_engine import (load_account, save_account, execute_trade, TRADING_R
 
 # 可转债扫描（盘中增量接入）
 from cb_scanner import fetch_cb_list, scan
+from bull_bear_debate import debate_stock, apply_debate_to_decision
 
 BASE_DIR = Path(__file__).parent.parent
 DATA_DIR = BASE_DIR / "data"
@@ -423,6 +424,33 @@ def scan_watchlist_opportunities(snapshot, analysis):
                     if actual_amount < min_amount:
                         print(f"   ⛔ 最小仓位过滤: {rt.get('name', code)} ¥{actual_amount:.0f}<{min_position_pct*100:.0f}%总资产(¥{min_amount:.0f})")
                         continue
+                    
+                    # === P1: Bull/Bear辩论 ===
+                    try:
+                        debate_info = {
+                            "name": rt.get("name", c.get("name", code)),
+                            "price": price,
+                            "change_pct": round(change_pct, 2),
+                            "pe": rt.get("pe", "未知"),
+                            "pb": rt.get("pb", "未知"),
+                            "industry": c.get("industry", "未知"),
+                            "score": score,
+                            "technical_signals": ", ".join(analysis_result.get("reasons", [])[:3]),
+                            "news": c.get("catalyst", c.get("reason", "无")),
+                        }
+                        debate_result = debate_stock(code, debate_info)
+                        adj_qty, debate_reason = apply_debate_to_decision(debate_result, buy_qty)
+                        print(f"   🐂🐻 辩论: {debate_info['name']} 置信度={debate_result['confidence']} → {'买入' if adj_qty > 0 else '放弃'}")
+                        if adj_qty == 0:
+                            print(f"      ❌ {debate_reason}")
+                            continue
+                        if adj_qty < buy_qty:
+                            print(f"      ⚠️ 减量: {buy_qty}→{adj_qty}股, {debate_reason}")
+                        buy_qty = adj_qty
+                    except Exception as e:
+                        print(f"   ⚠️ 辩论异常(不影响买入): {e}")
+                        debate_result = {"confidence": 50, "error": str(e)}
+                    
                     opportunities.append({
                         "code": code,
                         "name": rt.get("name", c.get("name", code)),
@@ -435,7 +463,8 @@ def scan_watchlist_opportunities(snapshot, analysis):
                         "amount": round(buy_qty * price, 2),
                         "reason": f"watchlist高分股({score}分): {', '.join(analysis_result.get('reasons', [])[:2])}",
                         "urgency": "MEDIUM" if score >= 70 else "LOW",
-                        "source": c.get("reason", "watchlist")
+                        "source": c.get("reason", "watchlist"),
+                        "debate": debate_result,
                     })
     
     # 按分数排序，只取最好的（受日买入限制）
@@ -490,6 +519,9 @@ def run_monitor():
             print(f"   🟢 {op['name']}({op['code']}) ¥{op['price']} ({op['change_pct']:+.1f}%) 评分{op['score']}")
             print(f"      建议: 买入{op['quantity']}股 ≈ ¥{op['amount']:,.0f}")
             print(f"      理由: {op['reason']}")
+            if op.get('debate'):
+                d = op['debate']
+                print(f"      🐂🐻 置信度{d.get('confidence',50)} | 风险:{d.get('key_risk','?')} | 机会:{d.get('key_opportunity','?')}")
         decisions.extend(watchlist_ops)
     
     trades_made = []

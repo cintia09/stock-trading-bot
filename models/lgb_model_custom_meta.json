@@ -1,0 +1,21 @@
+{
+  "trained_at": "2026-02-16T11:43:18.996251",
+  "baseline_ic": 0.010745530063594907,
+  "custom_ic": 0.01321584634705488,
+  "baseline_icir": 0.07776419383056761,
+  "custom_icir": 0.09530710906008488,
+  "custom_factors": [
+    "limit_up_flag",
+    "consecutive_limit_up",
+    "first_board_premium",
+    "vol_price_corr_5",
+    "vol_surge",
+    "vol_ratio_5",
+    "up_ratio_5",
+    "high_low_range_5",
+    "close_to_high_5",
+    "max_drawdown_10",
+    "momentum_dispersion"
+  ],
+  "handler": "CustomAlpha158"
+}

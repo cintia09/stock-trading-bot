@@ -187,7 +187,7 @@ def train_model(skip_data_update=False):
         "train_range": f"{train_start} ~ {train_end}",
         "valid_start": valid_start,
         "model_type": "LGBModel",
-        "handler": "Alpha158",
+        "handler": "CustomAlpha158",
         "instruments": "csi300",
     }
     with open(META_PATH, 'w') as f:

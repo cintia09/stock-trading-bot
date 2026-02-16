@@ -6,6 +6,7 @@ Qlib LightGBM 预测打分模块
 - 提供 get_ml_scores(stock_list) 接口
 """
 
+import os
 import sys
 import pickle
 import logging
@@ -120,29 +121,36 @@ def get_ml_scores(stock_list: list) -> dict:
             segments={"test": (start_date, end_date)},
         )
         
-        # 预测
-        pred = model.predict(dataset, segment="test")
+        # 获取特征数据，去掉LABEL列
+        df = dataset.prepare("test", col_set="feature")
+        # 去掉任何LABEL列（CustomAlpha158可能混入LABEL0）
+        label_cols = [c for c in df.columns if 'LABEL' in str(c).upper()]
+        if label_cols:
+            logger.info(f"去掉LABEL列: {label_cols}")
+            df = df.drop(columns=label_cols)
         
-        if pred is None or len(pred) == 0:
-            logger.warning("预测结果为空")
+        # 取最新交易日，用fillna(0)而非dropna（自定义因子可能有NaN）
+        latest_date = df.index.get_level_values('datetime').max()
+        latest = df.xs(latest_date, level='datetime').fillna(0)
+        
+        if latest.empty:
+            logger.warning("最新日期无数据")
             return {}
         
-        # 取每只股票最新一天的预测值
-        latest_scores = {}
-        for idx in pred.index:
-            if hasattr(idx, '__len__') and len(idx) == 2:
-                instrument, date = idx
-            else:
-                continue
-            latest_scores[instrument] = pred.loc[idx]
+        logger.info(f"推理特征数: {latest.shape[1]}, 股票数: {latest.shape[0]}")
         
-        # 如果有MultiIndex，取每个stock最后一个日期的值
-        if hasattr(pred.index, 'get_level_values'):
-            instruments = pred.index.get_level_values(0)
-            for inst in set(instruments):
-                inst_pred = pred.loc[inst]
-                if len(inst_pred) > 0:
-                    latest_scores[inst] = float(inst_pred.iloc[-1])
+        # 用模型内部的predict（绕过qlib Dataset wrapper）
+        import numpy as np
+        if hasattr(model, 'model'):
+            # qlib LGBModel wrapper
+            pred_values = model.model.predict(latest.values)
+        else:
+            pred_values = model.predict(latest.values)
+        
+        # 构建结果
+        latest_scores = {}
+        for i, inst in enumerate(latest.index):
+            latest_scores[inst] = float(pred_values[i])
         
         if not latest_scores:
             return {}

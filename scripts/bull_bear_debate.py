@@ -78,19 +78,29 @@ def _call_via_openclaw(prompt: str) -> str:
         token_data = json.load(f)
     token = token_data["token"]
     
-    # 从token解析API endpoint
-    base_url = "https://proxy.business.githubcopilot.com"
+    # 从token解析API endpoint（proxy-ep需要替换proxy.为api.）
+    base_url = "https://api.business.githubcopilot.com"
     for part in token.split(";"):
-        if part.startswith("proxy-ep="):
-            base_url = "https://" + part.split("=", 1)[1]
+        if part.strip().startswith("proxy-ep="):
+            host = part.split("=", 1)[1].strip()
+            # OpenClaw的做法：proxy. -> api.
+            import re as _re
+            host = _re.sub(r'^(https?://)?proxy\.', '', host, flags=_re.IGNORECASE)
+            base_url = f"https://api.{host}"
             break
     
     # 读取配置的模型，默认gemini-2.0-flash
     cfg = _load_llm_config()
-    model = cfg.get("model", "gemini-2.0-flash")
+    model = cfg.get("model", "gpt-4o-mini")
     # 去掉provider前缀
     if "/" in model:
         model = model.split("/", 1)[1]
+    # 某些模型在copilot API不可用，fallback
+    _COPILOT_MODEL_MAP = {
+        "gemini-2.0-flash": "gpt-4o-mini",
+        "gpt-4.1-mini": "gpt-4o-mini",
+    }
+    model = _COPILOT_MODEL_MAP.get(model, model)
     
     headers = {
         "Authorization": f"Bearer {token}",
@@ -106,9 +116,27 @@ def _call_via_openclaw(prompt: str) -> str:
         "temperature": 0.7,
         "max_tokens": 2048,
     }
-    resp = requests.post(f"{base_url}/chat/completions", json=payload, headers=headers, timeout=60)
+    payload["stream"] = True
+    resp = requests.post(f"{base_url}/chat/completions", json=payload, headers=headers, timeout=60, stream=True)
     resp.raise_for_status()
-    return resp.json()["choices"][0]["message"]["content"]
+    # SSE流式读取，拼接content
+    content_parts = []
+    for line in resp.iter_lines():
+        if not line:
+            continue
+        line = line.decode("utf-8", errors="ignore")
+        if line.startswith("data: "):
+            data_str = line[6:]
+            if data_str.strip() == "[DONE]":
+                break
+            try:
+                chunk = json.loads(data_str)
+                delta = chunk.get("choices", [{}])[0].get("delta", {})
+                if "content" in delta and delta["content"] is not None:
+                    content_parts.append(delta["content"])
+            except (json.JSONDecodeError, IndexError, KeyError):
+                pass
+    return "".join(content_parts)
 
 
 def _build_debate_prompt(code: str, info: Dict) -> str:

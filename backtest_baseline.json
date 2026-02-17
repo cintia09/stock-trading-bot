@@ -1,0 +1,14 @@
+{
+  "total_return": 0.008914,
+  "annual_return": 0.0575018490643564,
+  "max_drawdown": 0.01797810852169167,
+  "win_rate": 0.5,
+  "profit_factor": 1.4186968430157132,
+  "sharpe_ratio": 0.46730874941214356,
+  "total_trades": 24,
+  "label": "baseline_60d",
+  "period_days": 60,
+  "start_date": "2025-12-18",
+  "end_date": "2026-02-16",
+  "timestamp": "2026-02-16T16:47:38.086497"
+}

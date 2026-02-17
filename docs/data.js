@@ -1,9 +1,9 @@
 // 投资看板数据文件 - 自动生成，请勿手动编辑
-// 生成时间: 2026-02-16T15:40:20
+// 生成时间: 2026-02-17T15:41:21
 
 window.DASHBOARD_DATA = {
   "_meta": {
-    "generated_at": "2026-02-16T15:40:20",
+    "generated_at": "2026-02-17T15:41:21",
     "generator": "realtime_updater.py",
     "version": "1.2"
   },
@@ -14,7 +14,7 @@ window.DASHBOARD_DATA = {
         "current_cash": 489984.35,
         "total_value": 1000404.95,
         "created_at": "2026-02-06T00:23:00+08:00",
-        "last_updated": "2026-02-16T15:40:24",
+        "last_updated": "2026-02-17T15:41:25",
         "cb_holdings": [
           {
             "bond_code": "127071",
@@ -176,7 +176,7 @@ window.DASHBOARD_DATA = {
         "daily_pnl": -6624.8,
         "total_pnl": 404.95,
         "total_pnl_pct": 0.04,
-        "trade_count": 4,
+        "trade_count": 0,
         "trades": [
           {
             "date": "2026-02-12",
@@ -208,7 +208,7 @@ window.DASHBOARD_DATA = {
         "cb_daily_pnl_pct": 0.05
       },
       "description": "股票持仓与账户信息",
-      "last_updated": "2026-02-16T11:02:49",
+      "last_updated": "2026-02-17T10:52:45",
       "available": true
     },
     "transactions": {
@@ -1118,16 +1118,16 @@ window.DASHBOARD_DATA = {
             "added_at": "2026-02-12T14:06:42.565900"
           }
         ],
-        "last_updated": "2026-02-16T09:03:22.530164",
+        "last_updated": "2026-02-17T15:02:38.856342",
         "update_source": "新浪财经实时行情"
       },
       "description": "关注列表",
-      "last_updated": "2026-02-16T09:03:22",
+      "last_updated": "2026-02-17T15:02:38",
       "available": true
     },
     "cb_opportunities": {
       "data": {
-        "scan_time": "2026-02-16T14:51:13.861583",
+        "scan_time": "2026-02-17T14:51:18.277915",
         "total_listed": 375,
         "opportunities_found": 8,
         "opportunities": [
@@ -1278,7 +1278,7 @@ window.DASHBOARD_DATA = {
         ]
       },
       "description": "可转债套利机会",
-      "last_updated": "2026-02-16T14:51:13",
+      "last_updated": "2026-02-17T14:51:18",
       "available": true
     },
     "tomorrow_plan": {

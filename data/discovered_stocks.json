@@ -1,42 +1,8 @@
 {
-  "discovered_at": "2026-02-16T14:23:07.459720",
-  "total_scanned": 88,
-  "quality_stocks": 29,
+  "discovered_at": "2026-02-17T15:02:38.855319",
+  "total_scanned": 78,
+  "quality_stocks": 24,
   "top_picks": [
-    {
-      "code": "300308",
-      "name": "中际旭创",
-      "price": 531.0,
-      "change_pct": 0.67,
-      "amount": 13816376824.1,
-      "turnover": 2.36,
-      "pe": 62.05,
-      "market_cap": 590003835354,
-      "source": "成交额榜",
-      "discovery_score": 60,
-      "sources": [
-        "成交额榜"
-      ],
-      "ai_infra_category": "",
-      "ai_infra_reason": "光模块全球龙头，2025净利98-118亿，1.6T量产领先"
-    },
-    {
-      "code": "688256",
-      "name": "寒武纪-U",
-      "price": 1120.68,
-      "change_pct": 0.74,
-      "amount": 7918250312.0,
-      "turnover": 1.69,
-      "pe": 220.88,
-      "market_cap": 472574136316,
-      "source": "成交额榜",
-      "discovery_score": 45,
-      "sources": [
-        "成交额榜"
-      ],
-      "ai_infra_category": "",
-      "ai_infra_reason": "国产AI芯片龙头，2025首次扭亏，超节点方案放量"
-    },
     {
       "code": "002371",
       "name": "北方华创",
@@ -77,129 +43,18 @@
       ]
     },
     {
-      "code": "300502",
-      "name": "新易盛",
-      "price": 366.11,
-      "change_pct": 0.1,
-      "amount": 10944584115.79,
-      "turnover": 3.37,
-      "pe": 43.14,
-      "market_cap": 363916749216,
+      "code": "300308",
+      "name": "中际旭创",
+      "price": 531.0,
+      "change_pct": 0.67,
+      "amount": 13816376824.1,
+      "turnover": 2.36,
+      "pe": 62.05,
+      "market_cap": 590003835354,
       "source": "成交额榜",
-      "discovery_score": 40,
+      "discovery_score": 30,
       "sources": [
         "成交额榜"
-      ],
-      "ai_infra_category": "",
-      "ai_infra_reason": "1.6T光模块第一梯队，海外客户拓展"
-    },
-    {
-      "code": "300394",
-      "name": "天孚通信",
-      "price": 311.58,
-      "change_pct": -5.58,
-      "amount": 9414400814.09,
-      "turnover": 3.86,
-      "pe": 123.98,
-      "market_cap": 242227243318,
-      "source": "成交额榜",
-      "discovery_score": 40,
-      "sources": [
-        "成交额榜"
-      ],
-      "ai_infra_category": "",
-      "ai_infra_reason": "NPO/CPO卖水人，1.6T光引擎+英伟达供应链绑定，确定性最强"
-    },
-    {
-      "code": "002837",
-      "name": "英维克",
-      "price": 113.14,
-      "change_pct": 3.37,
-      "amount": 9152032796.99,
-      "turnover": 9.49,
-      "pe": 207.65,
-      "market_cap": 110487530792,
-      "source": "成交额榜",
-      "discovery_score": 40,
-      "sources": [
-        "成交额榜"
-      ],
-      "ai_infra_category": "",
-      "ai_infra_reason": "液冷龙头，Vertiv订单+252%全球验证，切入谷歌/英伟达链"
-    },
-    {
-      "code": "688008",
-      "name": "澜起科技",
-      "price": 0,
-      "change_pct": 0,
-      "ai_infra_score": 10,
-      "ai_infra_category": "",
-      "ai_infra_consensus": "3/3",
-      "ai_infra_reason": "DDR5+CXL双轮驱动，港股上市首日+63%，存储周期独立于风格切换",
-      "source": "AI基础设施研究",
-      "discovery_score": 40,
-      "sources": [
-        "AI基础设施研究"
-      ]
-    },
-    {
-      "code": "688525",
-      "name": "佰维存储",
-      "price": 0,
-      "change_pct": 0,
-      "ai_infra_score": 9,
-      "ai_infra_category": "",
-      "ai_infra_consensus": "3/3",
-      "ai_infra_reason": "存储涨价周期+HBM布局，Q1合约价+90%修复弹性大",
-      "source": "AI基础设施研究",
-      "discovery_score": 40,
-      "sources": [
-        "AI基础设施研究"
-      ]
-    },
-    {
-      "code": "301308",
-      "name": "江波龙",
-      "price": 0,
-      "change_pct": 0,
-      "ai_infra_score": 9,
-      "ai_infra_category": "",
-      "ai_infra_consensus": "3/3",
-      "ai_infra_reason": "存储模组龙头，AI服务器适配率70%，涨价弹性大",
-      "source": "AI基础设施研究",
-      "discovery_score": 40,
-      "sources": [
-        "AI基础设施研究"
-      ]
-    },
-    {
-      "code": "688041",
-      "name": "海光信息",
-      "price": 0,
-      "change_pct": 0,
-      "ai_infra_score": 10,
-      "ai_infra_category": "",
-      "ai_infra_consensus": "2/3",
-      "ai_infra_reason": "国产CPU+DCU双线，盈利+政策+国产替代三重底",
-      "source": "AI基础设施研究",
-      "discovery_score": 35,
-      "sources": [
-        "AI基础设施研究"
-      ]
-    },
-    {
-      "code": "688498",
-      "name": "源杰科技",
-      "price": 0,
-      "change_pct": 0,
-      "ai_infra_score": 9,
-      "ai_infra_category": "",
-      "ai_infra_consensus": "2/3",
-      "ai_infra_reason": "光芯片供需缺口受益，弹性高于光模块",
-      "source": "AI基础设施研究",
-      "discovery_score": 35,
-      "sources": [
-        "AI基础设施研究"
       ]
     },
     {
@@ -244,6 +99,51 @@
       "turnover": 21.58,
       "pe": 67.42,
       "market_cap": 55386808978,
+      "source": "成交额榜",
+      "discovery_score": 15,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "300502",
+      "name": "新易盛",
+      "price": 366.11,
+      "change_pct": 0.1,
+      "amount": 10944584115.79,
+      "turnover": 3.37,
+      "pe": 43.14,
+      "market_cap": 363916749216,
+      "source": "成交额榜",
+      "discovery_score": 15,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "002837",
+      "name": "英维克",
+      "price": 113.14,
+      "change_pct": 3.37,
+      "amount": 9152032796.99,
+      "turnover": 9.49,
+      "pe": 207.65,
+      "market_cap": 110487530792,
+      "source": "成交额榜",
+      "discovery_score": 15,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "688256",
+      "name": "寒武纪-U",
+      "price": 1120.68,
+      "change_pct": 0.74,
+      "amount": 7918250312.0,
+      "turnover": 1.69,
+      "pe": 220.88,
+      "market_cap": 472574136316,
       "source": "成交额榜",
       "discovery_score": 15,
       "sources": [
@@ -303,6 +203,96 @@
       "turnover": 21.23,
       "pe": 77.27,
       "market_cap": 60675137179,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "600589",
+      "name": "大位科技",
+      "price": 13.19,
+      "change_pct": -4.83,
+      "amount": 10367345536.0,
+      "turnover": 49.35,
+      "pe": 386.18,
+      "market_cap": 19582795849,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "300058",
+      "name": "蓝色光标",
+      "price": 19.0,
+      "change_pct": -5.75,
+      "amount": 9724703583.2,
+      "turnover": 14.25,
+      "pe": 261.45,
+      "market_cap": 68214203313,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "300394",
+      "name": "天孚通信",
+      "price": 311.58,
+      "change_pct": -5.58,
+      "amount": 9414400814.09,
+      "turnover": 3.86,
+      "pe": 123.98,
+      "market_cap": 242227243318,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "300750",
+      "name": "宁德时代",
+      "price": 365.34,
+      "change_pct": -2.8,
+      "amount": 8229700941.45,
+      "turnover": 0.52,
+      "pe": 25.5,
+      "market_cap": 1667360220756,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "300274",
+      "name": "阳光电源",
+      "price": 149.16,
+      "change_pct": -4.72,
+      "amount": 7812539817.85,
+      "turnover": 3.25,
+      "pe": 19.52,
+      "market_cap": 309240216004,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "300418",
+      "name": "昆仑万维",
+      "price": 60.39,
+      "change_pct": -4.16,
+      "amount": 6761764341.94,
+      "turnover": 8.81,
+      "pe": -85.46,
+      "market_cap": 75811006392,
       "source": "成交额榜",
       "discovery_score": 10,
       "sources": [

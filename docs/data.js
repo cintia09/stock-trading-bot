@@ -1,9 +1,9 @@
 // 投资看板数据文件 - 自动生成，请勿手动编辑
-// 生成时间: 2026-02-18T05:06:13
+// 生成时间: 2026-02-18T21:48:12
 
 window.DASHBOARD_DATA = {
   "_meta": {
-    "generated_at": "2026-02-18T05:06:13",
+    "generated_at": "2026-02-18T21:48:12",
     "generator": "realtime_updater.py",
     "version": "1.2"
   },
@@ -14,7 +14,7 @@ window.DASHBOARD_DATA = {
         "current_cash": 489984.35,
         "total_value": 1000404.95,
         "created_at": "2026-02-06T00:23:00+08:00",
-        "last_updated": "2026-02-18T05:06:17",
+        "last_updated": "2026-02-18T21:48:16",
         "cb_holdings": [
           {
             "bond_code": "127071",
@@ -208,7 +208,7 @@ window.DASHBOARD_DATA = {
         "cb_daily_pnl_pct": 0.05
       },
       "description": "股票持仓与账户信息",
-      "last_updated": "2026-02-16T11:02:49",
+      "last_updated": "2026-02-18T11:02:11",
       "available": true
     },
     "transactions": {
@@ -833,7 +833,7 @@ window.DASHBOARD_DATA = {
     },
     "strategy_params": {
       "data": {
-        "stop_loss_pct": -0.042,
+        "stop_loss_pct": -0.03,
         "take_profit_atr_multiplier": 2.0,
         "take_profit_full_atr_multiplier": 4.0,
         "trailing_stop_atr_multiplier": 1.5,
@@ -854,8 +854,8 @@ window.DASHBOARD_DATA = {
         "underperform_cumulative_days": 3,
         "underperform_cumulative_pct": -0.02,
         "version": 3.5,
-        "last_updated": "2026-02-13T16:45:00",
-        "notes": "v3.5: +最小有效建仓阈值(5%) +首笔上限(7%) +无效仓位(<3%)自动清理 +日内高位过滤 +ATR自适应止损",
+        "last_updated": "2026-02-18T21:50:00",
+        "notes": "v3.6: 震荡市止损收窄-4.2%→-3%，regime联动调整",
         "underperform_alert_pct": -0.015,
         "underperform_consecutive_days_to_act": 2,
         "underperform_reduce_pct": 0.5,
@@ -884,7 +884,7 @@ window.DASHBOARD_DATA = {
         }
       },
       "description": "策略参数",
-      "last_updated": "2026-02-16T12:11:11",
+      "last_updated": "2026-02-18T21:47:49",
       "available": true
     },
     "watchlist": {
@@ -1118,11 +1118,11 @@ window.DASHBOARD_DATA = {
             "added_at": "2026-02-12T14:06:42.565900"
           }
         ],
-        "last_updated": "2026-02-17T15:02:38.856342",
+        "last_updated": "2026-02-18T10:32:38.890337",
         "update_source": "新浪财经实时行情"
       },
       "description": "关注列表",
-      "last_updated": "2026-02-17T15:02:38",
+      "last_updated": "2026-02-18T10:32:38",
       "available": true
     },
     "cb_opportunities": {
@@ -1278,7 +1278,7 @@ window.DASHBOARD_DATA = {
         ]
       },
       "description": "可转债套利机会",
-      "last_updated": "2026-02-17T14:51:18",
+      "last_updated": "2026-02-18T05:06:29",
       "available": true
     },
     "tomorrow_plan": {

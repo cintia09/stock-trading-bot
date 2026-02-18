@@ -1,0 +1,66 @@
+{
+  "overall_sentiment": 6,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "贵金属",
+      8,
+      0.12
+    ],
+    [
+      "AI",
+      8,
+      0.25
+    ],
+    [
+      "银行",
+      6,
+      0.17
+    ],
+    [
+      "新能源车",
+      5,
+      0.0
+    ],
+    [
+      "消费",
+      4,
+      -0.25
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "日本数据：2月制造业信心指数回升，但非制造业信心下降",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "订单增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1771379288"
+    },
+    {
+      "title": "疯狂暴跌超100美元！黄金异常震荡难回5000",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "暴跌",
+          "下跌"
+        ]
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1771376082"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-18T10:32:41.953871"
+}

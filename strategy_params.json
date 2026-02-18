@@ -1,5 +1,5 @@
 {
-  "stop_loss_pct": -0.042,
+  "stop_loss_pct": -0.03,
   "take_profit_atr_multiplier": 2.0,
   "take_profit_full_atr_multiplier": 4.0,
   "trailing_stop_atr_multiplier": 1.5,
@@ -20,8 +20,8 @@
   "underperform_cumulative_days": 3,
   "underperform_cumulative_pct": -0.02,
   "version": 3.5,
-  "last_updated": "2026-02-13T16:45:00",
-  "notes": "v3.5: +最小有效建仓阈值(5%) +首笔上限(7%) +无效仓位(<3%)自动清理 +日内高位过滤 +ATR自适应止损",
+  "last_updated": "2026-02-18T21:50:00",
+  "notes": "v3.6: 震荡市止损收窄-4.2%→-3%，regime联动调整",
   "underperform_alert_pct": -0.015,
   "underperform_consecutive_days_to_act": 2,
   "underperform_reduce_pct": 0.5,

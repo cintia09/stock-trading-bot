@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-02-18T22:24:02",
+    "generated_at": "2026-02-18T22:35:16",
     "generator": "realtime_updater.py",
     "version": "1.2"
   },
@@ -11,7 +11,7 @@
         "current_cash": 489984.35,
         "total_value": 1000404.95,
         "created_at": "2026-02-06T00:23:00+08:00",
-        "last_updated": "2026-02-18T22:24:08",
+        "last_updated": "2026-02-18T22:35:21",
         "cb_holdings": [
           {
             "bond_code": "127071",
@@ -1281,56 +1281,54 @@
     "tomorrow_plan": {
       "data": {
         "date": "2026-02-19",
-        "generated_at": "2026-02-18T21:50:00",
-        "market_regime": "震荡",
-        "param_changes": {
-          "stop_loss_pct": "-0.042 → -0.03"
-        },
-        "holdings_plan": [
+        "generated_at": "2026-02-18T22:25:00",
+        "market_regime": "range",
+        "regime_confidence": 0.4,
+        "target_position_pct": 0.4,
+        "current_position_pct": 0.46,
+        "p0_trades": [
           {
+            "action": "SELL",
             "code": "601318",
             "name": "中国平安",
-            "action": "止损",
-            "trigger": "跌破-3%(即<64.74)或连续3日阴线",
-            "current_pnl": "-2.17%",
-            "priority": "高"
-          },
+            "quantity": 550,
+            "reason": "12天零浮盈，入场逻辑证伪。Opus-4.5裁定减半。",
+            "limit_price": 65.0,
+            "timing": "开盘前挂单"
+          }
+        ],
+        "p0_monitors": [
           {
             "code": "600036",
             "name": "招商银行",
-            "action": "观望",
-            "trigger": "关注银行板块联动，接近-3%止损线",
-            "current_pnl": "-1.95%",
-            "priority": "中"
-          },
-          {
-            "code": "000333",
-            "name": "美的集团",
-            "action": "观望",
-            "trigger": "消费降级趋势不利，警惕",
-            "current_pnl": "-1.06%",
-            "priority": "低"
+            "watch": "若跌破38.30(-3%止损线)则卖出"
           },
           {
             "code": "688041",
             "name": "海光信息",
-            "action": "持有",
-            "trigger": "AI推理算力舆情利好，可容忍波动",
-            "current_pnl": "-1.42%",
-            "priority": "低"
+            "watch": "若跌破255.0(-3%止损线)则卖出"
           }
         ],
-        "cb_plan": "持有不动(防守仓位)",
-        "buy_plan": "震荡市不主动加仓，等待高分信号",
-        "code_todo": [
-          "P0: regime联动止损(已手动改参数，需代码自动化)",
-          "P1: 连涨回调过滤器(避免买在高点)",
-          "P2: 基本面因子接入score_stock()",
-          "P3: 验证框架scenario test"
-        ]
+        "p0_rules": [
+          "不加仓",
+          "不买新股"
+        ],
+        "dev_tasks": [
+          {
+            "priority": "P0",
+            "task": "实现持有评审机制(underperform_review): 5天未浮盈>0.5%且跑输大盘>1% → 清仓候选",
+            "estimated_hours": 2
+          },
+          {
+            "priority": "P1",
+            "task": "tomorrow_plan生成脚本自动包含dev_tasks字段",
+            "estimated_hours": 1
+          }
+        ],
+        "notes": "平安减半后仓位降至约42%，接近regime建议40%。空闲时间用于P0代码任务。"
       },
       "description": "明日交易计划",
-      "last_updated": "2026-02-18T21:48:33",
+      "last_updated": "2026-02-18T22:24:46",
       "available": true
     },
     "news_briefing": {

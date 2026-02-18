@@ -1,0 +1,15 @@
+[
+  {
+    "id": "h-20260218-01",
+    "action": "增加underperform_review模块：持仓5天未浮盈>0.5%且high_since_entry≈cost_price则减半，8天则清仓",
+    "5why_root": "策略缺'持有合理性'主动评审机制。只有entry和硬止损，中间是真空。12天零浮盈的持仓无法被识别和清理。",
+    "result": {
+      "sharpe_delta": 0.0,
+      "win_rate_delta": 0.0,
+      "annual_return_delta": 0.0,
+      "max_drawdown_delta": 0.0
+    },
+    "reason": "多周期: 0/3通过 (需≥2); 滚动窗口: 0/3通过 (需>1)",
+    "date": "2026-02-18"
+  }
+]

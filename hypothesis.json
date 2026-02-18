@@ -1,0 +1,22 @@
+{
+  "date": "2026-02-18",
+  "hypotheses": [
+    {
+      "id": "h-20260218-01",
+      "5why_root": "策略缺'持有合理性'主动评审机制。只有entry和硬止损，中间是真空。12天零浮盈的持仓无法被识别和清理。",
+      "action": "增加underperform_review模块：持仓5天未浮盈>0.5%且high_since_entry≈cost_price则减半，8天则清仓",
+      "target_file": "trading_engine.py",
+      "target_function": "generate_trade_decisions",
+      "priority": 1,
+      "patch": {
+        "file": "trading_engine.py",
+        "changes": [
+          {
+            "old": "            elif is_residual and holding_qty <= 300:\n                # v3: 残仓清理（<总资产0.5%且<=300股）\n                decision[\"action\"] = \"residual_clear\"\n                decision[\"trade_type\"] = \"sell\"\n                decision[\"quantity\"] = can_sell_today(account, code)\n                decision[\"reasons\"].append(f\"残仓清理: {holding_qty}股 市值¥{holding_value:.0f} (<{residual_threshold*100:.1f}%)\")",
+            "new": "            elif is_residual and holding_qty <= 300:\n                # v3: 残仓清理（<总资产0.5%且<=300股）\n                decision[\"action\"] = \"residual_clear\"\n                decision[\"trade_type\"] = \"sell\"\n                decision[\"quantity\"] = can_sell_today(account, code)\n                decision[\"reasons\"].append(f\"残仓清理: {holding_qty}股 市值¥{holding_value:.0f} (<{residual_threshold*100:.1f}%)\")\n            elif pnl_pct < 0:\n                # v4: 持有评审 — N天未盈利主动减仓/清仓\n                underperform_half_days = TRADING_RULES.get(\"underperform_review_half_days\", 5)\n                underperform_clear_days = TRADING_RULES.get(\"underperform_review_clear_days\", 8)\n                underperform_min_gain = TRADING_RULES.get(\"underperform_review_min_gain\", 0.005)\n                # 计算持仓天数\n                _hold_entry = None\n                for _h in account.get(\"holdings\", []):\n                    if _h[\"code\"] == code:\n                        _hold_entry = _h.get(\"last_buy_date\", \"\")\n                        break\n                if _hold_entry:\n                    try:\n                        _entry_dt = datetime.strptime(_hold_entry, \"%Y-%m-%d\")\n                        _days_held = (datetime.now() - _entry_dt).days\n                    except ValueError:\n                        _days_held = 0\n                else:\n                    _days_held = 0\n                # high_since_entry接近cost_price说明从未有效盈利\n                _max_gain = (high_since - cost_price) / cost_price if cost_price > 0 else 0\n                if _days_held >= underperform_clear_days and _max_gain < underperform_min_gain:\n                    # 8天+从未盈利>0.5% → 清仓\n                    decision[\"action\"] = \"underperform_clear\"\n                    decision[\"trade_type\"] = \"sell\"\n                    decision[\"quantity\"] = can_sell_today(account, code)\n                    decision[\"reasons\"].append(f\"持有评审清仓: {_days_held}天未盈利(最高浮盈{_max_gain*100:.1f}%<{underperform_min_gain*100:.1f}%)\")\n                elif _days_held >= underperform_half_days and _max_gain < underperform_min_gain:\n                    # 5天+从未盈利>0.5% → 减半\n                    _sell_qty = int(can_sell_today(account, code) * 0.5 / 100) * 100\n                    if _sell_qty >= 100:\n                        decision[\"action\"] = \"underperform_half\"\n                        decision[\"trade_type\"] = \"sell\"\n                        decision[\"quantity\"] = _sell_qty\n                        decision[\"reasons\"].append(f\"持有评审减半: {_days_held}天未盈利(最高浮盈{_max_gain*100:.1f}%<{underperform_min_gain*100:.1f}%)\")"
+          }
+        ]
+      }
+    }
+  ]
+}

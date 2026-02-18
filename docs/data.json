@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-02-18T21:48:12",
+    "generated_at": "2026-02-18T22:24:02",
     "generator": "realtime_updater.py",
     "version": "1.2"
   },
@@ -11,7 +11,7 @@
         "current_cash": 489984.35,
         "total_value": 1000404.95,
         "created_at": "2026-02-06T00:23:00+08:00",
-        "last_updated": "2026-02-18T21:48:16",
+        "last_updated": "2026-02-18T22:24:08",
         "cb_holdings": [
           {
             "bond_code": "127071",
@@ -1280,114 +1280,57 @@
     },
     "tomorrow_plan": {
       "data": {
-        "date": "2026-02-14",
-        "generated_by": "gpt52_cross_review",
-        "generated_at": "2026-02-13T15:45:00",
-        "status": "final",
-        "sentiment_context": {
-          "overall": "中性偏多",
-          "fear_greed": 58,
-          "key_themes": [
-            "AI算力链超强(液冷/CPO/光模块)",
-            "稀土涨价+资源品轮动",
-            "消费谨慎+汽车价格战",
-            "海南零关税利好旅游消费",
-            "节前防御配置"
-          ],
-          "portfolio_impact": "海光直接利好, 招行平安防御受益, 中免比亚迪需清理"
+        "date": "2026-02-19",
+        "generated_at": "2026-02-18T21:50:00",
+        "market_regime": "震荡",
+        "param_changes": {
+          "stop_loss_pct": "-0.042 → -0.03"
         },
-        "actions": [
+        "holdings_plan": [
           {
-            "type": "sell",
-            "code": "601888",
-            "name": "中国中免",
-            "condition": "open",
-            "quantity": "all",
-            "reason": "无效仓位1.9%, 两模型一致清掉",
-            "priority": "P0",
-            "method": "market_sell_at_open",
-            "done": true,
-            "executed_at": "2026-02-16T09:41:40.305919"
+            "code": "601318",
+            "name": "中国平安",
+            "action": "止损",
+            "trigger": "跌破-3%(即<64.74)或连续3日阴线",
+            "current_pnl": "-2.17%",
+            "priority": "高"
           },
           {
-            "type": "sell",
-            "code": "002594",
-            "name": "比亚迪",
-            "condition": "open",
-            "quantity": "all",
-            "reason": "无效仓位1.8%, 汽车价格战舆情, 两模型一致清掉",
-            "priority": "P0",
-            "method": "market_sell_at_open",
-            "done": true,
-            "executed_at": "2026-02-16T09:41:40.305930"
+            "code": "600036",
+            "name": "招商银行",
+            "action": "观望",
+            "trigger": "关注银行板块联动，接近-3%止损线",
+            "current_pnl": "-1.95%",
+            "priority": "中"
           },
           {
-            "type": "sell",
-            "code": "300896",
-            "name": "爱美客",
-            "condition": "open",
-            "quantity": "all",
-            "reason": "无效仓位1.5%, 此前止损标的, 两模型一致清掉",
-            "priority": "P0",
-            "method": "market_sell_at_open",
-            "done": true,
-            "executed_at": "2026-02-16T09:41:40.305932"
+            "code": "000333",
+            "name": "美的集团",
+            "action": "观望",
+            "trigger": "消费降级趋势不利，警惕",
+            "current_pnl": "-1.06%",
+            "priority": "低"
           },
           {
-            "type": "sell",
             "code": "688041",
             "name": "海光信息",
-            "condition": "price <= 252",
-            "quantity": "all",
-            "reason": "硬止损¥252(-4.1%), AI板块转弱时优先减",
-            "priority": "P0"
+            "action": "持有",
+            "trigger": "AI推理算力舆情利好，可容忍波动",
+            "current_pnl": "-1.42%",
+            "priority": "低"
           }
         ],
-        "no_buy_reasons": [
-          "节前仅剩3个交易日, 不大幅加仓",
-          "55%仓位偏高, 清理后目标45%",
-          "周末消息面不确定"
-        ],
-        "code_improvements": [
-          {
-            "priority": "P1",
-            "order": 1,
-            "task": "最小有效建仓阈值≥5%/¥50K(GPT投票)"
-          },
-          {
-            "priority": "P1",
-            "order": 2,
-            "task": "单只>12%自动减仓(Opus投票)"
-          },
-          {
-            "priority": "P1",
-            "order": 3,
-            "task": "残仓自动清理(9次提出)"
-          },
-          {
-            "priority": "P1",
-            "order": 4,
-            "task": "新仓分批制(首笔≤5-7%)(GPT新建议)"
-          },
-          {
-            "priority": "P2",
-            "order": 5,
-            "task": "情绪模块0.0bug"
-          },
-          {
-            "priority": "P2",
-            "order": 6,
-            "task": "一次性submit卖出"
-          },
-          {
-            "priority": "P2",
-            "order": 7,
-            "task": "弱市日降低首笔仓位"
-          }
+        "cb_plan": "持有不动(防守仓位)",
+        "buy_plan": "震荡市不主动加仓，等待高分信号",
+        "code_todo": [
+          "P0: regime联动止损(已手动改参数，需代码自动化)",
+          "P1: 连涨回调过滤器(避免买在高点)",
+          "P2: 基本面因子接入score_stock()",
+          "P3: 验证框架scenario test"
         ]
       },
       "description": "明日交易计划",
-      "last_updated": "2026-02-16T09:41:40",
+      "last_updated": "2026-02-18T21:48:33",
       "available": true
     },
     "news_briefing": {

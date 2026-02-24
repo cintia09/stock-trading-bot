@@ -1,0 +1,90 @@
+{
+  "overall_sentiment": 34,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "贵金属",
+      12,
+      0.75
+    ],
+    [
+      "AI",
+      5,
+      0.2
+    ],
+    [
+      "银行",
+      3,
+      0.33
+    ],
+    [
+      "新能源车",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "火电指数盘中强势上涨3%，成分股表现活跃",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "强势"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-02-24 10:58:48"
+    },
+    {
+      "title": "国泰君安期货：碳酸锂节后“开门红”，跳空大涨超7%",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "大涨",
+          "主力",
+          "强势"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1771901935"
+    },
+    {
+      "title": "潼关黄金早盘涨近8% 预计去年溢利同比增长约289%至298%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1771900243"
+    },
+    {
+      "title": "中联重科早盘涨近4% 花旗将公司列为起重机械行业首选",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1771899509"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-24T11:02:29.589843"
+}

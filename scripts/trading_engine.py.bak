@@ -872,18 +872,7 @@ def run_trading_cycle():
         h["pnl_pct"] = round((price - h["cost_price"]) / h["cost_price"] * 100, 2)
         holdings_value += h["market_value"]
     
-    # 可转债实时价格更新
-    cb_holdings = account.get("cb_holdings", [])
-    if cb_holdings:
-        cb_codes = [cb["bond_code"] for cb in cb_holdings]
-        cb_realtime = fetch_realtime_sina(cb_codes)
-        for cb in cb_holdings:
-            cb_rt = cb_realtime.get(cb["bond_code"], {})
-            if cb_rt.get("price", 0) > 0:
-                cb["current_price"] = cb_rt["price"]
-                cb["market_value"] = round(cb_rt["price"] * cb["shares"], 2)
-                cb["pnl_pct"] = round((cb_rt["price"] - cb["cost_price"]) / cb["cost_price"] * 100, 2)
-    cb_value = sum(cb.get("market_value", 0) for cb in cb_holdings)
+    account["total_value"] = round(account["current_cash"] + holdings_value, 2)
     account["total_pnl"] = round(account["total_value"] - account["initial_capital"], 2)
     account["total_pnl_pct"] = round(account["total_pnl"] / account["initial_capital"] * 100, 2)
     save_account(account)
@@ -1205,19 +1194,8 @@ def run_enhanced_trading_cycle():
             h["current_price"] = price
             h["pnl_pct"] = round((price - h["cost_price"]) / h["cost_price"] * 100, 2)
             holdings_value += h["market_value"]
-    # 可转债实时价格更新
-    cb_holdings = account.get("cb_holdings", [])
-    if cb_holdings:
-        cb_codes = [cb["bond_code"] for cb in cb_holdings]
-        cb_realtime = fetch_realtime_sina(cb_codes)
-        for cb in cb_holdings:
-            cb_rt = cb_realtime.get(cb["bond_code"], {})
-            if cb_rt.get("price", 0) > 0:
-                cb["current_price"] = cb_rt["price"]
-                cb["market_value"] = round(cb_rt["price"] * cb["shares"], 2)
-                cb["pnl_pct"] = round((cb_rt["price"] - cb["cost_price"]) / cb["cost_price"] * 100, 2)
-    cb_value = sum(cb.get("market_value", 0) for cb in cb_holdings)
-    account["total_value"] = round(account["current_cash"] + holdings_value + cb_value, 2)
+    
+    account["total_value"] = round(account["current_cash"] + holdings_value, 2)
     account["total_pnl"] = round(account["total_value"] - account["initial_capital"], 2)
     account["total_pnl_pct"] = round(account["total_pnl"] / account["initial_capital"] * 100, 2)
     save_account(account)

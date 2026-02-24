@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-02-19",
+    "time": "09:30:00",
+    "code": "601318",
+    "name": "中国平安",
+    "action": "SELL",
+    "quantity": 550,
+    "price": 65.29,
+    "amount": 35909.5,
+    "reason": "复盘计划P0: 12天零浮盈入场逻辑证伪，减半",
+    "source": "tomorrow_plan"
+  }
+]

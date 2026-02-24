@@ -54,23 +54,6 @@ def collect_snapshot():
     holdings_codes = [h["code"] for h in account.get("holdings", [])]
     realtime = fetch_realtime_sina(holdings_codes) if holdings_codes else {}
     
-    # 获取可转债实时数据并更新account
-    cb_holdings = account.get("cb_holdings", [])
-    if cb_holdings:
-        cb_codes = [cb["bond_code"] for cb in cb_holdings]
-        cb_realtime = fetch_realtime_sina(cb_codes)
-        cb_total_value = 0
-        for cb in cb_holdings:
-            cb_rt = cb_realtime.get(cb["bond_code"], {})
-            if cb_rt.get("price", 0) > 0:
-                cb["current_price"] = cb_rt["price"]
-                cb["market_value"] = round(cb_rt["price"] * cb["shares"], 2)
-                cb["pnl_pct"] = round((cb_rt["price"] - cb["cost_price"]) / cb["cost_price"] * 100, 2)
-            cb_total_value += cb.get("market_value", 0)
-        save_account(account)
-    else:
-        cb_total_value = 0
-    
     holdings_snapshot = []
     total_holdings_value = 0
     for h in account.get("holdings", []):
@@ -110,8 +93,7 @@ def collect_snapshot():
         "market": market_data,
         "holdings": holdings_snapshot,
         "cash": account.get("current_cash", 0),
-        "cb_value": round(cb_total_value, 2),
-        "total_value": round(account.get("current_cash", 0) + total_holdings_value + cb_total_value, 2),
+        "total_value": round(account.get("current_cash", 0) + total_holdings_value, 2),
     }
     
     # 追加到今日快照文件
@@ -229,30 +211,6 @@ def make_dynamic_decisions(snapshot, analysis, snapshots):
     decisions = []
     account = load_account()
     
-    # 读取策略参数止损线
-    try:
-        params_file = Path(__file__).parent.parent / "strategy_params.json"
-        with open(params_file) as f:
-            strategy_params = json.load(f)
-        strategy_stop_loss_pct = strategy_params.get("stop_loss_pct", -0.042) * 100  # 转为百分比
-    except:
-        strategy_stop_loss_pct = -4.2
-    
-    # 读取复盘计划的个股止损线
-    review_stop_prices = {}
-    try:
-        reviews_dir = Path(__file__).parent.parent / "reviews"
-        if reviews_dir.exists():
-            review_files = sorted(reviews_dir.glob("*.json"), reverse=True)
-            for rf in review_files[:3]:  # 最近3个复盘文件
-                with open(rf) as f:
-                    review = json.load(f)
-                for plan in review.get("tomorrow_plan", review.get("plans", [])):
-                    if isinstance(plan, dict) and plan.get("stop_price"):
-                        review_stop_prices[plan.get("code", "")] = plan["stop_price"]
-    except:
-        pass
-    
     for h in snapshot["holdings"]:
         code = h["code"]
         name = h["name"]
@@ -285,28 +243,6 @@ def make_dynamic_decisions(snapshot, analysis, snapshots):
         market_weak = analysis["market_change"] < -1
         
         # === 动态卖出决策 ===
-        
-        # 0. 策略参数止损：亏损超过strategy_params设定值（默认-3%~-4.2%）
-        if pnl <= strategy_stop_loss_pct:
-            decisions.append({
-                "code": code, "name": name, "action": "SELL_ALL",
-                "trade_type": "sell", "price": price, "quantity": quantity,
-                "reason": f"策略止损：浮亏{pnl:.1f}%超过止损线{strategy_stop_loss_pct:.1f}%",
-                "urgency": "HIGH",
-                "score": 5
-            })
-            continue
-        
-        # 0b. 复盘计划个股止损线
-        if code in review_stop_prices and price <= review_stop_prices[code]:
-            decisions.append({
-                "code": code, "name": name, "action": "SELL_ALL",
-                "trade_type": "sell", "price": price, "quantity": quantity,
-                "reason": f"复盘止损：现价{price}跌破止损线{review_stop_prices[code]}",
-                "urgency": "HIGH",
-                "score": 5
-            })
-            continue
         
         # 1. 硬止损：亏损超8%必须止损
         if pnl <= -8:

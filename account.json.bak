@@ -1,0 +1,171 @@
+{
+  "initial_capital": 1000000,
+  "current_cash": 601212.0700000001,
+  "total_value": 999031.67,
+  "created_at": "2026-02-06T00:23:00+08:00",
+  "last_updated": "2026-02-24T11:30:00",
+  "cb_holdings": [
+    {
+      "bond_code": "127071",
+      "bond_name": "天箭转债",
+      "shares": 80,
+      "cost_price": 125.155,
+      "buy_time": "2026-02-13T09:15:45",
+      "strategy": "低溢价套利",
+      "target_stock_code": "003009",
+      "transfer_price": 53.11,
+      "current_price": 126.95,
+      "market_value": 10156.0,
+      "pnl_pct": 1.43
+    },
+    {
+      "bond_code": "127042",
+      "bond_name": "嘉美转债",
+      "shares": 100,
+      "cost_price": 496.2,
+      "buy_time": "2026-02-16T09:16:44",
+      "strategy": "负溢价转股套利",
+      "target_stock_code": "002969",
+      "transfer_price": 4.87,
+      "current_price": 496.2,
+      "market_value": 49620.0,
+      "pnl_pct": 0.0
+    },
+    {
+      "bond_code": "123159",
+      "bond_name": "崧盛转债",
+      "shares": 260,
+      "cost_price": 156.11,
+      "buy_time": "2026-02-16T09:16:44",
+      "strategy": "负溢价转股套利",
+      "target_stock_code": "301002",
+      "transfer_price": 24.95,
+      "current_price": 156.11,
+      "market_value": 40588.6,
+      "pnl_pct": 0.0
+    }
+  ],
+  "holdings": [
+    {
+      "code": "601318",
+      "name": "中国平安",
+      "quantity": 550,
+      "cost_price": 66.74,
+      "last_buy_date": "2026-02-06",
+      "market_value": 35640.0,
+      "current_price": 64.8,
+      "pnl_pct": -2.91,
+      "high_since_entry": 66.74
+    },
+    {
+      "code": "600036",
+      "name": "招商银行",
+      "quantity": 3000,
+      "cost_price": 39.48,
+      "last_buy_date": "2026-02-06",
+      "market_value": 116910.0,
+      "current_price": 38.97,
+      "pnl_pct": -1.29,
+      "high_since_entry": 39.48
+    },
+    {
+      "code": "000333",
+      "name": "美的集团",
+      "quantity": 1500,
+      "cost_price": 79.9,
+      "last_buy_date": "2026-02-06",
+      "market_value": 119835.0,
+      "current_price": 79.89,
+      "pnl_pct": -0.01,
+      "high_since_entry": 79.99
+    },
+    {
+      "code": "688041",
+      "name": "海光信息",
+      "quantity": 100,
+      "cost_price": 262.801,
+      "last_buy_date": "2026-02-13",
+      "current_price": 250.7,
+      "market_value": 25070.0,
+      "pnl_pct": -4.6,
+      "high_since_entry": 264.49
+    }
+  ],
+  "frozen_sells": [
+    {
+      "code": "601318",
+      "quantity": 2200,
+      "buy_date": "2026-02-06"
+    },
+    {
+      "code": "300896",
+      "quantity": 900,
+      "buy_date": "2026-02-06"
+    },
+    {
+      "code": "600036",
+      "quantity": 3700,
+      "buy_date": "2026-02-06"
+    },
+    {
+      "code": "000333",
+      "quantity": 1800,
+      "buy_date": "2026-02-06"
+    },
+    {
+      "code": "300144",
+      "quantity": 16900,
+      "buy_date": "2026-02-06"
+    },
+    {
+      "code": "300251",
+      "quantity": 4800,
+      "buy_date": "2026-02-10"
+    },
+    {
+      "code": "601899",
+      "quantity": 3000,
+      "buy_date": "2026-02-12"
+    },
+    {
+      "code": "002594",
+      "quantity": 200,
+      "buy_date": "2026-02-12"
+    },
+    {
+      "code": "300896",
+      "quantity": 100,
+      "buy_date": "2026-02-12"
+    },
+    {
+      "code": "601888",
+      "quantity": 200,
+      "buy_date": "2026-02-12"
+    },
+    {
+      "code": "688041",
+      "quantity": 400,
+      "buy_date": "2026-02-13"
+    }
+  ],
+  "daily_pnl": 0,
+  "total_pnl": -101032.43,
+  "total_pnl_pct": -10.1,
+  "trade_count": 1,
+  "trades": [
+    {
+      "date": "2026-02-12",
+      "time": "10:52:30",
+      "code": "300896",
+      "name": "爱美客",
+      "type": "sell",
+      "quantity": 900,
+      "price": 147.15,
+      "amount": 132435.0,
+      "reason": "止损: 盘中低点触¥147(复盘共识止损线), 当前¥147.15",
+      "pnl": -4140.0,
+      "pnl_pct": -3.03
+    }
+  ],
+  "peak_value": 1008850.44
+}

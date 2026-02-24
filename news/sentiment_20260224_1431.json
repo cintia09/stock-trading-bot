@@ -1,0 +1,142 @@
+{
+  "overall_sentiment": 33,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "贵金属",
+      7,
+      0.57
+    ],
+    [
+      "消费",
+      5,
+      -0.4
+    ],
+    [
+      "新能源车",
+      2,
+      1.5
+    ],
+    [
+      "AI",
+      2,
+      0.0
+    ],
+    [
+      "银行",
+      2,
+      0.0
+    ],
+    [
+      "光伏",
+      1,
+      0.0
+    ],
+    [
+      "医药",
+      1,
+      1.0
+    ],
+    [
+      "房地产",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "主力资金监控：中际旭创净买入超22亿",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "主力"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-02-24 14:29:35"
+    },
+    {
+      "title": "今年春节假期新能源汽车出行创新高 充电服务保障水平显著提升",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "创新高",
+          "提升",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "新能源车"
+      ],
+      "time": "2026-02-24 14:21:41"
+    },
+    {
+      "title": "广期所碳酸锂主力合约暴涨9%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "主力",
+          "暴涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-02-24 14:21:37"
+    },
+    {
+      "title": "广期所碳酸锂主力合约大涨9%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "大涨",
+          "主力"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-02-24 14:21:37"
+    },
+    {
+      "title": "集体大涨！300164，一分钟拉涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "大涨",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1771909740"
+    },
+    {
+      "title": "中国中免股价跌停，最新回应",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "跌停",
+          "利空"
+        ]
+      },
+      "sectors": [
+        "消费"
+      ],
+      "time": "1771909532"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-24T14:31:17.187133"
+}

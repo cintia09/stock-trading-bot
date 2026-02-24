@@ -1,0 +1,82 @@
+{
+  "overall_sentiment": 16,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      8,
+      0.25
+    ],
+    [
+      "贵金属",
+      6,
+      0.5
+    ],
+    [
+      "消费",
+      3,
+      -1.0
+    ],
+    [
+      "银行",
+      3,
+      0.0
+    ],
+    [
+      "医药",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "集体大涨！300164，一分钟拉涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "涨停",
+          "大涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属"
+      ],
+      "time": "1771909740"
+    },
+    {
+      "title": "中国中免股价跌停，最新回应",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "跌停",
+          "利空"
+        ]
+      },
+      "sectors": [
+        "消费"
+      ],
+      "time": "1771909532"
+    },
+    {
+      "title": "海通国际：25Q4新濠国际发展EBITDA利润率环比下滑 市场份额同比环比均下滑",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "提升",
+          "市场份额"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1771905507"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-02-24T14:01:21.018653"
+}

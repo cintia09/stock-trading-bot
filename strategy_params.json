@@ -42,6 +42,8 @@
   "first_buy_max_pct": 0.07,
   "ineffective_position_pct": 0.03,
   "intraday_high_zone_pct": 0.75,
+  "rebuy_cooldown_days": 20,
+  "hold_review_days": 15,
   "qlib_enabled": false,
   "qlib_weight": 0.4,
   "debate_llm": {

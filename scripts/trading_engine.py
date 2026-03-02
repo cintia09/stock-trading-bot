@@ -66,7 +66,8 @@ def _load_strategy_params():
                      "min_score",
                      "max_daily_buys", "same_day_rebuy_ban", "buy_reasons_required",
                      "min_position_pct", "first_buy_max_pct",
-                     "ineffective_position_pct", "intraday_high_zone_pct"]:
+                     "ineffective_position_pct", "intraday_high_zone_pct",
+                     "rebuy_cooldown_days", "hold_review_days"]:
             if key in params:
                 TRADING_RULES[key] = params[key]
 
@@ -120,24 +121,54 @@ def get_current_cash(account: Dict) -> float:
     return account.get("current_cash", 0)
 
 
-def get_today_stop_loss_codes() -> set:
-    """获取今日止损卖出的股票代码（24h内禁止买回）"""
-    today = datetime.now().strftime("%Y-%m-%d")
+def get_cooldown_codes() -> set:
+    """获取冷却期内不可买入的股票代码（近N个交易日内有止损记录）"""
+    cooldown_days = TRADING_RULES.get("rebuy_cooldown_days", 20)
+    cutoff = (datetime.now() - timedelta(days=cooldown_days)).strftime("%Y-%m-%d")
     tx_file = BASE_DIR / "transactions.json"
     if not tx_file.exists():
         return set()
     try:
         with open(tx_file, 'r') as f:
             transactions = json.load(f)
-        stop_loss_codes = set()
+        cooldown_codes = set()
         for t in transactions:
+            tx_date = t.get("timestamp", "")[:10]
             if (t.get("type") == "sell" and
-                t.get("timestamp", "").startswith(today) and
+                tx_date >= cutoff and
                 any("止损" in r for r in t.get("reasons", []))):
-                stop_loss_codes.add(t["code"])
-        return stop_loss_codes
+                cooldown_codes.add(t["code"])
+        return cooldown_codes
     except Exception:
         return set()
+
+
+def check_hold_reviews(account: Dict, prices: Dict) -> List[Dict]:
+    """持有评审：持有N天无浮盈→减仓50%"""
+    review_days = TRADING_RULES.get("hold_review_days", 15)
+    today = datetime.now().strftime("%Y-%m-%d")
+    actions = []
+    for h in account.get("holdings", []):
+        code = h["code"]
+        entry_date = h.get("buy_date", h.get("last_buy_date", today))
+        try:
+            hold_days = (datetime.strptime(today, "%Y-%m-%d") - datetime.strptime(entry_date, "%Y-%m-%d")).days
+        except Exception:
+            continue
+        current_price = prices.get(code, h.get("current_price", h["cost_price"]))
+        pnl_pct = (current_price - h["cost_price"]) / h["cost_price"]
+        if hold_days >= review_days and pnl_pct <= 0:
+            sell_qty = max(100, (h["quantity"] // 2 // 100) * 100)
+            if sell_qty > 0 and sell_qty <= h["quantity"]:
+                actions.append({
+                    "code": code,
+                    "name": h.get("name", code),
+                    "action": "reduce",
+                    "quantity": sell_qty,
+                    "reasons": [f"持有评审:持有{hold_days}天零浮盈,减仓50%"],
+                    "pnl_pct": pnl_pct
+                })
+    return actions
 
 
 def get_today_buy_count() -> int:
@@ -633,10 +664,11 @@ def execute_trade(account: Dict, decision: Dict) -> Dict:
     }
     
     if trade_type == "buy":
-        # === P0: 止损后同日禁买 ===
-        stop_loss_codes = get_today_stop_loss_codes()
-        if code in stop_loss_codes:
-            return {"success": False, "reason": f"⛔止损后同日禁买: {name}({code})今日已止损"}
+        # === P0: 止损冷却期禁买 ===
+        cooldown_codes = get_cooldown_codes()
+        if code in cooldown_codes:
+            cooldown_days = TRADING_RULES.get("rebuy_cooldown_days", 20)
+            return {"success": False, "reason": f"⛔止损冷却期({cooldown_days}天): {name}({code})近期已止损，冷却中"}
 
         # === P0: reasons空阻断 ===
         if not decision.get("reasons") and not decision.get("reason"):
@@ -754,7 +786,23 @@ def run_trading_cycle():
     print(f"\n[账户状态]")
     print(f"  现金: ¥{account['current_cash']:,.2f}")
     print(f"  持仓: {len(account.get('holdings', []))}只")
-    
+
+    # P0: 持有评审（在其他风控之前执行）
+    try:
+        _review_prices_raw = fetch_realtime_sina([h["code"] for h in account.get("holdings", [])])
+        _review_prices = {h["code"]: _review_prices_raw.get(h["code"], {}).get("price", h.get("current_price", h["cost_price"])) for h in account.get("holdings", [])}
+        review_actions = check_hold_reviews(account, _review_prices)
+        for ra in review_actions:
+            import logging as _logging
+            _logger = _logging.getLogger(__name__)
+            _logger.info(f"[持有评审] {ra['name']}({ra['code']}) {ra['reasons'][0]}")
+            print(f"\n📋 [持有评审] {ra['name']}({ra['code']}) {ra['reasons'][0]}")
+            execute_trade(account, {**ra, "type": "sell", "price": _review_prices.get(ra["code"], 0)})
+        if review_actions:
+            account = load_account()
+    except Exception as _e:
+        print(f"\n⚠️ [持有评审异常] {_e}")
+
     # 1.5 风控检查：回撤熔断 + 组合风险
     try:
         from risk_manager import check_drawdown_circuit_breaker, calculate_portfolio_risk

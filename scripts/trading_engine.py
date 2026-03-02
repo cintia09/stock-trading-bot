@@ -797,7 +797,14 @@ def run_trading_cycle():
             _logger = _logging.getLogger(__name__)
             _logger.info(f"[持有评审] {ra['name']}({ra['code']}) {ra['reasons'][0]}")
             print(f"\n📋 [持有评审] {ra['name']}({ra['code']}) {ra['reasons'][0]}")
-            execute_trade(account, {**ra, "type": "sell", "price": _review_prices.get(ra["code"], 0)})
+            execute_trade(account, {
+                "code": ra["code"],
+                "name": ra.get("name", ra["code"]),
+                "price": _review_prices.get(ra["code"], 0),
+                "trade_type": "sell",
+                "quantity": ra["quantity"],
+                "reasons": ra.get("reasons", []),
+            })
         if review_actions:
             account = load_account()
     except Exception as _e:

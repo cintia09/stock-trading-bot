@@ -1,0 +1,139 @@
+{
+  "overall_sentiment": 22,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      5,
+      0.0
+    ],
+    [
+      "贵金属",
+      4,
+      0.25
+    ],
+    [
+      "新能源车",
+      3,
+      0.33
+    ],
+    [
+      "银行",
+      3,
+      0.0
+    ],
+    [
+      "消费",
+      2,
+      0.0
+    ],
+    [
+      "医药",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "燃料油主力合约再度触及涨停，涨幅13.98%，报3888元/吨",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "主力",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-04 14:36:38"
+    },
+    {
+      "title": "油气股回暖 准油股份涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "涨停",
+          "回暖"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-04 14:34:41"
+    },
+    {
+      "title": "燃料油主力合约再度触及涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "主力",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-04 14:32:54"
+    },
+    {
+      "title": "上期所燃油主力合约再度触及涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "主力",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-04 14:32:50"
+    },
+    {
+      "title": "油气股回暖 准油股份涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "涨停",
+          "回暖"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-04 14:32:50"
+    },
+    {
+      "title": "上期所欧线集运主力合约再度触及涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "主力",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-04 14:32:49"
+    },
+    {
+      "title": "泰国基准股指下跌8% 触发市场暂停交易",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "暴跌",
+          "下跌"
+        ]
+      },
+      "sectors": [],
+      "time": "1772602193"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-03-04T14:40:13.122084"
+}

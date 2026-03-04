@@ -1,0 +1,175 @@
+{
+  "overall_sentiment": 28,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "贵金属",
+      5,
+      -0.2
+    ],
+    [
+      "AI",
+      5,
+      1.4
+    ],
+    [
+      "银行",
+      4,
+      0.0
+    ],
+    [
+      "房地产",
+      2,
+      0.0
+    ],
+    [
+      "消费",
+      1,
+      0.0
+    ],
+    [
+      "医药",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "开盘后涨停！800亿市值龙头最新披露",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "龙头",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-04 12:37:35"
+    },
+    {
+      "title": "800亿存储龙头 “20CM”涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "龙头",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-04 12:35:20"
+    },
+    {
+      "title": "存储芯片股 强势反弹",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "反弹",
+          "强势"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "2026-03-04 12:30:08"
+    },
+    {
+      "title": "利好 688525 开盘“20cm”涨停！业绩有望飙升的AI产业股（附名单）",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "飙升",
+          "利好",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "2026-03-04 12:29:26"
+    },
+    {
+      "title": "氢能政策利好提振板块 京城机电股份大涨超32%亿华通涨超9%",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "上涨",
+          "利好",
+          "大涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772596263"
+    },
+    {
+      "title": "中船防务盘中涨超8% 机构看好船价后续有望上行",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "看好"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772595329"
+    },
+    {
+      "title": "存储芯片供不应求，佰维存储净利预增超900%股价20CM涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "强势",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1772595088"
+    },
+    {
+      "title": "东吴证券：维持H&H国际控股“买入”评级 预告25年收入好于市场预期",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772595020"
+    },
+    {
+      "title": "东方电气盘中逆市涨超13% 花旗称公司已取得20台50MW燃气轮机订单",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "突破"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772594990"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-03-04T13:01:05.172224"
+}

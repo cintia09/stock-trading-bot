@@ -24,5 +24,18 @@
     },
     "reason": "多周期: 0/3通过 (需≥2); 滚动窗口: 0/3通过 (需>1)",
     "date": "2026-03-02"
+  },
+  {
+    "id": "h-20260303-01",
+    "action": "在cb_trading_engine.py的should_sell_or_convert函数中增加止盈(pnl>=profit_take)和最长持有(hold_days>=max_hold_days)退出逻辑，读取strategy_params.json配置",
+    "5why_root": "可转债策略有建仓无退出，convertible_profit_take和convertible_max_hold_days参数已写入strategy_params.json但cb_trading_engine.py未使用，导致¥90k转债资金冻结",
+    "result": {
+      "sharpe_delta": 0.0,
+      "win_rate_delta": 0.0,
+      "annual_return_delta": 0.0,
+      "max_drawdown_delta": 0.0
+    },
+    "reason": "多周期: 0/3通过 (需≥2); 滚动窗口: 0/3通过 (需>1)",
+    "date": "2026-03-03"
   }
 ]

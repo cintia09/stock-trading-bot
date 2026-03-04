@@ -1,6 +1,291 @@
 {
-  "discovered_at": "2026-03-03T15:33:08.837495",
-  "total_scanned": 0,
-  "quality_stocks": 0,
-  "top_picks": []
+  "discovered_at": "2026-03-04T09:25:13.022623",
+  "total_scanned": 42,
+  "quality_stocks": 18,
+  "top_picks": [
+    {
+      "code": "601857",
+      "name": "中国石油",
+      "price": 13.69,
+      "change_pct": 4.11,
+      "amount": 344043390.0,
+      "turnover": 0.02,
+      "pe": 14.88,
+      "market_cap": 2505557186328,
+      "source": "成交额榜",
+      "discovery_score": 15,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "001896",
+      "name": "豫能控股",
+      "price": 13.3,
+      "change_pct": 0.15,
+      "amount": 199804516.8,
+      "turnover": 0.98,
+      "pe": 52.9,
+      "market_cap": 20292891689,
+      "source": "成交额榜",
+      "discovery_score": 15,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "600026",
+      "name": "中远海能",
+      "price": 24.99,
+      "change_pct": 0.36,
+      "amount": 173183199.0,
+      "turnover": 0.2,
+      "pe": 37.62,
+      "market_cap": 136575868767,
+      "source": "成交额榜",
+      "discovery_score": 15,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "600938",
+      "name": "中国海油",
+      "price": 44.5,
+      "change_pct": 2.51,
+      "amount": 491102000.0,
+      "market_cap": 2115082952288,
+      "sector": "油气开采Ⅲ",
+      "source": "油气开采Ⅲ龙头",
+      "discovery_score": 15,
+      "sources": [
+        "油气开采Ⅲ龙头"
+      ]
+    },
+    {
+      "code": "603619",
+      "name": "中曼石油",
+      "price": 48.18,
+      "change_pct": 9.52,
+      "volume": "-",
+      "amount": "-",
+      "amplitude": 0.0,
+      "turnover": 0.0,
+      "pe": 36.85,
+      "pb": "-",
+      "market_cap": 22275467051,
+      "source": "涨幅榜",
+      "discovery_score": 10,
+      "sources": [
+        "涨幅榜"
+      ]
+    },
+    {
+      "code": "601975",
+      "name": "招商南油",
+      "price": 5.4,
+      "change_pct": 8.65,
+      "volume": 1046312,
+      "amount": 565008480.0,
+      "amplitude": 0.0,
+      "turnover": 2.24,
+      "pe": 20.02,
+      "pb": 51.24,
+      "market_cap": 25273861261,
+      "source": "涨幅榜",
+      "discovery_score": 10,
+      "sources": [
+        "涨幅榜"
+      ]
+    },
+    {
+      "code": "600635",
+      "name": "大众公用",
+      "price": 7.37,
+      "change_pct": 6.66,
+      "volume": "-",
+      "amount": "-",
+      "amplitude": 0.0,
+      "turnover": 0.0,
+      "pe": 31.4,
+      "pb": "-",
+      "market_cap": 21759443555,
+      "source": "涨幅榜",
+      "discovery_score": 10,
+      "sources": [
+        "涨幅榜"
+      ]
+    },
+    {
+      "code": "301308",
+      "name": "江波龙",
+      "price": 280.15,
+      "change_pct": 6.56,
+      "volume": 4328,
+      "amount": 121241636.1,
+      "amplitude": 0.0,
+      "turnover": 0.16,
+      "pe": 123.58,
+      "pb": 10.34,
+      "market_cap": 117423546550,
+      "source": "涨幅榜",
+      "discovery_score": 10,
+      "sources": [
+        "涨幅榜"
+      ]
+    },
+    {
+      "code": "600339",
+      "name": "中油工程",
+      "price": 5.45,
+      "change_pct": 6.24,
+      "volume": 151591,
+      "amount": 82617095.0,
+      "amplitude": 0.0,
+      "turnover": 0.27,
+      "pe": 43.6,
+      "pb": 18.65,
+      "market_cap": 30428153717,
+      "source": "涨幅榜",
+      "discovery_score": 10,
+      "sources": [
+        "涨幅榜"
+      ]
+    },
+    {
+      "code": "601899",
+      "name": "紫金矿业",
+      "price": 37.7,
+      "change_pct": -2.99,
+      "amount": 287485120.0,
+      "turnover": 0.04,
+      "pe": 19.86,
+      "market_cap": 1002432939378,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "002155",
+      "name": "湖南黄金",
+      "price": 36.72,
+      "change_pct": -9.73,
+      "amount": 257478436.8,
+      "turnover": 0.45,
+      "pe": 41.83,
+      "market_cap": 57380556324,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "300308",
+      "name": "中际旭创",
+      "price": 554.02,
+      "change_pct": -1.73,
+      "amount": 170194944.0,
+      "turnover": 0.03,
+      "pe": 57.01,
+      "market_cap": 615581779403,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "601872",
+      "name": "招商轮船",
+      "price": 18.8,
+      "change_pct": -4.33,
+      "amount": 166364960.0,
+      "turnover": 0.11,
+      "pe": 34.5,
+      "market_cap": 151801323838,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "300476",
+      "name": "胜宏科技",
+      "price": 280.11,
+      "change_pct": -1.37,
+      "amount": 159039735.36,
+      "turnover": 0.07,
+      "pe": 56.49,
+      "market_cap": 244412028944,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "000988",
+      "name": "华工科技",
+      "price": 93.85,
+      "change_pct": -2.07,
+      "amount": 158580034.3,
+      "turnover": 0.17,
+      "pe": 53.56,
+      "market_cap": 94366429052,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "002716",
+      "name": "湖南白银",
+      "price": 14.26,
+      "change_pct": -9.0,
+      "amount": 143697962.96,
+      "turnover": 0.43,
+      "pe": 190.42,
+      "market_cap": 40257244092,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "600498",
+      "name": "烽火通信",
+      "price": 54.0,
+      "change_pct": -3.79,
+      "amount": 140578200.0,
+      "turnover": 0.2,
+      "pe": 107.29,
+      "market_cap": 73341044028,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "300442",
+      "name": "润泽科技",
+      "price": 93.13,
+      "change_pct": -3.48,
+      "amount": 138330738.63,
+      "turnover": 0.09,
+      "pe": 24.27,
+      "market_cap": 152206416953,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    }
+  ]
 }

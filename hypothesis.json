@@ -1,23 +1,23 @@
 {
-  "date": "2026-03-02",
+  "date": "2026-03-03",
   "hypotheses": [
     {
-      "id": "h-20260302-01",
-      "5why_root": "策略缺止损冷却期机制，同股止损后次日评分达标就能再买，导致美的二进宫重复亏损",
-      "action": "新增get_cooldown_codes()函数，检查近N天止损记录；在买入决策前拦截冷却期内股票。strategy_params加rebuy_cooldown_days:30",
-      "target_file": "trading_engine.py",
-      "target_function": "analyze_candidates (买入决策分支)",
+      "id": "h-20260303-01",
+      "5why_root": "可转债策略有建仓无退出，convertible_profit_take和convertible_max_hold_days参数已写入strategy_params.json但cb_trading_engine.py未使用，导致¥90k转债资金冻结",
+      "action": "在cb_trading_engine.py的should_sell_or_convert函数中增加止盈(pnl>=profit_take)和最长持有(hold_days>=max_hold_days)退出逻辑，读取strategy_params.json配置",
+      "target_file": "scripts/cb_trading_engine.py",
+      "target_function": "should_sell_or_convert",
       "priority": 1,
       "patch": {
-        "file": "trading_engine.py",
+        "file": "cb_trading_engine.py",
         "changes": [
           {
-            "old": "def get_today_stop_loss_codes() -> set:\n    \"\"\"获取今日止损卖出的股票代码（24h内禁止买回）\"\"\"\n    today = datetime.now().strftime(\"%Y-%m-%d\")\n    tx_file = BASE_DIR / \"transactions.json\"\n    if not tx_file.exists():\n        return set()\n    try:\n        with open(tx_file, 'r') as f:\n            transactions = json.load(f)\n        stop_loss_codes = set()\n        for t in transactions:\n            if (t.get(\"type\") == \"sell\" and\n                t.get(\"timestamp\", \"\").startswith(today) and\n                any(\"止损\" in r for r in t.get(\"reasons\", []))):\n                stop_loss_codes.add(t[\"code\"])\n        return stop_loss_codes\n    except Exception:\n        return set()",
-            "new": "def get_today_stop_loss_codes() -> set:\n    \"\"\"获取今日止损卖出的股票代码（24h内禁止买回）\"\"\"\n    today = datetime.now().strftime(\"%Y-%m-%d\")\n    tx_file = BASE_DIR / \"transactions.json\"\n    if not tx_file.exists():\n        return set()\n    try:\n        with open(tx_file, 'r') as f:\n            transactions = json.load(f)\n        stop_loss_codes = set()\n        for t in transactions:\n            if (t.get(\"type\") == \"sell\" and\n                t.get(\"timestamp\", \"\").startswith(today) and\n                any(\"止损\" in r for r in t.get(\"reasons\", []))):\n                stop_loss_codes.add(t[\"code\"])\n        return stop_loss_codes\n    except Exception:\n        return set()\n\n\ndef get_cooldown_codes() -> dict:\n    \"\"\"获取止损冷却期内的股票代码 → {code: 剩余天数}\"\"\"\n    cooldown_days = TRADING_RULES.get(\"rebuy_cooldown_days\", 30)\n    tx_file = BASE_DIR / \"transactions.json\"\n    if not tx_file.exists():\n        return {}\n    try:\n        with open(tx_file, 'r') as f:\n            transactions = json.load(f)\n        from datetime import timedelta\n        now = datetime.now()\n        cooldown = {}\n        for t in transactions:\n            if t.get(\"type\") != \"sell\":\n                continue\n            reasons = t.get(\"reasons\", [])\n            # 止损卖出：reasons含\"止损\"，或pnl_pct < stop_loss_pct\n            is_stop_loss = any(\"止损\" in str(r) for r in reasons)\n            if not is_stop_loss:\n                pnl = t.get(\"pnl_pct\", 0)\n                if isinstance(pnl, (int, float)) and pnl < TRADING_RULES.get(\"stop_loss_pct\", -0.03) * 100:\n                    is_stop_loss = True\n            if not is_stop_loss:\n                continue\n            try:\n                sell_date = datetime.fromisoformat(t[\"timestamp\"][:10])\n            except (ValueError, KeyError):\n                continue\n            days_since = (now - sell_date).days\n            remaining = cooldown_days - days_since\n            if remaining > 0:\n                code = t[\"code\"]\n                cooldown[code] = max(cooldown.get(code, 0), remaining)\n        return cooldown\n    except Exception:\n        return {}"
+            "old": "BASE_DIR = Path(__file__).parent.parent\nACCOUNT_FILE = BASE_DIR / \"account.json\"\nTRANSACTIONS_FILE = BASE_DIR / \"transactions.json\"",
+            "new": "BASE_DIR = Path(__file__).parent.parent\nACCOUNT_FILE = BASE_DIR / \"account.json\"\nTRANSACTIONS_FILE = BASE_DIR / \"transactions.json\"\nSTRATEGY_PARAMS_FILE = BASE_DIR / \"strategy_params.json\"\n\ndef _load_strategy_params() -> Dict[str, Any]:\n    try:\n        with open(STRATEGY_PARAMS_FILE, 'r') as f:\n            return json.load(f)\n    except Exception:\n        return {}"
           },
           {
-            "old": "        else:\n            # 无持仓，考虑买入\n            if analysis[\"action\"] in [\"buy\", \"strong_buy\"]:\n                # === v3: 涨停过滤 ===\n                pre_close = rt.get(\"pre_close\", 0)",
-            "new": "        else:\n            # 无持仓，考虑买入\n            if analysis[\"action\"] in [\"buy\", \"strong_buy\"]:\n                # === P0: 止损冷却期过滤（防二进宫） ===\n                cooldown_map = get_cooldown_codes()\n                if code in cooldown_map:\n                    decision[\"reasons\"].append(f\"⛔冷却期: {code}止损后仍需冷却{cooldown_map[code]}天\")\n                    decisions.append(decision)\n                    continue\n                # === v3: 涨停过滤 ===\n                pre_close = rt.get(\"pre_close\", 0)"
+            "old": "    pnl_pct = ((cur_price - cost) / cost * 100.0) if cost > 0 else 0.0\n    if pnl_pct <= -3.0:\n        return \"sell\", f\"止损: pnl {pnl_pct:.2f}%\"\n\n    # 负溢价套利：溢价率回到 > 0% -> 卖出",
+            "new": "    pnl_pct = ((cur_price - cost) / cost * 100.0) if cost > 0 else 0.0\n    if pnl_pct <= -3.0:\n        return \"sell\", f\"止损: pnl {pnl_pct:.2f}%\"\n\n    # 止盈：pnl >= convertible_profit_take -> 卖出\n    _params = _load_strategy_params()\n    profit_take = _params.get(\"convertible_profit_take\", 0.08)\n    if pnl_pct >= profit_take * 100.0:\n        return \"sell\", f\"止盈: pnl {pnl_pct:.2f}% >= {profit_take*100:.0f}%\"\n\n    # 最长持有天数：超期 -> 卖出\n    max_hold = _params.get(\"convertible_max_hold_days\", 30)\n    buy_time_raw = holding.get(\"buy_time\")\n    if buy_time_raw:\n        try:\n            buy_dt = datetime.fromisoformat(str(buy_time_raw))\n            hold_days = (now - buy_dt).days\n            if hold_days >= max_hold and pnl_pct <= 1.0:\n                return \"sell\", f\"超期: 持有{hold_days}天>={max_hold}天且pnl仅{pnl_pct:.2f}%\"\n        except Exception:\n            pass\n\n    # 负溢价套利：溢价率回到 > 0% -> 卖出"
           }
         ]
       }

@@ -27,6 +27,14 @@ from cb_scanner import fetch_cb_list, scan  # type: ignore
 BASE_DIR = Path(__file__).parent.parent
 ACCOUNT_FILE = BASE_DIR / "account.json"
 TRANSACTIONS_FILE = BASE_DIR / "transactions.json"
+STRATEGY_PARAMS_FILE = BASE_DIR / "strategy_params.json"
+
+def _load_strategy_params() -> Dict[str, Any]:
+    try:
+        with open(STRATEGY_PARAMS_FILE, 'r') as f:
+            return json.load(f)
+    except Exception:
+        return {}
 
 
 # ------------------------- json helpers -------------------------
@@ -361,6 +369,24 @@ def should_sell_or_convert(
     pnl_pct = ((cur_price - cost) / cost * 100.0) if cost > 0 else 0.0
     if pnl_pct <= -3.0:
         return "sell", f"止损: pnl {pnl_pct:.2f}%"
+
+    # 止盈：pnl >= convertible_profit_take -> 卖出
+    _params = _load_strategy_params()
+    profit_take = _params.get("convertible_profit_take", 0.08)
+    if pnl_pct >= profit_take * 100.0:
+        return "sell", f"止盈: pnl {pnl_pct:.2f}% >= {profit_take*100:.0f}%"
+
+    # 最长持有天数：超期 -> 卖出
+    max_hold = _params.get("convertible_max_hold_days", 30)
+    buy_time_raw = holding.get("buy_time")
+    if buy_time_raw:
+        try:
+            buy_dt = datetime.fromisoformat(str(buy_time_raw))
+            hold_days = (now - buy_dt).days
+            if hold_days >= max_hold and pnl_pct <= 1.0:
+                return "sell", f"超期: 持有{hold_days}天>={max_hold}天且pnl仅{pnl_pct:.2f}%"
+        except Exception:
+            pass
 
     # 负溢价套利：溢价率回到 > 0% -> 卖出
     if strategy == "负溢价转股套利" and premium is not None:

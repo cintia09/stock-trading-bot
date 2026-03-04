@@ -452,7 +452,6 @@ def make_dynamic_decisions(snapshot, analysis, snapshots):
     cash = account.get("current_cash", 0)
     total_value = snapshot["total_value"]
     cash_ratio = cash / total_value * 100 if total_value > 0 else 100
-    market_strong = analysis["market_change"] > 0.3
     
     # 大盘强势 + 有现金 + 持仓中有趋势向好的股票 → 考虑加仓
     if market_strong and cash_ratio > 15 and cash > 20000:

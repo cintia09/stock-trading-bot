@@ -1,14 +1,14 @@
 {
-  "total_return": -0.006205503228000016,
-  "annual_return": -0.04508889830818896,
-  "max_drawdown": 0.008620493196545823,
+  "total_return": -0.005082,
+  "annual_return": -0.03503620932077467,
+  "max_drawdown": 0.008814286656104972,
   "win_rate": 0.0,
   "profit_factor": 0.0,
-  "sharpe_ratio": -5.177273823108051,
+  "sharpe_ratio": -4.314037226776902,
   "total_trades": 3,
   "label": "baseline_60d",
   "period_days": 60,
-  "start_date": "2026-01-01",
-  "end_date": "2026-03-02",
-  "timestamp": "2026-03-02T16:48:23.036706"
+  "start_date": "2026-01-02",
+  "end_date": "2026-03-03",
+  "timestamp": "2026-03-03T16:49:28.980044"
 }

@@ -11,16 +11,80 @@
 """
 
 import json
+import os
+import time
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
-from typing import List, Dict
+from typing import List, Dict, Optional
 
 BASE_DIR = Path(__file__).parent.parent
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "Accept": "application/json,text/plain,*/*",
 }
+
+# --- Reliability knobs (env overrides for testing) ---
+EASTMONEY_TIMEOUT = float(os.getenv("EASTMONEY_TIMEOUT", "12"))
+EASTMONEY_RETRIES = int(os.getenv("EASTMONEY_RETRIES", "3"))
+EASTMONEY_FORCE_FAIL = os.getenv("EASTMONEY_FORCE_FAIL", "0") == "1"  # smoke-test helper
+FORCE_DISCOVERY_EMPTY = os.getenv("FORCE_DISCOVERY_EMPTY", "0") == "1"  # smoke-test helper
+FORCE_BAOSTOCK_POOL = os.getenv("FORCE_BAOSTOCK_POOL", "0") == "1"  # smoke-test helper
+
+LAST_GOOD_MAX_TRADING_DAYS = int(os.getenv("LAST_GOOD_MAX_TRADING_DAYS", "3"))
+LAST_GOOD_MAX_REUSE = int(os.getenv("LAST_GOOD_MAX_REUSE", "2"))
+
+BAOSTOCK_POOL_MAX_CODES = int(os.getenv("BAOSTOCK_POOL_MAX_CODES", "260"))
+
+
+def _em_get_json(name: str, url: str, params: dict, timeout: float = EASTMONEY_TIMEOUT, retries: int = EASTMONEY_RETRIES) -> Optional[dict]:
+    """Eastmoney GET with timeout + retry + clearer logs."""
+    if EASTMONEY_FORCE_FAIL:
+        raise RuntimeError("EASTMONEY_FORCE_FAIL=1 (smoke test)")
+
+    last_err: Optional[BaseException] = None
+    for attempt in range(1, retries + 1):
+        try:
+            if attempt > 1:
+                time.sleep(0.6 * attempt)
+            resp = requests.get(url, params=params, timeout=timeout, headers=HEADERS)
+            resp.raise_for_status()
+            return resp.json()
+        except Exception as e:
+            last_err = e
+            et = type(e).__name__
+            msg = str(e)
+            print(f"[eastmoney][{name}] attempt={attempt}/{retries} failed: {et}: {msg}")
+    print(f"[eastmoney][{name}] giving up after {retries} attempts: {type(last_err).__name__}: {last_err}")
+    return None
+
+
+def _trading_day_threshold(days: int) -> datetime:
+    """Return a datetime threshold that is N trading days ago (approx: weekday-based)."""
+    d = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+    left = max(0, int(days))
+    while left > 0:
+        d = d - timedelta(days=1)
+        if d.weekday() < 5:  # Mon-Fri
+            left -= 1
+    return d
+
+
+def _load_json(path: Path) -> Optional[dict]:
+    try:
+        if not path.exists():
+            return None
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
+def _save_json(path: Path, data: dict):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
 
 def fetch_top_gainers(limit: int = 20) -> List[Dict]:
@@ -34,10 +98,9 @@ def fetch_top_gainers(limit: int = 20) -> List[Dict]:
     }
 
     try:
-        resp = requests.get(url, params=params, timeout=10)
-        data = resp.json()
+        data = _em_get_json("top_gainers", url, params)
 
-        if data.get("data") and data["data"].get("diff"):
+        if data and data.get("data") and data["data"].get("diff"):
             return [{
                 "code": str(item.get("f12", "")).zfill(6),
                 "name": item.get("f14", ""),
@@ -68,10 +131,9 @@ def fetch_top_volume(limit: int = 20) -> List[Dict]:
     }
 
     try:
-        resp = requests.get(url, params=params, timeout=10)
-        data = resp.json()
+        data = _em_get_json("top_volume", url, params)
 
-        if data.get("data") and data["data"].get("diff"):
+        if data and data.get("data") and data["data"].get("diff"):
             return [{
                 "code": str(item.get("f12", "")).zfill(6),
                 "name": item.get("f14", ""),
@@ -102,10 +164,9 @@ def fetch_sector_leaders() -> List[Dict]:
     }
 
     try:
-        resp = requests.get(url, params=params, timeout=10)
-        data = resp.json()
+        data = _em_get_json("sector_list", url, params)
 
-        if data.get("data") and data["data"].get("diff"):
+        if data and data.get("data") and data["data"].get("diff"):
             for sector in data["data"]["diff"][:5]:  # 前5热门板块
                 sector_code = sector.get("f12", "")
                 sector_name = sector.get("f14", "")
@@ -118,10 +179,9 @@ def fetch_sector_leaders() -> List[Dict]:
                     "fields": "f2,f3,f6,f12,f14,f20"
                 }
 
-                member_resp = requests.get(url, params=member_params, timeout=10)
-                member_data = member_resp.json()
+                member_data = _em_get_json(f"sector_members:{sector_code}", url, member_params)
 
-                if member_data.get("data") and member_data["data"].get("diff"):
+                if member_data and member_data.get("data") and member_data["data"].get("diff"):
                     for item in member_data["data"]["diff"][:2]:  # 每板块取前2
                         leaders.append({
                             "code": str(item.get("f12", "")).zfill(6),
@@ -152,10 +212,9 @@ def fetch_northbound_top() -> List[Dict]:
     }
 
     try:
-        resp = requests.get(url, params=params, timeout=10)
-        data = resp.json()
+        data = _em_get_json("northbound", url, params)
 
-        if data.get("data") and data["data"].get("diff"):
+        if data and data.get("data") and data["data"].get("diff"):
             for item in data["data"]["diff"][:10]:
                 f62 = item.get("f62", 0)
                 try:
@@ -198,9 +257,12 @@ def fetch_strong_stocks() -> List[Dict]:
 
         # 延迟导入，避免模块加载失败影响 discover
         try:
-            from fetch_stock_data import fetch_kline
+            from fetch_stock_data import fetch_kline  # when run as script
         except Exception:
-            fetch_kline = None
+            try:
+                from scripts.fetch_stock_data import fetch_kline  # when imported as package
+            except Exception:
+                fetch_kline = None
 
         if not fetch_kline:
             return []
@@ -264,9 +326,8 @@ def fetch_institution_holdings() -> List[Dict]:
             "fields": "f2,f3,f6,f12,f14,f62,f20",
         }
 
-        resp = requests.get(url, params=params, timeout=10)
-        data = resp.json()
-        diff = ((data.get("data") or {}).get("diff")) or []
+        data = _em_get_json("institution_holdings", url, params)
+        diff = (((data or {}).get("data") or {}).get("diff")) or []
         if not isinstance(diff, list):
             return []
 
@@ -361,6 +422,140 @@ def fetch_ai_infra_stocks() -> List[Dict]:
         return []
 
 
+# ============ BaoStock 兜底候选池（强硬修复） ============
+
+def _baostock_index_constituents(index_name: str) -> List[str]:
+    """Fetch index constituents via BaoStock. Returns 6-digit codes."""
+    try:
+        import baostock as bs
+
+        lg = bs.login()
+        if lg.error_code != '0':
+            print(f"[baostock] login failed: {lg.error_msg}")
+            return []
+
+        if index_name == "hs300":
+            rs = bs.query_hs300_stocks()
+        elif index_name == "zz500":
+            rs = bs.query_zz500_stocks()
+        elif index_name == "sz50":
+            rs = bs.query_sz50_stocks()
+        else:
+            return []
+
+        codes: List[str] = []
+        while rs.next():
+            row = rs.get_row_data()
+            # row usually: [updateDate, code]
+            if len(row) >= 2 and row[1]:
+                codes.append(str(row[1]).split(".")[-1].zfill(6))
+
+        bs.logout()
+        return codes
+    except Exception as e:
+        print(f"[baostock] index constituents failed ({index_name}): {type(e).__name__}: {e}")
+        return []
+
+
+def fetch_candidate_pool_baostock(max_codes: int = BAOSTOCK_POOL_MAX_CODES) -> List[str]:
+    """Generate a stable candidate pool using indices to avoid full-market scanning."""
+    codes = []
+    # Prefer broad+liquid pools
+    codes.extend(_baostock_index_constituents("hs300"))
+    codes.extend(_baostock_index_constituents("zz500"))
+    codes.extend(_baostock_index_constituents("sz50"))
+
+    # de-dup while preserving order
+    seen = set()
+    uniq: List[str] = []
+    for c in codes:
+        if not c:
+            continue
+        if c in seen:
+            continue
+        seen.add(c)
+        uniq.append(c)
+
+    if max_codes and len(uniq) > max_codes:
+        uniq = uniq[:max_codes]
+
+    print(f"[baostock] candidate pool size={len(uniq)} (cap={max_codes})")
+    return uniq
+
+
+def fetch_baostock_pool_picks(max_codes: int = BAOSTOCK_POOL_MAX_CODES) -> List[Dict]:
+    """Fallback discovery using BaoStock daily K-lines.
+
+    Strategy: use index pool (HS300+ZZ500+SZ50) → compute simple momentum scores.
+    """
+    try:
+        # 延迟导入，避免主流程因 baostock 不可用而崩
+        try:
+            from fetch_stock_data import fetch_kline_baostock  # when run as script
+        except Exception:
+            from scripts.fetch_stock_data import fetch_kline_baostock  # when imported as package
+    except Exception as e:
+        print(f"[baostock] cannot import fetch_kline_baostock: {e}")
+        return []
+
+    pool = fetch_candidate_pool_baostock(max_codes=max_codes)
+    if not pool:
+        return []
+
+    picks: List[Dict] = []
+    scanned = 0
+    for code in pool:
+        scanned += 1
+        try:
+            kl = fetch_kline_baostock(code, limit=30)
+            if not kl or len(kl) < 6:
+                continue
+            last = kl[-1]
+            last_close = float(last.get("close", 0) or 0)
+            last_cpct = float(last.get("change_pct", 0) or 0)
+
+            # Simple momentum: last day + recent trend
+            last5 = kl[-5:]
+            last10 = kl[-10:] if len(kl) >= 10 else kl
+
+            # 5d sum pct + close slope
+            sum5 = sum(float(x.get("change_pct", 0) or 0) for x in last5)
+            closes10 = [float(x.get("close", 0) or 0) for x in last10]
+            slope = closes10[-1] - closes10[0] if closes10 else 0
+
+            score = 0
+            score += max(-9.9, min(9.9, last_cpct))
+            score += 0.6 * sum5
+            score += 0.02 * slope
+
+            # Avoid limit-up/down and illiquid junk by soft rules
+            if last_close <= 0:
+                continue
+            if abs(last_cpct) >= 9.9:
+                continue
+
+            picks.append({
+                "code": str(code).zfill(6),
+                "name": str(code).zfill(6),  # name may be missing in BaoStock; keep non-empty to avoid downstream blanks
+                "price": last_close,
+                "change_pct": last_cpct,
+                "volume": last.get("volume", 0),
+                "amount": last.get("amount", 0),
+                "market_cap": 0,
+                "source": "BaoStock指数池",
+                "_baostock_score": score,
+            })
+        except Exception:
+            continue
+
+    picks = sorted(picks, key=lambda x: x.get("_baostock_score", 0), reverse=True)
+    for p in picks:
+        p.pop("_baostock_score", None)
+
+    print(f"[baostock] scanned={scanned}, got={len(picks)}")
+    return picks[:40]
+
+
 # ============ 原有逻辑 ============
 
 def filter_quality_stocks(stocks: List[Dict]) -> List[Dict]:
@@ -435,6 +630,14 @@ def discover_stocks() -> Dict:
     print("  获取北向资金...")
     north = fetch_northbound_top()
     all_stocks.extend(north)
+
+    # P0 强硬修复：当东财榜单整体不可用时，直接启用 BaoStock 指数成分池兜底
+    eastmoney_lists_empty = (len(gainers) + len(volume) + len(leaders) + len(north) == 0)
+    if FORCE_BAOSTOCK_POOL or eastmoney_lists_empty:
+        reason = "FORCE_BAOSTOCK_POOL=1" if FORCE_BAOSTOCK_POOL else "eastmoney_lists_empty"
+        print(f"  [P0] 启用 BaoStock 指数池兜底: {reason}")
+        bs_picks = fetch_baostock_pool_picks(max_codes=BAOSTOCK_POOL_MAX_CODES)
+        all_stocks.extend(bs_picks)
 
     # 5. 新增：近3天连涨
     print("  获取三连涨股票...")
@@ -527,22 +730,85 @@ def discover_stocks() -> Dict:
     # 排序
     ranked = sorted(stock_scores.values(), key=lambda x: x["discovery_score"], reverse=True)
 
+    # smoke-test helper: simulate discovery=0
+    if FORCE_DISCOVERY_EMPTY:
+        print("[test] FORCE_DISCOVERY_EMPTY=1 -> ranked forced empty")
+        ranked = []
+
+    data_dir = BASE_DIR / "data"
+    data_dir.mkdir(exist_ok=True)
+    discovered_path = data_dir / "discovered_stocks.json"
+    last_good_path = data_dir / "discovered_stocks_last_good.json"
+
+    fallback_used: Optional[str] = None
+
+    # --- P0 兜底链路：last_good(<=3交易日且<=M次) -> watchlist -> block ---
+    if not ranked:
+        last_good = _load_json(last_good_path) or {}
+        lg_picks = last_good.get("top_picks") or []
+        lg_reuse = int(last_good.get("reuse_count") or 0)
+        lg_at = last_good.get("discovered_at") or ""
+
+        ok_date = False
+        if lg_at:
+            try:
+                lg_dt = datetime.fromisoformat(lg_at)
+                ok_date = lg_dt >= _trading_day_threshold(LAST_GOOD_MAX_TRADING_DAYS)
+            except Exception:
+                ok_date = False
+
+        if lg_picks and ok_date and lg_reuse < LAST_GOOD_MAX_REUSE:
+            fallback_used = "last_good"
+            ranked = lg_picks
+            last_good["reuse_count"] = lg_reuse + 1
+            last_good.setdefault("reuse_history", []).append(datetime.now().isoformat())
+            _save_json(last_good_path, last_good)
+            print(f"🚨 [P0] stock_discovery=0 -> fallback=last_good (reuse_count={last_good['reuse_count']}/{LAST_GOOD_MAX_REUSE}, discovered_at={lg_at})")
+        else:
+            # fallback: watchlist
+            watchlist = _load_json(BASE_DIR / "watchlist.json") or {"stocks": []}
+            wl = watchlist.get("stocks") or []
+            if wl:
+                fallback_used = "watchlist"
+                ranked = [{
+                    "code": str(s.get("code", "")).zfill(6),
+                    "name": s.get("name", ""),
+                    "price": s.get("latest_price", 0),
+                    "change_pct": s.get("change_pct", 0),
+                    "market_cap": 0,
+                    "discovery_score": 0,
+                    "sources": ["watchlist_fallback"],
+                } for s in wl][:20]
+                print(f"🚨 [P0] stock_discovery=0 -> fallback=watchlist (n={len(ranked)})")
+
+    if not ranked:
+        # Still empty: hard block + clear alarm
+        print("🚨🚨 [P0] stock_discovery=0：last_good/watchlist 均为空或不可用，已阻断下游（需要人工介入修复数据源）")
+
+    # Assemble result and persist
     result = {
         "discovered_at": datetime.now().isoformat(),
         "total_scanned": len(all_stocks),
         "quality_stocks": len(ranked),
+        "fallback_used": fallback_used,
         "top_picks": ranked[:20]
     }
 
-    # 保存
-    (BASE_DIR / "data").mkdir(exist_ok=True)
-    with open(BASE_DIR / "data" / "discovered_stocks.json", 'w') as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
+    _save_json(discovered_path, result)
 
-    if len(ranked) == 0:
+    # Maintain last_good when we have a non-empty discovery (not from fallback)
+    if result.get("top_picks") and not fallback_used:
+        last_good_blob = {
+            **result,
+            "reuse_count": 0,
+            "reuse_history": [],
+        }
+        _save_json(last_good_path, last_good_blob)
+
+    if len(result.get("top_picks") or []) == 0:
         print("🚨 [P0] stock_discovery=0：本次发现结果为空（数据源可能异常），后续将阻断 watchlist 更新/新标的流转")
     else:
-        print(f"✅ 发现 {len(ranked)} 只优质股票")
+        print(f"✅ 发现 {len(result.get('top_picks') or [])} 只候选 (fallback={fallback_used or 'none'})")
 
     return result
 

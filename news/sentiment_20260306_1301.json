@@ -1,0 +1,178 @@
+{
+  "overall_sentiment": 31,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      9,
+      0.22
+    ],
+    [
+      "贵金属",
+      5,
+      0.2
+    ],
+    [
+      "银行",
+      3,
+      0.67
+    ],
+    [
+      "医药",
+      2,
+      0.5
+    ],
+    [
+      "新能源车",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "500亿市值龙头，盘中触及涨停",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "涨停",
+          "龙头"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-06 12:32:05"
+    },
+    {
+      "title": "市值逼近千亿！电力龙头股，历史新高",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "新高",
+          "龙头"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-06 12:28:03"
+    },
+    {
+      "title": "000533，逾34万手封单涨停！超70亿元主力资金涌入这个板块",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "涨停",
+          "主力"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-06 12:27:46"
+    },
+    {
+      "title": "易鑫（02858.HK）金融科技业务再创新高，2025年促成融资额达403亿元",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "新高",
+          "创新高"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "银行"
+      ],
+      "time": "2026-03-06 12:23:34"
+    },
+    {
+      "title": "中金：给予中国宏桥“跑赢行业”评级 目标价提升至47.54港元",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "提升",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772768819"
+    },
+    {
+      "title": "西部证券：首予速腾聚创“买入”评级 激光雷达龙头进军全球市场",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "龙头"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772768743"
+    },
+    {
+      "title": "国盛证券：维持统一企业中国“买入”评级 业绩增长稳健 股息优势突出",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772768481"
+    },
+    {
+      "title": "携程集团-S午前涨逾7% 国投证券维持“买入”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772768056"
+    },
+    {
+      "title": "中国心连心化肥早盘涨超7% 公司为国内氮肥行业龙头",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "龙头"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772767228"
+    },
+    {
+      "title": "西锐早盘涨逾4% 国泰海通证券首次覆盖并给予“增持”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "增持"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772767021"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-03-06T13:01:05.613561"
+}

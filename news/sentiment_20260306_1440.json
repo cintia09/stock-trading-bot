@@ -1,0 +1,101 @@
+{
+  "overall_sentiment": 38,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      3,
+      0.33
+    ],
+    [
+      "医药",
+      3,
+      0.33
+    ],
+    [
+      "贵金属",
+      2,
+      0.5
+    ],
+    [
+      "银行",
+      2,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "百奥赛图-B午后涨逾14% 预计2025年归母净利润同比大幅增长416.37%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772773318"
+    },
+    {
+      "title": "中金：给予中国宏桥“跑赢行业”评级 目标价提升至47.54港元",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "提升",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772768819"
+    },
+    {
+      "title": "西部证券：首予速腾聚创“买入”评级 激光雷达龙头进军全球市场",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "龙头",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772768743"
+    },
+    {
+      "title": "国盛证券：维持统一企业中国“买入”评级 业绩增长稳健 股息优势突出",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772768481"
+    },
+    {
+      "title": "携程集团-S午前涨逾7% 国投证券维持“买入”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1772768056"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-03-06T14:40:05.741599"
+}

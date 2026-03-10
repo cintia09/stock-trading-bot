@@ -1,0 +1,68 @@
+{
+  "overall_sentiment": 26,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "贵金属",
+      6,
+      0.67
+    ],
+    [
+      "银行",
+      5,
+      0.2
+    ],
+    [
+      "AI",
+      3,
+      1.0
+    ],
+    [
+      "医药",
+      2,
+      0.0
+    ],
+    [
+      "新能源车",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "金山云午后涨超5% 机构指其AI业务有望保持高速增长",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "提升",
+          "增长",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1773033474"
+    },
+    {
+      "title": "全球债券卖压加剧 油价飙升加剧滞胀疑虑",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "增长",
+          "上涨",
+          "飙升"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773032953"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-03-09T14:40:05.592890"
+}

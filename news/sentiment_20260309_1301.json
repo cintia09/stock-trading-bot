@@ -1,0 +1,122 @@
+{
+  "overall_sentiment": 29,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "银行",
+      5,
+      0.8
+    ],
+    [
+      "AI",
+      4,
+      0.25
+    ],
+    [
+      "消费",
+      3,
+      0.67
+    ],
+    [
+      "贵金属",
+      1,
+      2.0
+    ],
+    [
+      "新能源车",
+      1,
+      1.0
+    ],
+    [
+      "医药",
+      1,
+      1.0
+    ],
+    [
+      "房地产",
+      1,
+      2.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "在避险情绪下新加坡元走弱",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "飙升",
+          "突破"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属",
+        "银行"
+      ],
+      "time": "1773029171"
+    },
+    {
+      "title": "美银证券：京东健康季绩持续胜预期 目标价75港元 重申“买入”评级",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773029140"
+    },
+    {
+      "title": "国泰海通证券：首予天虹国际集团“增持”评级 全球纱线龙头盈利进入上行期",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "龙头",
+          "盈利",
+          "增持"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773029103"
+    },
+    {
+      "title": "申万宏源：首予太古地产“买入”评级 深耕中国香港且加码内地拓展",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "龙头"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "房地产"
+      ],
+      "time": "1773029022"
+    },
+    {
+      "title": "佳鑫国际资源早盘涨逾14% 公司正式进入港股通名单",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773026581"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-03-09T13:01:04.709536"
+}

@@ -1,0 +1,114 @@
+{
+  "overall_sentiment": 28,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      10,
+      0.4
+    ],
+    [
+      "新能源车",
+      3,
+      0.33
+    ],
+    [
+      "贵金属",
+      2,
+      0.0
+    ],
+    [
+      "光伏",
+      2,
+      0.0
+    ],
+    [
+      "医药",
+      2,
+      0.5
+    ],
+    [
+      "银行",
+      1,
+      1.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "资金借道ETF入市 多只产品份额创新高",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "创新高",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-10 14:33:09"
+    },
+    {
+      "title": "特朗普试图缓解市场对战争持续时间的担忧，油价下跌",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "暴跌",
+          "下跌"
+        ]
+      },
+      "sectors": [],
+      "time": "1773124633"
+    },
+    {
+      "title": "东吴证券：维持中烟香港“买入”评级 盈利能力提升加速全球布局",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "买入",
+          "提升",
+          "盈利"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773123550"
+    },
+    {
+      "title": "美银证券：升中联重科目标价至10.1港元 重申“买入”评级",
+      "sentiment": {
+        "score": 4,
+        "label": "very_positive",
+        "positive": [
+          "政策支持",
+          "买入",
+          "提升",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773123430"
+    },
+    {
+      "title": "理文造纸发布年度业绩 普通股股东应占盈利19.41亿港元同比增长47.87%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "盈利"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773119168"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-03-10T14:40:05.388614"
+}

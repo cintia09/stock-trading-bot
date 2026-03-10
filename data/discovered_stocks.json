@@ -1,143 +1,63 @@
 {
-  "discovered_at": "2026-03-10T09:26:14.909369",
-  "total_scanned": 65,
-  "quality_stocks": 26,
+  "discovered_at": "2026-03-10T15:35:58.174068",
+  "total_scanned": 75,
+  "quality_stocks": 18,
   "fallback_used": null,
   "top_picks": [
     {
-      "code": "603220",
-      "name": "中贝通信",
-      "price": 30.67,
-      "change_pct": 4.64,
-      "volume": 21763,
-      "amount": 66746814.0,
-      "amplitude": 0.0,
-      "turnover": 0.5,
-      "pe": 145.07,
-      "pb": 10.73,
-      "market_cap": 16449737801,
-      "source": "三连涨",
-      "discovery_score": 25,
+      "code": "603601",
+      "name": "再升科技",
+      "price": 12.35,
+      "change_pct": 7.77,
+      "amount": 3049499157.0,
+      "north_net": 614830336.0,
+      "source": "北向资金",
+      "discovery_score": 40,
       "sources": [
-        "三连涨"
+        "北向资金"
       ]
     },
     {
-      "code": "002015",
-      "name": "协鑫能科",
-      "price": 18.39,
-      "change_pct": 7.04,
-      "volume": 88828,
-      "amount": 163354692.0,
-      "amplitude": 0.0,
-      "turnover": 0.55,
-      "pe": 29.38,
-      "pb": 15.85,
-      "market_cap": 29852939651,
-      "source": "涨幅榜",
-      "discovery_score": 20,
-      "sources": [
-        "涨幅榜"
-      ]
-    },
-    {
-      "code": "600602",
-      "name": "云赛智联",
-      "price": 23.74,
-      "change_pct": 6.65,
-      "volume": 74600,
-      "amount": 177100400.0,
-      "amplitude": 0.0,
-      "turnover": 0.69,
-      "pe": 167.7,
-      "pb": 24.39,
-      "market_cap": 32468567822,
-      "source": "涨幅榜",
-      "discovery_score": 20,
-      "sources": [
-        "涨幅榜"
-      ]
-    },
-    {
-      "code": "000815",
-      "name": "美利云",
-      "price": 19.01,
-      "change_pct": 5.96,
-      "amount": 163536053.33,
-      "turnover": 1.24,
-      "pe": 306.49,
-      "market_cap": 13216950295,
+      "code": "000547",
+      "name": "航天发展",
+      "price": 33.66,
+      "change_pct": 4.86,
+      "amount": 12202207226.06,
+      "turnover": 22.97,
+      "pe": -82.55,
+      "market_cap": 53804441935,
       "source": "成交额榜",
-      "discovery_score": 20,
+      "discovery_score": 30,
       "sources": [
         "成交额榜"
       ]
     },
     {
-      "code": "301205",
-      "name": "联特科技",
-      "price": 269.0,
-      "change_pct": 5.98,
-      "volume": 1919,
-      "amount": 51621100.0,
-      "amplitude": 0.0,
-      "turnover": 0.28,
-      "pe": 320.01,
-      "pb": 3.55,
-      "market_cap": 34901136000,
-      "source": "三连涨",
-      "discovery_score": 20,
-      "sources": [
-        "三连涨"
-      ]
-    },
-    {
-      "code": "688300",
-      "name": "联瑞新材",
-      "price": 88.01,
-      "change_pct": 5.65,
-      "volume": 3481,
-      "amount": 30638393.0,
-      "amplitude": 0.0,
-      "turnover": 0.14,
-      "pe": 72.62,
-      "pb": 8.35,
-      "market_cap": 21251703412,
-      "source": "三连涨",
-      "discovery_score": 20,
-      "sources": [
-        "三连涨"
-      ]
-    },
-    {
-      "code": "001267",
-      "name": "汇绿生态",
-      "price": 43.8,
-      "change_pct": 5.47,
-      "volume": 12333,
-      "amount": 54018540.0,
-      "amplitude": 0.0,
-      "turnover": 0.2,
-      "pe": 498.71,
-      "pb": 3.55,
-      "market_cap": 34390212896,
-      "source": "三连涨",
-      "discovery_score": 20,
-      "sources": [
-        "三连涨"
-      ]
-    },
-    {
-      "code": "300750",
-      "name": "宁德时代",
-      "price": 375.0,
-      "change_pct": 4.9,
-      "amount": 728536875.0,
-      "turnover": 0.05,
-      "pe": 23.7,
-      "market_cap": 1711450858500,
+      "code": "300476",
+      "name": "胜宏科技",
+      "price": 289.0,
+      "change_pct": 7.02,
+      "amount": 11308521839.3,
+      "turnover": 4.63,
+      "pe": 58.29,
+      "market_cap": 252169063457,
       "source": "成交额榜",
-      "discovery_score": 15,
+      "discovery_score": 25,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "002475",
+      "name": "立讯精密",
+      "price": 49.39,
+      "change_pct": 6.22,
+      "amount": 8875107862.07,
+      "turnover": 2.5,
+      "pe": 23.43,
+      "market_cap": 359854777418,
+      "source": "成交额榜",
+      "discovery_score": 25,
       "sources": [
         "成交额榜"
       ]
@@ -145,42 +65,12 @@
     {
       "code": "300502",
       "name": "新易盛",
-      "price": 394.75,
-      "change_pct": 2.8,
-      "amount": 326159029.5,
-      "turnover": 0.09,
-      "pe": 46.51,
-      "market_cap": 392385175912,
-      "source": "成交额榜",
-      "discovery_score": 15,
-      "sources": [
-        "成交额榜"
-      ]
-    },
-    {
-      "code": "300170",
-      "name": "汉得信息",
-      "price": 27.0,
-      "change_pct": 0.82,
-      "amount": 216969300.0,
-      "turnover": 0.82,
-      "pe": 142.53,
-      "market_cap": 27600134697,
-      "source": "成交额榜",
-      "discovery_score": 15,
-      "sources": [
-        "成交额榜"
-      ]
-    },
-    {
-      "code": "300017",
-      "name": "网宿科技",
-      "price": 20.65,
-      "change_pct": 3.1,
-      "amount": 203542238.55,
-      "turnover": 0.43,
-      "pe": 61.82,
-      "market_cap": 50787637895,
+      "price": 397.33,
+      "change_pct": 3.47,
+      "amount": 16696054478.15,
+      "turnover": 4.8,
+      "pe": 46.82,
+      "market_cap": 394949719937,
       "source": "成交额榜",
       "discovery_score": 15,
       "sources": [
@@ -190,12 +80,12 @@
     {
       "code": "300308",
       "name": "中际旭创",
-      "price": 540.0,
-      "change_pct": 2.66,
-      "amount": 194292000.0,
-      "turnover": 0.03,
-      "pe": 55.56,
-      "market_cap": 600003900360,
+      "price": 547.0,
+      "change_pct": 3.99,
+      "amount": 15348948106.17,
+      "turnover": 2.56,
+      "pe": 56.28,
+      "market_cap": 607781728698,
       "source": "成交额榜",
       "discovery_score": 15,
       "sources": [
@@ -205,12 +95,12 @@
     {
       "code": "000988",
       "name": "华工科技",
-      "price": 119.49,
-      "change_pct": 0.75,
-      "amount": 181505310.0,
-      "turnover": 0.15,
-      "pe": 68.2,
-      "market_cap": 120147518459,
+      "price": 123.51,
+      "change_pct": 4.14,
+      "amount": 13637331128.37,
+      "turnover": 11.32,
+      "pe": 70.49,
+      "market_cap": 124189639342,
       "source": "成交额榜",
       "discovery_score": 15,
       "sources": [
@@ -218,16 +108,106 @@
       ]
     },
     {
-      "code": "300442",
-      "name": "润泽科技",
-      "price": 99.0,
-      "change_pct": 2.75,
-      "amount": 176814000.0,
-      "turnover": 0.11,
-      "pe": 25.8,
-      "market_cap": 161800013727,
+      "code": "600410",
+      "name": "华胜天成",
+      "price": 31.83,
+      "change_pct": 4.33,
+      "amount": 11563305544.0,
+      "turnover": 33.79,
+      "pe": 73.05,
+      "market_cap": 34901425760,
       "source": "成交额榜",
       "discovery_score": 15,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "300017",
+      "name": "网宿科技",
+      "price": 20.39,
+      "change_pct": 1.8,
+      "amount": 11555321860.64,
+      "turnover": 24.64,
+      "pe": 61.04,
+      "market_cap": 50148180953,
+      "source": "成交额榜",
+      "discovery_score": 15,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "300274",
+      "name": "阳光电源",
+      "price": 156.1,
+      "change_pct": 0.19,
+      "amount": 9259443702.2,
+      "turnover": 3.73,
+      "pe": 20.43,
+      "market_cap": 323628303286,
+      "source": "成交额榜",
+      "discovery_score": 15,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "300750",
+      "name": "宁德时代",
+      "price": 376.3,
+      "change_pct": 5.26,
+      "amount": 19049080512.74,
+      "turnover": 1.19,
+      "pe": 23.79,
+      "market_cap": 1717383888143,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "002261",
+      "name": "拓维信息",
+      "price": 41.76,
+      "change_pct": -2.79,
+      "amount": 13204267077.83,
+      "turnover": 27.38,
+      "pe": 376.33,
+      "market_cap": 52610562354,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "600089",
+      "name": "特变电工",
+      "price": 31.86,
+      "change_pct": -2.75,
+      "amount": 11328709167.0,
+      "turnover": 6.99,
+      "pe": 22.02,
+      "market_cap": 160981971312,
+      "source": "成交额榜",
+      "discovery_score": 10,
+      "sources": [
+        "成交额榜"
+      ]
+    },
+    {
+      "code": "601179",
+      "name": "中国西电",
+      "price": 19.99,
+      "change_pct": -0.89,
+      "amount": 8876727165.0,
+      "turnover": 8.64,
+      "pe": 81.88,
+      "market_cap": 102466388216,
+      "source": "成交额榜",
+      "discovery_score": 10,
       "sources": [
         "成交额榜"
       ]
@@ -235,86 +215,59 @@
     {
       "code": "688525",
       "name": "佰维存储",
-      "price": 220.0,
-      "change_pct": 1.55,
-      "amount": 176441980.0,
-      "turnover": 0.17,
-      "pe": 118.57,
-      "market_cap": 102768976200,
+      "price": 213.75,
+      "change_pct": -1.34,
+      "amount": 8470628686.0,
+      "turnover": 8.5,
+      "pe": 115.2,
+      "market_cap": 99849403013,
       "source": "成交额榜",
-      "discovery_score": 15,
+      "discovery_score": 10,
       "sources": [
         "成交额榜"
       ]
     },
     {
-      "code": "002716",
-      "name": "湖南白银",
-      "price": 15.28,
-      "change_pct": 3.59,
-      "amount": 43211840.0,
-      "market_cap": 43136794511,
-      "sector": "白银",
-      "source": "白银龙头",
-      "discovery_score": 15,
+      "code": "002506",
+      "name": "协鑫集成",
+      "price": 6.07,
+      "change_pct": 5.02,
+      "amount": 8373467310.85,
+      "turnover": 24.24,
+      "pe": -47.98,
+      "market_cap": 35511420712,
+      "source": "成交额榜",
+      "discovery_score": 10,
       "sources": [
-        "白银龙头"
+        "成交额榜"
       ]
     },
     {
-      "code": "000426",
-      "name": "兴业银锡",
-      "price": 51.06,
-      "change_pct": 2.78,
-      "amount": 34950570.0,
-      "market_cap": 90663960833,
-      "sector": "白银",
-      "source": "白银龙头",
-      "discovery_score": 15,
+      "code": "600487",
+      "name": "亨通光电",
+      "price": 49.99,
+      "change_pct": 9.34,
+      "amount": 7447926525.0,
+      "market_cap": 123312065503,
+      "sector": "通信线缆及配套",
+      "source": "通信线缆及配套龙头",
+      "discovery_score": 10,
       "sources": [
-        "白银龙头"
+        "通信线缆及配套龙头"
       ]
     },
     {
-      "code": "601111",
-      "name": "中国国航",
-      "price": 7.55,
-      "change_pct": 3.28,
-      "amount": 44777540.0,
-      "market_cap": 131735578550,
-      "sector": "航空运输",
-      "source": "航空运输龙头",
-      "discovery_score": 15,
+      "code": "600522",
+      "name": "中天科技",
+      "price": 28.9,
+      "change_pct": 6.25,
+      "amount": 4798301707.0,
+      "market_cap": 98634244943,
+      "sector": "通信线缆及配套",
+      "source": "通信线缆及配套龙头",
+      "discovery_score": 10,
       "sources": [
-        "航空运输龙头"
-      ]
-    },
-    {
-      "code": "300666",
-      "name": "江丰电子",
-      "price": 153.85,
-      "change_pct": 1.54,
-      "amount": 22523640.0,
-      "market_cap": 40819587080,
-      "sector": "半导体材料",
-      "source": "半导体材料龙头",
-      "discovery_score": 15,
-      "sources": [
-        "半导体材料龙头"
-      ]
-    },
-    {
-      "code": "301611",
-      "name": "珂玛科技",
-      "price": 115.0,
-      "change_pct": 4.18,
-      "amount": 15168500.0,
-      "market_cap": 50140000000,
-      "sector": "半导体材料",
-      "source": "半导体材料龙头",
-      "discovery_score": 15,
-      "sources": [
-        "半导体材料龙头"
+        "通信线缆及配套龙头"
       ]
     }
   ]

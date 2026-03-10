@@ -1,0 +1,192 @@
+{
+  "overall_sentiment": 37,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      6,
+      1.5
+    ],
+    [
+      "贵金属",
+      3,
+      0.67
+    ],
+    [
+      "新能源车",
+      3,
+      0.67
+    ],
+    [
+      "光伏",
+      2,
+      0.0
+    ],
+    [
+      "银行",
+      1,
+      1.0
+    ],
+    [
+      "医药",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "国际油价一夜暴跌！油气股集体走低，多股跌停",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "跌停",
+          "暴跌"
+        ]
+      },
+      "sectors": [],
+      "time": "2026-03-10 12:37:25"
+    },
+    {
+      "title": "理文化工发布年度业绩 年内溢利5.58亿港元同比增长15.75%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "盈利"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773118241"
+    },
+    {
+      "title": "海丰国际发布年度业绩 股东应占利润12.23亿美元同比增长18.92%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "增长",
+          "盈利"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773118168"
+    },
+    {
+      "title": "科技股强势反弹，沪指半日上涨0.39%",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "反弹",
+          "上涨",
+          "强势"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773117501"
+    },
+    {
+      "title": "摩根大通建议买入日本股票 预计将快速复苏",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "买入",
+          "上涨"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773117485"
+    },
+    {
+      "title": "国际油价一夜暴跌！油气股集体走低，多股跌停",
+      "sentiment": {
+        "score": -2,
+        "label": "negative",
+        "positive": [],
+        "negative": [
+          "跌停",
+          "暴跌"
+        ]
+      },
+      "sectors": [],
+      "time": "1773117057"
+    },
+    {
+      "title": "港股午评：恒指涨1.56% 科指涨1.4% 科网股普涨 锂电池股强势 AI应用股活跃 宁德时代涨超8%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "强势"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "新能源车",
+        "AI"
+      ],
+      "time": "1773115206"
+    },
+    {
+      "title": "万咖壹联午前涨近13% AI商业化服务平台效率提升显著",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "提升",
+          "上涨",
+          "盈利"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1773115135"
+    },
+    {
+      "title": "兆威机电午前涨超9%创新高 上市首日即调入港股通名单",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "新高",
+          "上涨",
+          "创新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773114744"
+    },
+    {
+      "title": "存储概念股午前走高 澜起科技涨逾7%兆易创新涨逾2%",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "龙头",
+          "上涨",
+          "飙升"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1773114295"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-03-10T13:01:05.684374"
+}

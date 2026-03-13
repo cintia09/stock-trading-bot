@@ -1,0 +1,151 @@
+{
+  "overall_sentiment": 29,
+  "overall_label": "positive",
+  "hot_sectors": [
+    [
+      "AI",
+      8,
+      0.25
+    ],
+    [
+      "贵金属",
+      4,
+      0.5
+    ],
+    [
+      "消费",
+      2,
+      0.5
+    ],
+    [
+      "银行",
+      2,
+      0.0
+    ],
+    [
+      "光伏",
+      2,
+      1.0
+    ],
+    [
+      "新能源车",
+      1,
+      0.0
+    ],
+    [
+      "医药",
+      1,
+      0.0
+    ]
+  ],
+  "stock_mentions": {},
+  "important_news": [
+    {
+      "title": "绿发电力等多股涨停，绿电ETF（562550）放量大涨2.52%，盘中成交额同类第一",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "放量",
+          "大涨",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-12 14:35:14"
+    },
+    {
+      "title": "主力资金监控：三安光电净买入超12亿",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "主力",
+          "买入"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "2026-03-12 14:30:29"
+    },
+    {
+      "title": "受伊朗冲突影响加剧，布伦特原油价格飙升重回100美元上方",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "大涨",
+          "飙升"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773297395"
+    },
+    {
+      "title": "光大期货0312热点追踪：聚酯品种集体走强，PX还有上方空间吗？",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "上涨",
+          "涨停"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773294337"
+    },
+    {
+      "title": "BMI预测2026白银均价飙升至93美元/盎司 投资需求强势抵消太阳能珠宝疲软",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "强势",
+          "飙升"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "贵金属",
+        "光伏"
+      ],
+      "time": "1773293340"
+    },
+    {
+      "title": "创新实业午后涨超8%创新高 本周股价累计涨超30%",
+      "sentiment": {
+        "score": 3,
+        "label": "very_positive",
+        "positive": [
+          "上涨",
+          "创新高",
+          "新高"
+        ],
+        "negative": []
+      },
+      "sectors": [],
+      "time": "1773293068"
+    },
+    {
+      "title": "韩国2月ICT出口飙升逾一倍，芯片出口激增160%",
+      "sentiment": {
+        "score": 2,
+        "label": "positive",
+        "positive": [
+          "飙升",
+          "增长"
+        ],
+        "negative": []
+      },
+      "sectors": [
+        "AI"
+      ],
+      "time": "1773291946"
+    }
+  ],
+  "total_news": 80,
+  "analyzed_at": "2026-03-12T14:40:04.915990"
+}
